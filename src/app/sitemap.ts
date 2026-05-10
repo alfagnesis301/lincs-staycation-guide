@@ -1,0 +1,66 @@
+import type { MetadataRoute } from 'next';
+import { caravanParkGuides } from '@/data/caravanParkGuides';
+import { towns } from '@/data/towns';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincsstaycationguide.co.uk';
+  const now = new Date();
+
+  const staticRoutes = [
+    '',
+    '/places-to-stay',
+    '/things-to-do',
+    '/food-drink',
+    '/lincolnshire-coast',
+    '/dog-friendly',
+    '/family-days-out',
+    '/town-guides',
+    '/events',
+    '/blog',
+    '/about',
+    '/contact',
+    '/add-your-business',
+    '/advertise',
+    '/caravan-parks',
+    '/caravan-parks/booking',
+    '/image-credits',
+    '/privacy-policy',
+    '/cookie-policy',
+    '/terms',
+    '/affiliate-disclosure',
+    '/editorial-policy',
+    '/business-listing-terms',
+  ];
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: now,
+    changeFrequency: route === '' ? 'daily' : 'weekly',
+    priority:
+      route === ''
+        ? 1
+        : route === '/caravan-parks'
+          ? 0.9
+          : route.includes('policy') || route.includes('terms') || route.includes('disclosure') || route.includes('credits')
+            ? 0.3
+            : 0.8,
+  }));
+
+  // Caravan park guide pages (16 entries)
+  const caravanEntries: MetadataRoute.Sitemap = caravanParkGuides.map((g) => ({
+    url: `${baseUrl}/caravan-parks/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: ['skegness', 'mablethorpe', 'lincoln', 'chapel-st-leonards', 'sutton-on-sea'].includes(g.id) ? 0.8 : 0.7,
+  }));
+
+  // Town guide pages
+  const townEntries: MetadataRoute.Sitemap = towns.map((t) => ({
+    url: `${baseUrl}/town-guides/${t.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...caravanEntries, ...townEntries];
+}
