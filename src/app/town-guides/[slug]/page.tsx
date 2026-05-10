@@ -3,12 +3,15 @@ import Image from 'next/image';
 import { towns } from '@/data/towns';
 import { getListingsByTown } from '@/data/listings';
 import { getImageCredit } from '@/data/imageCredits';
+import { lincolnGuide } from '@/data/lincolnGuide';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SectionHeader from '@/components/SectionHeader';
 import ListingCard from '@/components/ListingCard';
 import CTASection from '@/components/CTASection';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import ImageCreditComponent from '@/components/ImageCredit';
+import LocationGuideHero from '@/components/town-guides/LocationGuideHero';
+import LincolnGuideSections from '@/components/town-guides/LincolnGuideSections';
 
 interface TownGuidePageProps {
   params: Promise<{ slug: string }>;
@@ -22,6 +25,20 @@ export async function generateMetadata({ params }: TownGuidePageProps) {
   const { slug } = await params;
   const town = towns.find((t) => t.slug === slug);
   if (!town) return {};
+
+  if (slug === 'lincoln') {
+    return {
+      title: 'Lincoln Travel Guide | Places to Stay, Things to Do & Food | Lincs Staycation Guide',
+      description:
+        'Plan a Lincoln city break with places to stay, nearby caravan parks, historic things to do, food and drink ideas, and practical visitor information for Lincoln, Lincolnshire.',
+      openGraph: {
+        title: 'Lincoln Travel Guide | Lincs Staycation Guide',
+        description:
+          'Plan a Lincoln city break with places to stay, nearby caravan parks, historic things to do, food and drink ideas, and practical visitor information.',
+      },
+      alternates: { canonical: '/town-guides/lincoln' },
+    };
+  }
 
   return {
     title: `${town.name} Travel Guide | Things to Do, Places to Stay & Where to Eat in ${town.name}`,
@@ -41,6 +58,23 @@ export default async function TownGuidePage({ params }: TownGuidePageProps) {
 
   const townListings = getListingsByTown(town.name);
   const imageCredit = town.image ? getImageCredit(`town-${slug}`) : undefined;
+
+  if (slug === 'lincoln') {
+    return (
+      <>
+        <LocationGuideHero
+          title={lincolnGuide.title}
+          subtitle={lincolnGuide.subtitle}
+          intro={lincolnGuide.intro}
+          regionBadge={lincolnGuide.regionBadge}
+          bestFor={lincolnGuide.bestFor}
+          quickFacts={lincolnGuide.quickFacts}
+          heroImage={lincolnGuide.heroImage}
+        />
+        <LincolnGuideSections />
+      </>
+    );
+  }
 
   const regionIcons: Record<string, string> = {
     'City': '🏛️',

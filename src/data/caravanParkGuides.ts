@@ -32,6 +32,8 @@ export interface CaravanParkListing {
   listingType?: ListingType[];
   monetisationType?: MonetisationType;
   affiliateUrl?: string;
+  bookingUrl?: string;
+  bookingDeepLinkPending?: boolean;
   sponsored?: boolean;
   featured?: boolean;
   partnerPlacement?: boolean;
@@ -123,6 +125,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         sourceLabel: 'City of Lincoln Council',
         listingType: ['Touring site', 'Camping', 'Family-friendly'],
         monetisationType: 'business-listing',
+        bookingDeepLinkPending: true,
       },
       {
         id: 'hanworth-country-park',
@@ -135,6 +138,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         sourceLabel: 'Official site',
         listingType: ['Holiday park', 'Touring site', 'Lodges', 'Glamping', 'Fishing', 'Family-friendly'],
         monetisationType: 'business-listing',
+        bookingDeepLinkPending: true,
       },
       {
         id: 'camper-uk-leisure-park',
@@ -147,6 +151,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         sourceLabel: 'Official site',
         listingType: ['Touring site', 'Glamping', 'Fishing'],
         monetisationType: 'business-listing',
+        bookingDeepLinkPending: true,
       },
       {
         id: 'woodhall-country-park-lincoln',
@@ -160,6 +165,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         locationContext: 'Near Woodhall Spa — useful as a countryside alternative for Lincoln visitors',
         listingType: ['Holiday park', 'Touring site', 'Camping', 'Lodges', 'Glamping', 'Fishing'],
         monetisationType: 'business-listing',
+        bookingDeepLinkPending: true,
       },
       {
         id: 'brandy-wharf-leisure-park',
@@ -172,6 +178,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         sourceLabel: 'Official site',
         listingType: ['Touring site', 'Camping', 'Fishing'],
         monetisationType: 'business-listing',
+        bookingDeepLinkPending: true,
       },
     ],
     seoContentIdeas: STANDARD_SEO_IDEAS('Lincoln'),

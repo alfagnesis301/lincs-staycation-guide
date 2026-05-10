@@ -76,7 +76,30 @@ export default function CaravanParkListingCard({ listing }: Props) {
         <p className="text-xs text-charcoal-muted">
           Source: <span className="text-charcoal">{listing.sourceLabel}</span>
         </p>
-        {listing.needsVerification ? (
+        {listing.bookingUrl ? (
+          <div className="flex flex-col items-end gap-1">
+            <a
+              href={listing.bookingUrl}
+              target="_blank"
+              rel="sponsored nofollow noopener"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-sage-dark transition-colors"
+            >
+              Check availability on Booking
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <span className="text-[11px] text-charcoal-muted">Affiliate link</span>
+          </div>
+        ) : listing.bookingDeepLinkPending ? (
+          <button
+            type="button"
+            disabled
+            className="cursor-not-allowed rounded-xl bg-cream-dark px-4 py-2 text-sm font-medium text-charcoal-muted"
+          >
+            Booking link coming soon
+          </button>
+        ) : listing.needsVerification ? (
           <p className="text-xs text-charcoal-muted italic">
             Source to be verified before publication.
           </p>

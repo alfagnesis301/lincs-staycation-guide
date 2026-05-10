@@ -25,7 +25,7 @@ export default function ImageCreditComponent({ credit, variant = 'inline' }: Ima
         </a>
         {' via '}{credit.source}{' · '}{credit.licence}{' · '}
         <Link
-          href="/image-credits"
+          href={`/image-credits#${credit.id}`}
           className="underline hover:text-white transition-colors"
         >
           Full credits
@@ -36,7 +36,7 @@ export default function ImageCreditComponent({ credit, variant = 'inline' }: Ima
 
   // card variant — used on /image-credits page
   return (
-    <div className="bg-white rounded-2xl border border-cream-dark/60 p-5 space-y-3">
+    <div id={credit.id} className="bg-white rounded-2xl border border-cream-dark/60 p-5 space-y-3 scroll-mt-24">
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-heading text-base font-semibold text-charcoal leading-snug">
           {credit.title}
