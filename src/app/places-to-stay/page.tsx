@@ -43,21 +43,22 @@ export default function PlacesToStayPage() {
         ctaDescription="Help visitors find your hotel, cottage, caravan park or guest house by adding your business to the directory."
         ctaButtonText="List your accommodation"
         ctaButtonHref="/add-your-business"
+        beforeListings={
+          <section className="bg-white py-12 sm:py-16">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <SectionHeader
+                title="Places to Stay in Lincoln"
+                subtitle="Booking-ready Lincoln accommodation candidates for cathedral city breaks, historic centre visits, weekend stays and practical access to the wider Lincolnshire area."
+              />
+              <div className="grid gap-5 lg:grid-cols-2">
+                {lincolnGuide.placesToStay.map((listing) => (
+                  <StayListingCard key={listing.id} listing={listing} />
+                ))}
+              </div>
+            </div>
+          </section>
+        }
       />
-
-      <section className="bg-white py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Places to Stay in Lincoln"
-            subtitle="Booking-ready Lincoln accommodation candidates for cathedral city breaks, historic centre visits, weekend stays and practical access to the wider Lincolnshire area."
-          />
-          <div className="grid gap-5 lg:grid-cols-2">
-            {lincolnGuide.placesToStay.map((listing) => (
-              <StayListingCard key={listing.id} listing={listing} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Popular caravan park guides */}
       <PopularCaravanGuidesStrip

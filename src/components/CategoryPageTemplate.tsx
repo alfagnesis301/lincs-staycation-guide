@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ListingCard from '@/components/ListingCard';
@@ -28,6 +29,7 @@ interface CategoryPageTemplateProps {
   ctaButtonText?: string;
   ctaButtonHref?: string;
   breadcrumbLabel: string;
+  beforeListings?: ReactNode;
 }
 
 export default function CategoryPageTemplate({
@@ -44,6 +46,7 @@ export default function CategoryPageTemplate({
   ctaButtonText = 'Add Your Business',
   ctaButtonHref = '/add-your-business',
   breadcrumbLabel,
+  beforeListings,
 }: CategoryPageTemplateProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
@@ -145,6 +148,8 @@ export default function CategoryPageTemplate({
           </div>
         </div>
       </section>
+
+      {beforeListings}
 
       {/* Listings */}
       <section className="py-12 sm:py-16 bg-cream/20">
