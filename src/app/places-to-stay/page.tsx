@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import CategoryPageTemplate from '@/components/CategoryPageTemplate';
 import PopularCaravanGuidesStrip from '@/components/caravan-parks/PopularCaravanGuidesStrip';
+import SectionHeader from '@/components/SectionHeader';
+import { StayListingCard } from '@/components/town-guides/GuideListingCards';
 import { getListingsByCategory } from '@/data/listings';
 import { guides } from '@/data/guides';
 import { placesToStayFaqs } from '@/data/faqs';
 import { mainCategories } from '@/data/categories';
+import { lincolnGuide } from '@/data/lincolnGuide';
 
 export const metadata: Metadata = {
   title: 'Places to Stay in Lincolnshire | Hotels, Cottages, Caravan Parks, Glamping & B&Bs',
@@ -41,6 +44,20 @@ export default function PlacesToStayPage() {
         ctaButtonText="List your accommodation"
         ctaButtonHref="/add-your-business"
       />
+
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Places to Stay in Lincoln"
+            subtitle="Booking-ready Lincoln accommodation candidates for cathedral city breaks, historic centre visits, weekend stays and practical access to the wider Lincolnshire area."
+          />
+          <div className="grid gap-5 lg:grid-cols-2">
+            {lincolnGuide.placesToStay.map((listing) => (
+              <StayListingCard key={listing.id} listing={listing} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Popular caravan park guides */}
       <PopularCaravanGuidesStrip
