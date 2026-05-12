@@ -5,8 +5,21 @@ export interface NavItem {
   highlight?: boolean;
 }
 
+export const placesToStayLocations: NavItem[] = [
+  { label: 'Lincoln', href: '/places-to-stay/lincoln' },
+  { label: 'Skegness', href: '/places-to-stay/skegness' },
+  { label: 'Stamford', href: '/places-to-stay/stamford' },
+  { label: 'Louth', href: '/places-to-stay/louth' },
+  { label: 'Boston', href: '/places-to-stay/boston' },
+  { label: 'Grantham', href: '/places-to-stay/grantham' },
+  { label: 'Spalding', href: '/places-to-stay/spalding' },
+  { label: 'Sleaford', href: '/places-to-stay/sleaford' },
+  { label: 'Mablethorpe', href: '/places-to-stay/mablethorpe' },
+  { label: 'Woodhall Spa', href: '/places-to-stay/woodhall-spa' },
+];
+
 export const mainNavItems: NavItem[] = [
-  { label: 'Places to Stay', href: '/places-to-stay' },
+  { label: 'Places to Stay', href: '/places-to-stay', children: placesToStayLocations },
   { label: 'Caravan Parks', href: '/caravan-parks' },
   { label: 'Things to Do', href: '/things-to-do' },
   { label: 'Food & Drink', href: '/food-drink' },

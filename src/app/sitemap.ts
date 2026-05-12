@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { caravanParkGuides } from '@/data/caravanParkGuides';
+import { placesToStayLocations } from '@/data/navigation';
 import { towns } from '@/data/towns';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -62,5 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...caravanEntries, ...townEntries];
+  // Places to stay location landing pages
+  const placesToStayLocationEntries: MetadataRoute.Sitemap = placesToStayLocations.map((location) => ({
+    url: `${baseUrl}${location.href}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...caravanEntries, ...townEntries, ...placesToStayLocationEntries];
 }
