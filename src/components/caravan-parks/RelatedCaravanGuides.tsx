@@ -9,7 +9,7 @@ interface Props {
 export default function RelatedCaravanGuides({ currentGuide, related }: Props) {
   // Build dynamic related links pointing to other parts of the site
   const generalLinks: Array<{ label: string; href: string }> = [
-    { label: `Best places to stay in ${currentGuide.location}`, href: `/places-to-stay` },
+    { label: `Places to stay in ${currentGuide.location}`, href: `/places-to-stay/${currentGuide.id}` },
     { label: `Things to do in ${currentGuide.location}`, href: `/things-to-do` },
     { label: 'Dog-friendly stays in Lincolnshire', href: '/dog-friendly' },
     { label: 'Family days out in Lincolnshire', href: '/family-days-out' },

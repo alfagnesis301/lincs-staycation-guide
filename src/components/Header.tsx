@@ -14,6 +14,7 @@ export default function Header() {
   const [isMobilePlacesOpen, setIsMobilePlacesOpen] = useState(false);
   const placesDropdownRef = useRef<HTMLDivElement>(null);
   const firstPlaceLinkRef = useRef<HTMLAnchorElement>(null);
+  const closePlacesTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +29,12 @@ export default function Header() {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
-      setIsMobilePlacesOpen(false);
     }
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+    const handleClick = (event: MouseEvent) => {
       if (
         placesDropdownRef.current &&
         !placesDropdownRef.current.contains(event.target as Node)
@@ -50,13 +50,11 @@ export default function Header() {
       }
     };
 
-    document.addEventListener('mousedown', handlePointerDown);
-    document.addEventListener('touchstart', handlePointerDown);
+    document.addEventListener('click', handleClick);
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.removeEventListener('mousedown', handlePointerDown);
-      document.removeEventListener('touchstart', handlePointerDown);
+      document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
@@ -66,8 +64,33 @@ export default function Header() {
     setIsMobilePlacesOpen(false);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMenuOpen((current) => {
+      if (current) setIsMobilePlacesOpen(false);
+      return !current;
+    });
+  };
+
   const focusFirstPlaceLink = () => {
     window.setTimeout(() => firstPlaceLinkRef.current?.focus(), 0);
+  };
+
+  const openPlacesDropdown = () => {
+    if (closePlacesTimerRef.current) {
+      window.clearTimeout(closePlacesTimerRef.current);
+      closePlacesTimerRef.current = null;
+    }
+    setIsPlacesOpen(true);
+  };
+
+  const schedulePlacesDropdownClose = () => {
+    if (closePlacesTimerRef.current) {
+      window.clearTimeout(closePlacesTimerRef.current);
+    }
+    closePlacesTimerRef.current = window.setTimeout(() => {
+      setIsPlacesOpen(false);
+      closePlacesTimerRef.current = null;
+    }, 180);
   };
 
   return (
@@ -97,14 +120,14 @@ export default function Header() {
                     key={item.href}
                     ref={placesDropdownRef}
                     className="relative"
-                    onMouseEnter={() => setIsPlacesOpen(true)}
-                    onMouseLeave={() => setIsPlacesOpen(false)}
+                    onMouseEnter={openPlacesDropdown}
+                    onMouseLeave={schedulePlacesDropdownClose}
                   >
                     <div className="flex items-center">
                       <Link
                         href={item.href}
                         className="px-3 py-2 text-sm font-medium text-charcoal-light hover:text-sage transition-colors rounded-l-lg hover:bg-cream/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
-                        onFocus={() => setIsPlacesOpen(true)}
+                        onFocus={openPlacesDropdown}
                       >
                         {item.label}
                       </Link>
@@ -115,7 +138,10 @@ export default function Header() {
                         aria-expanded={isPlacesOpen}
                         aria-controls={placesDropdownId}
                         aria-label="Open places to stay by location"
-                        onClick={() => setIsPlacesOpen((current) => !current)}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setIsPlacesOpen((current) => !current);
+                        }}
                         onKeyDown={(event) => {
                           if (event.key === 'ArrowDown') {
                             event.preventDefault();
@@ -141,7 +167,9 @@ export default function Header() {
                         id={placesDropdownId}
                         role="menu"
                         aria-label="Places to stay by location"
-                        className="absolute left-0 top-full mt-3 w-72 rounded-2xl border border-cream-dark/70 bg-white p-3 shadow-xl shadow-charcoal/10 ring-1 ring-black/5"
+                        className="pointer-events-auto absolute left-0 top-full z-50 mt-3 w-72 rounded-2xl border border-cream-dark/70 bg-white p-3 shadow-xl shadow-charcoal/10 ring-1 ring-black/5"
+                        onMouseEnter={openPlacesDropdown}
+                        onMouseLeave={schedulePlacesDropdownClose}
                       >
                         <p className="px-3 pb-2 pt-1 text-xs font-semibold uppercase tracking-wide text-charcoal-muted">
                           Places to stay by location
@@ -209,7 +237,7 @@ export default function Header() {
               Add Business
             </Link>
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={toggleMobileMenu}
               className="p-2 rounded-lg hover:bg-cream transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
