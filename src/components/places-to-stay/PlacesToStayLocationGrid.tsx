@@ -9,15 +9,6 @@ interface Props {
   guides: PlacesToStayGuide[];
 }
 
-const regionIcon: Record<RegionType, string> = {
-  City: '🏛️',
-  Coast: '🌊',
-  'Market town': '🏘️',
-  Countryside: '🌿',
-  Wolds: '⛰️',
-  Fens: '🌾',
-};
-
 const allRegions: RegionType[] = ['Coast', 'City', 'Market town', 'Countryside', 'Wolds', 'Fens'];
 
 export default function PlacesToStayLocationGrid({ guides }: Props) {
@@ -47,9 +38,8 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
             Browse places to stay by location
           </h2>
           <p className="leading-relaxed text-charcoal-muted">
-            Compare location-based accommodation guides across Lincolnshire. Current researched options focus on
-            verified holiday parks, lodges, touring, camping and glamping while broader hotel and B&amp;B research is
-            curated.
+            Compare location-based accommodation guides across Lincolnshire. This section is reserved for hotels,
+            B&amp;Bs, guest houses, inns, apartments, holiday cottages and similar stays.
           </p>
         </div>
 
@@ -97,7 +87,6 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
                     : 'border-cream-dark bg-white text-charcoal-light hover:border-sage/30 hover:text-sage'
                 }`}
               >
-                <span className="mr-1" aria-hidden="true">{regionIcon[regionName]}</span>
                 {regionName}
               </button>
             ))}
@@ -112,23 +101,24 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
                 href={guide.href}
                 className="card-hover group block rounded-2xl border border-cream-dark/60 bg-white p-5 transition-all hover:border-sage/40 hover:shadow-lg hover:shadow-sage/5"
               >
-                <div className="mb-3 flex items-start justify-between gap-3">
-                  <span className="flex-shrink-0 text-2xl" role="img" aria-label={guide.regionType}>
-                    {regionIcon[guide.regionType]}
-                  </span>
+                <div className="mb-3 flex items-start justify-end gap-3">
                   <span className="badge badge-coast text-[11px]">{guide.regionType}</span>
                 </div>
                 <h3 className="font-heading mb-2 text-lg font-semibold text-charcoal transition-colors group-hover:text-sage">
                   Places to Stay in {guide.location}
                 </h3>
-                <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-charcoal-muted">
-                  {guide.description}
-                </p>
+                <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-charcoal-muted">{guide.description}</p>
                 <div className="flex items-center justify-between gap-3 text-xs text-charcoal-muted">
-                  <span>{guide.options.length} curated options</span>
+                  <span>{guide.options.length > 0 ? `${guide.options.length} verified options` : 'Guide under review'}</span>
                   <span className="inline-flex items-center gap-1 font-medium text-sage group-hover:text-sage-dark">
                     View guide
-                    <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg
+                      className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </span>

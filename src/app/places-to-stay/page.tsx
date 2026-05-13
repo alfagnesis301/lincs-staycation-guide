@@ -14,17 +14,17 @@ import {
 } from '@/data/placesToStayGuides';
 import { guides } from '@/data/guides';
 
-const SITE_URL = 'https://lincsstaycationguide.co.uk';
+const SITE_URL = 'https://lincs-staycation-guide.netlify.app';
 
 export const metadata: Metadata = {
   title: 'Places to Stay in Lincolnshire | Hotels, B&Bs, Cottages & Glamping',
   description:
-    'Browse places to stay across Lincolnshire, including hotels, B&Bs, holiday cottages, inns, lodges, glamping stays and dog-friendly accommodation by town and coast.',
-  alternates: { canonical: '/places-to-stay' },
+    'Browse places to stay across Lincolnshire, including hotels, B&Bs, holiday cottages, inns, guest houses, apartments and dog-friendly accommodation.',
+  alternates: { canonical: `${SITE_URL}/places-to-stay` },
   openGraph: {
     title: 'Places to Stay in Lincolnshire | Hotels, B&Bs, Cottages & Glamping',
     description:
-      'Browse places to stay across Lincolnshire, including hotels, B&Bs, holiday cottages, inns, lodges, glamping stays and dog-friendly accommodation by town and coast.',
+      'Browse places to stay across Lincolnshire, including hotels, B&Bs, holiday cottages, inns, guest houses, apartments and dog-friendly accommodation.',
     url: `${SITE_URL}/places-to-stay`,
     type: 'website',
   },
@@ -41,7 +41,7 @@ export default function PlacesToStayPage() {
     '@type': 'ItemList',
     name: 'Places to Stay in Lincolnshire',
     description:
-      'Curated places to stay guides by Lincolnshire location, covering cities, coast, market towns, countryside, the Wolds and the fens.',
+      'Curated hotel, B&B, inn, guest house, apartment and cottage accommodation guides by Lincolnshire location.',
     numberOfItems: placesToStayGuides.length,
     itemListElement: placesToStayGuides.map((guide, index) => ({
       '@type': 'ListItem',
@@ -76,7 +76,7 @@ export default function PlacesToStayPage() {
               Places to Stay in <span className="text-sage">Lincolnshire</span>
             </h1>
             <p className="mb-8 max-w-2xl text-lg leading-relaxed text-charcoal-muted sm:text-xl">
-              Compare hotels, B&amp;Bs, holiday cottages, inns, lodges, glamping stays and practical accommodation
+              Compare hotels, B&amp;Bs, guest houses, inns, apartments, holiday cottages and practical accommodation
               options across Lincolnshire&apos;s cities, coast, market towns and countryside.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -108,9 +108,12 @@ export default function PlacesToStayPage() {
             or a quiet countryside weekend.
           </p>
           <p className="text-lg leading-relaxed text-charcoal-muted">
-            The live location guides currently prioritise researched and source-linked accommodation options already
-            reviewed in the project, especially holiday parks, lodges, touring sites, camping and glamping. Broader
-            hotel, B&amp;B, inn and cottage coverage should be added only when verified data is available.
+            Places to Stay is kept separate from caravan parks, holiday parks, touring sites and campsites. Looking for
+            those instead? Browse the{' '}
+            <Link href="/caravan-parks" className="font-semibold text-sage hover:text-sage-dark">
+              Caravan Parks guide
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -119,7 +122,7 @@ export default function PlacesToStayPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Popular places to stay guides"
-            subtitle="Frequently searched Lincolnshire locations for coast, city, countryside and market town breaks."
+            subtitle="Frequently searched Lincolnshire locations for hotels, B&Bs, inns, guest accommodation and cottages."
           />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {featured.map((guide) => (
@@ -128,13 +131,15 @@ export default function PlacesToStayPage() {
                 href={guide.href}
                 className="group rounded-xl border border-cream-dark/60 bg-white p-4 transition-all hover:border-sage/40 hover:shadow"
               >
-                <span className="mb-2 block text-2xl" aria-hidden="true">
-                  {guide.regionType === 'Coast' ? '🌊' : guide.regionType === 'City' ? '🏛️' : guide.regionType === 'Wolds' ? '⛰️' : guide.regionType === 'Fens' ? '🌾' : '🌿'}
+                <span className="mb-2 inline-flex rounded-full bg-sage/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-sage">
+                  {guide.regionType}
                 </span>
                 <h2 className="font-heading text-sm font-semibold leading-snug text-charcoal transition-colors group-hover:text-sage">
                   Places to Stay in {guide.location}
                 </h2>
-                <span className="mt-1 block text-xs text-charcoal-muted">{guide.options.length} curated options</span>
+                <span className="mt-1 block text-xs text-charcoal-muted">
+                  {guide.options.length > 0 ? `${guide.options.length} verified options` : 'Guide under review'}
+                </span>
               </Link>
             ))}
           </div>
@@ -166,7 +171,7 @@ export default function PlacesToStayPage() {
       <FAQSection faqs={placesToStayLandingFaqs} />
 
       <CTASection
-        title="Run a hotel, B&B, holiday cottage, lodge, campsite or guest accommodation in Lincolnshire?"
+        title="Run a hotel, B&B, holiday cottage, inn or guest accommodation in Lincolnshire?"
         description="Add your business to Lincs Staycation Guide and help visitors discover your accommodation."
         buttonText="Add Your Business"
         buttonHref="/add-your-business"
