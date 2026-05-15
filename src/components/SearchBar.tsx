@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { categoryChips } from '@/data/navigation';
+import { findSearchTarget } from '@/data/searchIndex';
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
@@ -16,10 +18,30 @@ export default function SearchBar({
   showChips = true,
 }: SearchBarProps) {
   const [query, setQuery] = useState('');
+  const [message, setMessage] = useState('');
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (onSearch) onSearch(query);
+    const trimmedQuery = query.trim();
+    if (onSearch) {
+      onSearch(trimmedQuery);
+      return;
+    }
+
+    if (!trimmedQuery) {
+      setMessage('Enter a search term to find a guide.');
+      return;
+    }
+
+    const target = findSearchTarget(trimmedQuery);
+    if (target) {
+      setMessage(`Opening ${target.title}.`);
+      router.push(target.href);
+      return;
+    }
+
+    setMessage('No matching guide found. Try a town, category or activity.');
   };
 
   return (
@@ -43,11 +65,20 @@ export default function SearchBar({
               if (onSearch) onSearch(e.target.value);
             }}
             placeholder={placeholder}
-            className="w-full pl-12 pr-4 py-4 bg-white border border-cream-dark rounded-2xl text-base text-charcoal placeholder:text-charcoal-muted focus:outline-none focus:border-coast focus:ring-2 focus:ring-coast/20 shadow-sm"
+            className="w-full pl-12 pr-28 py-4 bg-white border border-cream-dark rounded-2xl text-base text-charcoal placeholder:text-charcoal-muted focus:outline-none focus:border-coast focus:ring-2 focus:ring-coast/20 shadow-sm"
             aria-label="Search the directory"
           />
+          <button
+            type="submit"
+            className="absolute right-2 top-1/2 inline-flex min-h-[44px] -translate-y-1/2 items-center justify-center rounded-xl bg-sage px-4 text-sm font-semibold text-white transition-colors hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+          >
+            Search
+          </button>
         </div>
       </form>
+      <p className="mt-2 text-sm text-charcoal-muted" aria-live="polite">
+        {message}
+      </p>
 
       {showChips && (
         <div className="flex flex-wrap gap-2 mt-4" role="navigation" aria-label="Quick category filters">
