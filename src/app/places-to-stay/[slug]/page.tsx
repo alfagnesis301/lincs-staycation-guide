@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { LocationCategoryPage } from '@/components/CategoryGuidePages';
 import { getLocationGuideBySlug, locationGuides } from '@/data/locationGuides';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincsstaycationguide.co.uk';
+
 export function generateStaticParams(){ return locationGuides.map(g=>({slug:g.slug})); }
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}): Promise<Metadata>{ const {slug}=await params; const guide=getLocationGuideBySlug(slug); if(!guide) return {}; return { title: 'Places to Stay in '+guide.name+' | Lincs Staycation Guide', description: 'Research-led places to stay guide for '+guide.name+', Lincolnshire, using revised PDF candidates and cautious verification notes.', alternates:{canonical:'/places-to-stay/'+guide.slug} }; }
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}): Promise<Metadata>{ const {slug}=await params; const guide=getLocationGuideBySlug(slug); if(!guide) return {}; const title = 'Places to Stay in '+guide.name; const description = 'Research-led places to stay guide for '+guide.name+', Lincolnshire, using revised PDF candidates and cautious verification notes.'; const path = '/places-to-stay/'+guide.slug; return { metadataBase: new URL(SITE_URL), title, description, alternates:{canonical:path}, openGraph:{title: `${title} | Lincs Staycation Guide`, description, url:`${SITE_URL}${path}`, siteName:'Lincs Staycation Guide', locale:'en_GB', type:'article'}, twitter:{card:'summary_large_image', title, description} }; }
 export default async function Page({params}:{params:Promise<{slug:string}>}){ const {slug}=await params; const guide=getLocationGuideBySlug(slug); if(!guide) notFound(); return <LocationCategoryPage guide={guide} kind="places-to-stay" />; }

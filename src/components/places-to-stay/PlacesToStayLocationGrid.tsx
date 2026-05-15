@@ -14,6 +14,7 @@ const allRegions: RegionType[] = ['Coast', 'City', 'Market town', 'Countryside',
 export default function PlacesToStayLocationGrid({ guides }: Props) {
   const [search, setSearch] = useState('');
   const [region, setRegion] = useState<RegionType | null>(null);
+  const hasActiveFilter = search.trim().length > 0 || Boolean(region);
 
   const filtered = useMemo(() => {
     return guides.filter((guide) => {
@@ -68,6 +69,7 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
             <button
               type="button"
               onClick={() => setRegion(null)}
+              aria-pressed={!region}
               className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all sm:text-sm ${
                 !region
                   ? 'border-sage bg-sage text-white'
@@ -81,6 +83,7 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
                 key={regionName}
                 type="button"
                 onClick={() => setRegion(region === regionName ? null : regionName)}
+                aria-pressed={region === regionName}
                 className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all sm:text-sm ${
                   region === regionName
                     ? 'border-sage bg-sage text-white'
@@ -91,6 +94,9 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
               </button>
             ))}
           </div>
+          <p className="mt-4 text-sm text-charcoal-muted" aria-live="polite">
+            Showing {filtered.length} of {guides.length} location guides.
+          </p>
         </div>
 
         {filtered.length > 0 ? (
@@ -129,6 +135,18 @@ export default function PlacesToStayLocationGrid({ guides }: Props) {
         ) : (
           <div className="rounded-2xl border border-cream-dark/40 bg-white py-12 text-center">
             <p className="text-charcoal-muted">No location guides match your search. Try another region or clear the filter.</p>
+            {hasActiveFilter && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearch('');
+                  setRegion(null);
+                }}
+                className="mt-4 inline-flex min-h-[44px] items-center justify-center rounded-xl bg-sage px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+              >
+                Clear filters
+              </button>
+            )}
           </div>
         )}
       </div>

@@ -20,6 +20,10 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   return {
     title: guide.title,
     description: guide.description,
+    robots: {
+      index: false,
+      follow: false,
+    },
     openGraph: {
       title: guide.title,
       description: guide.description,
