@@ -1,4 +1,5 @@
 import type { CaravanParkListing } from '@/data/caravanParkGuides';
+import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
 
 interface Props {
   listing: CaravanParkListing;
@@ -76,6 +77,15 @@ export default function CaravanParkListingCard({ listing }: Props) {
         <p className="text-xs text-charcoal-muted">
           Source: <span className="text-charcoal">{listing.sourceLabel}</span>
         </p>
+        <GoogleMapsLinkButton
+          listing={{
+            name: listing.name,
+            areaNote: listing.locationContext,
+            googleMapsUrl: listing.googleMapsUrl,
+            location: listing.location,
+          }}
+          variant="inline"
+        />
         {listing.bookingUrl ? (
           <div className="flex flex-col items-end gap-1">
             <a

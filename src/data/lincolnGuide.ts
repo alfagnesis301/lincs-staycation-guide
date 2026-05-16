@@ -19,6 +19,16 @@ export type PublicImage = {
   modifications?: string;
 };
 
+export type GuideListingLocation = {
+  address?: string;
+  town?: string;
+  postcode?: string;
+  googleMapsUrl?: string;
+  googleMapsQuery?: string;
+  latitude?: number;
+  longitude?: number;
+};
+
 export type StayListing = {
   id: string;
   name: string;
@@ -32,6 +42,8 @@ export type StayListing = {
   image?: PublicImage;
   imageStatus: ImageStatus;
   sourceNote?: string;
+  googleMapsUrl?: string;
+  mapLocation?: GuideListingLocation;
 };
 
 export type CaravanParkListing = {
@@ -48,6 +60,8 @@ export type CaravanParkListing = {
   image?: PublicImage;
   imageStatus: ImageStatus;
   sourceNote?: string;
+  googleMapsUrl?: string;
+  mapLocation?: GuideListingLocation;
 };
 
 export type ThingToDoListing = {
@@ -61,6 +75,8 @@ export type ThingToDoListing = {
   tags: string[];
   image?: PublicImage;
   imageStatus: Extract<ImageStatus, 'public-use-image' | 'area-context-image' | 'permission-needed' | 'placeholder'>;
+  googleMapsUrl?: string;
+  mapLocation?: GuideListingLocation;
 };
 
 export type FoodDrinkListing = {
@@ -75,6 +91,8 @@ export type FoodDrinkListing = {
   reviewVerificationNeeded: boolean;
   imageStatus: Extract<ImageStatus, 'area-context-image' | 'permission-needed' | 'placeholder'>;
   sourceNote?: string;
+  googleMapsUrl?: string;
+  mapLocation?: GuideListingLocation;
 };
 
 export type LincolnFaq = {

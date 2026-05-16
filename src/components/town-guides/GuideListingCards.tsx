@@ -8,6 +8,31 @@ import type {
 } from '@/data/lincolnGuide';
 import BookingCtaButton from './BookingCtaButton';
 import ImageCreditLink from './ImageCreditLink';
+import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import type { ListingLocationInput } from '@/lib/googleMaps';
+
+function toMapsInput(listing: {
+  name: string;
+  location?: string;
+  googleMapsUrl?: string;
+  mapLocation?: {
+    address?: string;
+    town?: string;
+    postcode?: string;
+    googleMapsUrl?: string;
+    googleMapsQuery?: string;
+  };
+}): ListingLocationInput {
+  return {
+    name: listing.name,
+    town: listing.mapLocation?.town,
+    areaNote: listing.location,
+    address: listing.mapLocation?.address,
+    postcode: listing.mapLocation?.postcode,
+    googleMapsUrl: listing.googleMapsUrl,
+    location: listing.mapLocation,
+  };
+}
 
 function TagList({ tags }: { tags: string[] }) {
   return (
@@ -45,11 +70,12 @@ export function StayListingCard({ listing }: { listing: StayListing }) {
       </p>
       <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
       <TagList tags={listing.tags} />
-      <div className="mt-5 border-t border-cream-dark/50 pt-4">
+      <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-cream-dark/50 pt-4">
         <BookingCtaButton
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
         />
+        <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
     </CardShell>
   );
@@ -71,11 +97,12 @@ export function CaravanParkCard({ listing }: { listing: CaravanParkListing }) {
       </p>
       <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
       <TagList tags={listing.tags} />
-      <div className="mt-5 border-t border-cream-dark/50 pt-4">
+      <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-cream-dark/50 pt-4">
         <BookingCtaButton
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
         />
+        <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
     </CardShell>
   );
@@ -91,18 +118,21 @@ export function ThingToDoCard({ listing }: { listing: ThingToDoListing }) {
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/50 pt-4">
         {listing.image?.imageCreditId ? <ImageCreditLink imageCreditId={listing.image.imageCreditId} /> : <span />}
-        {listing.officialUrl ? (
-          <a
-            href={listing.officialUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="text-sm font-semibold text-sage hover:text-sage-dark"
-          >
-            Visit official website
-          </a>
-        ) : (
-          <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
-        )}
+        <div className="flex flex-wrap items-center gap-3">
+          {listing.officialUrl ? (
+            <a
+              href={listing.officialUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-sm font-semibold text-sage hover:text-sage-dark"
+            >
+              Visit official website
+            </a>
+          ) : (
+            <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
+          )}
+          <GoogleMapsLinkButton listing={toMapsInput(listing)} variant="inline" />
+        </div>
       </div>
     </CardShell>
   );
@@ -122,21 +152,29 @@ export function FoodDrinkCard({ listing }: { listing: FoodDrinkListing }) {
         ) : (
           <span />
         )}
-        {listing.mapSearchUrl ? (
-          <a
-            href={listing.mapSearchUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="text-sm font-semibold text-sage hover:text-sage-dark"
-          >
-            View on map
-          </a>
-        ) : (
-          <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
-        )}
+        <div className="flex flex-wrap items-center gap-3">
+          {listing.officialUrl ? (
+            <a
+              href={listing.officialUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-sm font-semibold text-sage hover:text-sage-dark"
+            >
+              Visit website
+            </a>
+          ) : null}
+          <GoogleMapsLinkButton listing={toMapsInput(listing)} variant="inline" />
+          {!listing.officialUrl && !getMapsHrefHint(listing) ? (
+            <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
+          ) : null}
+        </div>
       </div>
     </CardShell>
   );
+}
+
+function getMapsHrefHint(listing: { name: string; location?: string; googleMapsUrl?: string }) {
+  return Boolean(listing.name && (listing.location || listing.googleMapsUrl));
 }
 
 export function RelatedGuides({ links }: { links: { label: string; href: string }[] }) {

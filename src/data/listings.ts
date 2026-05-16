@@ -10,6 +10,16 @@ export interface Listing {
   features: string[];
   priceRange?: string;
   isSample: boolean;
+  googleMapsUrl?: string;
+  location?: {
+    address?: string;
+    town?: string;
+    postcode?: string;
+    googleMapsUrl?: string;
+    googleMapsQuery?: string;
+    latitude?: number;
+    longitude?: number;
+  };
 }
 
 // Real business listings only. Sample/placeholder entries were removed so the

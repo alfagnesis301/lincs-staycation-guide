@@ -38,6 +38,16 @@ export interface CaravanParkListing {
   featured?: boolean;
   partnerPlacement?: boolean;
   enquiryUrl?: string;
+  googleMapsUrl?: string;
+  location?: {
+    address?: string;
+    town?: string;
+    postcode?: string;
+    googleMapsUrl?: string;
+    googleMapsQuery?: string;
+    latitude?: number;
+    longitude?: number;
+  };
 }
 
 export interface FAQItem {
