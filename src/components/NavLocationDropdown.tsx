@@ -21,6 +21,7 @@ export default function NavLocationDropdown({
   const containerRef = useRef<HTMLDivElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeTimerRef = useRef<number | null>(null);
+  const isTownGuides = href === '/town-guides';
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -78,14 +79,15 @@ export default function NavLocationDropdown({
       <div className="flex items-center">
         <Link
           href={href}
-          className="px-3 py-2 text-sm font-medium text-charcoal-light hover:text-sage transition-colors rounded-l-lg hover:bg-cream/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+          className="dsn-nav-item"
           onFocus={open}
         >
           {label}
         </Link>
         <button
           type="button"
-          className="px-2 py-2 text-charcoal-light hover:text-sage transition-colors rounded-r-lg hover:bg-cream/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage"
+          className="dsn-nav-item"
+          style={{ paddingLeft: 8, paddingRight: 8 }}
           aria-haspopup="menu"
           aria-expanded={isOpen}
           aria-controls={menuId}
@@ -119,14 +121,22 @@ export default function NavLocationDropdown({
           id={menuId}
           role="menu"
           aria-label={dropdown.heading}
-          className="pointer-events-auto absolute left-0 top-full z-50 mt-3 w-72 rounded-2xl border border-cream-dark/70 bg-white p-3 shadow-xl shadow-charcoal/10 ring-1 ring-black/5"
+          className="pointer-events-auto absolute left-0 top-full z-50 mt-3 rounded-2xl border border-cream-dark/70 bg-white p-3 shadow-xl shadow-charcoal/10 ring-1 ring-black/5"
+          style={{ width: isTownGuides ? 430 : 288, maxWidth: 'calc(100vw - 24px)' }}
           onMouseEnter={open}
           onMouseLeave={scheduleClose}
         >
           <p className="px-3 pb-2 pt-1 text-xs font-semibold uppercase tracking-wide text-charcoal-muted">
             {dropdown.heading}
           </p>
-          <div className="space-y-1">
+          <div
+            className="space-y-1"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: isTownGuides ? 'repeat(2, minmax(0, 1fr))' : '1fr',
+              gap: 4,
+            }}
+          >
             {dropdown.locations.map((location, index) => (
               <Link
                 key={location.href}

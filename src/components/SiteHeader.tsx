@@ -4,12 +4,13 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { mainNavItems } from '@/data/navigation';
 import { ChevDown, Menu, Plus, Search, X } from '@/components/dsn/Icons';
+import NavLocationDropdown from '@/components/NavLocationDropdown';
 
 const navItems = mainNavItems.filter((i) => i.href !== '/add-your-business');
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -20,14 +21,17 @@ export default function SiteHeader() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape') {
+        setOpen(false);
+        setOpenMobileDropdown(null);
+      }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, []);
 
   return (
-    <>
+    <header>
       {/* Desktop nav (≥ md) */}
       <nav className="dsn-nav" aria-label="Main navigation">
         <Link href="/" className="dsn-nav-brand" aria-label="Lincs Staycation Guide — home">
@@ -40,91 +44,19 @@ export default function SiteHeader() {
         </Link>
         <div className="dsn-nav-items">
           {navItems.map((item) => (
-            <div
-              key={item.href}
-              style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
-              className={item.dropdown ? 'dsn-nav-dropdown' : ''}
-              onMouseEnter={() => item.dropdown && setOpenDropdown(item.href)}
-              onMouseLeave={() => item.dropdown && setOpenDropdown(null)}
-            >
-              <Link
+            item.dropdown ? (
+              <NavLocationDropdown
+                key={item.href}
+                label={item.label}
                 href={item.href}
-                className="dsn-nav-item"
-              >
+                dropdown={item.dropdown}
+                menuId={`desktop-menu-${item.href.replace(/\//g, '-')}`}
+              />
+            ) : (
+              <Link key={item.href} href={item.href} className="dsn-nav-item">
                 {item.label}
-                {item.dropdown && <ChevDown width={13} height={13} />}
               </Link>
-
-              {/* Desktop dropdown menu — only show if openDropdown matches */}
-              {item.dropdown && openDropdown === item.href && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '100%',
-                    left: -12,
-                    marginTop: 4,
-                    background: 'var(--bg)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 12,
-                    padding: '12px',
-                    minWidth: 240,
-                    boxShadow: 'var(--shadow-pop)',
-                    zIndex: 50,
-                  }}
-                  className="dsn-dropdown-menu"
-                >
-                  <div style={{ paddingBottom: 8, borderBottom: '1px solid var(--line)' }}>
-                    <div
-                      style={{
-                        fontSize: 11,
-                        fontFamily: 'var(--font-mono)',
-                        fontWeight: 600,
-                        color: 'var(--ink-3)',
-                        textTransform: 'uppercase',
-                        letterSpacing: 0.5,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {item.dropdown.heading}
-                    </div>
-                    <nav style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                      {item.dropdown.locations.map((loc) => (
-                        <Link
-                          key={loc.href}
-                          href={loc.href}
-                          style={{
-                            padding: '8px 10px',
-                            borderRadius: 8,
-                            fontSize: 13,
-                            color: 'var(--ink)',
-                            textDecoration: 'none',
-                          }}
-                          className="dsn-dropdown-link"
-                        >
-                          {loc.label}
-                        </Link>
-                      ))}
-                    </nav>
-                  </div>
-                  <Link
-                    href={item.dropdown.viewAllHref}
-                    style={{
-                      display: 'block',
-                      padding: '8px 10px',
-                      marginTop: 8,
-                      borderRadius: 8,
-                      fontSize: 12,
-                      fontWeight: 600,
-                      color: 'var(--sage-2)',
-                      textDecoration: 'none',
-                    }}
-                    className="dsn-dropdown-viewall"
-                  >
-                    {item.dropdown.viewAllLabel}
-                  </Link>
-                </div>
-              )}
-            </div>
+            )
           ))}
         </div>
         <Link href="/search" className="dsn-nav-search" aria-label="Search">
@@ -178,22 +110,85 @@ export default function SiteHeader() {
         >
           <nav aria-label="Mobile primary" style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             {mainNavItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                style={{
-                  padding: '14px 12px',
-                  borderRadius: 10,
-                  fontSize: 16,
-                  fontWeight: 500,
-                  color: 'var(--ink)',
-                  textDecoration: 'none',
-                  borderBottom: '1px solid var(--line)',
-                }}
-              >
-                {item.label}
-              </Link>
+              <div key={item.href} style={{ borderBottom: '1px solid var(--line)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    style={{
+                      flex: 1,
+                      padding: '14px 12px',
+                      borderRadius: 10,
+                      fontSize: 16,
+                      fontWeight: 500,
+                      color: 'var(--ink)',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.dropdown && (
+                    <button
+                      type="button"
+                      aria-label={item.label}
+                      aria-expanded={openMobileDropdown === item.href}
+                      aria-controls={`mobile-menu-${item.href.replace(/\//g, '-')}`}
+                      onClick={() =>
+                        setOpenMobileDropdown((current) =>
+                          current === item.href ? null : item.href,
+                        )
+                      }
+                      className="icon-btn"
+                      style={{ flex: '0 0 auto' }}
+                    >
+                      <ChevDown
+                        width={16}
+                        height={16}
+                        style={{
+                          transform:
+                            openMobileDropdown === item.href ? 'rotate(180deg)' : undefined,
+                        }}
+                      />
+                    </button>
+                  )}
+                </div>
+                {item.dropdown && openMobileDropdown === item.href && (
+                  <div
+                    id={`mobile-menu-${item.href.replace(/\//g, '-')}`}
+                    role="menu"
+                    aria-label={`${item.label} locations`}
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns:
+                        item.href === '/town-guides' ? 'repeat(2, minmax(0, 1fr))' : '1fr',
+                      gap: 4,
+                      maxHeight: '42vh',
+                      overflowY: 'auto',
+                      padding: '0 4px 12px 12px',
+                    }}
+                  >
+                    {item.dropdown.locations.map((location) => (
+                      <Link
+                        key={location.href}
+                        href={location.href}
+                        role="menuitem"
+                        onClick={() => setOpen(false)}
+                        className="dsn-dropdown-link"
+                        style={{
+                          padding: '10px 12px',
+                          borderRadius: 10,
+                          color: 'var(--ink)',
+                          textDecoration: 'none',
+                          fontSize: 14,
+                          background: 'var(--bg-tint)',
+                        }}
+                      >
+                        {location.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Link
               href="/advertise"
@@ -205,6 +200,6 @@ export default function SiteHeader() {
           </nav>
         </div>
       )}
-    </>
+    </header>
   );
 }
