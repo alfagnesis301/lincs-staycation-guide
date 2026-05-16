@@ -2,11 +2,14 @@ import type { MetadataRoute } from 'next';
 import { caravanParkGuides } from '@/data/caravanParkGuides';
 import { placesToStayGuides } from '@/data/placesToStayGuides';
 import { towns } from '@/data/towns';
+import { publishedGuides } from '@/data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincsstaycationguide.co.uk';
   const now = new Date();
 
+  // /events and /blog are intentionally omitted while they hold no
+  // verified, dated content — both pages also send noindex headers.
   const staticRoutes = [
     '',
     '/places-to-stay',
@@ -16,8 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/dog-friendly',
     '/family-days-out',
     '/town-guides',
-    '/events',
-    '/blog',
     '/about',
     '/contact',
     '/add-your-business',
@@ -32,6 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/editorial-policy',
     '/business-listing-terms',
   ];
+
+  if (publishedGuides.length > 0) {
+    staticRoutes.push('/blog');
+  }
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
@@ -71,5 +76,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...caravanEntries, ...townEntries, ...placesToStayLocationEntries];
+  // Published blog posts only — drafts/stubs must never appear in the sitemap.
+  const blogEntries: MetadataRoute.Sitemap = publishedGuides.map((g) => ({
+    url: `${baseUrl}/blog/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  return [
+    ...staticEntries,
+    ...caravanEntries,
+    ...townEntries,
+    ...placesToStayLocationEntries,
+    ...blogEntries,
+  ];
 }

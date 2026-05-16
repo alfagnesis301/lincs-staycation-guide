@@ -259,7 +259,7 @@ export default function BusinessSubmissionForm() {
             required
           />
           <span className="text-sm text-charcoal-muted">
-            I confirm that the information provided is accurate and I have permission to submit this business. <span className="text-red-500">*</span>
+            I confirm that the information provided is accurate and that I have the right to submit these business details &mdash; and any images shared with us later &mdash; for publication on Lincs Staycation Guide. <span className="text-red-500">*</span>
           </span>
         </label>
         {errors.consent && <p className="mt-1 text-xs text-red-500">{errors.consent}</p>}

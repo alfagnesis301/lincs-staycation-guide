@@ -4,14 +4,21 @@ interface Props {
   text?: string;
   /** Show a "Report an update" CTA below the note */
   showCorrectionsCta?: boolean;
+  /**
+   * The kind of entry described on this page — used inside the corrections CTA.
+   * Example values: "parks", "accommodation listings", "attractions",
+   * "food and drink venues", "local businesses".
+   */
+  subjectLabel?: string;
 }
 
 const DEFAULT_TEXT =
-  'These entries are curated candidates, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Please check directly with each park before planning your trip.';
+  'These entries are curated candidates, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Please check directly with each business before planning your trip.';
 
 export default function CaravanParkEditorialNote({
   text = DEFAULT_TEXT,
   showCorrectionsCta = true,
+  subjectLabel = 'parks',
 }: Props) {
   return (
     <section className="py-8 bg-cream/30">
@@ -26,7 +33,7 @@ export default function CaravanParkEditorialNote({
           {showCorrectionsCta && (
             <div className="mt-4 pt-4 border-t border-cream-dark/40">
               <p className="text-xs text-charcoal-muted">
-                <strong className="text-charcoal">Found outdated information?</strong> If you manage one of these parks or spot an error,{' '}
+                <strong className="text-charcoal">Found outdated information?</strong> If you manage one of these {subjectLabel} or spot an error,{' '}
                 <Link href="/contact?reason=listing-update" className="text-coast hover:text-coast-dark underline font-medium">
                   report an update
                 </Link>{' '}

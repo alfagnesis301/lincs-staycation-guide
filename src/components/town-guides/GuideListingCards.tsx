@@ -101,7 +101,7 @@ export function ThingToDoCard({ listing }: { listing: ThingToDoListing }) {
             Visit official website
           </a>
         ) : (
-          <span className="text-sm font-medium text-charcoal-muted">View details coming soon</span>
+          <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
         )}
       </div>
     </CardShell>
@@ -132,7 +132,7 @@ export function FoodDrinkCard({ listing }: { listing: FoodDrinkListing }) {
             View on map
           </a>
         ) : (
-          <span className="text-sm font-medium text-charcoal-muted">Details coming soon</span>
+          <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
         )}
       </div>
     </CardShell>

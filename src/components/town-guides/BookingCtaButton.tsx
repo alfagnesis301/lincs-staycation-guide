@@ -1,9 +1,15 @@
 type BookingCtaButtonProps = {
   bookingUrl?: string;
   bookingDeepLinkPending?: boolean;
+  officialUrl?: string;
 };
 
-export default function BookingCtaButton({ bookingUrl, bookingDeepLinkPending }: BookingCtaButtonProps) {
+// Booking/visit CTA priority:
+//   1. Verified affiliate / booking URL → "Check availability on Booking" (sponsored link)
+//   2. Verified official website        → "Visit official website"
+//   3. Otherwise                        → small "Details being verified" note (no button)
+// Never advertise a future booking link as a primary CTA.
+export default function BookingCtaButton({ bookingUrl, bookingDeepLinkPending, officialUrl }: BookingCtaButtonProps) {
   if (bookingUrl) {
     return (
       <div className="flex flex-col items-start gap-1.5">
@@ -20,15 +26,24 @@ export default function BookingCtaButton({ bookingUrl, bookingDeepLinkPending }:
     );
   }
 
+  if (officialUrl) {
+    return (
+      <a
+        href={officialUrl}
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        className="inline-flex items-center justify-center rounded-xl border border-sage px-4 py-2.5 text-sm font-semibold text-sage hover:bg-sage hover:text-white"
+      >
+        Visit official website
+      </a>
+    );
+  }
+
   if (bookingDeepLinkPending) {
     return (
-      <button
-        type="button"
-        disabled
-        className="inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-cream-dark px-4 py-2.5 text-sm font-semibold text-charcoal-muted"
-      >
-        Booking link coming soon
-      </button>
+      <span className="text-xs text-charcoal-muted italic">
+        Details being verified
+      </span>
     );
   }
 

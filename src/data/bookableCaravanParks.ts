@@ -10,7 +10,7 @@
 //   4. Save. The "Check availability" button activates automatically.
 //
 // IF affiliateUrl is empty AND officialUrl is empty:
-//   The button shows "Booking link coming soon" (disabled).
+//   The card shows a small "Details being verified" note (no CTA).
 // IF affiliateUrl is empty BUT officialUrl is set:
 //   The button shows "Visit official website" (no affiliate label).
 // IF affiliateUrl is set:

@@ -5,6 +5,9 @@ export interface Guide {
   category: string;
   description: string;
   readingTime: string;
+  /** When false (default), the post is a planned-but-not-yet-written stub
+   *  and must NOT appear in /blog, the sitemap, or related-guides strips. */
+  published?: boolean;
 }
 
 export const guides: Guide[] = [
@@ -82,6 +85,8 @@ export const guides: Guide[] = [
   },
 ];
 
+export const publishedGuides = guides.filter((g) => g.published);
+
 export function getGuidesByCategory(category: string): Guide[] {
-  return guides.filter((guide) => guide.category.toLowerCase() === category.toLowerCase());
+  return publishedGuides.filter((guide) => guide.category.toLowerCase() === category.toLowerCase());
 }

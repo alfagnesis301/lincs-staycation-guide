@@ -92,13 +92,9 @@ export default function CaravanParkListingCard({ listing }: Props) {
             <span className="text-[11px] text-charcoal-muted">Affiliate link</span>
           </div>
         ) : listing.bookingDeepLinkPending ? (
-          <button
-            type="button"
-            disabled
-            className="cursor-not-allowed rounded-xl bg-cream-dark px-4 py-2 text-sm font-medium text-charcoal-muted"
-          >
-            Booking link coming soon
-          </button>
+          <span className="text-xs italic text-charcoal-muted">
+            Details being verified
+          </span>
         ) : listing.needsVerification ? (
           <p className="text-xs text-charcoal-muted italic">
             Source to be verified before publication.

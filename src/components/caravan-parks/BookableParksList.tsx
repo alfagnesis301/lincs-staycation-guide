@@ -353,15 +353,9 @@ function ParkCard({ park }: { park: BookableCaravanPark }) {
             Visit official website
           </a>
         ) : (
-          <button
-            type="button"
-            disabled
-            aria-disabled="true"
-            title="Booking link not yet available"
-            className="inline-flex items-center justify-center text-sm font-semibold bg-cream-dark/40 text-charcoal-muted px-4 py-2 rounded-lg cursor-not-allowed"
-          >
-            Booking link coming soon
-          </button>
+          <span className="inline-flex items-center justify-center text-xs italic text-charcoal-muted px-4 py-2">
+            Details being verified
+          </span>
         )}
       </div>
       </div>

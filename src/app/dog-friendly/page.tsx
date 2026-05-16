@@ -65,11 +65,22 @@ export default function DogFriendlyPage() {
             title="Dog-friendly listings"
             subtitle="Places across Lincolnshire that welcome your four-legged friend."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            {dogListings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
-            ))}
-          </div>
+          {dogListings.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+              {dogListings.map((listing) => (
+                <ListingCard key={listing.id} listing={listing} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-white rounded-2xl border border-cream-dark/40">
+              <p className="text-charcoal-muted max-w-xl mx-auto leading-relaxed">
+                We are building this section with verified dog-friendly pubs, stays, walks and attractions. Pet policies change frequently, so each entry is checked before publication. Browse our caravan park guides below for dog-friendly options in the meantime.
+              </p>
+              <a href="/add-your-business" className="mt-4 inline-block text-sage font-medium hover:text-sage-dark underline">
+                Add a dog-friendly business
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
