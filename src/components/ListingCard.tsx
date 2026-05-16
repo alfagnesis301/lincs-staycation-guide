@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Listing } from '@/data/listings';
+import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
 
 interface ListingCardProps {
   listing: Listing;
@@ -91,15 +92,26 @@ export default function ListingCard({ listing }: ListingCardProps) {
           ))}
         </div>
 
-        <Link
-          href={`/places/${listing.id}`}
-          className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 min-h-[44px] text-sm font-medium text-sage border border-sage/30 hover:bg-sage hover:text-white rounded-xl transition-all"
-        >
-          View details
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href={`/places/${listing.id}`}
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 min-h-[44px] text-sm font-medium text-sage border border-sage/30 hover:bg-sage hover:text-white rounded-xl transition-all"
+          >
+            View details
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+          <GoogleMapsLinkButton
+            listing={{
+              name: listing.name,
+              town: listing.town,
+              area: listing.area,
+              googleMapsUrl: listing.googleMapsUrl,
+              location: listing.location,
+            }}
+          />
+        </div>
       </div>
     </div>
   );
