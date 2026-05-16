@@ -121,7 +121,7 @@ export const lincolnGuide = {
       location: 'Lincoln historic centre',
       bestFor: 'Boutique-style stays close to Lincoln\'s historic centre.',
       description:
-        'A strong candidate for visitors planning a city break around Lincoln Cathedral, Lincoln Castle and the uphill historic quarter. Use as a Booking.com-ready accommodation option once the correct Booking/CJ deep link is available.',
+        'A good option for visitors planning a city break around Lincoln Cathedral, Lincoln Castle and the uphill historic quarter.',
       tags: ['City break', 'Historic centre', 'Couples', 'Boutique stay'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
@@ -329,7 +329,7 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Historic Lincoln',
       description:
-        'A review-led candidate for a more refined Lincoln dining guide. Verify current ratings, opening hours, booking availability and menu details before publication.',
+        'A refined dining option in historic Lincoln. Check the venue for current opening hours and booking availability.',
       tags: ['Restaurant', 'Fine dining candidate', 'Historic Lincoln', 'Couples', 'Dinner'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -413,7 +413,7 @@ export const lincolnGuide = {
     {
       question: 'Can I find good restaurants and cafes in Lincoln?',
       answer:
-        'Lincoln has a strong independent food and drink scene, but review scores, opening hours and menus change. This guide marks food entries as review-led candidates until details are verified for publication.',
+        'Lincoln has a strong independent food and drink scene, with everything from historic dining rooms to casual cafés. Opening hours and menus change frequently, so always check the venue directly before visiting.',
     },
   ] satisfies LincolnFaq[],
   relatedGuides: [

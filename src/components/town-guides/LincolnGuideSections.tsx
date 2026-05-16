@@ -59,7 +59,7 @@ export default function LincolnGuideSections() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Food & Drink in Lincoln"
-            subtitle="Explore review-led food and drink candidates in Lincoln, including restaurants, cafes and casual dining options. Ratings and opening details should be verified before publication."
+            subtitle="Explore Lincoln's food and drink scene, including restaurants, cafés and casual dining options. Always check the venue for current opening hours."
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {lincolnGuide.foodDrink.map((listing) => (
