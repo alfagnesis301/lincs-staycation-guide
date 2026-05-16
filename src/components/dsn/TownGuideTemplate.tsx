@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Bed, Castle, Compass, Map as MapIco, Pin } from '@/components/dsn/Icons';
-import { Breadcrumb, SectionHead, AdSlot } from '@/components/dsn/primitives';
+import { Breadcrumb, SectionHead } from '@/components/dsn/primitives';
 import { LocationHero } from '@/components/dsn/sections';
 
 export interface TownGuideTemplateProps {
@@ -92,17 +92,12 @@ export function TownGuideTemplate({
         lead={lead}
         body={body}
         bestFor={bestFor}
-        imageLabel={imageLabel ?? `${town} · placeholder photo`}
+        imageLabel={imageLabel}
         imageContext={imageContext}
         primaryCta={{
           label: `Where to stay`,
           href: `/places-to-stay/${town.toLowerCase().replace(/\s+/g, '-')}`,
           icon: <Bed width={15} height={15} />,
-        }}
-        ghostCta={{
-          label: 'Open in map',
-          href: '#map',
-          icon: <MapIco width={15} height={15} />,
         }}
         quickFacts={facts}
       />
@@ -153,11 +148,6 @@ export function TownGuideTemplate({
         >
           <SectionHead eyebrow={s.eyebrow} title={s.title} sub={s.sub} />
           {s.children}
-          {i === 1 && (
-            <div style={{ marginTop: 28 }}>
-              <AdSlot size="mrec" slotId="ad_slot_town_inline" />
-            </div>
-          )}
         </section>
       ))}
     </>

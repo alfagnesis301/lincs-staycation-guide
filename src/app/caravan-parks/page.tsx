@@ -6,7 +6,7 @@ import {
   type RegionType,
 } from '@/data/caravanParkGuides';
 import { CaravanHero, CTABanner, FAQGrid } from '@/components/dsn/sections';
-import { SectionHead, AdSlot } from '@/components/dsn/primitives';
+import { SectionHead } from '@/components/dsn/primitives';
 import { GuideCard, RowCard } from '@/components/dsn/cards';
 import { Home, Leaf, Sun, Tent, Arrow } from '@/components/dsn/Icons';
 
@@ -254,10 +254,6 @@ export default function CaravanParksPage() {
       )}
 
       {/* Ad slot — after featured, between sections */}
-      <section style={{ padding: '0 60px 28px' }}>
-        <AdSlot size="leaderboard" slotId="ad_slot_caravan_inline" />
-      </section>
-
       {/* By region */}
       <section className="dsn-section" id="by-region">
         <SectionHead
@@ -299,9 +295,6 @@ export default function CaravanParksPage() {
         secondary={{ label: 'See advertising options', href: '/advertise' }}
       />
 
-      <section style={{ padding: '0 60px 32px' }}>
-        <AdSlot size="leaderboard" slotId="ad_slot_footer" />
-      </section>
     </>
   );
 }
