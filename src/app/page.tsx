@@ -5,10 +5,10 @@ import GuideCard from '@/components/GuideCard';
 import SectionHeader from '@/components/SectionHeader';
 import CTASection from '@/components/CTASection';
 import { mainCategories } from '@/data/categories';
-import { guides } from '@/data/guides';
+import { publishedGuides } from '@/data/guides';
 
 export default function HomePage() {
-  const featuredGuides = guides.slice(0, 6);
+  const featuredGuides = publishedGuides.slice(0, 6);
 
   const jsonLdWebsite = {
     '@context': 'https://schema.org',

@@ -122,7 +122,7 @@ export const lincolnGuide = {
       bestFor: 'Boutique-style stays close to Lincoln\'s historic centre.',
       description:
         'A strong candidate for visitors planning a city break around Lincoln Cathedral, Lincoln Castle and the uphill historic quarter. Use as a Booking.com-ready accommodation option once the correct Booking/CJ deep link is available.',
-      tags: ['City break', 'Historic centre', 'Couples', 'Boutique stay', 'Booking-ready'],
+      tags: ['City break', 'Historic centre', 'Couples', 'Boutique stay'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
@@ -137,7 +137,7 @@ export const lincolnGuide = {
       bestFor: 'Visitors wanting a stay near the cathedral quarter and Lincoln\'s historic attractions.',
       description:
         'A useful Lincoln accommodation candidate for travellers interested in the cathedral, castle, independent restaurants and walkable historic streets.',
-      tags: ['Cathedral quarter', 'City break', 'Historic attractions', 'Couples', 'Booking-ready'],
+      tags: ['Cathedral quarter', 'City break', 'Historic attractions', 'Couples'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
@@ -152,7 +152,7 @@ export const lincolnGuide = {
       bestFor: 'Classic city-centre stays close to Lincoln Cathedral and the historic uphill area.',
       description:
         'A well-known Lincoln hotel candidate for visitors comparing central accommodation near the cathedral, castle and restaurants.',
-      tags: ['Central Lincoln', 'Cathedral', 'Historic stay', 'Restaurants nearby', 'Booking-ready'],
+      tags: ['Central Lincoln', 'Cathedral', 'Historic stay', 'Restaurants nearby'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
@@ -167,7 +167,7 @@ export const lincolnGuide = {
       bestFor: 'Practical city stays near the waterfront and central Lincoln.',
       description:
         'A useful option for visitors who prefer a familiar hotel brand, practical access and a base for exploring Lincoln city centre and the waterfront area.',
-      tags: ['City centre', 'Waterfront', 'Practical stay', 'Brand hotel', 'Booking-ready'],
+      tags: ['City centre', 'Waterfront', 'Practical stay', 'Brand hotel'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
@@ -182,7 +182,7 @@ export const lincolnGuide = {
       bestFor: 'Visitors wanting a practical stay with pub/restaurant-style convenience outside the busiest historic centre.',
       description:
         'A useful accommodation candidate for travellers who want easy access to Lincoln while staying slightly outside the most central visitor areas.',
-      tags: ['Inn', 'Practical base', 'Food on site', 'Budget-friendly', 'Booking-ready'],
+      tags: ['Inn', 'Practical base', 'Food on site', 'Budget-friendly'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
