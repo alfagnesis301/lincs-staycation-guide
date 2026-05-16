@@ -19,11 +19,6 @@ export default function LegalPageLayout({ title, lastUpdated, children }: LegalP
         <div className="prose prose-lg max-w-none text-charcoal-light leading-relaxed [&_h2]:font-heading [&_h2]:text-charcoal [&_h2]:text-xl [&_h2]:sm:text-2xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:font-heading [&_h3]:text-charcoal [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_a]:text-coast [&_a]:underline [&_a]:hover:text-coast-dark [&_strong]:text-charcoal [&_em]:text-charcoal-muted">
           {children}
         </div>
-        <div className="mt-12 pt-8 border-t border-cream-dark">
-          <p className="text-sm text-charcoal-muted">
-            <strong className="text-charcoal">Note:</strong> This is a general policy document. It should be reviewed by a legal professional before the site goes live.
-          </p>
-        </div>
       </div>
     </div>
   );
