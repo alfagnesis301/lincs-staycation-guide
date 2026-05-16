@@ -2,8 +2,10 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { towns } from '@/data/towns';
 import { lincolnGuide } from '@/data/lincolnGuide';
+import { getTownGuideProfile } from '@/data/townGuideProfiles';
 import { TownGuideTemplate } from '@/components/dsn/TownGuideTemplate';
 import LincolnGuideSections from '@/components/town-guides/LincolnGuideSections';
+import FullTownGuidePage from '@/components/town-guides/FullTownGuidePage';
 
 interface TownGuidePageProps {
   params: Promise<{ slug: string }>;
@@ -16,28 +18,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: TownGuidePageProps) {
   const { slug } = await params;
   const town = towns.find((t) => t.slug === slug);
-  if (!town) return {};
-
-  if (slug === 'lincoln') {
-    return {
-      title: 'Lincoln Travel Guide | Places to Stay, Things to Do & Food | Lincs Staycation Guide',
-      description:
-        'Plan a Lincoln city break with places to stay, nearby caravan parks, historic things to do, food and drink ideas, and practical visitor information for Lincoln, Lincolnshire.',
-      openGraph: {
-        title: 'Lincoln Travel Guide | Lincs Staycation Guide',
-        description:
-          'Plan a Lincoln city break with places to stay, nearby caravan parks, historic things to do, food and drink ideas, and practical visitor information.',
-      },
-      alternates: { canonical: '/town-guides/lincoln' },
-    };
-  }
+  const profile = getTownGuideProfile(slug);
+  if (!town || !profile) return {};
 
   return {
-    title: `${town.name} Travel Guide | Things to Do, Places to Stay & Where to Eat in ${town.name}`,
-    description: `Discover the best things to do, places to stay, restaurants, pubs and local attractions in ${town.name}, Lincolnshire. An independent local guide.`,
+    title: profile.seoTitle,
+    description: profile.metaDescription,
     openGraph: {
-      title: `${town.name} Guide | Lincs Staycation Guide`,
-      description: `Discover the best things to do, places to stay and where to eat in ${town.name}, Lincolnshire.`,
+      title: profile.seoTitle,
+      description: profile.metaDescription,
     },
     alternates: { canonical: `/town-guides/${slug}` },
   };
@@ -60,14 +49,16 @@ const GOOD_BASE_FOR: Record<string, string> = {
 export default async function TownGuidePage({ params }: TownGuidePageProps) {
   const { slug } = await params;
   const town = towns.find((t) => t.slug === slug);
+  const profile = getTownGuideProfile(slug);
   if (!town) notFound();
+  if (profile) return <FullTownGuidePage slug={slug} />;
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TouristDestination',
     name: town.name,
     description: town.description,
-    url: `https://lincsstaycationguide.co.uk/town-guides/${slug}`,
+    url: `https://lincs-staycation-guide.co.uk/town-guides/${slug}`,
     touristType: town.bestFor,
     geo: {
       '@type': 'GeoCoordinates',

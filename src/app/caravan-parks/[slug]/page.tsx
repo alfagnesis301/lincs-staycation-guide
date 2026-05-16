@@ -17,7 +17,7 @@ import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import SectionHeader from '@/components/SectionHeader';
 
-const SITE_URL = 'https://lincsstaycationguide.co.uk';
+const SITE_URL = 'https://lincs-staycation-guide.co.uk';
 
 interface Props {
   params: Promise<{ slug: string }>;

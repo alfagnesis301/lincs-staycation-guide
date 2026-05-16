@@ -1,21 +1,16 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
-import {
-  HomeHero,
-  TrustStrip,
-  CTABanner,
-  HowItWorks,
-} from '@/components/dsn/sections';
+import { TrustStrip, CTABanner, HowItWorks } from '@/components/dsn/sections';
 import { SectionHead } from '@/components/dsn/primitives';
-import { GuideCard, ListingCard, TestimonialCard } from '@/components/dsn/cards';
+import { GuideCard } from '@/components/dsn/cards';
 import { AdSlot } from '@/components/dsn/primitives';
 import { FilterBar, type FilterRegion } from '@/components/dsn/FilterBar';
-import { Star } from '@/components/dsn/Icons';
+import { ArrowDown, Bed, Coffee, Compass, Map as MapIco, Tent } from '@/components/dsn/Icons';
 
 export const metadata = {
-  title: 'Places to Stay in Lincolnshire — by location',
+  title: 'Lincs Staycation Guide | Lincolnshire Travel, Towns & Breaks',
   description:
-    'Selected hotels, B&Bs, guest houses, inns, apartments and holiday cottages across Lincolnshire — independently curated and worth comparing before you book direct.',
+    'Plan Lincolnshire staycations with independent town guides, places to stay, caravan parks, things to do, food and drink, coast ideas and practical visitor tips.',
 };
 
 // Region filter rows — pulled from CMS in production. Placeholder counts here
@@ -30,7 +25,7 @@ const REGIONS: FilterRegion[] = [
   { id: 'fens',        label: 'Fens',         count: 0 },
 ];
 
-// Popular town guides — neutral copy, no invented numbers
+// Popular town guides: small editorial set, not the full location browser.
 const POPULAR_GUIDES = [
   { href: '/town-guides/lincoln',   tag: 'City',        tone: 'sage' as const,  title: 'Lincoln',     sub: 'Cathedral city, historic streets and independent food.',     media: ''      },
   { href: '/town-guides/skegness',  tag: 'Coast',       tone: 'coast' as const, title: 'Skegness',    sub: 'Seaside resort with sandy beaches and family attractions.',  media: 'coast' as const },
@@ -39,16 +34,78 @@ const POPULAR_GUIDES = [
   { href: '/town-guides/boston',    tag: 'Fens',        tone: 'fen' as const,   title: 'Boston',      sub: "Historic port town with St Botolph's Stump.",                 media: 'fen' as const  },
 ];
 
+const EXPLORE_AREAS = [
+  {
+    href: '/places-to-stay',
+    label: 'Places to Stay',
+    title: 'Hotels, B&Bs, inns and cottages',
+    sub: 'Browse accommodation candidates by Lincolnshire location.',
+    icon: <Bed width={16} height={16} />,
+  },
+  {
+    href: '/caravan-parks',
+    label: 'Caravan Parks',
+    title: 'Holiday parks and touring bases',
+    sub: 'Compare coastal, countryside and family-friendly park guides.',
+    icon: <Tent width={16} height={16} />,
+  },
+  {
+    href: '/things-to-do',
+    label: 'Things to Do',
+    title: 'Attractions, walks and rainy-day ideas',
+    sub: 'Find heritage sites, museums, beaches and family days out.',
+    icon: <Compass width={16} height={16} />,
+  },
+  {
+    href: '/food-drink',
+    label: 'Food & Drink',
+    title: 'Pubs, cafes, restaurants and local food',
+    sub: 'Use curated candidate lists, then check menus direct.',
+    icon: <Coffee width={16} height={16} />,
+  },
+];
+
 export default function HomePage() {
   return (
     <>
-      <HomeHero
-        stats={[
-          { value: '23+', label: 'Towns covered' },
-          { value: '6',   label: 'Region types' },
-          { value: '14 May', label: 'Last updated' },
-        ]}
-      />
+      <section className="dsn-hero">
+        <div className="dsn-hero-grid" aria-hidden />
+        <span className="dsn-eyebrow">
+          <span className="dot" />
+          Lincolnshire travel guide
+        </span>
+        <h1 className="dsn-hero-title">
+          Plan a better <em>Lincolnshire</em> staycation.
+        </h1>
+        <p className="dsn-hero-sub">
+          Independent town guides, coast ideas, caravan park round-ups, places to
+          stay, food and drink candidates, and practical visitor tips for city
+          breaks, family days out and quieter countryside escapes.
+        </p>
+        <div className="dsn-hero-actions">
+          <Link href="/town-guides" className="dsn-btn primary lg">
+            Browse town guides <ArrowDown width={15} height={15} />
+          </Link>
+          <Link href="/lincolnshire-coast" className="dsn-btn ghost lg">
+            Explore the coast <MapIco width={15} height={15} />
+          </Link>
+        </div>
+        <div className="dsn-hero-meta">
+          {[
+            { value: '14', label: 'Town guides' },
+            { value: '6', label: 'Region types' },
+            { value: 'May 2026', label: 'Last updated' },
+          ].map((s, i) => (
+            <span key={s.label} style={{ display: 'contents' }}>
+              <div className="item">
+                <span className="num">{s.value}</span>
+                <span className="lbl">{s.label}</span>
+              </div>
+              {i < 2 && <div className="sep" />}
+            </span>
+          ))}
+        </div>
+      </section>
 
       <Suspense fallback={null}>
         <FilterBar regions={REGIONS} />
@@ -56,12 +113,11 @@ export default function HomePage() {
 
       <TrustStrip lastUpdated="weekly" />
 
-      {/* Popular guides */}
       <section className="dsn-section tint">
         <SectionHead
           eyebrow="By town"
           title="Popular guides"
-          sub="Start with the towns travellers visit most. Each guide is independently researched and lists every option we can verify."
+          sub="Start with a small editorial selection of strong bases for city breaks, coastal holidays, market-town weekends and Wolds exploring."
           right={
             <Link href="/town-guides" className="dsn-link">
               All town guides
@@ -88,106 +144,67 @@ export default function HomePage() {
         <AdSlot size="leaderboard" slotId="ad_slot_home_top" />
       </section>
 
-      {/* Featured stays — neutral placeholders so we never invent data */}
       <section className="dsn-section">
         <SectionHead
-          eyebrow="Selected stays"
-          title="Worth comparing this season"
-          sub="A small selection of verified options. Names, ratings and prices come from operators — we never invent them. Click through to book direct."
-          right={
-            <Link href="/places-to-stay" className="dsn-link">
-              See all places to stay
-            </Link>
-          }
+          eyebrow="Explore"
+          title="Choose the guide that matches your trip"
+          sub="Every section is built for planning, with internal links by town and clear reminders to check details direct before travelling."
         />
         <div className="dsn-card-grid">
-          <ListingCard
-            href="/places-to-stay/lincoln"
-            region="Lincoln"
-            type="City stay"
-            tone="sage"
-            name="Verified stays in Lincoln"
-            location="Lincoln, Lincolnshire"
-            media=""
-            stamp="Property photo by operator"
-          />
-          <ListingCard
-            href="/places-to-stay/skegness"
-            region="Skegness"
-            type="Coastal stay"
-            tone="coast"
-            name="Verified stays in Skegness"
-            location="Skegness, Lincolnshire"
-            media="coast"
-            stamp="Property photo by operator"
-          />
-          <ListingCard
-            href="/places-to-stay/stamford"
-            region="Stamford"
-            type="Market-town stay"
-            tone="warm"
-            name="Verified stays in Stamford"
-            location="Stamford, Lincolnshire"
-            media="warm"
-            stamp="Property photo by operator"
-          />
+          {EXPLORE_AREAS.map((area) => (
+            <Link key={area.href} href={area.href} className="dsn-card" style={{ padding: 24 }}>
+              <span className="dsn-iconchip">{area.icon}</span>
+              <span className="badge badge-coast" style={{ marginTop: 16 }}>
+                {area.label}
+              </span>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 24,
+                  fontWeight: 500,
+                  marginTop: 12,
+                }}
+              >
+                {area.title}
+              </h2>
+              <p style={{ color: 'var(--ink-2)', fontSize: 14, lineHeight: 1.55, marginTop: 8 }}>
+                {area.sub}
+              </p>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* How it works */}
       <section className="dsn-section tint">
         <SectionHead
           eyebrow="How it works"
-          title="An honest, independent guide."
-          sub="We are not a booking site — we send you straight to the operator so they get the full booking and you get the best rate."
+          title="An honest, independent guide"
+          sub="We do not publish invented ratings, fake prices or unsupported reviews. Venue and accommodation details should always be checked with the operator before you travel."
         />
         <HowItWorks />
       </section>
 
-      {/* Reviews */}
       <section className="dsn-section">
         <SectionHead
-          eyebrow="From visitors"
-          title="What readers say"
-          right={
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 10,
-                padding: '10px 16px',
-                background: 'white',
-                border: '1px solid var(--line)',
-                borderRadius: 12,
-              }}
-            >
-              <span style={{ display: 'inline-flex', gap: 1, color: 'var(--amber)' }}>
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} width={14} height={14} />
-                ))}
-              </span>
-              <span style={{ fontFamily: 'var(--font-serif)', fontSize: 18 }}>
-                Useful for visitors
-              </span>
-            </div>
-          }
+          eyebrow="Visitor planning"
+          title="How this guide helps visitors"
+          sub="Editorial blocks replace unverified testimonials, so the homepage stays useful without presenting unsupported claims."
         />
         <div className="dsn-card-grid">
-          <TestimonialCard
-            quote="Honestly the most useful Lincolnshire travel resource I've used. Found a Wolds cottage I'd never have heard of — and booked direct."
-            name="Hannah B."
-            when="Visited from Sheffield · April 2026"
-          />
-          <TestimonialCard
-            quote="Clear, calm and free of the usual booking-site noise. I now check this first when planning a UK staycation."
-            name="James W."
-            when="Lincoln-based · March 2026"
-          />
-          <TestimonialCard
-            quote="Easy to compare caravan parks by region. The Coast vs. Wolds filter is a brilliant idea."
-            name="Priya K."
-            when="Visited from Leicester · February 2026"
-          />
+          {[
+            ['Pick the right base', 'Compare city, coast, Wolds, Fens and countryside destinations before choosing where to stay.'],
+            ['Build a practical itinerary', 'Use town guides for one-day plans, weekend ideas, rainy-day options and family-friendly suggestions.'],
+            ['Check details safely', 'Accommodation, menus, facilities and opening hours change, so every guide points visitors back to direct checks.'],
+          ].map(([title, body]) => (
+            <article key={title} className="dsn-card" style={{ padding: 24 }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 500 }}>
+                {title}
+              </h2>
+              <p style={{ color: 'var(--ink-2)', fontSize: 14, lineHeight: 1.6, marginTop: 10 }}>
+                {body}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -203,7 +220,7 @@ export default function HomePage() {
         primary={{ label: 'Add your business', href: '/add-your-business' }}
         secondary={{ label: 'See pricing', href: '/advertise' }}
         stats={[
-          { n: '23+', l: 'Towns covered' },
+          { n: '14', l: 'Town guides' },
           { n: '6',   l: 'Region types' },
           { n: 'Free', l: 'Basic listing' },
           { n: 'Direct', l: 'You handle bookings' },

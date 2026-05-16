@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   description:
     'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire. We are a directory — book direct with the operator.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lincsstaycationguide.co.uk'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk'),
   openGraph: {
     type: 'website',
     locale: 'en_GB',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincsstaycationguide.co.uk';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk';
 
 const siteJsonLd = [
   {

@@ -58,13 +58,6 @@ export function RegionPill({
 */
 type AdSize = 'leaderboard' | 'mrec' | 'mobile' | 'sidebar';
 
-const sizeLabels: Record<AdSize, string> = {
-  leaderboard: '728×90',
-  mrec: '300×250',
-  mobile: '320×100',
-  sidebar: '300×600',
-};
-
 export function AdSlot({
   size = 'leaderboard',
   slotId,
@@ -81,11 +74,7 @@ export function AdSlot({
       aria-label="Advertisement"
       data-slot-id={slotId}
     >
-      <span className="ad-label">
-        <span className="ad-tag">AD</span>
-        Sponsored — {sizeLabels[size]}
-      </span>
-      <span>{slotId}</span>
+      <span className="sr-only">Advertisement</span>
     </div>
   );
 }
