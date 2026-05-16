@@ -99,6 +99,16 @@ export const townGuidesLocations: NavLocation[] = buildLocations(
 
 export const mainNavItems: NavItem[] = [
   {
+    label: 'Town Guides',
+    href: '/town-guides',
+    dropdown: {
+      heading: 'Town guides by location',
+      locations: townGuidesLocations,
+      viewAllHref: '/town-guides',
+      viewAllLabel: 'View all town guides',
+    },
+  },
+  {
     label: 'Places to Stay',
     href: '/places-to-stay',
     dropdown: {
@@ -146,16 +156,6 @@ export const mainNavItems: NavItem[] = [
       locations: coastLocations,
       viewAllHref: '/lincolnshire-coast',
       viewAllLabel: 'View all coastal guides',
-    },
-  },
-  {
-    label: 'Town Guides',
-    href: '/town-guides',
-    dropdown: {
-      heading: 'Town guides by location',
-      locations: townGuidesLocations,
-      viewAllHref: '/town-guides',
-      viewAllLabel: 'View all town guides',
     },
   },
   { label: 'Add Your Business', href: '/add-your-business' },

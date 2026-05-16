@@ -1,10 +1,7 @@
-import { Suspense } from 'react';
 import Link from 'next/link';
-import { TrustStrip, CTABanner, HowItWorks } from '@/components/dsn/sections';
+import { CTABanner, HowItWorks } from '@/components/dsn/sections';
 import { SectionHead } from '@/components/dsn/primitives';
 import { GuideCard } from '@/components/dsn/cards';
-import { AdSlot } from '@/components/dsn/primitives';
-import { FilterBar, type FilterRegion } from '@/components/dsn/FilterBar';
 import { ArrowDown, Bed, Coffee, Compass, Map as MapIco, Tent } from '@/components/dsn/Icons';
 
 export const metadata = {
@@ -15,16 +12,6 @@ export const metadata = {
 
 // Region filter rows — pulled from CMS in production. Placeholder counts here
 // are illustrative; replace with live CMS aggregation when the dataset wires in.
-const REGIONS: FilterRegion[] = [
-  { id: 'all',         label: 'All regions',  count: 0 },
-  { id: 'coast',       label: 'Coast',        count: 0 },
-  { id: 'city',        label: 'City',         count: 0 },
-  { id: 'market-town', label: 'Market town',  count: 0 },
-  { id: 'countryside', label: 'Countryside',  count: 0 },
-  { id: 'wolds',       label: 'Wolds',        count: 0 },
-  { id: 'fens',        label: 'Fens',         count: 0 },
-];
-
 // Popular town guides: small editorial set, not the full location browser.
 const POPULAR_GUIDES = [
   { href: '/town-guides/lincoln',   tag: 'City',        tone: 'sage' as const,  title: 'Lincoln',     sub: 'Cathedral city, historic streets and independent food.',     media: ''      },
@@ -105,13 +92,11 @@ export default function HomePage() {
             </span>
           ))}
         </div>
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-charcoal-muted">
+          Independently curated and updated as guides are reviewed. Always check opening times, prices,
+          availability and facilities directly before travelling.
+        </p>
       </section>
-
-      <Suspense fallback={null}>
-        <FilterBar regions={REGIONS} />
-      </Suspense>
-
-      <TrustStrip lastUpdated="weekly" />
 
       <section className="dsn-section tint">
         <SectionHead
@@ -140,10 +125,6 @@ export default function HomePage() {
       </section>
 
       {/* Ad slot — below the fold, between sections */}
-      <section style={{ padding: '0 60px 28px' }}>
-        <AdSlot size="leaderboard" slotId="ad_slot_home_top" />
-      </section>
-
       <section className="dsn-section">
         <SectionHead
           eyebrow="Explore"
@@ -209,10 +190,6 @@ export default function HomePage() {
       </section>
 
       {/* Ad slot — between content sections */}
-      <section style={{ padding: '0 60px 28px' }}>
-        <AdSlot size="mrec" slotId="ad_slot_home_inline" />
-      </section>
-
       <CTABanner
         eyebrow="For local businesses"
         title="Run a B&B, caravan park or guest house in Lincolnshire?"
@@ -228,9 +205,6 @@ export default function HomePage() {
       />
 
       {/* Footer-area ad, above dark footer */}
-      <section style={{ padding: '0 60px 32px' }}>
-        <AdSlot size="leaderboard" slotId="ad_slot_footer" />
-      </section>
     </>
   );
 }

@@ -58,25 +58,13 @@ export function RegionPill({
 */
 type AdSize = 'leaderboard' | 'mrec' | 'mobile' | 'sidebar';
 
-export function AdSlot({
-  size = 'leaderboard',
-  slotId,
-  className,
-}: {
+export function AdSlot(_props: {
   size?: AdSize;
   slotId: string;
   className?: string;
 }) {
-  return (
-    <div
-      className={`dsn-ad-slot size-${size}${className ? ' ' + className : ''}`}
-      role="complementary"
-      aria-label="Advertisement"
-      data-slot-id={slotId}
-    >
-      <span className="sr-only">Advertisement</span>
-    </div>
-  );
+  void _props;
+  return null;
 }
 
 /* ---------------- Breadcrumb ---------------- */
