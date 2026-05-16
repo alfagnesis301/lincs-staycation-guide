@@ -64,11 +64,22 @@ export default function FamilyDaysOutPage() {
             title="Family-friendly listings"
             subtitle="Activities, attractions and days out suitable for families with children."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            {familyListings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
-            ))}
-          </div>
+          {familyListings.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+              {familyListings.map((listing) => (
+                <ListingCard key={listing.id} listing={listing} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-white rounded-2xl border border-cream-dark/40">
+              <p className="text-charcoal-muted max-w-xl mx-auto leading-relaxed">
+                We are researching family attractions across Lincolnshire and adding them as each one is verified. In the meantime, explore the location guides below or our caravan park reviews for family-friendly stays.
+              </p>
+              <a href="/add-your-business" className="mt-4 inline-block text-sage font-medium hover:text-sage-dark underline">
+                Add a family attraction
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

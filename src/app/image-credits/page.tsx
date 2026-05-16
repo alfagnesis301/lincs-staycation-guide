@@ -34,24 +34,41 @@ export default function ImageCreditsPage() {
         <li>This page is updated whenever new images are added to the site.</li>
       </ul>
 
-      <h2>All images ({imageCredits.length})</h2>
+      {(() => {
+        const townCount = imageCredits.filter((c) => c.id.startsWith('town-')).length;
+        const coastalCount = imageCredits.filter((c) => c.id.startsWith('coastal-')).length;
+        const caravanCount = bookableCaravanParks.length;
+        const total = townCount + coastalCount + caravanCount;
+        return (
+          <>
+            <h2>Image library overview ({total} total)</h2>
+            <p className="text-sm text-charcoal-muted">
+              Town and area images: <strong>{townCount}</strong> · Coastal area images: <strong>{coastalCount}</strong> · Caravan and holiday park images: <strong>{caravanCount}</strong>.
+            </p>
+          </>
+        );
+      })()}
 
       {/* Full credit cards rendered outside the prose layout */}
       <div className="not-prose mt-6 space-y-4">
         {/* Town photographs */}
-        <h3 className="font-heading text-lg font-semibold text-charcoal mt-2 mb-3">Town photographs (14)</h3>
+        <h3 className="font-heading text-lg font-semibold text-charcoal mt-2 mb-3">
+          Town and area images ({imageCredits.filter((c) => c.id.startsWith('town-')).length})
+        </h3>
         {imageCredits.filter(c => c.id.startsWith('town-')).map((credit) => (
           <ImageCreditComponent key={credit.id} credit={credit} variant="card" />
         ))}
         {/* Coastal photographs */}
-        <h3 className="font-heading text-lg font-semibold text-charcoal mt-6 mb-3">Coastal area photographs (4)</h3>
+        <h3 className="font-heading text-lg font-semibold text-charcoal mt-6 mb-3">
+          Coastal area images ({imageCredits.filter((c) => c.id.startsWith('coastal-')).length})
+        </h3>
         {imageCredits.filter(c => c.id.startsWith('coastal-')).map((credit) => (
           <ImageCreditComponent key={credit.id} credit={credit} variant="card" />
         ))}
 
         {/* Caravan park photographs */}
         <h3 className="font-heading text-lg font-semibold text-charcoal mt-6 mb-3">
-          Caravan park photographs ({bookableCaravanParks.length})
+          Accommodation and caravan park images ({bookableCaravanParks.length})
         </h3>
         <p className="text-sm text-charcoal-muted leading-relaxed mb-4">
           Each caravan park card uses either an exact image of the park (where a

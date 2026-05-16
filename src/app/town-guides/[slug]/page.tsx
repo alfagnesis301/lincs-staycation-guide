@@ -223,12 +223,15 @@ export default async function TownGuidePage({ params }: TownGuidePageProps) {
         <section className="py-12 sm:py-16 bg-cream/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center py-12 bg-white rounded-2xl border border-cream-dark/40">
-              <p className="text-charcoal-muted mb-4">
-                We are building our {town.name} directory. More listings are coming soon.
+              <p className="text-charcoal-muted max-w-xl mx-auto leading-relaxed mb-4">
+                We are researching {town.name} businesses and only publish verified entries. Browse the location category pages below for accommodation, attractions and food &amp; drink options we have already reviewed for the area.
               </p>
-              <a href="/add-your-business" className="text-sage font-medium hover:text-sage-dark underline">
-                Add your {town.name} business
-              </a>
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
+                <a href={`/places-to-stay/${town.slug}`} className="text-sage font-medium hover:text-sage-dark underline">Places to stay</a>
+                <a href={`/things-to-do/${town.slug}`} className="text-sage font-medium hover:text-sage-dark underline">Things to do</a>
+                <a href={`/food-drink/${town.slug}`} className="text-sage font-medium hover:text-sage-dark underline">Food &amp; drink</a>
+                <a href="/add-your-business" className="text-sage font-medium hover:text-sage-dark underline">Add a {town.name} business</a>
+              </div>
             </div>
           </div>
         </section>

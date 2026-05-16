@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { guides } from '@/data/guides';
+import { guides, publishedGuides } from '@/data/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
 
@@ -9,21 +9,18 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  return guides.map((guide) => ({ slug: guide.slug }));
+  // Only generate routes for published articles. Drafts are not built/indexed.
+  return publishedGuides.map((guide) => ({ slug: guide.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const guide = guides.find((g) => g.slug === slug);
+  const guide = guides.find((g) => g.slug === slug && g.published);
   if (!guide) return {};
 
   return {
     title: guide.title,
     description: guide.description,
-    robots: {
-      index: false,
-      follow: false,
-    },
     openGraph: {
       title: guide.title,
       description: guide.description,
@@ -35,10 +32,10 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const guide = guides.find((g) => g.slug === slug);
+  const guide = guides.find((g) => g.slug === slug && g.published);
   if (!guide) notFound();
 
-  const otherGuides = guides.filter((g) => g.id !== guide.id).slice(0, 3);
+  const otherGuides = publishedGuides.filter((g) => g.id !== guide.id).slice(0, 3);
 
   return (
     <>
@@ -66,24 +63,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-coast/5 border border-coast/20 rounded-2xl p-6 mb-8 text-center">
-            <p className="text-charcoal-muted">
-              📝 This guide is coming soon. We are currently researching and writing comprehensive, useful content for this topic. Check back shortly for the full guide.
-            </p>
-          </div>
-
           <div className="prose max-w-none">
             <p className="text-charcoal-muted leading-relaxed mb-6">
               {guide.description}
-            </p>
-            <p className="text-charcoal-muted leading-relaxed">
-              In the full guide, we will cover practical tips, recommended places, useful local knowledge and suggestions to help you make the most of your time in Lincolnshire. All content will be independently written with a focus on accuracy and local usefulness.
             </p>
           </div>
 
           <AdPlaceholder />
 
-          {/* Related guides */}
           {otherGuides.length > 0 && (
             <div className="mt-12 pt-8 border-t border-cream-dark/40">
               <h2 className="font-heading text-xl font-semibold text-charcoal mb-6">Related guides</h2>
