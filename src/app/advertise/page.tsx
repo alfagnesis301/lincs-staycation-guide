@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Advertise with Lincs Staycation Guide',
+  title: 'Advertise',
   description: 'Reach visitors, families, couples, dog owners and local residents planning trips, days out and short breaks across Lincolnshire.',
   openGraph: {
     title: 'Advertise with Lincs Staycation Guide',

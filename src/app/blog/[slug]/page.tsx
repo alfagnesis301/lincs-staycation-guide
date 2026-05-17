@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { guides, publishedGuides } from '@/data/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import AdPlaceholder from '@/components/AdPlaceholder';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -63,13 +62,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose max-w-none">
-            <p className="text-charcoal-muted leading-relaxed mb-6">
-              {guide.description}
+          <div className="space-y-10">
+            <p className="text-lg leading-relaxed text-charcoal-muted">
+              {guide.intro ?? guide.description}
             </p>
+            {guide.sections?.map((section) => (
+              <section key={section.heading} className="border-t border-cream-dark/50 pt-8">
+                <h2 className="font-heading text-2xl font-semibold text-charcoal">{section.heading}</h2>
+                <div className="mt-4 space-y-4">
+                  {section.body.map((paragraph) => (
+                    <p key={paragraph} className="text-base leading-relaxed text-charcoal-muted">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                {section.links && section.links.length > 0 ? (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {section.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="inline-flex min-h-[44px] items-center rounded-xl border border-sage/30 px-4 py-2 text-sm font-semibold text-sage hover:bg-sage hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </section>
+            ))}
           </div>
-
-          <AdPlaceholder />
 
           {otherGuides.length > 0 && (
             <div className="mt-12 pt-8 border-t border-cream-dark/40">

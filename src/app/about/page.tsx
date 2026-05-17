@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Lincs Staycation Guide | Independent Local Travel Directory',
+  title: 'About the Independent Local Travel Directory',
   description: 'Lincs Staycation Guide is an independent local travel directory for Lincolnshire, UK. Not affiliated with any council or tourism board — focused on honest, practical information for visitors and residents.',
   openGraph: {
     title: 'About Lincs Staycation Guide | Independent Local Guide',

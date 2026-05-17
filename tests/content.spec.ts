@@ -9,9 +9,10 @@ test.describe('Content quality regressions', () => {
     await expect(robotsMeta).toHaveAttribute('content', /noindex/i);
   });
 
-  test('blog page shows holding message when no published posts', async ({ page }) => {
+  test('blog page does not expose placeholder guide copy', async ({ page }) => {
     await page.goto('/blog');
     await expect(page.locator('body')).not.toContainText('This guide is coming soon');
+    await expect(page.locator('body')).not.toContainText('Advertisement space');
   });
 
   test('caravan parks editorial note shows correct subject on non-park category pages', async ({ page }) => {
@@ -49,11 +50,29 @@ test.describe('Content quality regressions', () => {
     await expect(page.locator('body')).toContainText(/Accommodation and caravan park images/);
   });
 
-  test('sitemap excludes /events and unpublished /blog', async ({ request }) => {
+  test('sitemap excludes /events and includes only published blog guides', async ({ request }) => {
     const res = await request.get('/sitemap.xml');
     expect(res.ok()).toBeTruthy();
     const xml = await res.text();
     expect(xml).not.toContain('/events</loc>');
     expect(xml).not.toContain('/events<');
+    expect(xml).toContain('/blog/best-beaches');
+    expect(xml).toContain('/blog/dog-friendly-days-out');
+    expect(xml).toContain('/blog/weekend-breaks');
+    expect(xml).toContain('/blog/rainy-day-activities');
+  });
+
+  test('major attraction guides include official website links', async ({ page }) => {
+    await page.goto('/things-to-do/lincoln');
+    await expect(page.getByRole('link', { name: 'Official website' }).first()).toHaveAttribute('href', 'https://lincolncathedral.com/');
+    await expect(page.locator('a[href="https://www.lincolncastle.com/"]')).toBeVisible();
+    await expect(page.locator('a[href="https://internationalbcc.co.uk/"]')).toBeVisible();
+
+    await page.goto('/things-to-do/skegness');
+    await expect(page.locator('a[href="https://skegnessnatureland.co.uk/"]')).toBeVisible();
+    await expect(page.locator('a[href="https://www.lincstrust.org.uk/top-reserves/gibraltar-point"]')).toBeVisible();
+
+    await page.goto('/things-to-do/stamford');
+    await expect(page.locator('a[href="https://burghley.co.uk/"]')).toBeVisible();
   });
 });
