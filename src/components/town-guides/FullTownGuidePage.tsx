@@ -159,6 +159,44 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
+      '@type': 'Guide',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonical,
+      },
+      headline: `${town.name} Travel Guide | Lincs Staycation Guide`,
+      description: profile.shortIntro,
+      image: `${SITE_URL}${credit.localPath}`,
+      inLanguage: 'en-GB',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Lincs Staycation Guide',
+        url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/logo.png`,
+        },
+      },
+      hasPart: [
+        {
+          '@type': 'WebPage',
+          name: `Where to stay in ${town.name}`,
+          url: `${canonical}#where-to-stay`,
+        },
+        {
+          '@type': 'WebPage',
+          name: `Things to do in ${town.name}`,
+          url: `${canonical}#things-to-do`,
+        },
+        {
+          '@type': 'WebPage',
+          name: `Food & drink in ${town.name}`,
+          url: `${canonical}#food-drink`,
+        },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },

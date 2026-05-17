@@ -1,6 +1,15 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSubmissionForm from '@/components/BusinessSubmissionForm';
+import LincsStaycationBadge from '@/components/LincsStaycationBadge';
+
+const badgeHtml = `<div class="lincs-staycation-badge" style="max-width: 220px; border: 1px solid #0f766e; border-radius: 8px; padding: 12px; text-align: center; font-family: sans-serif; background-color: #fafafa;">
+  <p style="margin: 0 0 8px 0; font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Recommended on</p>
+  <a href="https://lincs-staycation-guide.co.uk/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0f766e; font-weight: bold; font-size: 14px;">
+    Lincs <span style="font-style: italic; color: #1e3a8a;">Staycation</span> Guide
+  </a>
+  <p style="margin: 6px 0 0 0; font-size: 12px; color: #334155;">Independent Guide to Lincolnshire</p>
+</div>`;
 
 export const metadata: Metadata = {
   title: 'Add Your Business',
@@ -120,6 +129,42 @@ export default function AddYourBusinessPage() {
           <div className="max-w-3xl relative">
             <h2 className="font-heading text-2xl font-semibold text-charcoal mb-6">Submit your business</h2>
             <BusinessSubmissionForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Backlink Badge Section - For listed businesses */}
+      <section className="py-12 sm:py-16 bg-cream/30 border-t border-cream-dark/40">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="badge badge-coast mb-3 inline-block text-[11px]">For Listed Businesses</span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-charcoal mb-3">
+              Display our recommendation badge
+            </h2>
+            <p className="text-charcoal-muted max-w-2xl mx-auto leading-relaxed">
+              Already featured? Show your customers you&apos;re recommended on Lincs Staycation Guide by adding this lightweight badge to your website. Simply copy the HTML below and paste it where you&apos;d like it to appear.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            {/* Live preview */}
+            <div>
+              <h3 className="font-heading text-lg font-semibold text-charcoal mb-4">Preview</h3>
+              <div className="bg-white rounded-2xl border border-cream-dark/60 p-8 flex items-center justify-center">
+                <LincsStaycationBadge />
+              </div>
+            </div>
+
+            {/* HTML code */}
+            <div>
+              <h3 className="font-heading text-lg font-semibold text-charcoal mb-4">Copy the HTML</h3>
+              <pre className="bg-charcoal text-cream rounded-2xl p-5 text-xs overflow-x-auto leading-relaxed">
+                <code>{badgeHtml}</code>
+              </pre>
+              <p className="mt-3 text-xs text-charcoal-muted">
+                The badge is lightweight (under 1KB) with inline styles, so it works on any website without external dependencies.
+              </p>
+            </div>
           </div>
         </div>
       </section>
