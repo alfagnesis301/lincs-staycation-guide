@@ -67,7 +67,7 @@ const REGION_TONE: Record<RegionType, 'sage' | 'coast' | 'warm' | 'fen'> = {
 const LANDING_FAQS = [
   {
     q: 'Are these parks bookable through Lincs Staycation Guide?',
-    a: 'No — we are a directory, not a booking engine. Each listing links straight to the park or operator so you book direct and get the best rate.',
+    a: 'No. We are a directory, not a booking engine. Book direct with the operator to check current availability, facilities and prices.',
   },
   {
     q: 'How do you decide which parks are listed?',

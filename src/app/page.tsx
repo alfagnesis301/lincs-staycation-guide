@@ -3,9 +3,12 @@ import { CTABanner, HowItWorks } from '@/components/dsn/sections';
 import { SectionHead } from '@/components/dsn/primitives';
 import { GuideCard } from '@/components/dsn/cards';
 import { ArrowDown, Bed, Coffee, Compass, Map as MapIco, Tent } from '@/components/dsn/Icons';
+import { publishedGuides } from '@/data/guides';
 
 export const metadata = {
-  title: 'Lincs Staycation Guide | Lincolnshire Travel, Towns & Breaks',
+  title: {
+    absolute: 'Lincs Staycation Guide | Lincolnshire Travel, Towns & Breaks',
+  },
   description:
     'Plan Lincolnshire staycations with independent town guides, places to stay, caravan parks, things to do, food and drink, coast ideas and practical visitor tips.',
 };
@@ -51,6 +54,10 @@ const EXPLORE_AREAS = [
     icon: <Coffee width={16} height={16} />,
   },
 ];
+
+const FEATURED_EDITORIAL_GUIDES = publishedGuides
+  .filter((guide) => ['best-beaches', 'dog-friendly-days-out', 'weekend-breaks', 'rainy-day-activities'].includes(guide.slug))
+  .slice(0, 4);
 
 export default function HomePage() {
   return (
@@ -155,6 +162,34 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {FEATURED_EDITORIAL_GUIDES.length > 0 && (
+        <section className="dsn-section tint">
+          <SectionHead
+            eyebrow="Planning guides"
+            title="Popular Lincolnshire guides"
+            sub="Practical editorial guides for beaches, dog-friendly days out, weekend breaks and rainy-day backup plans."
+            right={
+              <Link href="/blog" className="dsn-link">
+                All guides
+              </Link>
+            }
+          />
+          <div className="dsn-card-grid cols-4">
+            {FEATURED_EDITORIAL_GUIDES.map((guide) => (
+              <GuideCard
+                key={guide.id}
+                href={`/blog/${guide.slug}`}
+                tag={guide.category}
+                tone={guide.category === 'Coast' ? 'coast' : guide.category === 'Stays' ? 'warm' : 'sage'}
+                title={guide.title}
+                sub={guide.description}
+                media={guide.category === 'Coast' ? 'coast' : guide.category === 'Stays' ? 'warm' : ''}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="dsn-section tint">
         <SectionHead

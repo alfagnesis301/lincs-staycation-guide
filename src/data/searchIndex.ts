@@ -1,5 +1,5 @@
 import { mainCategories } from '@/data/categories';
-import { guides } from '@/data/guides';
+import { publishedGuides } from '@/data/guides';
 import { categoryChips, placesToStayLocations } from '@/data/navigation';
 import { towns } from '@/data/towns';
 
@@ -41,7 +41,7 @@ export const searchTargets: SearchTarget[] = uniqueByHref([
     href: `/town-guides/${town.slug}`,
     keywords: [town.name, town.description, town.bestFor, town.regionType, ...town.categories],
   })),
-  ...guides.map((guide) => ({
+  ...publishedGuides.map((guide) => ({
     title: guide.title,
     href: `/blog/${guide.slug}`,
     keywords: [guide.category, guide.description],

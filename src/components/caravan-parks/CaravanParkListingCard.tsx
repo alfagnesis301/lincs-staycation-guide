@@ -103,11 +103,11 @@ export default function CaravanParkListingCard({ listing }: Props) {
           </div>
         ) : listing.bookingDeepLinkPending ? (
           <span className="text-xs italic text-charcoal-muted">
-            Details being verified
+            Details should be checked directly with the venue before travelling.
           </span>
         ) : listing.needsVerification ? (
           <p className="text-xs text-charcoal-muted italic">
-            Source to be verified before publication.
+            Details should be checked directly with the venue before travelling.
           </p>
         ) : listing.sourceUrl ? (
           <a

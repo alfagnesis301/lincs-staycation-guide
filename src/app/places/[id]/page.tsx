@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ListingPageProps) {
   const { id } = await params;
   const listing = listings.find((l) => l.id === id);
-  if (!listing) return {};
+  if (!listing || listing.isSample) return {};
 
   return {
     title: `${listing.name} | ${listing.category} in ${listing.town}, Lincolnshire`,
@@ -41,7 +41,7 @@ const categoryLabels: Record<string, string> = {
 export default async function ListingPage({ params }: ListingPageProps) {
   const { id } = await params;
   const listing = listings.find((l) => l.id === id);
-  if (!listing) notFound();
+  if (!listing || listing.isSample) notFound();
 
   const gradient = categoryGradients[listing.categorySlug] ?? defaultGradient;
   const categoryLabel = categoryLabels[listing.categorySlug] ?? 'Listings';
@@ -94,9 +94,6 @@ export default async function ListingPage({ params }: ListingPageProps) {
                 <span>{listing.town}, {listing.area}</span>
                 <span className="text-cream-dark">·</span>
                 <span className="badge badge-sage text-[11px]">{listing.category}</span>
-                {listing.isSample && (
-                  <span className="badge badge-sample text-[11px]">Sample listing</span>
-                )}
               </div>
             </div>
           </div>
@@ -142,14 +139,6 @@ export default async function ListingPage({ params }: ListingPageProps) {
                 </div>
               )}
 
-              {listing.isSample && (
-                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-5 text-sm text-orange-800">
-                  <strong>Sample listing:</strong> This is a demonstration entry showing how business profiles will appear on the directory. It does not represent a real business.{' '}
-                  <Link href="/add-your-business" className="underline font-medium hover:text-orange-900">
-                    Add your real business here.
-                  </Link>
-                </div>
-              )}
             </div>
 
             {/* Sidebar */}

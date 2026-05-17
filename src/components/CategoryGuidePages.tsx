@@ -74,6 +74,10 @@ function itemSummary(o: PlaceToStay | ThingToDo | FoodAndDrinkOption) {
   return 'A local option worth considering. Check the official website for current details.';
 }
 
+function officialWebsiteUrl(o: PlaceToStay | ThingToDo | FoodAndDrinkOption) {
+  return 'officialWebsiteUrl' in o ? o.officialWebsiteUrl : undefined;
+}
+
 export function CategoryHub({ kind }: { kind: Kind }) {
   const c = cfg[kind];
   const popular = popularByKind[kind]
@@ -213,7 +217,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
             <div className="hidden grid-cols-[1fr_0.7fr_1.4fr] gap-4 border-b border-cream-dark/60 bg-cream/50 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-charcoal-muted lg:grid">
               <span>Name</span>
               <span>Type</span>
-              <span>Source status</span>
+              <span>Planning note</span>
             </div>
             {list.map((o) => (
               <article
@@ -236,22 +240,37 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
             subtitle="Detailed information for each location. Check the official website for current ratings and bookings."
           />
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-            {list.map((o) => (
-              <article key={o.id} className="rounded-2xl border border-cream-dark/60 bg-white p-5">
-                <span className="badge badge-coast mb-3 inline-block text-[10px]">{itemLabel(o)}</span>
-                <h3 className="font-heading text-xl font-semibold text-charcoal">{o.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{itemSummary(o)}</p>
-                <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/40 pt-4">
-                  <p className="text-xs text-charcoal-muted">
-                    Always check the official website for the latest opening hours, prices and booking availability.
-                  </p>
-                  <GoogleMapsLinkButton
-                    listing={{ name: o.name, town: o.town, googleMapsUrl: o.googleMapsUrl, location: o.location }}
-                    variant="inline"
-                  />
-                </div>
-              </article>
-            ))}
+            {list.map((o) => {
+              const websiteUrl = officialWebsiteUrl(o);
+              return (
+                <article key={o.id} className="rounded-2xl border border-cream-dark/60 bg-white p-5">
+                  <span className="badge badge-coast mb-3 inline-block text-[10px]">{itemLabel(o)}</span>
+                  <h3 className="font-heading text-xl font-semibold text-charcoal">{o.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{itemSummary(o)}</p>
+                  <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/40 pt-4">
+                    <p className="text-xs text-charcoal-muted">
+                      Details should be checked directly with the venue before travelling.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-3">
+                      {websiteUrl ? (
+                        <a
+                          href={websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold text-sage hover:text-sage-dark"
+                        >
+                          Official website
+                        </a>
+                      ) : null}
+                      <GoogleMapsLinkButton
+                        listing={{ name: o.name, town: o.town, googleMapsUrl: o.googleMapsUrl, location: o.location }}
+                        variant="inline"
+                      />
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

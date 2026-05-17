@@ -95,7 +95,8 @@ export const locationGuides = [
         "town": "Lincoln",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Lincoln—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://lincolncathedral.com/",
+        "sourceUrls": [{ "label": "Lincoln Cathedral official website", "url": "https://lincolncathedral.com/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -106,7 +107,8 @@ export const locationGuides = [
         "town": "Lincoln",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Lincoln—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.lincolncastle.com/",
+        "sourceUrls": [{ "label": "Lincoln Castle official website", "url": "https://www.lincolncastle.com/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -117,7 +119,8 @@ export const locationGuides = [
         "town": "Lincoln",
         "category": "Museum",
         "shortDescription": "A worthwhile place to visit in Lincoln—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.lincolnshire.gov.uk/history-heritage/museum-lincolnshire-life",
+        "sourceUrls": [{ "label": "Museum of Lincolnshire Life official page", "url": "https://www.lincolnshire.gov.uk/history-heritage/museum-lincolnshire-life", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -128,7 +131,20 @@ export const locationGuides = [
         "town": "Lincoln",
         "category": "Museum",
         "shortDescription": "A worthwhile place to visit in Lincoln—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.lincolnmuseum.com/",
+        "sourceUrls": [{ "label": "Lincoln Museum official website", "url": "https://www.lincolnmuseum.com/", "type": "Official website", "checkedDate": "2026-05-17" }],
+        "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
+        "needsVerification": true
+      },
+      {
+        "id": "international-bomber-command-centre",
+        "name": "International Bomber Command Centre",
+        "slug": "international-bomber-command-centre",
+        "town": "Lincoln",
+        "category": "Heritage",
+        "shortDescription": "A major aviation and remembrance site near Lincoln; check opening times, tickets and event information direct.",
+        "officialWebsiteUrl": "https://internationalbcc.co.uk/",
+        "sourceUrls": [{ "label": "International Bomber Command Centre official website", "url": "https://internationalbcc.co.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       }
@@ -269,7 +285,8 @@ export const locationGuides = [
         "town": "Skegness",
         "category": "Family-friendly",
         "shortDescription": "A worthwhile place to visit in Skegness—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://skegnesspier.co.uk/",
+        "sourceUrls": [{ "label": "Skegness Pier official website", "url": "https://skegnesspier.co.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -280,7 +297,8 @@ export const locationGuides = [
         "town": "Skegness",
         "category": "Nature",
         "shortDescription": "A worthwhile place to visit in Skegness—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://skegnessnatureland.co.uk/",
+        "sourceUrls": [{ "label": "Natureland Seal Sanctuary official website", "url": "https://skegnessnatureland.co.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -291,7 +309,8 @@ export const locationGuides = [
         "town": "Skegness",
         "category": "Nature",
         "shortDescription": "A worthwhile place to visit in Skegness—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.lincstrust.org.uk/top-reserves/gibraltar-point",
+        "sourceUrls": [{ "label": "Gibraltar Point official reserve page", "url": "https://www.lincstrust.org.uk/top-reserves/gibraltar-point", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -302,7 +321,8 @@ export const locationGuides = [
         "town": "Skegness",
         "category": "Family-friendly",
         "shortDescription": "A worthwhile place to visit in Skegness—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.skegness-aquarium.uk/",
+        "sourceUrls": [{ "label": "Skegness Aquarium official website", "url": "https://www.skegness-aquarium.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       }
@@ -443,7 +463,8 @@ export const locationGuides = [
         "town": "Stamford",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Stamford—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://burghley.co.uk/",
+        "sourceUrls": [{ "label": "Burghley House official website", "url": "https://burghley.co.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -454,7 +475,8 @@ export const locationGuides = [
         "town": "Stamford",
         "category": "Other",
         "shortDescription": "A worthwhile place to visit in Stamford—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.stamfordartscentre.com/",
+        "sourceUrls": [{ "label": "Stamford Arts Centre official website", "url": "https://www.stamfordartscentre.com/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -791,7 +813,8 @@ export const locationGuides = [
         "town": "Boston",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Boston—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://parish-of-boston.org.uk/church/st-botolphs/",
+        "sourceUrls": [{ "label": "St Botolph's Church official page", "url": "https://parish-of-boston.org.uk/church/st-botolphs/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -802,7 +825,8 @@ export const locationGuides = [
         "town": "Boston",
         "category": "Museum",
         "shortDescription": "A worthwhile place to visit in Boston—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.boston.gov.uk/bostonguildhall",
+        "sourceUrls": [{ "label": "Boston Guildhall official page", "url": "https://www.boston.gov.uk/bostonguildhall", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -813,7 +837,8 @@ export const locationGuides = [
         "town": "Boston",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Boston—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://maudfoster.co.uk/",
+        "sourceUrls": [{ "label": "Maud Foster Windmill official website", "url": "https://maudfoster.co.uk/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -2009,7 +2034,8 @@ export const locationGuides = [
         "town": "Gainsborough",
         "category": "Historic site",
         "shortDescription": "A worthwhile place to visit in Gainsborough—check the official site for current opening hours.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.gainsborougholdhall.com/",
+        "sourceUrls": [{ "label": "Gainsborough Old Hall official website", "url": "https://www.gainsborougholdhall.com/", "type": "Official website", "checkedDate": "2026-05-17" }],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
         "needsVerification": true
       },
@@ -2452,4 +2478,3 @@ export const locationGuides = [
 export const categoryLandingFaqs: Record<'places-to-stay' | 'things-to-do' | 'food-drink', FAQItem[]> = { 'places-to-stay': [{question:'How are accommodation options selected?',answer:'These are curated accommodation options. Always check the official website or booking platform for current ratings, prices and availability.'},{question:'Is other accommodation content included here?',answer:'No. This section covers hotels, B&Bs, guest houses, inns, apartments and holiday cottages only.'}], 'things-to-do': [{question:'Are these official recommendations?',answer:'No. They are curated suggestions for visitor planning. Always verify opening hours and details with the official source.'}], 'food-drink': [{question:'Are these ranked restaurants?',answer:'No. These are curated suggestions, not rankings. We do not publish unverified ratings or review counts.'}] };
 export function getLocationGuideBySlug(slug:string){ return locationGuides.find(g=>g.slug===slug); }
 export function getRelatedLocationGuides(slug:string, limit=5){ const current=getLocationGuideBySlug(slug); const rest=locationGuides.filter(g=>g.slug!==slug); return [...rest.filter(g=>g.regionType===current?.regionType),...rest.filter(g=>g.regionType!==current?.regionType)].slice(0,limit); }
-

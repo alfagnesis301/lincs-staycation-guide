@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSubmissionForm from '@/components/BusinessSubmissionForm';
 
 export const metadata: Metadata = {
-  title: 'Add Your Business to Lincs Staycation Guide',
+  title: 'Add Your Business',
   description: 'Submit your tourism, hospitality, accommodation, food, drink or activity business in Lincolnshire to our local travel directory.',
   openGraph: {
     title: 'Add Your Business to Lincs Staycation Guide',

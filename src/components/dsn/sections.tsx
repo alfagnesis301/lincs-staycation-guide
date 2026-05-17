@@ -419,7 +419,7 @@ export function HowItWorks() {
       n: '03',
       icon: <Calendar width={18} height={18} />,
       h: 'Book direct',
-      p: "We are a directory, not a booking engine — go straight to the operator so you get the best rate.",
+      p: 'Book direct with the operator to check current availability, facilities and prices.',
     },
   ];
   return (

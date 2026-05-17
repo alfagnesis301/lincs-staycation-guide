@@ -132,7 +132,7 @@ function ThingCard({ item, town }: { item: TownAttraction; town: string }) {
   return (
     <InfoCard
       title={item.name}
-      meta={`${item.category} - needs verification`}
+      meta={`${item.category} - Details should be checked directly with the venue before travelling.`}
       body={item.description}
       tags={item.tags}
       ctaHref={item.officialWebsiteUrl ?? mapsSearchUrl(`${item.name} ${town}`)}
@@ -262,7 +262,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
             ['Suggested stay length', profile.suggestedStayLength],
             ['Best seasons', profile.bestSeasons],
             ['Last updated', locationGuide.lastUpdated],
-            ['Verification status', profile.verificationStatus],
+            ['Editorial note', profile.verificationStatus],
           ].map(([label, value]) => (
             <div key={label} className="rounded-2xl border border-cream-dark/60 bg-cream/30 p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-charcoal-muted">{label}</p>
@@ -294,7 +294,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
 
       <Section id="where-to-stay" eyebrow="Accommodation" title={`Places to Stay in ${town.name}`} tint>
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
-          Accommodation candidates exclude caravan parks. Ratings, prices, availability and photos are not invented; entries marked for verification should be checked directly before publication or booking.
+          Accommodation candidates exclude caravan parks. Ratings, prices, availability and photos are not invented; details should be checked directly with the operator before travelling or booking.
         </p>
         <div className="grid gap-5 lg:grid-cols-2">
           {(locationGuide.placesToStay as PlaceToStay[]).slice(0, 5).map((stay) => {
@@ -305,7 +305,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={stay.id}
                 title={stay.name}
-                meta={`${stay.type} - ${town.name} - needs verification`}
+                meta={`${stay.type} - ${town.name} - Details should be checked directly with the venue before travelling.`}
                 body={`${stay.bestFor} ${stay.sourceNote}`}
                 tags={[stay.type, 'Accommodation candidate', 'No caravan parks']}
                 ctaHref={ctaHref}
@@ -327,7 +327,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={park.id}
                 title={park.name}
-                meta={`${park.locationContext ?? `near ${town.name}`} - needs verification`}
+                meta={`${park.locationContext ?? `near ${town.name}`} - Details should be checked directly with the venue before travelling.`}
                 body={park.description}
                 tags={park.tags.slice(0, 6)}
                 ctaHref={park.bookingUrl ?? park.affiliateUrl ?? park.sourceUrl ?? maps?.href ?? mapsSearchUrl(`${park.name} ${town.name}`)}
@@ -355,7 +355,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={venue.id}
                 title={venue.name}
-                meta={`${venue.type} - needs verification`}
+                meta={`${venue.type} - Details should be checked directly with the venue before travelling.`}
                 body={`A ${venue.type.toLowerCase()} candidate for visitors planning food and drink in ${town.name}. Check current opening hours and menus before visiting.`}
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
                 ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}

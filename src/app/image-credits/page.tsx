@@ -9,7 +9,7 @@ import ImageCreditComponent from '@/components/ImageCredit';
 import LegalPageLayout from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Image Credits | Lincs Staycation Guide',
+  title: 'Image Credits',
   description: 'Full attribution for all images used on Lincs Staycation Guide, including source, author, licence and any modifications made.',
   alternates: { canonical: '/image-credits' },
 };

@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Lincs Staycation Guide',
+  title: 'Contact',
   description: 'Get in touch with Lincs Staycation Guide. General enquiries, listing updates, advertising, partnerships and corrections.',
   openGraph: {
     title: 'Contact Lincs Staycation Guide',

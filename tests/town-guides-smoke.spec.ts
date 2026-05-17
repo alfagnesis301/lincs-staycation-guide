@@ -10,6 +10,12 @@ const CRITICAL_ROUTES = [
   '/things-to-do',
   '/food-drink',
   '/caravan-parks',
+  '/dog-friendly',
+  '/family-days-out',
+  '/lincolnshire-coast',
+  '/events',
+  '/blog/things-to-do-with-kids',
+  '/blog/best-places-to-stay',
 ];
 
 const VIEWPORTS = [

@@ -52,11 +52,6 @@ export default function ListingCard({ listing }: ListingCardProps) {
           </span>
           <span className="text-xs text-charcoal-muted font-medium">{listing.category}</span>
         </div>
-        {listing.isSample && (
-          <span className="absolute top-3 right-3 badge badge-sample text-[11px]">
-            Sample listing
-          </span>
-        )}
         {listing.priceRange && (
           <span className="absolute top-3 left-3 badge badge-sage text-[11px]">
             {listing.priceRange}

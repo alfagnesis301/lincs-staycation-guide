@@ -10,6 +10,18 @@ test.describe('Home', () => {
     await page.goto('/');
     await expect(page.locator('header').getByRole('link', { name: /Lincs.*Staycation.*Guide/i })).toBeVisible();
   });
+
+  test('home internal links do not return 404', async ({ page, request }) => {
+    await page.goto('/');
+    const hrefs = await page.locator('a[href^="/"]').evaluateAll((links) =>
+      Array.from(new Set(links.map((link) => (link as HTMLAnchorElement).getAttribute('href')?.split('#')[0]).filter(Boolean)))
+    );
+
+    for (const href of hrefs) {
+      const response = await request.get(href as string);
+      expect(response.status(), href as string).not.toBe(404);
+    }
+  });
 });
 
 test.describe('Main navigation dropdowns (desktop)', () => {

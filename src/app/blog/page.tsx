@@ -60,7 +60,7 @@ export default function BlogPage() {
                 Travel guides in research
               </h2>
               <p className="text-charcoal-muted leading-relaxed mb-4">
-                Our editorial team is researching long-form Lincolnshire travel guides covering family days out, the coast, dog-friendly escapes and weekend breaks. We publish guides only once they have been written, fact-checked and properly credited &mdash; rather than as &ldquo;coming soon&rdquo; placeholders.
+                Our editorial team is researching long-form Lincolnshire travel guides covering family days out, the coast, dog-friendly escapes and weekend breaks. We publish guides only once they have been written, fact-checked and properly credited.
               </p>
               <p className="text-charcoal-muted leading-relaxed">
                 In the meantime, browse our{' '}
