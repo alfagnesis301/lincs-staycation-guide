@@ -106,7 +106,7 @@ function itemLabel(o: CategoryItem) {
 function itemSummary(o: CategoryItem) {
   if ('bestFor' in o) return o.bestFor;
   if ('shortDescription' in o) return o.shortDescription;
-  return 'Details should be checked directly with the venue before travelling.';
+  return 'Useful for visitor planning in this guide.';
 }
 
 function officialWebsiteUrl(o: CategoryItem) {
@@ -284,9 +284,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
                   <h3 className="font-heading text-xl font-semibold text-charcoal">{o.name}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{itemSummary(o)}</p>
                   <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/40 pt-4">
-                    <p className="text-xs text-charcoal-muted">
-                      Details should be checked directly with the venue before travelling.
-                    </p>
+                    <p className="text-xs text-charcoal-muted">Use the official or map links for live details.</p>
                     <div className="flex flex-wrap items-center gap-3">
                       {websiteUrl ? (
                         <a

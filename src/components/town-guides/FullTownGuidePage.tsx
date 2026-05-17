@@ -136,7 +136,7 @@ function ThingCard({ item, town }: { item: TownAttraction; town: string }) {
   return (
     <InfoCard
       title={item.name}
-      meta={`${item.category} - Details should be checked directly with the venue before travelling.`}
+      meta={item.category}
       body={item.description}
       tags={item.tags}
       ctaHref={item.officialWebsiteUrl ?? mapsSearchUrl(`${item.name} ${town}`)}

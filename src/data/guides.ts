@@ -66,6 +66,30 @@ export const guides: Guide[] = [
         links: [{ label: 'Rainy Day Activities', href: '/blog/rainy-day-activities' }],
       },
       {
+        heading: 'Nature, wildlife and outdoor space',
+        body: [
+          'For children who need space rather than queues, plan around parks, woods, nature reserves and short countryside walks. Woodhall Spa, Louth, the Wolds and the Lincolnshire coast all work well when the day needs fresh air and flexible timing.',
+          'Check paths, toilets, parking, dogs, pushchair access and seasonal restrictions before setting off. Nature-led days are often easier when you keep the route short and add a cafe or picnic stop nearby.',
+        ],
+        links: [
+          { label: 'Things to Do in Lincolnshire', href: '/things-to-do' },
+          { label: 'Woodhall Spa town guide', href: '/town-guides/woodhall-spa' },
+          { label: 'Louth town guide', href: '/town-guides/louth' },
+        ],
+      },
+      {
+        heading: 'Coast, arcades and classic resort days',
+        body: [
+          'The Lincolnshire coast is the easiest choice when children want a traditional day out: sand, chips, amusements, promenades and simple food stops. Skegness is busiest and most structured; Mablethorpe and Sutton-on-Sea can feel calmer depending on season.',
+          'Treat tide, wind and parking as part of the plan. If the beach weather turns, move to arcades, cafes, indoor attractions or a shorter promenade walk rather than forcing a full outdoor day.',
+        ],
+        links: [
+          { label: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches' },
+          { label: 'Skegness town guide', href: '/town-guides/skegness' },
+          { label: 'Mablethorpe town guide', href: '/town-guides/mablethorpe' },
+        ],
+      },
+      {
         heading: 'Low-cost family planning tips',
         body: [
           'A family day out does not have to mean a full paid attraction. Mix free walks, beaches, parks and town exploring with one paid stop if budget matters.',
@@ -97,11 +121,18 @@ export const guides: Guide[] = [
         answer:
           'It can be, especially if you keep distances short and plan around parks, beaches, cafes and flexible stops rather than long itineraries.',
       },
+      {
+        question: 'What is the best rainy-day base with children?',
+        answer:
+          'Lincoln is usually the strongest rainy-day base because indoor heritage, museums, cafes and compact streets are close together. Coastal resorts can still work, but it helps to have indoor amusements or a second town plan ready.',
+      },
     ],
     relatedGuides: [
       { title: 'Things to Do in Lincolnshire', href: '/things-to-do', label: 'Activities' },
       { title: 'Rainy Day Activities', href: '/blog/rainy-day-activities', label: 'Family' },
       { title: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches', label: 'Coast' },
+      { title: 'Lincoln Travel Guide', href: '/town-guides/lincoln', label: 'City' },
+      { title: 'Places to Stay in Lincolnshire', href: '/blog/best-places-to-stay', label: 'Stays' },
     ],
     editorialNote:
       'Family facilities, age suitability, tickets, menus, toilets and seasonal opening can change. Check directly before travelling.',
