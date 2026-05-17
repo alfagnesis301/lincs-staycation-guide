@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import CaravanParkEditorialNote from '@/components/caravan-parks/CaravanParkEditorialNote';
 import CaravanParkDisclosureBox from '@/components/caravan-parks/CaravanParkDisclosureBox';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 import {
   categoryLandingFaqs,
   getRelatedLocationGuides,
@@ -14,6 +15,7 @@ import {
   type PlaceToStay,
   type ThingToDo,
 } from '@/data/locationGuides';
+import { natureSpotsByTown } from '@/data/nature-spots';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 
 type Kind = 'places-to-stay' | 'things-to-do' | 'food-drink';
@@ -200,6 +202,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
   const c = cfg[kind];
   const list = items(guide, kind);
   const related = getRelatedLocationGuides(guide.slug, 5);
+  const natureSpots = kind === 'things-to-do' ? natureSpotsByTown[guide.slug] ?? [] : [];
 
   return (
     <>
@@ -308,6 +311,9 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
         </div>
       </section>
 
+      {kind === 'things-to-do' ? (
+        <NatureSpotsSection townName={guide.name} spots={natureSpots} />
+      ) : null}
       <CaravanParkEditorialNote
         text="This guide is independently curated, not a paid ranking. Details can change, so always check official sources before making plans."
         showCorrectionsCta

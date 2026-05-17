@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowDown,
   Bed,
@@ -251,14 +252,39 @@ export function CaravanHero() {
             </span>
           </div>
         </div>
-        <div className="dsn-cv-hero-collage" aria-hidden>
+        <div className="dsn-cv-hero-collage">
           <div className="dsn-cv-tile-1">
+            <Image
+              src="/images/lincolnshire/skegness.jpg"
+              alt="Skegness seafront on the Lincolnshire Coast"
+              fill
+              priority
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="object-cover"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" aria-hidden="true" />
             <span className="dsn-cv-tile-label">Coast · Skegness</span>
           </div>
           <div className="dsn-cv-tile-2">
+            <Image
+              src="/images/lincolnshire/louth.jpg"
+              alt="Louth and the Lincolnshire Wolds area"
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="object-cover"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" aria-hidden="true" />
             <span className="dsn-cv-tile-label">Wolds · Louth</span>
           </div>
           <div className="dsn-cv-tile-3">
+            <Image
+              src="/images/lincolnshire/stamford.jpg"
+              alt="Historic Stamford, useful for countryside and glamping breaks nearby"
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="object-cover"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" aria-hidden="true" />
             <span className="dsn-cv-tile-label">Glamping · Stamford</span>
           </div>
         </div>

@@ -152,11 +152,6 @@ export const User = (p: P) => (
     <path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
   </svg>
 );
-export const Bookmark = (p: P) => (
-  <svg width={14} height={14} {...base} {...p}>
-    <path d="M6 4h12v17l-6-4-6 4V4Z" />
-  </svg>
-);
 export const Sun = (p: P) => (
   <svg width={14} height={14} {...base} {...p}>
     <circle cx="12" cy="12" r="4" />
