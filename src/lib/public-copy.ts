@@ -41,8 +41,15 @@ const INTERNAL_REPLACEMENTS: Array<[RegExp, string]> = [
   [/\s*before publication\s*/gi, ' before travelling '],
 ];
 
+const PUBLIC_VERIFICATION_NOTE_PATTERN =
+  /\b(check|confirm|verify)\b[^.]{0,120}\b(current|direct|official|opening|ticket|availability|facilit|price|booking|travelling|visiting|details)\b/i;
+
 export function containsInternalCopy(value: string): boolean {
   return INTERNAL_COPY_PATTERNS.some((pattern) => pattern.test(value));
+}
+
+function hasPublicVerificationNote(value: string): boolean {
+  return PUBLIC_VERIFICATION_NOTE_PATTERN.test(value);
 }
 
 export function cleanPublicCopy(value?: string): string {
@@ -82,7 +89,7 @@ export function getPublicListingDescription(
   const note = publicVerificationNote(kind);
 
   if (cleanedDescription && !containsInternalCopy(cleanedDescription)) {
-    return cleanedDescription.includes('Check current') ? cleanedDescription : `${cleanedDescription} ${note}`;
+    return hasPublicVerificationNote(cleanedDescription) ? cleanedDescription : `${cleanedDescription} ${note}`;
   }
 
   const townPart = listing.town ? ` in or near ${listing.town}` : '';
