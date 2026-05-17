@@ -23,6 +23,7 @@ const CRITICAL_ROUTES = [
   '/blog',
   '/blog/best-beaches',
   '/blog/things-to-do-with-kids',
+  '/blog/dog-friendly-stays-coast',
   '/blog/dog-friendly-days-out',
   '/blog/rainy-day-activities',
   '/blog/best-places-to-stay',

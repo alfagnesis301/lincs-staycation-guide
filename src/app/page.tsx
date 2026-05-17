@@ -17,11 +17,11 @@ export const metadata = {
 // are illustrative; replace with live CMS aggregation when the dataset wires in.
 // Popular town guides: small editorial set, not the full location browser.
 const POPULAR_GUIDES = [
-  { href: '/town-guides/lincoln',   tag: 'City',        tone: 'sage' as const,  title: 'Lincoln',     sub: 'Cathedral city, historic streets and independent food.',     media: ''      },
-  { href: '/town-guides/skegness',  tag: 'Coast',       tone: 'coast' as const, title: 'Skegness',    sub: 'Seaside resort with sandy beaches and family attractions.',  media: 'coast' as const },
-  { href: '/town-guides/stamford',  tag: 'Market town', tone: 'warm' as const,  title: 'Stamford',    sub: 'Georgian stone streets, boutique stays and quiet courtyards.', media: 'warm' as const },
-  { href: '/town-guides/louth',     tag: 'Wolds',       tone: 'sage' as const,  title: 'Louth',       sub: 'Gateway market town for the Lincolnshire Wolds AONB.',       media: 'wolds' as const },
-  { href: '/town-guides/boston',    tag: 'Fens',        tone: 'fen' as const,   title: 'Boston',      sub: "Historic port town with St Botolph's Stump.",                 media: 'fen' as const  },
+  { href: '/town-guides/lincoln',   tag: 'City',        tone: 'sage' as const,  title: 'Lincoln',     sub: 'Cathedral city, historic streets and independent food.',     media: '' as const,      imageSrc: '/images/lincolnshire/lincoln.jpg' },
+  { href: '/town-guides/skegness',  tag: 'Coast',       tone: 'coast' as const, title: 'Skegness',    sub: 'Seaside resort with sandy beaches and family attractions.',  media: 'coast' as const, imageSrc: '/images/lincolnshire/skegness.jpg' },
+  { href: '/town-guides/stamford',  tag: 'Market town', tone: 'warm' as const,  title: 'Stamford',    sub: 'Georgian stone streets, boutique stays and quiet courtyards.', media: 'warm' as const,  imageSrc: '/images/lincolnshire/stamford.jpg' },
+  { href: '/town-guides/louth',     tag: 'Wolds',       tone: 'sage' as const,  title: 'Louth',       sub: 'Gateway market town for the Lincolnshire Wolds AONB.',       media: 'wolds' as const, imageSrc: '/images/lincolnshire/louth.jpg' },
+  { href: '/town-guides/boston',    tag: 'Fens',        tone: 'fen' as const,   title: 'Boston',      sub: "Historic port town with St Botolph's Stump.",                 media: 'fen' as const,   imageSrc: '/images/lincolnshire/boston.jpg' },
 ];
 
 const EXPLORE_AREAS = [
@@ -125,7 +125,9 @@ export default function HomePage() {
               tone={g.tone}
               title={g.title}
               sub={g.sub}
-              media={g.media as '' | 'coast' | 'warm' | 'fen' | 'wolds'}
+              media={g.media}
+              imageSrc={g.imageSrc}
+              imageAlt={`${g.title}, Lincolnshire`}
             />
           ))}
         </div>
