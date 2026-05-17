@@ -175,6 +175,25 @@ export const guides: Guide[] = [
           'Caravan and holiday parks are kept separate from hotels, inns, B&Bs and cottages so visitors can compare like with like.',
         ],
       },
+      {
+        heading: 'Match the stay type to the trip',
+        body: [
+          'Hotels and inns work best for short breaks where location, breakfast, parking and evening food matter more than self-catering space. Apartments and cottages can be better for families, longer stays and visitors who want their own kitchen.',
+          'Caravan parks and holiday parks are strongest around the coast and selected countryside bases. Check whether you are booking a static caravan, lodge, touring pitch, glamping unit or camping pitch because facilities and policies vary by park.',
+        ],
+        links: [
+          { label: 'Places to Stay in Lincoln', href: '/places-to-stay/lincoln' },
+          { label: 'Places to Stay in Skegness', href: '/places-to-stay/skegness' },
+          { label: 'Caravan parks near Skegness', href: '/caravan-parks/best-caravan-parks-near-skegness' },
+        ],
+      },
+      {
+        heading: 'Checks before booking',
+        body: [
+          'Use official operator websites or booking platforms to confirm current availability, facilities, access, cancellation terms, pet policies, parking arrangements and prices before committing.',
+          'For accessible stays, contact the operator directly rather than relying on old directory copy. Ask about step-free access, bathroom setup, parking distance, lift availability and any seasonal changes.',
+        ],
+      },
     ],
   },
   {
@@ -216,6 +235,41 @@ export const guides: Guide[] = [
     category: 'Dog-Friendly',
     description: 'Find accommodation that welcomes dogs near beaches, coastal walks and seaside towns along the Lincolnshire Coast.',
     readingTime: '6 min read',
+    published: true,
+    intro:
+      'Dog-friendly coastal stays in Lincolnshire need a little planning because beach rules, park policies and accommodation charges can change by season. Use this guide to choose the right coastal base, then confirm pet rules, fees, facilities and nearby walking options directly with the operator before booking.',
+    sections: [
+      {
+        heading: 'Best coastal bases with dogs',
+        body: [
+          'Skegness, Ingoldmells and Chapel St Leonards work well if you want classic seaside facilities, holiday parks and easy access to family attractions, but you should check seasonal beach dog restrictions before travelling.',
+          'Mablethorpe and Sutton-on-Sea are better for slower coastal breaks, promenade walks and quieter stays. For nature-led days, Gibraltar Point can be useful, but always check reserve guidance and dog-control rules before visiting.',
+        ],
+        links: [
+          { label: 'Dog-Friendly Lincolnshire', href: '/dog-friendly' },
+          { label: 'Lincolnshire Coast guide', href: '/lincolnshire-coast' },
+          { label: 'Skegness town guide', href: '/town-guides/skegness' },
+        ],
+      },
+      {
+        heading: 'Accommodation checks',
+        body: [
+          'Ask whether dogs are allowed in all rooms or only selected units, how many dogs are permitted, whether fees apply, and whether there are breed, size or seasonal restrictions.',
+          'For holiday parks, confirm whether dogs are allowed in the specific caravan, lodge, touring pitch or glamping unit you are booking. Site-wide dog-friendly marketing does not always mean every unit accepts pets.',
+        ],
+        links: [
+          { label: 'Caravan parks near Skegness', href: '/caravan-parks/best-caravan-parks-near-skegness' },
+          { label: 'Caravan parks near Mablethorpe', href: '/caravan-parks/best-caravan-parks-near-mablethorpe' },
+        ],
+      },
+      {
+        heading: 'Plan the dog-friendly day',
+        body: [
+          'Build the trip around confirmed walks, dog-friendly food stops and accommodation rules rather than assuming every beach, cafe or attraction will allow dogs.',
+          'Bring a backup plan for hot weather, wet weather and busy school-holiday days. Coastal towns can be crowded in peak season, so quieter promenades, countryside edges and Wolds walks may be more comfortable for some dogs.',
+        ],
+      },
+    ],
   },
   {
     id: 'best-caravan-parks-skegness',

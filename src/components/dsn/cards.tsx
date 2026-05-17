@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 import { Bed, Bookmark, Check, Pin, Star, Arrow } from '@/components/dsn/Icons';
 import { RegionPill } from '@/components/dsn/primitives';
@@ -104,6 +105,8 @@ export function GuideCard({
   rating,
   priceFromGBP,
   media = '',
+  imageSrc,
+  imageAlt,
 }: {
   href: string;
   tag: string;
@@ -114,10 +117,22 @@ export function GuideCard({
   rating?: number;
   priceFromGBP?: number;
   media?: Media;
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
   return (
-    <Link className="dsn-card compact" href={href} aria-label={`${title} guide`}>
+    <Link className="dsn-card compact group" href={href} aria-label={`${title} guide`}>
       <div className={`dsn-card-media ${media}`}>
+        {imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={imageAlt ?? title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+          />
+        ) : null}
+        {imageSrc ? <span className="absolute inset-0 bg-black/10" aria-hidden="true" /> : null}
         <span className="dsn-card-media-tag">
           <span className="dot" />
           {tag}

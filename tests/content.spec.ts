@@ -19,8 +19,15 @@ test.describe('Content quality regressions', () => {
     for (const url of ['/', '/dog-friendly', '/lincolnshire-coast', '/blog']) {
       await page.goto(url);
       await expect(page.locator('a[href="/saved"]')).toHaveCount(0);
-      await expect(page.locator('a[href="/blog/dog-friendly-stays-coast"]')).toHaveCount(0);
       await expect(page.locator('a[href="/blog/best-caravan-parks-skegness"]')).toHaveCount(0);
+    }
+  });
+
+  test('home has no best-rate claims and popular town cards use real images', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('body')).not.toContainText(/best rate/i);
+    for (const town of ['Lincoln', 'Skegness', 'Stamford', 'Louth', 'Boston']) {
+      await expect(page.getByRole('img', { name: `${town}, Lincolnshire` })).toBeVisible();
     }
   });
 
@@ -90,6 +97,7 @@ test.describe('Content quality regressions', () => {
     expect(xml).not.toContain('/family-days-out</loc>');
     expect(xml).toContain('/blog/best-beaches');
     expect(xml).toContain('/blog/dog-friendly-days-out');
+    expect(xml).toContain('/blog/dog-friendly-stays-coast');
     expect(xml).toContain('/blog/weekend-breaks');
     expect(xml).toContain('/blog/rainy-day-activities');
   });
