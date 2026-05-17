@@ -16,8 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/things-to-do',
     '/food-drink',
     '/lincolnshire-coast',
-    '/dog-friendly',
-    '/family-days-out',
     '/town-guides',
     '/about',
     '/contact',

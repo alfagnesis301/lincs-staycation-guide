@@ -14,6 +14,7 @@ import {
   type PlaceToStay,
   type ThingToDo,
 } from '@/data/locationGuides';
+import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 
 type Kind = 'places-to-stay' | 'things-to-do' | 'food-drink';
 
@@ -60,21 +61,53 @@ const popularByKind: Record<Kind, string[]> = {
   'food-drink': ['lincoln', 'stamford', 'louth', 'woodhall-spa', 'skegness'],
 };
 
-function items(g: LocationGuideBase, k: Kind) {
-  return k === 'things-to-do' ? g.thingsToDo : k === 'food-drink' ? g.foodDrink : g.placesToStay;
+type CategoryItem = PlaceToStay | ThingToDo | FoodAndDrinkOption;
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+function attractionToThingToDo(attraction: TownAttraction, guide: LocationGuideBase): ThingToDo {
+  return {
+    id: `${guide.slug}-${slugify(attraction.name)}`,
+    name: attraction.name,
+    slug: slugify(attraction.name),
+    town: guide.name,
+    category: attraction.category,
+    shortDescription: attraction.description,
+    officialWebsiteUrl: attraction.officialWebsiteUrl,
+    googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${attraction.name} ${guide.name} Lincolnshire`)}`,
+    sourceUrls: attraction.officialWebsiteUrl
+      ? [{ label: `${attraction.name} official website`, url: attraction.officialWebsiteUrl, type: 'Official website' }]
+      : [],
+    imageGuidance: `Use an attributed Wikimedia or official exterior image for ${attraction.name} if available.`,
+    needsVerification: true,
+  };
 }
 
-function itemLabel(o: PlaceToStay | ThingToDo | FoodAndDrinkOption) {
+function items(g: LocationGuideBase, k: Kind): CategoryItem[] {
+  if (k === 'things-to-do') {
+    const townProfile = getTownGuideProfile(g.slug);
+    return townProfile ? townProfile.attractions.map((attraction) => attractionToThingToDo(attraction, g)) : g.thingsToDo;
+  }
+
+  return k === 'food-drink' ? g.foodDrink : g.placesToStay;
+}
+
+function itemLabel(o: CategoryItem) {
   return 'type' in o ? o.type : o.category;
 }
 
-function itemSummary(o: PlaceToStay | ThingToDo | FoodAndDrinkOption) {
+function itemSummary(o: CategoryItem) {
   if ('bestFor' in o) return o.bestFor;
   if ('shortDescription' in o) return o.shortDescription;
-  return 'A local option worth considering. Check the official website for current details.';
+  return 'Details should be checked directly with the venue before travelling.';
 }
 
-function officialWebsiteUrl(o: PlaceToStay | ThingToDo | FoodAndDrinkOption) {
+function officialWebsiteUrl(o: CategoryItem) {
   return 'officialWebsiteUrl' in o ? o.officialWebsiteUrl : undefined;
 }
 
@@ -165,7 +198,7 @@ export function CategoryHub({ kind }: { kind: Kind }) {
 
 export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase; kind: Kind }) {
   const c = cfg[kind];
-  const list = items(guide, kind) as (PlaceToStay | ThingToDo | FoodAndDrinkOption)[];
+  const list = items(guide, kind);
   const related = getRelatedLocationGuides(guide.slug, 5);
 
   return (

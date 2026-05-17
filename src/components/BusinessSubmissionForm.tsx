@@ -135,10 +135,8 @@ export default function BusinessSubmissionForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-6">
-      {/* Honeypot */}
-      <div className="absolute -left-[9999px]" aria-hidden="true">
-        <label htmlFor="biz-hp">Leave blank</label>
-        <input type="text" id="biz-hp" name="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+      <div className="hidden" aria-hidden="true">
+        <input type="text" id="biz-hp" name="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex={-1} aria-hidden="true" autoComplete="off" />
       </div>
 
       <fieldset>
