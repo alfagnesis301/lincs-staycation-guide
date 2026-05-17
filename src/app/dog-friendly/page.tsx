@@ -6,7 +6,7 @@ import GuideCard from '@/components/GuideCard';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import { getListingsByTag } from '@/data/listings';
-import { guides } from '@/data/guides';
+import { publishedGuides } from '@/data/guides';
 import { dogFriendlyFaqs } from '@/data/faqs';
 import PopularCaravanGuidesStrip from '@/components/caravan-parks/PopularCaravanGuidesStrip';
 
@@ -18,12 +18,13 @@ export const metadata: Metadata = {
     title: 'Dog-Friendly Lincolnshire | Stays, Pubs, Walks & Beaches',
     description: 'Find the best dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire.',
   },
+  robots: { index: false, follow: true },
   alternates: { canonical: '/dog-friendly' },
 };
 
 export default function DogFriendlyPage() {
   const dogListings = getListingsByTag('Dog-friendly');
-  const dogGuides = guides.filter((g) => g.category === 'Dog-Friendly');
+  const dogGuides = publishedGuides.filter((g) => g.category === 'Dog-Friendly');
 
   const sections = [
     'Dog-friendly places to stay',
@@ -52,7 +53,7 @@ export default function DogFriendlyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {sections.map((section) => (
-              <span key={section} className="badge badge-sage">🐾 {section}</span>
+              <span key={section} className="badge badge-sage">{section}</span>
             ))}
           </div>
         </div>

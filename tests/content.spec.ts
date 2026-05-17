@@ -15,6 +15,36 @@ test.describe('Content quality regressions', () => {
     await expect(page.locator('body')).not.toContainText('Advertisement space');
   });
 
+  test('visible navigation and guide cards do not point to unpublished routes', async ({ page }) => {
+    for (const url of ['/', '/dog-friendly', '/lincolnshire-coast', '/blog']) {
+      await page.goto(url);
+      await expect(page.locator('a[href="/saved"]')).toHaveCount(0);
+      await expect(page.locator('a[href="/blog/dog-friendly-stays-coast"]')).toHaveCount(0);
+      await expect(page.locator('a[href="/blog/best-caravan-parks-skegness"]')).toHaveCount(0);
+    }
+  });
+
+  test('thin research pages are noindex while listing data is incomplete', async ({ page }) => {
+    for (const url of ['/dog-friendly', '/family-days-out', '/events']) {
+      await page.goto(url);
+      await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/i);
+    }
+  });
+
+  test('forms do not expose honeypot helper text', async ({ page }) => {
+    for (const url of ['/contact', '/add-your-business']) {
+      await page.goto(url);
+      await expect(page.locator('body')).not.toContainText('Leave blank');
+    }
+  });
+
+  test('metadata titles do not duplicate the site brand', async ({ page }) => {
+    for (const url of ['/things-to-do', '/food-drink', '/caravan-parks/best-caravan-parks-near-skegness', '/image-credits']) {
+      await page.goto(url);
+      await expect(page).not.toHaveTitle(/Lincs Staycation Guide \| Lincs Staycation Guide/);
+    }
+  });
+
   test('caravan parks editorial note shows correct subject on non-park category pages', async ({ page }) => {
     await page.goto('/places-to-stay/lincoln');
     await expect(page.locator('body')).not.toContainText('manage one of these parks');
@@ -56,6 +86,8 @@ test.describe('Content quality regressions', () => {
     const xml = await res.text();
     expect(xml).not.toContain('/events</loc>');
     expect(xml).not.toContain('/events<');
+    expect(xml).not.toContain('/dog-friendly</loc>');
+    expect(xml).not.toContain('/family-days-out</loc>');
     expect(xml).toContain('/blog/best-beaches');
     expect(xml).toContain('/blog/dog-friendly-days-out');
     expect(xml).toContain('/blog/weekend-breaks');

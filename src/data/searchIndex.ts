@@ -1,6 +1,13 @@
 import { mainCategories } from '@/data/categories';
 import { publishedGuides } from '@/data/guides';
-import { categoryChips, placesToStayLocations } from '@/data/navigation';
+import {
+  caravanParksLocations,
+  categoryChips,
+  coastLocations,
+  foodDrinkLocations,
+  placesToStayLocations,
+  thingsToDoLocations,
+} from '@/data/navigation';
 import { towns } from '@/data/towns';
 
 export interface SearchTarget {
@@ -35,6 +42,26 @@ export const searchTargets: SearchTarget[] = uniqueByHref([
     title: `${location.label} places to stay`,
     href: location.href,
     keywords: [location.label, 'accommodation', 'hotel', 'b&b', 'stay'],
+  })),
+  ...thingsToDoLocations.map((location) => ({
+    title: `${location.label} things to do`,
+    href: location.href,
+    keywords: [location.label, 'attractions', 'activities', 'heritage', 'museum', 'family days out'],
+  })),
+  ...foodDrinkLocations.map((location) => ({
+    title: `${location.label} food and drink`,
+    href: location.href,
+    keywords: [location.label, 'restaurant', 'pub', 'cafe', 'bar', 'food', 'drink'],
+  })),
+  ...caravanParksLocations.map((location) => ({
+    title: `${location.label} caravan parks`,
+    href: location.href,
+    keywords: [location.label, 'caravan parks', 'holiday parks', 'touring', 'lodges'],
+  })),
+  ...coastLocations.map((location) => ({
+    title: `${location.label} coast guide`,
+    href: location.href,
+    keywords: [location.label, 'coast', 'beach', 'seaside', 'Lincolnshire coast'],
   })),
   ...towns.map((town) => ({
     title: `${town.name} town guide`,

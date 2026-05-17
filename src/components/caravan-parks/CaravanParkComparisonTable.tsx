@@ -12,7 +12,7 @@ export default function CaravanParkComparisonTable({ parks }: Props) {
         <p className="text-sm text-charcoal-muted mb-6">A summary of all curated parks in this guide. Tap a row on mobile to scroll the full description below.</p>
 
         {/* Desktop table */}
-        <div className="hidden md:block overflow-x-auto rounded-2xl border border-cream-dark/60">
+        <div className="hidden md:block overflow-x-auto rounded-2xl border border-cream-dark/60" aria-label="Caravan park comparison">
           <table className="w-full text-sm">
             <thead className="bg-cream/50 text-charcoal">
               <tr>
@@ -61,7 +61,7 @@ export default function CaravanParkComparisonTable({ parks }: Props) {
         </div>
 
         {/* Mobile cards */}
-        <div className="md:hidden space-y-3">
+        <div className="md:hidden space-y-3" aria-hidden="true">
           {parks.map((p) => (
             <a
               key={p.id}

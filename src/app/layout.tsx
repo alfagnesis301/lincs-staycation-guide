@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: '%s | Lincs Staycation Guide',
   },
   description:
-    'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire. We are a directory — book direct with the operator.',
+    'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire. We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk'),
   openGraph: {
     type: 'website',

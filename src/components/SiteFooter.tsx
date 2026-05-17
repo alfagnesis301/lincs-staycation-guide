@@ -34,7 +34,7 @@ export default function SiteFooter() {
             }}
           >
             An independent guide to staying, eating and exploring across Lincolnshire — coast,
-            city, Wolds, Fens and market towns. We are a directory — book direct with the operator.
+            city, Wolds, Fens and market towns. We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.
           </p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <span

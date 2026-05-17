@@ -93,9 +93,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Honeypot */}
-      <div className="absolute -left-[9999px]" aria-hidden="true">
-        <label htmlFor="contact-hp">Leave blank</label>
+      <div className="hidden" aria-hidden="true">
         <input
           type="text"
           id="contact-hp"
@@ -103,6 +101,7 @@ export default function ContactForm() {
           value={formData.honeypot}
           onChange={handleChange}
           tabIndex={-1}
+          aria-hidden="true"
           autoComplete="off"
         />
       </div>

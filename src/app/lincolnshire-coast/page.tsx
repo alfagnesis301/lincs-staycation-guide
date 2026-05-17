@@ -8,7 +8,7 @@ import CTASection from '@/components/CTASection';
 import { coastalAreas } from '@/data/towns';
 import { listings } from '@/data/listings';
 import { coastFaqs } from '@/data/faqs';
-import { guides } from '@/data/guides';
+import { publishedGuides } from '@/data/guides';
 import GuideCard from '@/components/GuideCard';
 import PopularCaravanGuidesStrip from '@/components/caravan-parks/PopularCaravanGuidesStrip';
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function LincolnshireCoastPage() {
   const coastListings = listings.filter((l) => l.area === 'Lincolnshire Coast');
-  const coastGuides = guides.filter((g) => g.category === 'Coast');
+  const coastGuides = publishedGuides.filter((g) => g.category === 'Coast');
 
   return (
     <>
@@ -54,7 +54,7 @@ export default function LincolnshireCoastPage() {
               <Link key={area.slug} href={`/town-guides/${area.slug}`} className="group block">
                 <div className="card-hover bg-white rounded-2xl border border-cream-dark/60 overflow-hidden h-full">
                   <div className="h-28 bg-gradient-to-br from-coast/15 to-cream flex items-center justify-center">
-                    <span className="text-3xl" role="img" aria-label="Beach">🌊</span>
+                    <span className="text-sm font-semibold uppercase tracking-wide text-coast" aria-hidden="true">Coast</span>
                   </div>
                   <div className="p-4">
                     <h3 className="font-heading text-base font-semibold text-charcoal group-hover:text-coast transition-colors mb-1">
