@@ -59,6 +59,25 @@ const FEATURED_EDITORIAL_GUIDES = publishedGuides
   .filter((guide) => ['best-beaches', 'dog-friendly-days-out', 'weekend-breaks', 'rainy-day-activities'].includes(guide.slug))
   .slice(0, 4);
 
+const EDITORIAL_GUIDE_IMAGES: Record<string, { src: string; alt: string }> = {
+  'best-beaches': {
+    src: '/images/lincolnshire/skegness.jpg',
+    alt: 'Skegness seafront and beach on the Lincolnshire Coast',
+  },
+  'dog-friendly-days-out': {
+    src: '/images/lincolnshire/louth.jpg',
+    alt: 'Countryside and market town scenery in Lincolnshire suitable for dog-friendly days out',
+  },
+  'weekend-breaks': {
+    src: '/images/lincolnshire/stamford.jpg',
+    alt: 'Historic Stamford street scene, suitable for a Lincolnshire weekend break',
+  },
+  'rainy-day-activities': {
+    src: '/images/lincolnshire/lincoln.jpg',
+    alt: 'Historic Lincoln visitor attraction suitable for rainy day activities',
+  },
+};
+
 export default function HomePage() {
   return (
     <>
@@ -187,6 +206,8 @@ export default function HomePage() {
                 title={guide.title}
                 sub={guide.description}
                 media={guide.category === 'Coast' ? 'coast' : guide.category === 'Stays' ? 'warm' : ''}
+                imageSrc={EDITORIAL_GUIDE_IMAGES[guide.slug]?.src}
+                imageAlt={EDITORIAL_GUIDE_IMAGES[guide.slug]?.alt}
               />
             ))}
           </div>

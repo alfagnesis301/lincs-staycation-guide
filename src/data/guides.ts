@@ -150,48 +150,98 @@ export const guides: Guide[] = [
     title: 'Best Places to Stay in Lincolnshire',
     slug: 'best-places-to-stay',
     category: 'Stays',
-    description: 'A practical guide to accommodation options across Lincolnshire, from boutique hotels to budget-friendly campsites.',
+    description: 'A practical guide to choosing where to base yourself in Lincolnshire, from cathedral city breaks and coastal holidays to Wolds villages, spa-style stays and family-friendly seaside towns.',
     readingTime: '10 min read',
     published: true,
     intro:
-      'There is no single best place to stay in Lincolnshire. The right choice depends on whether you want a walkable city break, a seaside holiday park, a market-town weekend, a countryside cottage or a touring base. Compare by location first, then check live availability, facilities and prices direct.',
+      'A practical guide to choosing where to base yourself in Lincolnshire, from cathedral city breaks and coastal holidays to Wolds villages, spa-style stays and family-friendly seaside towns.',
     sections: [
       {
-        heading: 'Choose the right base first',
+        heading: 'Best for city breaks: Lincoln',
         body: [
-          'Lincoln is best for cathedral, castle, museums, food and rail-friendly weekends. Skegness, Mablethorpe, Sutton-on-Sea and Chapel St Leonards suit coast-first breaks and caravan holidays.',
-          'Stamford, Louth, Woodhall Spa, Horncastle and Market Rasen are better for slower stays, independent shops, Wolds access and countryside day trips.',
+          'Lincoln is the most practical base for a cathedral city break, with the historic uphill quarter, Lincoln Castle, Lincoln Cathedral, museums, shops, food stops and Brayford Waterfront all close enough for a compact itinerary.',
+          'It is also one of the strongest choices if you want rail access or a stay that does not depend on driving every day. Check accommodation location, parking, accessibility and breakfast arrangements directly before booking.',
         ],
         links: [
-          { label: 'Places to Stay in Lincolnshire', href: '/places-to-stay' },
-          { label: 'Caravan Parks in Lincolnshire', href: '/caravan-parks' },
-          { label: 'Town Guides', href: '/town-guides' },
-        ],
-      },
-      {
-        heading: 'What we do not claim',
-        body: [
-          'We do not invent ratings, review counts, prices or availability. Accommodation details change quickly, so current facilities, parking, accessibility, dog policies and charges should be checked directly with the operator.',
-          'Caravan and holiday parks are kept separate from hotels, inns, B&Bs and cottages so visitors can compare like with like.',
-        ],
-      },
-      {
-        heading: 'Match the stay type to the trip',
-        body: [
-          'Hotels and inns work best for short breaks where location, breakfast, parking and evening food matter more than self-catering space. Apartments and cottages can be better for families, longer stays and visitors who want their own kitchen.',
-          'Caravan parks and holiday parks are strongest around the coast and selected countryside bases. Check whether you are booking a static caravan, lodge, touring pitch, glamping unit or camping pitch because facilities and policies vary by park.',
-        ],
-        links: [
+          { label: 'Lincoln town guide', href: '/town-guides/lincoln' },
           { label: 'Places to Stay in Lincoln', href: '/places-to-stay/lincoln' },
-          { label: 'Places to Stay in Skegness', href: '/places-to-stay/skegness' },
-          { label: 'Caravan parks near Skegness', href: '/caravan-parks/best-caravan-parks-near-skegness' },
         ],
       },
       {
-        heading: 'Checks before booking',
+        heading: 'Best for coast: Skegness, Mablethorpe, Sutton-on-Sea',
         body: [
-          'Use official operator websites or booking platforms to confirm current availability, facilities, access, cancellation terms, pet policies, parking arrangements and prices before committing.',
-          'For accessible stays, contact the operator directly rather than relying on old directory copy. Ask about step-free access, bathroom setup, parking distance, lift availability and any seasonal changes.',
+          'Skegness is the easiest base for classic seaside facilities, family attractions, holiday parks and a lively resort feel. Mablethorpe and Sutton-on-Sea are better suited to slower coastal stays, beach walks and quieter seaside routines.',
+          'For coastal stays, check seasonal opening, beach rules, dog policies, entertainment schedules, parking and whether you are booking a room, static caravan, lodge, touring pitch or self-catering unit.',
+        ],
+        links: [
+          { label: 'Skegness town guide', href: '/town-guides/skegness' },
+          { label: 'Mablethorpe town guide', href: '/town-guides/mablethorpe' },
+          { label: 'Lincolnshire Coast guide', href: '/lincolnshire-coast' },
+        ],
+      },
+      {
+        heading: 'Best for boutique weekends: Stamford',
+        body: [
+          'Stamford works well for a slower market-town weekend, with historic streets, independent shops, pubs, riverside walks and Burghley House nearby.',
+          'It suits visitors who want a town-and-country break rather than a resort stay. Confirm current accommodation facilities, parking and cancellation policies directly with the operator before booking.',
+        ],
+        links: [
+          { label: 'Stamford town guide', href: '/town-guides/stamford' },
+          { label: 'Places to Stay in Stamford', href: '/places-to-stay/stamford' },
+        ],
+      },
+      {
+        heading: 'Best for countryside and Wolds: Louth, Horncastle, Market Rasen',
+        body: [
+          'Louth, Horncastle and Market Rasen are useful bases for the Lincolnshire Wolds, countryside walks, market-town wandering and quieter food-led breaks.',
+          'These areas work best if you are happy to drive between villages, walks and attractions. Check access, seasonal opening and dog rules before building a countryside itinerary around one venue.',
+        ],
+        links: [
+          { label: 'Louth town guide', href: '/town-guides/louth' },
+          { label: 'Horncastle town guide', href: '/town-guides/horncastle' },
+          { label: 'Market Rasen town guide', href: '/town-guides/market-rasen' },
+        ],
+      },
+      {
+        heading: 'Best for spa-style breaks: Woodhall Spa',
+        body: [
+          'Woodhall Spa is a good choice for a gentler village-style break with woodland, heritage, golf, tea rooms and a distinctive Edwardian feel.',
+          'It is especially useful for visitors who want slower days rather than a packed resort itinerary. Check current accommodation policies, spa or leisure access and dining arrangements directly.',
+        ],
+        links: [
+          { label: 'Woodhall Spa town guide', href: '/town-guides/woodhall-spa' },
+          { label: 'Things to Do in Woodhall Spa', href: '/things-to-do/woodhall-spa' },
+        ],
+      },
+      {
+        heading: 'Best for heritage: Boston, Gainsborough, Grantham',
+        body: [
+          'Boston, Gainsborough and Grantham are practical bases for heritage-led trips, with historic buildings, riverside settings, country houses and transport links depending on the town.',
+          'They are better approached as location choices for specific interests rather than one-size-fits-all holiday bases. Check opening times and accommodation facilities before travelling.',
+        ],
+        links: [
+          { label: 'Boston town guide', href: '/town-guides/boston' },
+          { label: 'Gainsborough town guide', href: '/town-guides/gainsborough' },
+          { label: 'Grantham town guide', href: '/town-guides/grantham' },
+        ],
+      },
+      {
+        heading: 'Best for quieter market-town stays: Bourne, Sleaford, Spalding',
+        body: [
+          'Bourne, Sleaford and Spalding suit quieter stays where the plan is built around local heritage, riverside walks, gardens, woodland, nearby villages or visiting family and friends.',
+          'They can be useful alternatives to the better-known bases, but transport, opening times and evening food options should be checked before you commit to a route.',
+        ],
+        links: [
+          { label: 'Bourne town guide', href: '/town-guides/bourne' },
+          { label: 'Sleaford town guide', href: '/town-guides/sleaford' },
+          { label: 'Spalding town guide', href: '/town-guides/spalding' },
+        ],
+      },
+      {
+        heading: 'Editorial booking note',
+        body: [
+          'Accommodation facilities, availability, prices and policies can change. Always check directly with the operator before booking.',
+          'We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.',
         ],
       },
     ],

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ReactNode } from 'react';
-import { Bed, Bookmark, Check, Pin, Star, Arrow } from '@/components/dsn/Icons';
+import { Bed, Check, Pin, Star, Arrow } from '@/components/dsn/Icons';
 import { RegionPill } from '@/components/dsn/primitives';
 
 type Media = '' | 'coast' | 'warm' | 'fen' | 'wolds';
@@ -47,9 +47,6 @@ export function ListingCard({
         <span className="dsn-card-media-tag">
           <span className="dot" />
           {region}
-        </span>
-        <span className="dsn-card-media-bookmark" aria-hidden>
-          <Bookmark width={15} height={15} />
         </span>
         {stamp && <span className="dsn-card-media-stamp">{stamp}</span>}
       </div>
@@ -132,15 +129,12 @@ export function GuideCard({
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
           />
         ) : null}
-        {imageSrc ? <span className="absolute inset-0 bg-black/10" aria-hidden="true" /> : null}
+        {imageSrc ? <span className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" aria-hidden="true" /> : null}
         <span className="dsn-card-media-tag">
           <span className="dot" />
           {tag}
         </span>
-        <span className="dsn-card-media-bookmark" aria-hidden>
-          <Bookmark width={15} height={15} />
-        </span>
-        <span className="dsn-card-media-stamp">{title}</span>
+        {!imageSrc ? <span className="dsn-card-media-stamp">{title}</span> : null}
       </div>
       <div className="dsn-card-body">
         <h3 className="dsn-card-title">{title}</h3>

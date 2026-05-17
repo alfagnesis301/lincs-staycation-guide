@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { towns } from '@/data/towns';
 import { caravanParkGuides } from '@/data/caravanParkGuides';
 import { getImageCredit } from '@/data/imageCredits';
+import { natureSpotsByTown } from '@/data/nature-spots';
 import {
   getLocationGuideBySlug,
   getRelatedLocationGuides,
@@ -13,6 +14,7 @@ import {
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk';
 
@@ -153,6 +155,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
   const canonical = `${SITE_URL}/town-guides/${slug}`;
   const related = getRelatedLocationGuides(slug, 4);
   const heroSrc = town.image ?? credit.localPath;
+  const natureSpots = natureSpotsByTown[town.slug] ?? [];
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -224,6 +227,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 {[
                   ['Where to stay', '#where-to-stay'],
                   ['Things to do', '#things-to-do'],
+                  ['Parks & nature', '#parks-nature'],
                   ['Food & drink', '#food-drink'],
                   ['Nearby caravan parks', '#caravan-parks'],
                 ].map(([label, href]) => (
@@ -343,6 +347,8 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
           {profile.attractions.map((item) => <ThingCard key={item.name} item={item} town={town.name} />)}
         </div>
       </Section>
+
+      <NatureSpotsSection townName={town.name} spots={natureSpots} />
 
       <Section id="food-drink" eyebrow="Food and drink" title={`Food & Drink in ${town.name}`}>
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">

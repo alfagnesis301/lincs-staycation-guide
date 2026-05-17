@@ -47,7 +47,7 @@ export default function SiteFooter() {
                 letterSpacing: '.04em',
               }}
             >
-              EST. 2024
+              EST. 2026
             </span>
             <span
               style={{
