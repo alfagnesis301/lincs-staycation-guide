@@ -35,7 +35,7 @@ export default function TownCard({ town }: TownCardProps) {
               alt={`${town.name}, Lincolnshire`}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
-              sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           ) : (
             <span className="text-4xl" role="img" aria-label={town.regionType}>
