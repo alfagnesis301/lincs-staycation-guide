@@ -77,7 +77,7 @@ export interface BookableParkImage {
 export type ImageStatus =
   | 'verified-public-use' // exact-match image of this specific park, CC licence verified
   | 'area-context-image' // contextual photo of the surrounding area
-  | 'permission-needed' // candidate image but permission not yet confirmed
+  | 'permission-needed' // possible image but permission not yet confirmed
   | 'placeholder'; // no legal image available — render placeholder icon
 
 export interface BookableCaravanPark {
@@ -149,7 +149,7 @@ export const bookableCaravanParks: BookableCaravanPark[] = [
     officialUrl: '',
     internalMonetizationPriority: 'very-high',
     internalBookingPlatforms: ['Haven', 'Awin'],
-    internalNote: 'Large family park, strong Haven affiliate route.',
+    internalNote: 'Large family park, strong Haven booking route.',
     // Verified Wikimedia Commons / Geograph image — David Brown, CC BY-SA 2.0
     // To activate: download the file at the source URL and save it as
     //   /public/images/caravan-parks/golden-sands-holiday-park.webp
@@ -350,7 +350,7 @@ export const bookableCaravanParks: BookableCaravanPark[] = [
     officialUrl: '',
     internalMonetizationPriority: 'high',
     internalBookingPlatforms: ['Pitchup', 'Direct booking'],
-    internalNote: 'Touring & motorhome site — Pitchup affiliate route.',
+    internalNote: 'Touring & motorhome site — Pitchup booking route.',
   },
   {
     id: 'coastfields-holiday-village',
@@ -427,7 +427,7 @@ export const bookableCaravanParks: BookableCaravanPark[] = [
     officialUrl: '',
     internalMonetizationPriority: 'medium',
     internalBookingPlatforms: ['Booking.com', 'Direct booking'],
-    internalNote: 'Hotel & lodge site — Booking.com affiliate route.',
+    internalNote: 'Hotel & lodge site — Booking.com booking route.',
   },
   {
     id: 'skegness-sands-touring',
@@ -457,7 +457,7 @@ export const bookableCaravanParks: BookableCaravanPark[] = [
     officialUrl: '',
     internalMonetizationPriority: 'medium',
     internalBookingPlatforms: ['Pitchup', 'Direct booking'],
-    internalNote: 'Lakeside touring & glamping — Pitchup affiliate route.',
+    internalNote: 'Lakeside touring & glamping — Pitchup booking route.',
   },
   {
     id: 'sycamore-farm-holiday-park',

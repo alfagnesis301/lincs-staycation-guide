@@ -10,6 +10,7 @@ import BookingCtaButton from './BookingCtaButton';
 import ImageCreditLink from './ImageCreditLink';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
 import type { ListingLocationInput } from '@/lib/googleMaps';
+import { cleanPublicCopy, uniquePublicTags } from '@/lib/public-copy';
 
 function toMapsInput(listing: {
   name: string;
@@ -35,9 +36,10 @@ function toMapsInput(listing: {
 }
 
 function TagList({ tags }: { tags: string[] }) {
+  const publicTags = uniquePublicTags(tags);
   return (
     <div className="flex flex-wrap gap-1.5">
-      {tags.map((tag) => (
+      {publicTags.map((tag) => (
         <span key={tag} className="badge bg-cream/60 text-[11px] text-charcoal-muted">
           {tag}
         </span>
@@ -66,9 +68,9 @@ export function StayListingCard({ listing }: { listing: StayListing }) {
         {listing.image?.imageCreditId ? <ImageCreditLink imageCreditId={listing.image.imageCreditId} /> : null}
       </div>
       <p className="mb-2 text-sm font-medium text-charcoal">
-        <span className="font-normal text-charcoal-muted">Best for:</span> {listing.bestFor}
+        <span className="font-normal text-charcoal-muted">Best for:</span> {cleanPublicCopy(listing.bestFor)}
       </p>
-      <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
+      <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{cleanPublicCopy(listing.description)}</p>
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-cream-dark/50 pt-4">
         <BookingCtaButton
@@ -93,9 +95,9 @@ export function CaravanParkCard({ listing }: { listing: CaravanParkListing }) {
         {listing.image?.imageCreditId ? <ImageCreditLink imageCreditId={listing.image.imageCreditId} /> : null}
       </div>
       <p className="mb-2 text-sm font-medium text-charcoal">
-        <span className="font-normal text-charcoal-muted">Best for:</span> {listing.bestFor}
+        <span className="font-normal text-charcoal-muted">Best for:</span> {cleanPublicCopy(listing.bestFor)}
       </p>
-      <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
+      <p className="mb-4 text-sm leading-relaxed text-charcoal-muted">{cleanPublicCopy(listing.description)}</p>
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-cream-dark/50 pt-4">
         <BookingCtaButton
@@ -114,7 +116,7 @@ export function ThingToDoCard({ listing }: { listing: ThingToDoListing }) {
       <span className="badge badge-sand mb-2 text-[10px]">{listing.category}</span>
       <h3 className="font-heading text-xl font-semibold leading-snug text-charcoal">{listing.name}</h3>
       <p className="mt-1 text-xs text-charcoal-muted">{listing.location}</p>
-      <p className="my-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
+      <p className="my-4 text-sm leading-relaxed text-charcoal-muted">{cleanPublicCopy(listing.description)}</p>
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/50 pt-4">
         {listing.image?.imageCreditId ? <ImageCreditLink imageCreditId={listing.image.imageCreditId} /> : <span />}
@@ -144,11 +146,11 @@ export function FoodDrinkCard({ listing }: { listing: FoodDrinkListing }) {
       <span className="badge badge-sage mb-2 text-[10px]">{listing.category}</span>
       <h3 className="font-heading text-xl font-semibold leading-snug text-charcoal">{listing.name}</h3>
       <p className="mt-1 text-xs text-charcoal-muted">{listing.location}</p>
-      <p className="my-4 text-sm leading-relaxed text-charcoal-muted">{listing.description}</p>
+      <p className="my-4 text-sm leading-relaxed text-charcoal-muted">{cleanPublicCopy(listing.description)}</p>
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/50 pt-4">
         {listing.reviewVerificationNeeded ? (
-          <span className="text-xs text-charcoal-muted">Review details need verification before publication.</span>
+          <span className="text-xs text-charcoal-muted">Check current menus, opening times and visitor details directly before visiting.</span>
         ) : (
           <span />
         )}

@@ -13,8 +13,10 @@ import {
 } from '@/data/locationGuides';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
+import { getPublicListingDescription, uniquePublicTags } from '@/lib/public-copy';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
+import { QuickLinks, lincolnQuickLinks } from '@/components/navigation/QuickLinks';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk';
 
@@ -44,7 +46,7 @@ function makeFaqs(town: string, profile: NonNullable<ReturnType<typeof getTownGu
     },
     {
       question: `Are there caravan parks near ${town}?`,
-      answer: 'Yes. This guide separates nearby caravan and holiday park candidates from hotels, B&Bs and guest accommodation so visitors can compare the right type of stay.',
+      answer: 'Yes. This guide separates nearby caravan and holiday parks from hotels, B&Bs and guest accommodation so visitors can compare the right type of stay.',
     },
     {
       question: `Can you visit ${town} without a car?`,
@@ -87,7 +89,7 @@ function CtaLink({ href, children }: { href: string; children: React.ReactNode }
       rel={external ? 'noopener noreferrer nofollow' : undefined}
       data-google-maps-link={maps ? true : undefined}
       aria-label={maps ? 'Search on Google Maps (opens in a new tab)' : undefined}
-      className="inline-flex rounded-xl bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-dark"
+      className="inline-flex rounded-xl bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
     >
       {children}
     </a>
@@ -181,7 +183,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         {
           '@type': 'WebPage',
           name: `Where to stay in ${town.name}`,
-          url: `${canonical}#where-to-stay`,
+          url: `${canonical}#places-to-stay`,
         },
         {
           '@type': 'WebPage',
@@ -261,18 +263,6 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-charcoal">
                 <span className="font-semibold">Best for:</span> {profile.bestFor}
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                {[
-                  ['Where to stay', '#where-to-stay'],
-                  ['Things to do', '#things-to-do'],
-                  ['Parks & nature', '#parks-nature'],
-                  ['Food & drink', '#food-drink'],
-                  ['Nearby caravan parks', '#caravan-parks'],
-                ].map(([label, href]) => (
-                  <Link key={href} href={href} className="btn-secondary">{label}</Link>
-                ))}
-                <CtaLink href={mapsSearchUrl(town.name)}>Search on Google Maps</CtaLink>
-              </div>
             </div>
             <figure className="overflow-hidden rounded-2xl border border-white/70 bg-white shadow-xl shadow-charcoal/10">
               <div className="relative aspect-[4/3] bg-cream">
@@ -294,6 +284,19 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <QuickLinks links={slug === 'lincoln' ? lincolnQuickLinks : [
+          { label: 'Where to stay', href: '#places-to-stay', description: 'Hotels, inns, B&Bs, guest houses and cottages.' },
+          { label: 'Things to do', href: '#things-to-do', description: 'Attractions, walks and rainy-day ideas.' },
+          { label: 'Parks & nature', href: '#parks-nature', description: 'Outdoor spaces and green breaks.' },
+          { label: 'Food & drink', href: '#food-drink', description: 'Pubs, cafes and restaurants.' },
+          { label: 'Nearby caravan parks', href: '#caravan-parks', description: 'Touring, lodges and holiday parks.' },
+        ]} />
+        <div className="-mt-2 mb-6">
+          <CtaLink href={mapsSearchUrl(town.name)}>Search on Google Maps</CtaLink>
+        </div>
+      </div>
 
       <Section id="summary" eyebrow="Quick summary" title={`${town.name} at a glance`}>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -334,9 +337,9 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         </div>
       </Section>
 
-      <Section id="where-to-stay" eyebrow="Accommodation" title={`Places to Stay in ${town.name}`} tint>
+      <Section id="places-to-stay" eyebrow="Accommodation" title={`Places to Stay in ${town.name}`} tint>
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
-          Accommodation candidates exclude caravan parks. Ratings, prices, availability and photos are not invented; details should be checked directly with the operator before travelling or booking.
+          This section focuses on hotels, B&Bs, guest houses, inns, apartments and cottages. Caravan and holiday parks are listed separately so visitors can compare the right type of stay.
         </p>
         <div className="grid gap-5 lg:grid-cols-2">
           {(locationGuide.placesToStay as PlaceToStay[]).slice(0, 5).map((stay) => {
@@ -347,9 +350,18 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={stay.id}
                 title={stay.name}
-                meta={`${stay.type} - ${town.name} - Details should be checked directly with the venue before travelling.`}
-                body={`${stay.bestFor} ${stay.sourceNote}`}
-                tags={[stay.type, 'Accommodation candidate', 'No caravan parks']}
+                meta={`${stay.type} - ${town.name}`}
+                body={getPublicListingDescription({
+                  name: stay.name,
+                  town: town.name,
+                  type: stay.type,
+                  bestFor: stay.bestFor,
+                  description: stay.bestFor,
+                  officialWebsiteUrl: stay.officialWebsiteUrl,
+                  bookingUrl: stay.bookingUrl,
+                  affiliateUrl: stay.affiliateUrl,
+                }, 'stay')}
+                tags={uniquePublicTags([stay.type, 'No caravan parks'])}
                 ctaHref={ctaHref}
                 ctaLabel={ctaLabel}
               />
@@ -369,9 +381,18 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={park.id}
                 title={park.name}
-                meta={`${park.locationContext ?? `near ${town.name}`} - Details should be checked directly with the venue before travelling.`}
-                body={park.description}
-                tags={park.tags.slice(0, 6)}
+                meta={park.locationContext ?? `near ${town.name}`}
+                body={getPublicListingDescription({
+                  name: park.name,
+                  town: town.name,
+                  type: 'Caravan park',
+                  description: park.description,
+                  tags: park.tags,
+                  bookingUrl: park.bookingUrl,
+                  affiliateUrl: park.affiliateUrl,
+                  officialWebsiteUrl: park.sourceUrl,
+                }, 'park')}
+                tags={uniquePublicTags(park.tags.slice(0, 6))}
                 ctaHref={park.bookingUrl ?? park.affiliateUrl ?? park.sourceUrl ?? maps?.href ?? mapsSearchUrl(`${park.name} ${town.name}`)}
                 ctaLabel={park.bookingUrl || park.affiliateUrl ? 'Check availability' : park.sourceUrl ? 'Visit official website' : 'Search on Google Maps'}
               />
@@ -390,7 +411,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
 
       <Section id="food-drink" eyebrow="Food and drink" title={`Food & Drink in ${town.name}`}>
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
-          These are curated candidate venues, not rankings. Check current opening hours and menus before visiting; unverified review ratings, review counts and prices are intentionally omitted.
+          These food and drink options are included for visitor planning, not rankings. Check current opening hours, menus and booking requirements directly before visiting.
         </p>
         <div className="grid gap-5 lg:grid-cols-2">
           {(locationGuide.foodDrink as FoodAndDrinkOption[]).slice(0, 5).map((venue) => {
@@ -399,8 +420,13 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               <InfoCard
                 key={venue.id}
                 title={venue.name}
-                meta={`${venue.type} - Details should be checked directly with the venue before travelling.`}
-                body={`A ${venue.type.toLowerCase()} candidate for visitors planning food and drink in ${town.name}. Check current opening hours and menus before visiting.`}
+                meta={venue.type}
+                body={getPublicListingDescription({
+                  name: venue.name,
+                  town: town.name,
+                  type: venue.type,
+                  description: `A ${venue.type.toLowerCase()} option for visitors planning food and drink in ${town.name}.`,
+                }, 'food')}
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
                 ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}
                 ctaLabel="Search on Google Maps"

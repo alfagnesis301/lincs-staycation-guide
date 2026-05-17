@@ -69,6 +69,7 @@ export default function CaravanParkLocationGrid({ guides }: Props) {
             <button
               type="button"
               onClick={() => setRegion(null)}
+              aria-pressed={!region}
               className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border transition-all ${
                 !region
                   ? 'bg-sage text-white border-sage'
@@ -82,6 +83,7 @@ export default function CaravanParkLocationGrid({ guides }: Props) {
                 key={r}
                 type="button"
                 onClick={() => setRegion(region === r ? null : r)}
+                aria-pressed={region === r}
                 className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border transition-all ${
                   region === r
                     ? 'bg-sage text-white border-sage'

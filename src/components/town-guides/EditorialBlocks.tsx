@@ -7,7 +7,7 @@ export function EditorialNote() {
         <div className="rounded-2xl border border-cream-dark/70 bg-cream/40 p-5 sm:p-6">
           <h2 className="font-heading text-xl font-semibold text-charcoal">Editorial note</h2>
           <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">
-            These listings are curated research candidates designed to help visitors compare useful options in and around Lincoln. Accommodation availability, facilities, booking options, opening hours and food reviews can change, so always check directly with the booking provider or venue before planning your visit.
+            These listings are included to help visitors compare useful options in and around Lincoln. Accommodation availability, facilities, booking options, opening hours and food details can change, so always check directly with the booking provider or venue before planning your visit.
           </p>
         </div>
       </div>

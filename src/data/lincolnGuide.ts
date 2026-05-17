@@ -145,7 +145,7 @@ export const lincolnGuide = {
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
       sourceNote:
-        'Use Booking/CJ approved images if available through the affiliate programme. Otherwise use a Lincoln area-context image or request permission.',
+        'Use approved booking-platform images if available. Otherwise use a Lincoln area-context image or request permission.',
     },
     {
       id: 'tower-hotel',
@@ -154,13 +154,13 @@ export const lincolnGuide = {
       location: 'Cathedral quarter, Lincoln',
       bestFor: 'Visitors wanting a stay near the cathedral quarter and Lincoln\'s historic attractions.',
       description:
-        'A useful Lincoln accommodation candidate for travellers interested in the cathedral, castle, independent restaurants and walkable historic streets.',
+        'A useful Lincoln accommodation option for travellers interested in the cathedral, castle, independent restaurants and walkable historic streets.',
       tags: ['Cathedral quarter', 'City break', 'Historic attractions', 'Couples'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
       sourceNote:
-        'Use Booking/CJ approved images if available. Otherwise use an area image or request permission.',
+        'Use approved booking-platform images if available. Otherwise use an area image or request permission.',
     },
     {
       id: 'white-hart-hotel-lincoln',
@@ -169,13 +169,13 @@ export const lincolnGuide = {
       location: 'Central Lincoln',
       bestFor: 'Classic city-centre stays close to Lincoln Cathedral and the historic uphill area.',
       description:
-        'A well-known Lincoln hotel candidate for visitors comparing central accommodation near the cathedral, castle and restaurants.',
+        'A well-known Lincoln hotel option for visitors comparing central accommodation near the cathedral, castle and restaurants.',
       tags: ['Central Lincoln', 'Cathedral', 'Historic stay', 'Restaurants nearby'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
       sourceNote:
-        'Use Booking/CJ approved images if available. Otherwise use an area image or request permission.',
+        'Use approved booking-platform images if available. Otherwise use an area image or request permission.',
     },
     {
       id: 'holiday-inn-lincoln',
@@ -190,7 +190,7 @@ export const lincolnGuide = {
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
       sourceNote:
-        'Use Booking/CJ approved images if available. Otherwise use an area image or request permission.',
+        'Use approved booking-platform images if available. Otherwise use an area image or request permission.',
     },
     {
       id: 'woodcocks-lincoln-marstons-inns',
@@ -199,13 +199,13 @@ export const lincolnGuide = {
       location: 'Lincoln area',
       bestFor: 'Visitors wanting a practical stay with pub/restaurant-style convenience outside the busiest historic centre.',
       description:
-        'A useful accommodation candidate for travellers who want easy access to Lincoln while staying slightly outside the most central visitor areas.',
+        'A useful accommodation option for travellers who want easy access to Lincoln while staying slightly outside the most central visitor areas.',
       tags: ['Inn', 'Practical base', 'Food on site', 'Budget-friendly'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
       imageStatus: 'area-context-image',
       sourceNote:
-        'Use Booking/CJ approved images if available. Otherwise use an area image or request permission.',
+        'Use approved booking-platform images if available. Otherwise use an area image or request permission.',
     },
   ] satisfies StayListing[],
   caravanParks: [
@@ -309,7 +309,7 @@ export const lincolnGuide = {
       category: 'Historic site',
       location: 'Historic Lincoln',
       description:
-        'A major Lincoln attraction for visitors interested in history, city views, heritage and family-friendly sightseeing. Useful internal link target from accommodation and city-break content.',
+        'A major Lincoln attraction for visitors interested in history, city views, heritage and family-friendly sightseeing. Useful link target from accommodation and city-break content.',
       officialUrlPending: true,
       tags: ['Castle', 'History', 'Heritage', 'Family-friendly', 'City views'],
       image: lincolnAreaImage,
@@ -348,7 +348,7 @@ export const lincolnGuide = {
       location: 'Historic Lincoln',
       description:
         'A refined dining option in historic Lincoln. Check the venue for current opening hours and booking availability.',
-      tags: ['Restaurant', 'Fine dining candidate', 'Historic Lincoln', 'Couples', 'Dinner'],
+      tags: ['Restaurant', 'Fine dining option', 'Historic Lincoln', 'Couples', 'Dinner'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
       sourceNote:
@@ -360,7 +360,7 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Lincoln',
       description:
-        'A useful food and drink candidate for visitors looking for independent dining in Lincoln. Verify current reviews, menu and opening times before publication.',
+        'A useful food and drink option for visitors looking for independent dining in Lincoln. Check current menu and opening times directly before visiting.',
       tags: ['Tapas', 'Independent restaurant', 'Dinner', 'City centre', 'Couples'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -373,8 +373,8 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Lincoln',
       description:
-        'A casual dining candidate for visitors searching for relaxed food options in Lincoln. Verify current review ratings and opening times before publication.',
-      tags: ['Pizza', 'Casual dining', 'Family-friendly candidate', 'Independent', 'City food'],
+        'A casual dining option for visitors searching for relaxed food options in Lincoln. Check current opening times directly before visiting.',
+      tags: ['Pizza', 'Casual dining', 'Family-friendly option', 'Independent', 'City food'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
       sourceNote:
@@ -386,7 +386,7 @@ export const lincolnGuide = {
       category: 'Cafe',
       location: 'Lincoln',
       description:
-        'A cafe candidate for visitors looking for lunch, coffee or a daytime food stop in Lincoln. Verify current ratings, opening times and visitor suitability before publication.',
+        'A cafe option for visitors looking for lunch, coffee or a daytime food stop in Lincoln. Check current opening times and visitor suitability directly before visiting.',
       tags: ['Cafe', 'Lunch', 'Coffee', 'Daytime', 'City centre'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -399,7 +399,7 @@ export const lincolnGuide = {
       category: 'Bar',
       location: 'Lincoln',
       description:
-        'A food and drink candidate for visitors looking for coffee, casual bites or drinks in Lincoln. Verify current ratings, opening times and menu before publication.',
+        'A food and drink option for visitors looking for coffee, casual bites or drinks in Lincoln. Check current opening times and menu directly before visiting.',
       tags: ['Cafe', 'Bar', 'Coffee', 'Casual food', 'City centre'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',

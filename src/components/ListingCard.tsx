@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Listing } from '@/data/listings';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import { cleanPublicCopy, uniquePublicTags } from '@/lib/public-copy';
 
 interface ListingCardProps {
   listing: Listing;
@@ -18,13 +19,15 @@ const defaultGradient = { from: 'from-cream', to: 'to-sand-light', emoji: '📍'
 
 export default function ListingCard({ listing }: ListingCardProps) {
   const gradient = categoryGradients[listing.categorySlug] ?? defaultGradient;
+  const description = cleanPublicCopy(listing.description);
+  const tags = uniquePublicTags(listing.tags);
 
   // LocalBusiness JSON-LD schema (only descriptive fields — no fake data)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: listing.name,
-    description: listing.description,
+    description,
     address: {
       '@type': 'PostalAddress',
       addressLocality: listing.town,
@@ -75,12 +78,12 @@ export default function ListingCard({ listing }: ListingCardProps) {
         </div>
 
         <p className="text-sm text-charcoal-muted leading-relaxed flex-1 mb-4">
-          {listing.description}
+          {description}
         </p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {listing.tags.map((tag) => (
+          {tags.map((tag) => (
             <span key={tag} className="badge badge-coast text-[11px]">
               {tag}
             </span>
@@ -90,7 +93,8 @@ export default function ListingCard({ listing }: ListingCardProps) {
         <div className="flex flex-wrap items-center gap-2">
           <Link
             href={`/places/${listing.id}`}
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 min-h-[44px] text-sm font-medium text-sage border border-sage/30 hover:bg-sage hover:text-white rounded-xl transition-all"
+            aria-label={`View details for ${listing.name}`}
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 min-h-[44px] text-sm font-medium text-sage border border-sage/30 hover:bg-sage hover:text-white rounded-xl transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
           >
             View details
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

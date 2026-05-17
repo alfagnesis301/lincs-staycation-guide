@@ -4,6 +4,7 @@ import {
   footerBusinessLinks,
   footerCompanyLinks,
 } from '@/data/navigation';
+import { siteConfig } from '@/config/site';
 
 const towns = [
   { label: 'Lincoln', href: '/town-guides/lincoln' },
@@ -47,7 +48,7 @@ export default function SiteFooter() {
                 letterSpacing: '.04em',
               }}
             >
-              EST. 2026
+              EST. {siteConfig.established}
             </span>
             <span
               style={{
@@ -59,7 +60,7 @@ export default function SiteFooter() {
                 letterSpacing: '.04em',
               }}
             >
-              LINCOLN, UK
+              {siteConfig.location.toUpperCase()}
             </span>
           </div>
         </div>
