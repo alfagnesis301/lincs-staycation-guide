@@ -78,7 +78,7 @@ export interface CaravanParkGuide {
 }
 
 const STANDARD_EDITORIAL =
-  'These entries are curated candidates, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Always check directly with each park before planning your trip.';
+  'These entries are curated options, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Always check directly with each park before planning your trip.';
 
 const STANDARD_SEO_IDEAS = (location: string) => [
   `Best caravan parks near ${location} for families`,
@@ -386,7 +386,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     faqs: [],
     lastUpdated: '6 May 2026',
     editorialNote:
-      'These entries are curated candidates, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Always check directly with each park before planning your trip.',
+      'These entries are curated options, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Always check directly with each park before planning your trip.',
   },
 
   // ============================================================
@@ -440,7 +440,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Stamford Meadows Glamping',
         bestFor: 'Couples and visitors who prefer glamping close to Stamford town.',
         description:
-          'Not a traditional caravan park, but an excellent Stamford accommodation candidate. Offers a town-and-country glamping feel, yurts/cabin/campervan options and private hot tub style stays close to Stamford Meadows.',
+          'Not a traditional caravan park, but an excellent Stamford accommodation option. Offers a town-and-country glamping feel, yurts/cabin/campervan options and private hot tub style stays close to Stamford Meadows.',
         tags: ['Glamping', 'Hot tubs', 'Dog-friendly', 'Couples', 'Town access', 'Premium escape'],
         sourceUrl: 'https://stamfordmeadowsglamping.com/',
         sourceLabel: 'Official site',
@@ -895,7 +895,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Bainland Country Park',
         bestFor: 'Premium lodge and glamping stays near Woodhall Spa.',
         description:
-          'More lodge retreat than caravan park, but one of the best premium accommodation candidates near Sleaford/Woodhall Spa. Offers lodges, cabins, glamping, dog-friendly escapes and family/group options.',
+          'More lodge retreat than caravan park, but one of the best premium accommodation options near Sleaford/Woodhall Spa. Offers lodges, cabins, glamping, dog-friendly escapes and family/group options.',
         tags: ['Lodges', 'Cabins', 'Glamping', 'Hot tubs', 'Dog-friendly', 'Premium'],
         sourceUrl: 'https://www.bainland.co.uk/',
         sourceLabel: 'Official site',
@@ -1326,7 +1326,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Wolds View Country Park',
         bestFor: 'Luxury fishing lodges, pods and touring in the Lincolnshire Wolds.',
         description:
-          'One of the strongest Market Rasen candidates. Offers lodges, luxury lakeside pods, a touring park and fishing lakes in a Wolds setting.',
+          'One of the strongest Market Rasen options. Offers lodges, luxury lakeside pods, a touring park and fishing lakes in a Wolds setting.',
         tags: ['Lodges', 'Touring', 'Pods', 'Fishing', 'Hot tubs', 'Lincolnshire Wolds'],
         sourceUrl: 'https://www.woldsviewcountrypark.co.uk/',
         sourceLabel: 'Official site',
@@ -1470,7 +1470,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Sacrewell Camping and Caravanning',
         bestFor: 'Family camping and caravanning near a farm attraction.',
         description:
-          'A useful family-oriented option for Bourne/Stamford pages because the campsite is connected with a farm attraction. Supports "things to do with kids near Bourne" internal linking.',
+          'A useful family-oriented option for Bourne/Stamford pages because the campsite is connected with a farm attraction. Supports "things to do with kids near Bourne" cross-linking.',
         tags: ['Camping', 'Caravanning', 'Farm attraction', 'Children', 'Near A1', 'Family-friendly'],
         sourceUrl: 'https://www.sacrewell.org.uk/camping-and-caravanning/',
         sourceLabel: 'Sacrewell (official)',
@@ -1601,7 +1601,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Golden Palm Resort',
         bestFor: 'Family caravan holidays with entertainment in Chapel St Leonards.',
         description:
-          'The flagship Chapel St Leonards option. Offers self-catering caravans, indoor heated fun pool, adventure golf, arcade, play areas and food options, making it a top candidate for family-focused content.',
+          'The flagship Chapel St Leonards option. Offers self-catering caravans, indoor heated fun pool, adventure golf, arcade, play areas and food options, making it a strong option for family-focused content.',
         tags: ['Caravans', 'Family-friendly', 'Pool', 'Entertainment', 'Arcade', 'Chapel St Leonards'],
         sourceUrl: 'https://goldenpalmresort.co.uk/',
         sourceLabel: 'Official site',

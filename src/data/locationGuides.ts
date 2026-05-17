@@ -27,11 +27,11 @@ export const locationGuides = [
         "slug": "the-rest-hotel",
         "town": "Lincoln",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -40,11 +40,11 @@ export const locationGuides = [
         "slug": "tower-hotel",
         "town": "Lincoln",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -53,11 +53,11 @@ export const locationGuides = [
         "slug": "the-white-hart-hotel-lincoln",
         "town": "Lincoln",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Lincoln stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -66,11 +66,11 @@ export const locationGuides = [
         "slug": "holiday-inn-lincoln-by-ihg",
         "town": "Lincoln",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Lincoln stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Lincoln stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -79,11 +79,11 @@ export const locationGuides = [
         "slug": "woodcocks-lincoln-by-marston-s-inns",
         "town": "Lincoln",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Lincoln stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Lincoln stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -217,11 +217,11 @@ export const locationGuides = [
         "slug": "the-quorn",
         "town": "Skegness",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -230,11 +230,11 @@ export const locationGuides = [
         "slug": "southview-park-hotel",
         "town": "Skegness",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -243,11 +243,11 @@ export const locationGuides = [
         "slug": "north-shore-hotel",
         "town": "Skegness",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -256,11 +256,11 @@ export const locationGuides = [
         "slug": "the-saxby-hotel",
         "town": "Skegness",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -269,11 +269,11 @@ export const locationGuides = [
         "slug": "the-fountaindale-skegness",
         "town": "Skegness",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Skegness stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -395,11 +395,11 @@ export const locationGuides = [
         "slug": "crown-hotel",
         "town": "Stamford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -408,11 +408,11 @@ export const locationGuides = [
         "slug": "the-george-hotel-of-stamford",
         "town": "Stamford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -421,11 +421,11 @@ export const locationGuides = [
         "slug": "the-william-cecil",
         "town": "Stamford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Stamford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -434,11 +434,11 @@ export const locationGuides = [
         "slug": "the-bull-and-swan",
         "town": "Stamford",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Stamford stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Stamford stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -447,11 +447,11 @@ export const locationGuides = [
         "slug": "old-bank-apartments",
         "town": "Stamford",
         "type": "Apartment",
-        "bestFor": "Apartment accommodation candidate for Stamford stays; check current access, facilities, cancellation terms and prices directly before booking.",
+        "bestFor": "Apartment accommodation option for Stamford stays; check current access, facilities, cancellation terms and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -571,11 +571,11 @@ export const locationGuides = [
         "slug": "the-beaumont-accommodation",
         "town": "Louth",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -584,11 +584,11 @@ export const locationGuides = [
         "slug": "best-western-plus-kenwick-park-hotel",
         "town": "Louth",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -597,11 +597,11 @@ export const locationGuides = [
         "slug": "brackenborough-hotel",
         "town": "Louth",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -610,11 +610,11 @@ export const locationGuides = [
         "slug": "the-masons-arms",
         "town": "Louth",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Louth stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Louth stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -623,11 +623,11 @@ export const locationGuides = [
         "slug": "the-kings-head",
         "town": "Louth",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Louth stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -745,11 +745,11 @@ export const locationGuides = [
         "slug": "the-white-hart-hotel-boston",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -758,11 +758,11 @@ export const locationGuides = [
         "slug": "boston-west-hotel",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -771,11 +771,11 @@ export const locationGuides = [
         "slug": "the-old-kings-head",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -784,11 +784,11 @@ export const locationGuides = [
         "slug": "quayside-hotel-and-bar",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Boston stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -797,11 +797,11 @@ export const locationGuides = [
         "slug": "the-kings-arms",
         "town": "Boston",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Boston stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Boston stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -922,11 +922,11 @@ export const locationGuides = [
         "slug": "angel-and-royal-hotel",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -935,11 +935,11 @@ export const locationGuides = [
         "slug": "belton-woods-hotel-spa-and-golf-resort",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -948,11 +948,11 @@ export const locationGuides = [
         "slug": "the-avenue-hotel",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -961,11 +961,11 @@ export const locationGuides = [
         "slug": "the-barn-hotel-and-spa",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -974,11 +974,11 @@ export const locationGuides = [
         "slug": "urban-hotel-grantham",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Grantham stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1096,11 +1096,11 @@ export const locationGuides = [
         "slug": "tulip-queen-spalding-by-marston-s-inns",
         "town": "Spalding",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Spalding stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Spalding stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1109,11 +1109,11 @@ export const locationGuides = [
         "slug": "woodhouse-farm-lodge",
         "town": "Spalding",
         "type": "B&B",
-        "bestFor": "B&B accommodation candidate for Spalding stays; check current room facilities, breakfast arrangements and prices directly before booking.",
+        "bestFor": "B&B accommodation option for Spalding stays; check current room facilities, breakfast arrangements and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1122,11 +1122,11 @@ export const locationGuides = [
         "slug": "the-red-lion-hotel",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1135,11 +1135,11 @@ export const locationGuides = [
         "slug": "woodlands-hotel",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1148,11 +1148,11 @@ export const locationGuides = [
         "slug": "cley-hall",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Spalding stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1270,11 +1270,11 @@ export const locationGuides = [
         "slug": "the-solo",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1283,11 +1283,11 @@ export const locationGuides = [
         "slug": "marquis-of-granby",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1296,11 +1296,11 @@ export const locationGuides = [
         "slug": "the-finch-hatton-arms",
         "town": "Sleaford",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Sleaford stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Sleaford stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1309,11 +1309,11 @@ export const locationGuides = [
         "slug": "the-mallards",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Sleaford stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1326,7 +1326,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1448,7 +1448,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1461,7 +1461,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1470,11 +1470,11 @@ export const locationGuides = [
         "slug": "l30-what-a-cracker",
         "town": "Mablethorpe",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Mablethorpe stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Mablethorpe stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1487,7 +1487,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1500,7 +1500,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1618,11 +1618,11 @@ export const locationGuides = [
         "slug": "village-limits-bed-and-breakfast-rooms",
         "town": "Woodhall Spa",
         "type": "B&B",
-        "bestFor": "B&B accommodation candidate for Woodhall Spa stays; check current room facilities, breakfast arrangements and prices directly before booking.",
+        "bestFor": "B&B accommodation option for Woodhall Spa stays; check current room facilities, breakfast arrangements and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1631,11 +1631,11 @@ export const locationGuides = [
         "slug": "the-dower-house-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1644,11 +1644,11 @@ export const locationGuides = [
         "slug": "petwood-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1657,11 +1657,11 @@ export const locationGuides = [
         "slug": "the-golf-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Woodhall Spa stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1670,11 +1670,11 @@ export const locationGuides = [
         "slug": "the-inn-at-woodhall-spa",
         "town": "Woodhall Spa",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Woodhall Spa stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Woodhall Spa stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1792,11 +1792,11 @@ export const locationGuides = [
         "slug": "the-admiral-rodney-hotel",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1805,11 +1805,11 @@ export const locationGuides = [
         "slug": "magpies-restaurant-with-rooms",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1818,11 +1818,11 @@ export const locationGuides = [
         "slug": "laurel-lodge",
         "town": "Horncastle",
         "type": "B&B",
-        "bestFor": "B&B accommodation candidate for Horncastle stays; check current room facilities, breakfast arrangements and prices directly before booking.",
+        "bestFor": "B&B accommodation option for Horncastle stays; check current room facilities, breakfast arrangements and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1831,11 +1831,11 @@ export const locationGuides = [
         "slug": "mountain-ash",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Horncastle stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1844,11 +1844,11 @@ export const locationGuides = [
         "slug": "the-bull-hotel",
         "town": "Horncastle",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Horncastle stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Horncastle stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -1966,11 +1966,11 @@ export const locationGuides = [
         "slug": "brampton-dales-farm",
         "town": "Gainsborough",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Gainsborough stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Gainsborough stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1979,11 +1979,11 @@ export const locationGuides = [
         "slug": "hickman-hill-hotel",
         "town": "Gainsborough",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Gainsborough stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Gainsborough stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -1996,7 +1996,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2005,11 +2005,11 @@ export const locationGuides = [
         "slug": "the-black-horse-inn",
         "town": "Gainsborough",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Gainsborough stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Gainsborough stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2018,11 +2018,11 @@ export const locationGuides = [
         "slug": "thonock-park-b-and-b",
         "town": "Gainsborough",
         "type": "B&B",
-        "bestFor": "B&B accommodation candidate for Gainsborough stays; check current room facilities, breakfast arrangements and prices directly before booking.",
+        "bestFor": "B&B accommodation option for Gainsborough stays; check current room facilities, breakfast arrangements and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -2141,11 +2141,11 @@ export const locationGuides = [
         "slug": "the-advocate-arms",
         "town": "Market Rasen",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Market Rasen stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Market Rasen stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2154,11 +2154,11 @@ export const locationGuides = [
         "slug": "the-olive",
         "town": "Market Rasen",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Market Rasen stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Market Rasen stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2167,11 +2167,11 @@ export const locationGuides = [
         "slug": "woldview-house-b-and-b",
         "town": "Market Rasen",
         "type": "B&B",
-        "bestFor": "B&B accommodation candidate for Market Rasen stays; check current room facilities, breakfast arrangements and prices directly before booking.",
+        "bestFor": "B&B accommodation option for Market Rasen stays; check current room facilities, breakfast arrangements and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2180,11 +2180,11 @@ export const locationGuides = [
         "slug": "glebe-farm-apartments",
         "town": "Market Rasen",
         "type": "Apartment",
-        "bestFor": "Apartment accommodation candidate for Market Rasen stays; check current access, facilities, cancellation terms and prices directly before booking.",
+        "bestFor": "Apartment accommodation option for Market Rasen stays; check current access, facilities, cancellation terms and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2193,11 +2193,11 @@ export const locationGuides = [
         "slug": "the-white-swan",
         "town": "Market Rasen",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Market Rasen stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Market Rasen stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],
@@ -2315,11 +2315,11 @@ export const locationGuides = [
         "slug": "the-wishing-well-inn",
         "town": "Bourne",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Bourne stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Bourne stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2328,11 +2328,11 @@ export const locationGuides = [
         "slug": "the-angel-at-bourne",
         "town": "Bourne",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Bourne stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Bourne stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2341,11 +2341,11 @@ export const locationGuides = [
         "slug": "the-six-bells-witham-on-the-hill",
         "town": "Bourne",
         "type": "Hotel",
-        "bestFor": "Hotel accommodation candidate for Bourne stays; check current facilities, accessibility, parking and prices directly before booking.",
+        "bestFor": "Hotel accommodation option for Bourne stays; check current facilities, accessibility, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2354,11 +2354,11 @@ export const locationGuides = [
         "slug": "the-bull-inn-rippingale",
         "town": "Bourne",
         "type": "Inn",
-        "bestFor": "Inn accommodation candidate for Bourne stays; check current food service, rooms, parking and prices directly before booking.",
+        "bestFor": "Inn accommodation option for Bourne stays; check current food service, rooms, parking and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       },
       {
@@ -2371,7 +2371,7 @@ export const locationGuides = [
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
-        "imageGuidance": "Use Booking/CJ approved images if available; otherwise use a public area image or request permission.",
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": true
       }
     ],

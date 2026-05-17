@@ -29,7 +29,7 @@ const EXPLORE_AREAS = [
     href: '/places-to-stay',
     label: 'Places to Stay',
     title: 'Hotels, B&Bs, inns and cottages',
-    sub: 'Browse accommodation candidates by Lincolnshire location.',
+    sub: 'Browse accommodation options by Lincolnshire location.',
     icon: <Bed width={16} height={16} />,
   },
   {
@@ -50,7 +50,7 @@ const EXPLORE_AREAS = [
     href: '/food-drink',
     label: 'Food & Drink',
     title: 'Pubs, cafes, restaurants and local food',
-    sub: 'Use curated candidate lists, then check menus direct.',
+    sub: 'Use curated food and drink lists, then check menus direct.',
     icon: <Coffee width={16} height={16} />,
   },
 ];
@@ -92,7 +92,7 @@ export default function HomePage() {
         </h1>
         <p className="dsn-hero-sub">
           Independent town guides, coast ideas, caravan park round-ups, places to
-          stay, food and drink candidates, and practical visitor tips for city
+          stay, food and drink options, and practical visitor tips for city
           breaks, family days out and quieter countryside escapes.
         </p>
         <div className="dsn-hero-actions">
@@ -157,7 +157,7 @@ export default function HomePage() {
         <SectionHead
           eyebrow="Explore"
           title="Choose the guide that matches your trip"
-          sub="Every section is built for planning, with internal links by town and clear reminders to check details direct before travelling."
+          sub="Every section is built for planning, with links by town and clear reminders to check details direct before travelling."
         />
         <div className="dsn-card-grid">
           {EXPLORE_AREAS.map((area) => (

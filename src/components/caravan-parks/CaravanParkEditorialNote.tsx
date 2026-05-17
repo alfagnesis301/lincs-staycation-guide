@@ -13,7 +13,7 @@ interface Props {
 }
 
 const DEFAULT_TEXT =
-  'These entries are curated candidates, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Please check directly with each business before planning your trip.';
+  'These entries are included for visitor planning, not paid rankings. Facilities, prices, pet policies, opening dates and booking availability can change. Please check directly with each business before planning your trip.';
 
 export default function CaravanParkEditorialNote({
   text = DEFAULT_TEXT,

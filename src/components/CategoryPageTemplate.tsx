@@ -109,7 +109,9 @@ export default function CategoryPageTemplate({
           {/* Subcategory chips */}
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by subcategory">
             <button
+              type="button"
               onClick={() => setActiveSubcategory(null)}
+              aria-pressed={!activeSubcategory}
               className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border transition-all ${
                 !activeSubcategory
                   ? 'bg-sage text-white border-sage'
@@ -125,7 +127,7 @@ export default function CategoryPageTemplate({
                   <Link
                     key={sub}
                     href={href}
-                    className="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border bg-white text-charcoal-light border-cream-dark hover:border-sage/30 hover:text-sage transition-all"
+                    className="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border bg-white text-charcoal-light border-cream-dark hover:border-sage/30 hover:text-sage transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
                   >
                     {sub} →
                   </Link>
@@ -133,8 +135,10 @@ export default function CategoryPageTemplate({
               }
               return (
                 <button
+                  type="button"
                   key={sub}
                   onClick={() => setActiveSubcategory(activeSubcategory === sub ? null : sub)}
+                  aria-pressed={activeSubcategory === sub}
                   className={`px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full border transition-all ${
                     activeSubcategory === sub
                       ? 'bg-sage text-white border-sage'
