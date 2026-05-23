@@ -13,7 +13,7 @@ export default function CaravanParkGuideHero({ guide }: Props) {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Caravan Parks', href: '/caravan-parks' },
-            { label: `Best Caravan Parks near ${guide.location}` },
+            { label: `Caravan Parks near ${guide.location} to Compare` },
           ]}
         />
         <div className="max-w-3xl">

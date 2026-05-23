@@ -18,7 +18,14 @@ export const metadata: Metadata = {
     title: 'Dog-Friendly Lincolnshire | Stays, Pubs, Walks & Beaches',
     description: 'Find the best dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire.',
   },
-  robots: { index: false, follow: true },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   alternates: { canonical: '/dog-friendly' },
 };
 

@@ -18,7 +18,14 @@ export const metadata: Metadata = {
     title: 'Family Days Out in Lincolnshire | Activities & Attractions',
     description: 'Plan family-friendly activities, attractions, rainy day ideas and free days out across Lincolnshire.',
   },
-  robots: { index: false, follow: true },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   alternates: { canonical: '/family-days-out' },
 };
 

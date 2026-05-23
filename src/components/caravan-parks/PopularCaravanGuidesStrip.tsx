@@ -39,7 +39,7 @@ export default function PopularCaravanGuidesStrip({
                 {g.regionType === 'Coast' ? '🌊' : g.regionType === 'City' ? '🏛️' : g.regionType === 'Wolds' ? '⛰️' : g.regionType === 'Fens' ? '🌾' : '🌿'}
               </span>
               <h3 className="font-heading text-sm font-semibold text-charcoal group-hover:text-sage transition-colors leading-snug">
-                Best Caravan Parks near {g.location}
+                Caravan Parks near {g.location} to Compare
               </h3>
               <span className="text-[11px] text-charcoal-muted block mt-1">
                 {g.parks.length} options

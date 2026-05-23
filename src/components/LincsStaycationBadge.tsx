@@ -16,7 +16,7 @@ export default function LincsStaycationBadge() {
         textTransform: 'uppercase',
         fontWeight: 'bold',
         letterSpacing: '0.5px',
-      }}>Recommended on</p>
+      }}>Listed on</p>
       <a
         href="https://lincs-staycation-guide.co.uk/"
         target="_blank"

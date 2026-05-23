@@ -4,7 +4,7 @@ import BusinessSubmissionForm from '@/components/BusinessSubmissionForm';
 import LincsStaycationBadge from '@/components/LincsStaycationBadge';
 
 const badgeHtml = `<div class="lincs-staycation-badge" style="max-width: 220px; border: 1px solid #0f766e; border-radius: 8px; padding: 12px; text-align: center; font-family: sans-serif; background-color: #fafafa;">
-  <p style="margin: 0 0 8px 0; font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Recommended on</p>
+  <p style="margin: 0 0 8px 0; font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px;">Listed on</p>
   <a href="https://lincs-staycation-guide.co.uk/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0f766e; font-weight: bold; font-size: 14px;">
     Lincs <span style="font-style: italic; color: #1e3a8a;">Staycation</span> Guide
   </a>

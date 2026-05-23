@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "content:audit": "node scripts/audit-content-quality.mjs",
     "qa:static": "node scripts/audit-static-routes.mjs",
+    "check:site-quality": "npm run content:audit && npm run qa:static",
     "qa": "npm run lint && npm run typecheck && npm run content:audit && npm run qa:static && npm run build",
     "test:e2e": "playwright test"
   },

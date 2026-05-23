@@ -6,6 +6,7 @@ const APP_DIR = path.join(ROOT, 'src/app');
 const SOURCE_DIRS = ['src/app', 'src/components', 'src/data'].map((dir) => path.join(ROOT, dir));
 const CHECK_EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx']);
 const THIN_NOINDEX_ROUTES = ['/events', '/dog-friendly', '/family-days-out', '/search'];
+const ROBOTS_DISALLOW_ROUTES = ['/api/', '/admin/', '/preview/', '/drafts/', '/saved'];
 const BLOCKED_DOMAINS = ['https://lincsstaycationguide.co.uk', 'http://lincsstaycationguide.co.uk'];
 
 const failures = [];
@@ -93,6 +94,9 @@ for (const route of THIN_NOINDEX_ROUTES) {
   if (!/robots:\s*\{\s*index:\s*false/.test(source)) {
     failures.push(`${route} must keep robots.index=false while it is thin or editorial-only.`);
   }
+  if (!/googleBot:\s*\{\s*index:\s*false,\s*follow:\s*true/s.test(source)) {
+    failures.push(`${route} must keep googleBot noindex/follow while it is thin or editorial-only.`);
+  }
 }
 
 const sitemapSource = await readFile(path.join(APP_DIR, 'sitemap.ts'), 'utf8');
@@ -100,6 +104,16 @@ for (const route of [...THIN_NOINDEX_ROUTES, '/saved']) {
   if (sitemapSource.includes(`'${route}'`) || sitemapSource.includes(`"${route}"`)) {
     failures.push(`${route} is noindex/redirected and must not be listed in sitemap.ts.`);
   }
+}
+
+const robotsSource = await readFile(path.join(APP_DIR, 'robots.ts'), 'utf8');
+for (const route of ROBOTS_DISALLOW_ROUTES) {
+  if (!robotsSource.includes(`'${route}'`) && !robotsSource.includes(`"${route}"`)) {
+    failures.push(`robots.ts must disallow ${route}.`);
+  }
+}
+if (!robotsSource.includes('sitemap: `${baseUrl}/sitemap.xml`')) {
+  failures.push('robots.ts must advertise the canonical sitemap.xml URL.');
 }
 
 for (const dir of SOURCE_DIRS) {
