@@ -587,7 +587,7 @@ export const guides: Guide[] = [
   },
   {
     id: 'best-caravan-parks-skegness',
-    title: 'Best Caravan Parks near Skegness',
+    title: 'Caravan Parks near Skegness',
     slug: 'best-caravan-parks-skegness',
     category: 'Coast',
     description: 'Compare family-friendly caravan parks and holiday parks near Skegness for your next seaside holiday.',

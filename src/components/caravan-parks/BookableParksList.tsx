@@ -15,7 +15,7 @@ import {
 
 type FilterId =
   | 'all'
-  | 'recommended'
+  | 'compare-first'
   | 'family-friendly'
   | 'dog-friendly'
   | 'near-beach'
@@ -32,7 +32,7 @@ type FilterId =
 
 const FILTERS: { id: FilterId; label: string }[] = [
   { id: 'all', label: 'All parks' },
-  { id: 'recommended', label: 'Recommended' },
+  { id: 'compare-first', label: 'Compare first' },
   { id: 'family-friendly', label: 'Family-friendly' },
   { id: 'dog-friendly', label: 'Dog-friendly' },
   { id: 'near-beach', label: 'Near beach' },
@@ -49,7 +49,7 @@ const FILTERS: { id: FilterId; label: string }[] = [
 ];
 
 const SORT_OPTIONS: { id: SortOption; label: string }[] = [
-  { id: 'recommended', label: 'Recommended' },
+  { id: 'recommended', label: 'Compare first' },
   { id: 'alphabetical', label: 'Sort alphabetically' },
   { id: 'location', label: 'Sort by location' },
   { id: 'familyFriendly', label: 'Family-friendly first' },
@@ -74,13 +74,13 @@ const TAG_BADGE: Record<VisitorTag, string> = {
   'open-all-year': 'bg-cream text-charcoal border border-cream-dark/60',
 };
 
-const RECOMMENDED_BADGE = 'bg-indigo-50 text-indigo-800 border border-indigo-100';
+const COMPARE_FIRST_BADGE = 'bg-indigo-50 text-indigo-800 border border-indigo-100';
 
 function applyFilter(parks: BookableCaravanPark[], filter: FilterId): BookableCaravanPark[] {
   switch (filter) {
     case 'all':
       return parks;
-    case 'recommended':
+    case 'compare-first':
       return parks.filter(
         (p) =>
           p.internalMonetizationPriority === 'very-high' ||
@@ -117,9 +117,9 @@ const SECTIONS: {
 }[] = [
   {
     id: 'recommended',
-    title: 'Recommended caravan parks',
+    title: 'Caravan parks to compare first',
     intro:
-      'These recommended options are selected to help visitors compare useful caravan parks, holiday parks, touring sites and lodge stays across Lincolnshire.',
+      'These options are grouped first to help visitors compare useful caravan parks, holiday parks, touring sites and lodge stays across Lincolnshire.',
     match: (p) =>
       p.internalMonetizationPriority === 'very-high' ||
       p.internalMonetizationPriority === 'high',
@@ -235,13 +235,13 @@ export default function BookableParksList() {
 /** Visitor-facing badges shown on each card (max ~3). Never exposes internal data. */
 function visitorBadges(park: BookableCaravanPark): { key: string; label: string; cls: string }[] {
   const badges: { key: string; label: string; cls: string }[] = [];
-  const isRecommended =
+  const isCompareFirst =
     park.internalMonetizationPriority === 'very-high' ||
     park.internalMonetizationPriority === 'high';
-  if (isRecommended) {
-    badges.push({ key: 'recommended', label: 'Recommended', cls: RECOMMENDED_BADGE });
+  if (isCompareFirst) {
+    badges.push({ key: 'compare-first', label: 'Compare first', cls: COMPARE_FIRST_BADGE });
   }
-  // Pick up to 2 most-relevant tags after Recommended.
+  // Pick up to 2 most-relevant tags after the comparison badge.
   const tagOrder: VisitorTag[] = [
     'family-friendly',
     'near-beach',

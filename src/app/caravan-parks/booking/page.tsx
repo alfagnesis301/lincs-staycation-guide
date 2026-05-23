@@ -12,12 +12,12 @@ import {
 import { getSiteUrl, siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Best Caravan Parks in Lincolnshire with Booking Options',
+  title: 'Caravan Parks in Lincolnshire with Booking Options',
   description:
     'Compare caravan parks in Lincolnshire, Skegness, Chapel St Leonards, Woodhall Spa and nearby areas. Find booking options, holiday parks, campsites and family-friendly caravan stays.',
   alternates: { canonical: '/caravan-parks/booking' },
   openGraph: {
-    title: 'Best Caravan Parks in Lincolnshire with Booking Options',
+    title: 'Caravan Parks in Lincolnshire with Booking Options',
     description:
       'Compare caravan parks, holiday parks, touring sites, lodges and glamping stays across Lincolnshire.',
     url: `${siteConfig.domain}/caravan-parks/booking`,
@@ -33,7 +33,7 @@ export default function BookableCaravanParksPage() {
   const jsonLdItemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Best Caravan Parks in Lincolnshire with Booking Options',
+    name: 'Caravan Parks in Lincolnshire with Booking Options',
     description:
       'Caravan and holiday parks across Lincolnshire, with booking options and visitor-focused tags.',
     numberOfItems: sorted.length,
@@ -87,7 +87,7 @@ export default function BookableCaravanParksPage() {
             ]}
           />
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-4 leading-tight">
-            Best Caravan Parks in Lincolnshire with Booking Options
+            Caravan Parks in Lincolnshire with Booking Options
           </h1>
           <p className="text-lg text-charcoal-muted leading-relaxed max-w-3xl">
             Finding a caravan park with easy booking options can save time and

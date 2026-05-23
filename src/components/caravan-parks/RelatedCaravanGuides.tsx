@@ -38,7 +38,7 @@ export default function RelatedCaravanGuides({ currentGuide, related }: Props) {
                     <svg className="w-3.5 h-3.5 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                    Best Caravan Parks near {g.location}
+                    Caravan Parks near {g.location} to Compare
                   </Link>
                 </li>
               ))}

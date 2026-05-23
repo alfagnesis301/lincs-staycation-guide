@@ -208,7 +208,7 @@ export const bookableCaravanParks: BookableCaravanPark[] = [
     area: 'Woodhall Spa',
     bestFor: 'Touring, glamping and quiet countryside stays',
     description:
-      'An award-winning touring and glamping park in Woodhall Spa with quiet pitches, lodges and easy access to the Lincolnshire Wolds.',
+      'A touring and glamping park in Woodhall Spa with quiet pitches, lodges and easy access to the Lincolnshire Wolds.',
     tags: ['touring', 'glamping', 'lodges', 'quiet-stays', 'dog-friendly'],
     affiliateUrl: '',
     officialUrl: '',

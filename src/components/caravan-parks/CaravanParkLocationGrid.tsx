@@ -113,7 +113,7 @@ export default function CaravanParkLocationGrid({ guides }: Props) {
                   <span className="badge badge-coast text-[11px]">{g.regionType}</span>
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-charcoal group-hover:text-sage transition-colors mb-2">
-                  Best Caravan Parks near {g.location}
+                  Caravan Parks near {g.location} to Compare
                 </h3>
                 <p className="text-sm text-charcoal-muted leading-relaxed mb-4 line-clamp-3">
                   {g.contentAngle}

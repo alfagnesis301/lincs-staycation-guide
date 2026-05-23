@@ -23,10 +23,10 @@ test.describe('Content quality regressions', () => {
     }
   });
 
-  test('/saved redirects to search instead of returning a broken page', async ({ request }) => {
+  test('/saved redirects to town guides instead of returning a broken page', async ({ request }) => {
     const response = await request.get('/saved', { maxRedirects: 0 });
     expect([307, 308]).toContain(response.status());
-    expect(response.headers().location).toBe('/search');
+    expect(response.headers().location).toBe('/town-guides');
   });
 
   test('home has no best-rate claims and popular town cards use real images', async ({ page }) => {

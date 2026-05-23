@@ -8,7 +8,14 @@ export const metadata: Metadata = {
   title: 'Search Lincolnshire Guides',
   description: 'Search Lincs Staycation Guide by town, category, attraction or staycation topic.',
   alternates: { canonical: '/search' },
-  robots: { index: false, follow: true },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
 };
 
 function normalize(value: string) {

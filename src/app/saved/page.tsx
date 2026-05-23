@@ -1,5 +1,5 @@
 import { permanentRedirect } from 'next/navigation';
 
 export default function SavedPage() {
-  permanentRedirect('/search');
+  permanentRedirect('/town-guides');
 }

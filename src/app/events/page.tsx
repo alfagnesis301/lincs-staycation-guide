@@ -11,7 +11,14 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: '/events' },
   // Holding page — keep out of the index until we have a curated, dated programme.
-  robots: { index: false, follow: true },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
 };
 
 export default function EventsPage() {
