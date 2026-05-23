@@ -1,10 +1,6 @@
 import Link from 'next/link';
-import {
-  footerExploreLinks,
-  footerBusinessLinks,
-  footerCompanyLinks,
-} from '@/data/navigation';
-import { siteConfig } from '@/config/site';
+import { footerCompanyLinks, footerExploreLinks } from '@/data/navigation';
+import { siteConfig } from '@/lib/site-config';
 
 const towns = [
   { label: 'Lincoln', href: '/town-guides/lincoln' },
@@ -34,8 +30,7 @@ export default function SiteFooter() {
               maxWidth: '36ch',
             }}
           >
-            An independent guide to staying, eating and exploring across Lincolnshire — coast,
-            city, Wolds, Fens and market towns. We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.
+            {siteConfig.description} {siteConfig.footerDisclaimer}
           </p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <span
@@ -48,7 +43,7 @@ export default function SiteFooter() {
                 letterSpacing: '.04em',
               }}
             >
-              EST. {siteConfig.established}
+              EST. {siteConfig.establishedYear}
             </span>
             <span
               style={{
@@ -67,41 +62,41 @@ export default function SiteFooter() {
 
         <div>
           <h4>Explore</h4>
-          {footerExploreLinks.map((l) => (
-            <Link key={l.href} href={l.href}>
-              {l.label}
+          {footerExploreLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
             </Link>
           ))}
         </div>
 
         <div>
           <h4>Towns</h4>
-          {towns.map((l) => (
-            <Link key={l.href} href={l.href}>
-              {l.label}
+          {towns.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
             </Link>
           ))}
         </div>
 
         <div>
           <h4>For business</h4>
-          {footerBusinessLinks.map((l) => (
-            <Link key={l.href} href={l.href}>
-              {l.label}
+          {siteConfig.businessLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
             </Link>
           ))}
           <div style={{ height: 14 }} />
           <h4>Company</h4>
-          {footerCompanyLinks.slice(0, 5).map((l) => (
-            <Link key={l.href} href={l.href}>
-              {l.label}
+          {footerCompanyLinks.slice(0, 5).map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
             </Link>
           ))}
         </div>
       </div>
 
       <div className="dsn-foot-bottom">
-        <span>© {year} Lincs Staycation Guide. An independent travel publication.</span>
+        <span>&copy; {year} {siteConfig.name}. An independent travel publication.</span>
         <span style={{ display: 'flex', gap: 18 }}>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>

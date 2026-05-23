@@ -5,6 +5,7 @@ import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import MobileTabBar from '@/components/MobileTabBar';
 import CookieBanner from '@/components/CookieBanner';
+import { getSiteUrl, siteConfig } from '@/lib/site-config';
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -30,41 +31,37 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lincs Staycation Guide | Places to Stay, Eat & Explore in Lincolnshire',
-    template: '%s | Lincs Staycation Guide',
+    default: `${siteConfig.name} | Places to Stay, Eat & Explore in Lincolnshire`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire. We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk'),
+  description: `${siteConfig.description} ${siteConfig.footerDisclaimer}`,
+  metadataBase: new URL(getSiteUrl()),
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Lincs Staycation Guide',
-    title: 'Lincs Staycation Guide | Places to Stay, Eat & Explore in Lincolnshire',
-    description:
-      'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire.',
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} | Places to Stay, Eat & Explore in Lincolnshire`,
+    description: siteConfig.description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lincs Staycation Guide',
-    description:
-      'Independent directory of places to stay, things to do, food & drink, caravan parks and town guides across Lincolnshire.',
+    title: siteConfig.name,
+    description: siteConfig.description,
   },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },
 };
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk';
+const SITE_URL = getSiteUrl();
 
 const siteJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Lincs Staycation Guide',
+    name: siteConfig.name,
     url: SITE_URL,
     inLanguage: 'en-GB',
-    description:
-      'Independent directory of places to stay, things to do, food & drink, caravan parks, family days out and town guides across Lincolnshire.',
+    description: siteConfig.description,
     potentialAction: {
       '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,
@@ -74,7 +71,7 @@ const siteJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Lincs Staycation Guide',
+    name: siteConfig.name,
     url: SITE_URL,
     logo: `${SITE_URL}/file.svg`,
     sameAs: [],

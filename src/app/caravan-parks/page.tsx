@@ -9,6 +9,7 @@ import { CaravanHero, CTABanner, FAQGrid } from '@/components/dsn/sections';
 import { SectionHead } from '@/components/dsn/primitives';
 import { GuideCard, RowCard } from '@/components/dsn/cards';
 import { Home, Leaf, Sun, Tent, Arrow } from '@/components/dsn/Icons';
+import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Caravan Parks & Holiday Parks in Lincolnshire',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Caravan Parks & Holiday Parks in Lincolnshire',
     description:
       'Compare caravan parks, holiday parks, touring sites, lodges, glamping stays and family-friendly coastal parks across Lincolnshire.',
-    url: 'https://lincsstaycationguide.co.uk/caravan-parks',
+    url: `${siteConfig.domain}/caravan-parks`,
     type: 'website',
   },
 };

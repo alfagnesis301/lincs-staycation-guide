@@ -9,6 +9,7 @@ import {
   hasActiveAffiliateLinks,
   sortParks,
 } from '@/data/bookableCaravanParks';
+import { getSiteUrl, siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Best Caravan Parks in Lincolnshire with Booking Options',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Best Caravan Parks in Lincolnshire with Booking Options',
     description:
       'Compare caravan parks, holiday parks, touring sites, lodges and glamping stays across Lincolnshire.',
-    url: 'https://lincsstaycationguide.co.uk/caravan-parks/booking',
+    url: `${siteConfig.domain}/caravan-parks/booking`,
     type: 'website',
   },
 };
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
 export default function BookableCaravanParksPage() {
   const sorted = sortParks(bookableCaravanParks, 'recommended');
   const showAffiliateDisclosure = hasActiveAffiliateLinks();
+  const siteUrl = getSiteUrl();
 
   const jsonLdItemList = {
     '@context': 'https://schema.org',
@@ -47,18 +49,18 @@ export default function BookableCaravanParksPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lincsstaycationguide.co.uk' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Caravan Parks',
-        item: 'https://lincsstaycationguide.co.uk/caravan-parks',
+        item: `${siteUrl}/caravan-parks`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Booking Options',
-        item: 'https://lincsstaycationguide.co.uk/caravan-parks/booking',
+        item: `${siteUrl}/caravan-parks/booking`,
       },
     ],
   };
