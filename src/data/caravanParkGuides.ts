@@ -114,7 +114,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Lincoln to Compare',
     h1: 'Caravan Parks near Lincoln to Compare',
     contentAngle:
-      'Best for city breaks, cathedral visits, countryside walks and a practical base near the historic city centre.',
+      'Good for city breaks, cathedral visits, countryside walks and a practical base near the historic city centre.',
     intro:
       'Planning a caravan, lodge, touring or glamping break near Lincoln? This guide compares curated holiday park and campsite options in and around the city, including practical touring sites, peaceful countryside lodges and family-friendly bases for visiting Lincoln Cathedral, the castle and the historic quarter.',
     seoTitle: 'Caravan Parks near Lincoln to Compare',
@@ -207,7 +207,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Skegness to Compare',
     h1: 'Caravan Parks near Skegness to Compare',
     contentAngle:
-      'Best for classic Lincolnshire seaside holidays, family caravan breaks, coastal entertainment, touring, glamping, dog-friendly stays and easy access to Skegness, Ingoldmells and Chapel St Leonards.',
+      'Good for classic Lincolnshire seaside holidays, family caravan breaks, coastal entertainment, touring, glamping, dog-friendly stays and easy access to Skegness, Ingoldmells and Chapel St Leonards.',
     intro:
       'Planning a caravan, lodge, touring or glamping break near Skegness? This guide compares curated holiday park and campsite options around Skegness, Ingoldmells, Chapel St Leonards and the wider Lincolnshire Coast. Use it to compare family-friendly parks, beach-close bases, touring sites, dog-friendly options, entertainment-led resorts and quieter countryside alternatives.',
     seoTitle: 'Caravan Parks near Skegness to Compare',
@@ -399,7 +399,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Stamford to Compare',
     h1: 'Caravan Parks near Stamford to Compare',
     contentAngle:
-      'Best for Georgian town breaks, Burghley House, Rutland Water, A1 stopovers and countryside weekends.',
+      'Good for Georgian town breaks, Burghley House, Rutland Water, A1 stopovers and countryside weekends.',
     intro:
       'Planning a caravan, lodge, touring or glamping break near Stamford? Compare curated options around Stamford’s Georgian streets, Burghley House, Rutland Water and the A1 corridor, including lakeside parks, adults-only farm-shop sites and family-focused glamping.',
     seoTitle: 'Caravan Parks near Stamford to Compare',
@@ -488,7 +488,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Louth to Compare',
     h1: 'Caravan Parks near Louth to Compare',
     contentAngle:
-      'Best for Lincolnshire Wolds walking, Georgian market town stays, coastal access and quiet countryside retreats.',
+      'Good for Lincolnshire Wolds walking, Georgian market town stays, coastal access and quiet countryside retreats.',
     intro:
       'Planning a caravan, lodge, touring or glamping break near Louth? Compare curated options across the Lincolnshire Wolds and nearby coast, including lodge estates, adults-only Wolds parks, family-friendly coastal sites and simple countryside touring.',
     seoTitle: 'Caravan Parks near Louth to Compare',
@@ -578,7 +578,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Boston to Compare',
     h1: 'Caravan Parks near Boston to Compare',
     contentAngle:
-      'Best for market town breaks, fishing lodges, countryside retreats and access to The Wash and South Lincolnshire.',
+      'Good for market town breaks, fishing lodges, countryside retreats and access to The Wash and South Lincolnshire.',
     intro:
       'Planning a caravan, lodge, touring or fishing break near Boston? Compare curated options including premium lodges, hot-tub stays, adults-only fishing parks and quiet countryside touring sites within reach of Boston, The Wash and South Lincolnshire.',
     seoTitle: 'Caravan Parks near Boston to Compare',
@@ -668,7 +668,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Grantham to Compare',
     h1: 'Caravan Parks near Grantham to Compare',
     contentAngle:
-      'Best for A1 stopovers, Belton House, country-park breaks and visitors crossing between Lincolnshire, Rutland and Nottinghamshire.',
+      'Good for A1 stopovers, Belton House, country-park breaks and visitors crossing between Lincolnshire, Rutland and Nottinghamshire.',
     intro:
       'Planning a caravan, touring or lodge break near Grantham? Compare curated options including peaceful family-run countryside parks, A1-friendly touring sites and nearby Rutland and Newark alternatives for visitors exploring the Grantham area.',
     seoTitle: 'Caravan Parks near Grantham to Compare',
@@ -761,7 +761,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Spalding to Compare',
     h1: 'Caravan Parks near Spalding to Compare',
     contentAngle:
-      'Best for tulip-country breaks, peaceful Fens countryside, adults-only touring, lodge/golf stays and fishing-focused holidays.',
+      'Good for tulip-country breaks, peaceful Fens countryside, adults-only touring, lodge/golf stays and fishing-focused holidays.',
     intro:
       'Planning a caravan, touring or lodge break near Spalding? Compare curated options across the South Lincolnshire Fens, including adults-only touring, fishing lakes, luxury lodge estates and rural caravan and motorhome bases.',
     seoTitle: 'Caravan Parks near Spalding to Compare',
@@ -853,7 +853,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Sleaford to Compare',
     h1: 'Caravan Parks near Sleaford to Compare',
     contentAngle:
-      'Best for central Lincolnshire bases, family lakeside resorts, woodland touring and premium lodge retreats near Tattershall and Woodhall Spa.',
+      'Good for central Lincolnshire bases, family lakeside resorts, woodland touring and premium lodge retreats near Tattershall and Woodhall Spa.',
     intro:
       'Planning a caravan, lodge, glamping or touring break near Sleaford? Compare curated options including full-service lakeside resorts, woodland touring and camping parks and premium lodge retreats within easy reach of Sleaford and central Lincolnshire.',
     seoTitle: 'Caravan Parks near Sleaford to Compare',
@@ -945,7 +945,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Mablethorpe to Compare',
     h1: 'Caravan Parks near Mablethorpe to Compare',
     contentAngle:
-      'Best for traditional Lincolnshire seaside holidays, Blue Flag beaches, family caravan breaks and quieter coastal alternatives to Skegness.',
+      'Good for traditional Lincolnshire seaside holidays, Blue Flag beaches, family caravan breaks and quieter coastal alternatives to Skegness.',
     intro:
       'Planning a caravan or holiday park break near Mablethorpe? Compare curated coastal options across Mablethorpe, Trusthorpe and Sutton-on-Sea, including major holiday park brands, fishing-lake parks and quieter family bases close to the beach.',
     seoTitle: 'Caravan Parks near Mablethorpe to Compare',
@@ -1034,7 +1034,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Woodhall Spa to Compare',
     h1: 'Caravan Parks near Woodhall Spa to Compare',
     contentAngle:
-      'Best for woodland lodges, hot-tub retreats, premium glamping and family resort holidays in central Lincolnshire.',
+      'Good for woodland lodges, hot-tub retreats, premium glamping and family resort holidays in central Lincolnshire.',
     intro:
       'Planning a lodge, glamping or caravan break near Woodhall Spa? Compare curated options including premium woodland lodge estates, family-friendly lakeside resorts and dedicated touring and camping country parks within easy reach of the village.',
     seoTitle: 'Caravan Parks near Woodhall Spa to Compare',
@@ -1126,7 +1126,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Horncastle to Compare',
     h1: 'Caravan Parks near Horncastle to Compare',
     contentAngle:
-      'Best for Lincolnshire Wolds walking, aviation heritage day trips and quiet countryside or premium lodge stays.',
+      'Good for Lincolnshire Wolds walking, aviation heritage day trips and quiet countryside or premium lodge stays.',
     intro:
       'Planning a lodge, caravan or touring break near Horncastle? Compare curated options including premium lodge retreats, woodland touring sites, family resorts and Wolds camping bases for visitors exploring Horncastle and the Lincolnshire Wolds.',
     seoTitle: 'Caravan Parks near Horncastle to Compare',
@@ -1218,7 +1218,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Gainsborough to Compare',
     h1: 'Caravan Parks near Gainsborough to Compare',
     contentAngle:
-      'Best for Trent-side breaks, North Lincolnshire countryside and visitors combining Gainsborough with Lincoln, Newark and the Sherwood Forest area.',
+      'Good for Trent-side breaks, North Lincolnshire countryside and visitors combining Gainsborough with Lincoln, Newark and the Sherwood Forest area.',
     intro:
       'Planning a touring or caravan break near Gainsborough? Compare curated options including riverside camping along the Ancholme, motorhome-friendly bases between Lincoln and Newark and woodland sites just over the Nottinghamshire border.',
     seoTitle: 'Caravan Parks near Gainsborough to Compare',
@@ -1311,7 +1311,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Market Rasen to Compare',
     h1: 'Caravan Parks near Market Rasen to Compare',
     contentAngle:
-      'Best for Lincolnshire Wolds walking, Market Rasen Racecourse visits and quiet countryside or fishing-focused breaks.',
+      'Good for Lincolnshire Wolds walking, Market Rasen Racecourse visits and quiet countryside or fishing-focused breaks.',
     intro:
       'Planning a lodge, caravan or touring break near Market Rasen? Compare curated Wolds and countryside options including luxury lakeside pods, simple camping sites and riverside touring within easy reach of Market Rasen and the Lincolnshire Wolds.',
     seoTitle: 'Caravan Parks near Market Rasen to Compare',
@@ -1402,7 +1402,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Bourne to Compare',
     h1: 'Caravan Parks near Bourne to Compare',
     contentAngle:
-      'Best for South Lincolnshire town breaks, Stamford and Rutland combinations, family farm attractions and adults-only countryside touring.',
+      'Good for South Lincolnshire town breaks, Stamford and Rutland combinations, family farm attractions and adults-only countryside touring.',
     intro:
       'Planning a caravan, touring or glamping break near Bourne? Compare curated options including lakeside family parks, Rutland-edge touring, premium glamping near Stamford and adults-only farm-style breaks within easy reach of Bourne.',
     seoTitle: 'Caravan Parks near Bourne to Compare',
@@ -1494,7 +1494,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Sutton-on-Sea to Compare',
     h1: 'Caravan Parks near Sutton-on-Sea to Compare',
     contentAngle:
-      'Best for quieter Lincolnshire seaside breaks, beach huts, Mablethorpe-Sutton coastal stays and family-friendly bases.',
+      'Good for quieter Lincolnshire seaside breaks, beach huts, Mablethorpe-Sutton coastal stays and family-friendly bases.',
     intro:
       'Planning a caravan or holiday park break near Sutton-on-Sea? Compare curated options across the Mablethorpe-Sutton coastal stretch, including quieter family parks, fishing-lake holiday parks and ownership-focused sites within walking distance of the beach.',
     seoTitle: 'Caravan Parks near Sutton-on-Sea to Compare',
@@ -1586,7 +1586,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
     title: 'Caravan Parks near Chapel St Leonards to Compare',
     h1: 'Caravan Parks near Chapel St Leonards to Compare',
     contentAngle:
-      'Best for family caravan holidays close to the beach, ownership communities and coastal entertainment along the Skegness-Mablethorpe coast.',
+      'Good for family caravan holidays close to the beach, ownership communities and coastal entertainment along the Skegness-Mablethorpe coast.',
     intro:
       'Planning a caravan or holiday park break in Chapel St Leonards? Compare curated coastal options including the flagship Golden Palm Resort, beach-front family parks, established static caravan sites and ownership-focused community parks.',
     seoTitle: 'Caravan Parks near Chapel St Leonards to Compare',
@@ -1756,8 +1756,8 @@ export function generateCaravanParkFaqs(guide: CaravanParkGuide): FAQItem[] {
 
   if (hasFamilyFriendly) {
     faqs.push({
-      question: `Which caravan parks near ${location} are best for families?`,
-      answer: `Several entries in this guide are positioned as family-friendly with facilities, activities or beach access. The best fit depends on whether you prefer a large entertainment-led resort, a quieter site or a touring base. Check the "Best for" tag on each listing.`,
+      question: `Which caravan parks near ${location} work well for families?`,
+      answer: `Several entries in this guide are positioned as family-friendly with facilities, activities or beach access. The right fit depends on whether you prefer a large entertainment-led resort, a quieter site or a touring base. Check the "Good for" tag on each listing.`,
     });
   }
 

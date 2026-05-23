@@ -318,7 +318,7 @@ function ParkCard({ park }: { park: BookableCaravanPark }) {
       <p className="text-xs text-charcoal-muted mb-3">📍 {park.location}</p>
 
       <p className="text-xs text-charcoal-muted leading-relaxed mb-2">
-        <strong className="text-charcoal">Best for:</strong> {park.bestFor}
+        <strong className="text-charcoal">Good for:</strong> {park.bestFor}
       </p>
       <p className="text-xs text-charcoal-muted leading-relaxed mb-3">{park.description}</p>
 

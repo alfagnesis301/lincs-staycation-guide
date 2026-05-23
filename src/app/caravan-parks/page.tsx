@@ -10,6 +10,7 @@ import { SectionHead } from '@/components/dsn/primitives';
 import { GuideCard, RowCard } from '@/components/dsn/cards';
 import { Home, Leaf, Sun, Tent, Arrow } from '@/components/dsn/Icons';
 import { siteConfig } from '@/lib/site-config';
+import { softenSuitabilityCopy } from '@/lib/public-copy';
 
 export const metadata: Metadata = {
   title: 'Caravan Parks & Holiday Parks in Lincolnshire',
@@ -30,28 +31,28 @@ const PARK_TYPES = [
     icon: <Home width={22} height={22} />,
     h: 'Static caravans',
     p: 'Family-friendly resorts with on-site pools, clubs and entertainment.',
-    who: 'Best for: families, couples, weeks-away breaks',
+    who: 'Good for: families, couples, weeks-away breaks',
     href: '#by-region',
   },
   {
     icon: <Tent width={22} height={22} />,
     h: 'Touring sites',
     p: 'Pitches for caravans, motorhomes and tents — quiet, well-equipped, often dog-friendly.',
-    who: 'Best for: touring caravanners, motorhomes',
+    who: 'Good for: touring caravanners, motorhomes',
     href: '#by-region',
   },
   {
     icon: <Leaf width={22} height={22} />,
     h: 'Glamping',
     p: "Shepherd's huts, safari tents, pods and yurts. Often in countryside or Wolds locations.",
-    who: 'Best for: short breaks, couples, off-grid stays',
+    who: 'Good for: short breaks, couples, off-grid stays',
     href: '#by-region',
   },
   {
     icon: <Sun width={22} height={22} />,
     h: 'Holiday lodges',
     p: 'Premium self-catering — hot tubs, lake views, more space than a static.',
-    who: 'Best for: larger groups, special occasions',
+    who: 'Good for: larger groups, special occasions',
     href: '#by-region',
   },
 ];
@@ -224,9 +225,9 @@ export default function CaravanParksPage() {
       {featured.length > 0 && (
         <section className="dsn-section tint">
           <SectionHead
-            eyebrow="Featured · Editorial picks"
+            eyebrow="Comparison shortlist"
             title="Worth comparing this season"
-            sub="A small set of parks chosen by our editors. We never invent ratings or prices — visit each park's own site for live availability."
+            sub="A small set of practical park guides for visitor planning. We never invent ratings or prices - visit each park's own site for live availability."
             right={
               <Link href="/caravan-parks/booking" className="dsn-link">
                 Browse all
@@ -246,7 +247,7 @@ export default function CaravanParksPage() {
                   type={g.regionType}
                   location={g.location}
                   media={media}
-                  badge={g.contentAngle ? 'EDITORS’ PICK' : undefined}
+                  badge={g.regionType}
                 />
               );
             })}
@@ -274,7 +275,7 @@ export default function CaravanParksPage() {
                 tag={g.regionType}
                 tone={tone}
                 title={g.location}
-                sub={g.contentAngle}
+                sub={softenSuitabilityCopy(g.contentAngle)}
                 media={media}
               />
             );

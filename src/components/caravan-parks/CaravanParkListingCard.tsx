@@ -52,7 +52,7 @@ export default function CaravanParkListingCard({ listing }: Props) {
       </div>
 
       <p className="text-sm font-medium text-charcoal mb-2">
-        <span className="text-charcoal-muted font-normal">Best for:</span> {listing.bestFor}
+        <span className="text-charcoal-muted font-normal">Good for:</span> {listing.bestFor}
       </p>
 
       <p className="text-sm text-charcoal-muted leading-relaxed mb-4">

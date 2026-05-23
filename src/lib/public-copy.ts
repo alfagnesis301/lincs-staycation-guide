@@ -66,6 +66,14 @@ export function cleanPublicCopy(value?: string): string {
     .trim();
 }
 
+export function softenSuitabilityCopy(value?: string): string {
+  return cleanPublicCopy(value)
+    .replace(/^Best for\b/i, 'Good for')
+    .replace(/\bBest for:/gi, 'Good for:')
+    .replace(/\bbest fit\b/gi, 'right fit')
+    .replace(/"Best for"/gi, '"Good for"');
+}
+
 export function publicVerificationNote(kind: ListingKind = 'generic'): string {
   switch (kind) {
     case 'stay':
@@ -95,7 +103,7 @@ export function getPublicListingDescription(
   const townPart = listing.town ? ` in or near ${listing.town}` : '';
   const typePart = listing.type ? `${listing.type.toLowerCase()} option` : 'visitor option';
   const bestForPart = listing.bestFor
-    ? ` Best for ${cleanPublicCopy(listing.bestFor).toLowerCase().replace(/\.$/, '')}.`
+    ? ` Good for ${cleanPublicCopy(listing.bestFor).toLowerCase().replace(/\.$/, '')}.`
     : '';
 
   if (kind === 'stay') {

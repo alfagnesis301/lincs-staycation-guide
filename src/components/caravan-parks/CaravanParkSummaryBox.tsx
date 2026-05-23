@@ -1,4 +1,5 @@
 import type { CaravanParkGuide } from '@/data/caravanParkGuides';
+import { softenSuitabilityCopy } from '@/lib/public-copy';
 
 interface Props {
   guide: CaravanParkGuide;
@@ -18,7 +19,7 @@ export default function CaravanParkSummaryBox({ guide }: Props) {
   const items: Array<{ label: string; value: string; icon: string }> = [
     { label: 'Location', value: `${guide.location}, Lincolnshire`, icon: '📍' },
     { label: 'Listed parks', value: `${guide.parks.length} curated options`, icon: '🏕️' },
-    { label: 'Best for', value: guide.contentAngle, icon: '✨' },
+    { label: 'Good for', value: softenSuitabilityCopy(guide.contentAngle), icon: '✨' },
     { label: 'Last updated', value: guide.lastUpdated, icon: '🗓️' },
   ];
 
