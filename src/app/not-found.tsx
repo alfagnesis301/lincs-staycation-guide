@@ -1,31 +1,51 @@
 import Link from 'next/link';
 
+const usefulLinks = [
+  { label: 'Town guides', href: '/town-guides' },
+  { label: 'Places to stay', href: '/places-to-stay' },
+  { label: 'Caravan parks', href: '/caravan-parks' },
+  { label: 'Things to do', href: '/things-to-do' },
+];
+
 export default function NotFound() {
   return (
-    <div className="hero-gradient min-h-[60vh] flex items-center justify-center">
-      <div className="max-w-xl mx-auto px-4 text-center">
-        <span className="text-6xl block mb-6">🧭</span>
-        <h1 className="font-heading text-4xl sm:text-5xl font-bold text-charcoal mb-4">
+    <section className="hero-gradient min-h-[60vh] py-16">
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-sage">
           Page not found
-        </h1>
-        <p className="text-lg text-charcoal-muted mb-8">
-          Sorry, we couldn&apos;t find that page. It may have been moved or no longer exists.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <h1 className="font-heading mb-4 text-4xl font-bold text-charcoal sm:text-5xl">
+          We could not find that Lincolnshire guide
+        </h1>
+        <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-charcoal-muted">
+          The page may have moved, or the guide may still be in editorial review. Use one of the main sections below to keep browsing verified pages.
+        </p>
+        <div className="mb-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="/"
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-sage hover:bg-sage-dark rounded-xl transition-colors"
+            className="inline-flex items-center justify-center rounded-xl bg-sage px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-sage-dark"
           >
             Return home
           </Link>
           <Link
-            href="/things-to-do"
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-charcoal border border-cream-dark hover:bg-cream rounded-xl transition-colors"
+            href="/search"
+            className="inline-flex items-center justify-center rounded-xl border border-cream-dark px-6 py-3 text-base font-semibold text-charcoal transition-colors hover:bg-cream"
           >
-            Explore Lincolnshire guides
+            Search guides
           </Link>
         </div>
+        <nav aria-label="Useful sections" className="flex flex-wrap justify-center gap-3">
+          {usefulLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-full border border-cream-dark bg-white px-4 py-2 text-sm font-medium text-charcoal transition-colors hover:border-sage hover:text-sage-dark"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
-    </div>
+    </section>
   );
 }

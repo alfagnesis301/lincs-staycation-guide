@@ -9,7 +9,8 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "content:audit": "node scripts/audit-content-quality.mjs",
-    "qa": "npm run lint && npm run content:audit && npm run build",
+    "qa:static": "node scripts/audit-static-routes.mjs",
+    "qa": "npm run lint && npm run typecheck && npm run content:audit && npm run qa:static && npm run build",
     "test:e2e": "playwright test"
   },
   "dependencies": {

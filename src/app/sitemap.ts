@@ -3,9 +3,10 @@ import { caravanParkGuides } from '@/data/caravanParkGuides';
 import { placesToStayGuides } from '@/data/placesToStayGuides';
 import { towns } from '@/data/towns';
 import { publishedGuides } from '@/data/guides';
+import { getSiteUrl } from '@/lib/site-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-guide.co.uk';
+  const baseUrl = getSiteUrl();
   const now = new Date();
 
   // /events and /blog are intentionally omitted while they hold no
