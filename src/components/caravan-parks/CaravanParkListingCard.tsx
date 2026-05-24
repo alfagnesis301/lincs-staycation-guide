@@ -1,5 +1,6 @@
 import type { CaravanParkListing } from '@/data/caravanParkGuides';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import VerificationNotice from '@/components/VerificationNotice';
 
 interface Props {
   listing: CaravanParkListing;
@@ -102,13 +103,9 @@ export default function CaravanParkListingCard({ listing }: Props) {
             <span className="text-[11px] text-charcoal-muted">Affiliate link</span>
           </div>
         ) : listing.bookingDeepLinkPending ? (
-          <span className="text-xs italic text-charcoal-muted">
-            Booking link under review.
-          </span>
+          <VerificationNotice kind="park" compact />
         ) : listing.needsVerification ? (
-          <p className="text-xs text-charcoal-muted italic">
-            Use source links for current park details.
-          </p>
+          <VerificationNotice kind="park" compact />
         ) : listing.sourceUrl ? (
           <a
             href={listing.sourceUrl}

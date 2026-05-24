@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import CaravanParkEditorialNote from '@/components/caravan-parks/CaravanParkEditorialNote';
 import CaravanParkDisclosureBox from '@/components/caravan-parks/CaravanParkDisclosureBox';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import VerificationNotice from '@/components/VerificationNotice';
 import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 import {
   categoryLandingFaqs,
@@ -17,6 +18,7 @@ import {
 } from '@/data/locationGuides';
 import { natureSpotsByTown } from '@/data/nature-spots';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
+import { getPublicListingDescription, type ListingKind } from '@/lib/public-copy';
 
 type Kind = 'places-to-stay' | 'things-to-do' | 'food-drink';
 
@@ -103,14 +105,57 @@ function itemLabel(o: CategoryItem) {
   return 'type' in o ? o.type : o.category;
 }
 
-function itemSummary(o: CategoryItem) {
-  if ('bestFor' in o) return o.bestFor;
-  if ('shortDescription' in o) return o.shortDescription;
-  return 'Useful for visitor planning in this guide.';
+function listingKind(kind: Kind): ListingKind {
+  if (kind === 'places-to-stay') return 'stay';
+  if (kind === 'things-to-do') return 'attraction';
+  return 'food';
+}
+
+function itemSummary(o: CategoryItem, kind: Kind) {
+  const publicKind = listingKind(kind);
+  if ('bestFor' in o) {
+    return getPublicListingDescription(
+      {
+        name: o.name,
+        town: o.town,
+        type: o.type,
+        bestFor: o.bestFor,
+        description: o.bestFor,
+        officialWebsiteUrl: o.officialWebsiteUrl,
+        bookingUrl: o.bookingUrl,
+        affiliateUrl: o.affiliateUrl,
+      },
+      publicKind,
+    );
+  }
+  if ('shortDescription' in o) {
+    return getPublicListingDescription(
+      {
+        name: o.name,
+        town: o.town,
+        type: o.category,
+        description: o.shortDescription,
+        officialWebsiteUrl: o.officialWebsiteUrl,
+      },
+      publicKind,
+    );
+  }
+  return getPublicListingDescription(
+    {
+      name: o.name,
+      town: o.town,
+      type: o.type,
+    },
+    publicKind,
+  );
 }
 
 function officialWebsiteUrl(o: CategoryItem) {
   return 'officialWebsiteUrl' in o ? o.officialWebsiteUrl : undefined;
+}
+
+function itemNeedsVerification(o: CategoryItem) {
+  return o.needsVerification === true;
 }
 
 export function CategoryHub({ kind }: { kind: Kind }) {
@@ -225,6 +270,16 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
         </div>
       </section>
 
+      {guide.sourceStatus !== 'verified' ? (
+        <section className="bg-white py-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <VerificationNotice>
+              This location guide is still in editorial review. Check official sources before booking, travelling or relying on facilities.
+            </VerificationNotice>
+          </div>
+        </section>
+      ) : null}
+
       <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-4 sm:grid-cols-4">
@@ -262,7 +317,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
               >
                 <h2 className="font-heading font-semibold text-charcoal">{o.name}</h2>
                 <p className="text-charcoal-muted">{itemLabel(o)}</p>
-                <p className="text-charcoal-muted">{itemSummary(o)}</p>
+                <p className="text-charcoal-muted">{itemSummary(o, kind)}</p>
               </article>
             ))}
           </div>
@@ -273,18 +328,24 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Curated listings"
-            subtitle="Detailed information for each location. Check the official website for current ratings and bookings."
+            subtitle="Detailed information for each location. Check official sources for current opening, booking, access and visitor details."
           />
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {list.map((o) => {
               const websiteUrl = officialWebsiteUrl(o);
+              const summary = itemSummary(o, kind);
               return (
                 <article key={o.id} className="rounded-2xl border border-cream-dark/60 bg-white p-5">
                   <span className="badge badge-coast mb-3 inline-block text-[10px]">{itemLabel(o)}</span>
                   <h3 className="font-heading text-xl font-semibold text-charcoal">{o.name}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{itemSummary(o)}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{summary}</p>
+                  {itemNeedsVerification(o) ? (
+                    <div className="mt-4">
+                      <VerificationNotice kind={listingKind(kind)} compact />
+                    </div>
+                  ) : null}
                   <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/40 pt-4">
-                    <p className="text-xs text-charcoal-muted">Use the official or map links for live details.</p>
+                    <p className="text-xs text-charcoal-muted">Use official sources for live details.</p>
                     <div className="flex flex-wrap items-center gap-3">
                       {websiteUrl ? (
                         <a
