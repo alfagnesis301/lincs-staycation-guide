@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Explore practical travel guides for Lincolnshire\'s cities, towns and coastal destinations.',
   openGraph: {
     title: 'Lincolnshire Town Guides',
-    description: 'Explore practical travel guides for Lincolnshire\'s cities, towns and coastal destinations.',
+    description: 'Compare Lincolnshire city, coast, market-town and countryside guides for practical trip planning.',
   },
   alternates: { canonical: '/town-guides' },
 };
@@ -19,7 +19,7 @@ export default function TownGuidesPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Lincolnshire Town Guides',
-    description: 'Explore practical travel guides for Lincolnshire\'s cities, towns and coastal destinations.',
+    description: 'Town-by-town Lincolnshire planning guides covering stays, attractions, food stops and local context.',
   };
 
   return (

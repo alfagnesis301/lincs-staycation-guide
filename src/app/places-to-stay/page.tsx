@@ -6,11 +6,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://lincs-staycation-g
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Places to Stay in Lincolnshire',
-  description: 'Find places to stay in Lincolnshire by location, from boutique hotels to holiday cottages.',
+  description: 'Compare Lincolnshire hotels, B&Bs, inns, apartments and cottages by town, then check live details before booking.',
   alternates: { canonical: '/places-to-stay' },
   openGraph: {
     title: 'Places to Stay in Lincolnshire | Lincs Staycation Guide',
-    description: 'Find places to stay in Lincolnshire by location, from boutique hotels to holiday cottages.',
+    description: 'Browse Lincolnshire places to stay by town, including hotels, B&Bs, inns, apartments and cottages.',
     url: `${SITE_URL}/places-to-stay`,
     siteName: 'Lincs Staycation Guide',
     locale: 'en_GB',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Places to Stay in Lincolnshire',
-    description: 'Find places to stay in Lincolnshire by location, from boutique hotels to holiday cottages.',
+    description: 'Use town-by-town stay guides, then verify current facilities, policies and availability directly.',
   },
 };
 

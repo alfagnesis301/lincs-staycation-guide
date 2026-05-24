@@ -13,9 +13,14 @@ import {
 } from '@/data/locationGuides';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
-import { getPublicListingDescription, uniquePublicTags, type ListingKind } from '@/lib/public-copy';
+import {
+  getPublicListingDescription,
+  shouldShowListingVerificationNotice,
+  uniquePublicTags,
+  type ListingKind,
+} from '@/lib/public-copy';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import VerificationNotice from '@/components/VerificationNotice';
+import VerificationNotice, { SectionVerificationSummary } from '@/components/VerificationNotice';
 import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 import { QuickLinks, lincolnQuickLinks } from '@/components/navigation/QuickLinks';
 
@@ -140,7 +145,15 @@ function InfoCard({
   );
 }
 
-function ThingCard({ item, town }: { item: TownAttraction; town: string }) {
+function ThingCard({
+  item,
+  town,
+  showVerificationNotice = true,
+}: {
+  item: TownAttraction;
+  town: string;
+  showVerificationNotice?: boolean;
+}) {
   return (
     <InfoCard
       title={item.name}
@@ -149,7 +162,7 @@ function ThingCard({ item, town }: { item: TownAttraction; town: string }) {
       tags={item.tags}
       ctaHref={item.officialWebsiteUrl ?? mapsSearchUrl(`${item.name} ${town}`)}
       ctaLabel={item.officialWebsiteUrl ? 'Visit official website' : 'Search on Google Maps'}
-      verificationKind={item.needsVerification ? 'attraction' : undefined}
+      verificationKind={item.needsVerification && showVerificationNotice ? 'attraction' : undefined}
     />
   );
 }
@@ -167,6 +180,19 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
   const related = getRelatedLocationGuides(slug, 4);
   const heroSrc = town.image ?? credit.localPath;
   const natureSpots = natureSpotsByTown[town.slug] ?? [];
+  const visibleStays = (locationGuide.placesToStay as PlaceToStay[]).slice(0, 5);
+  const visibleParks = (caravanGuide?.parks ?? []).slice(0, 5);
+  const visibleFood = (locationGuide.foodDrink as FoodAndDrinkOption[]).slice(0, 5);
+  const showStayVerificationSummary =
+    visibleStays.filter((stay) =>
+      shouldShowListingVerificationNotice({ needsVerification: stay.needsVerification, sourceUrls: stay.sourceUrls }),
+    ).length >= 3;
+  const showParkVerificationSummary = visibleParks.filter((park) => park.needsVerification).length >= 3;
+  const showAttractionVerificationSummary = profile.attractions.filter((item) => item.needsVerification).length >= 3;
+  const showFoodVerificationSummary =
+    visibleFood.filter((venue) =>
+      shouldShowListingVerificationNotice({ needsVerification: venue.needsVerification, sourceUrls: venue.sourceUrls }),
+    ).length >= 3;
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -350,11 +376,16 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
           This section focuses on hotels, B&Bs, guest houses, inns, apartments and cottages. Caravan and holiday parks are listed separately so visitors can compare the right type of stay.
         </p>
+        {showStayVerificationSummary ? <SectionVerificationSummary kind="stay" /> : null}
         <div className="grid gap-5 lg:grid-cols-2">
-          {(locationGuide.placesToStay as PlaceToStay[]).slice(0, 5).map((stay) => {
+          {visibleStays.map((stay) => {
             const maps = getGoogleMapsLink({ name: stay.name, town: town.name, location: stay.location });
             const ctaHref = stay.affiliateUrl ?? stay.bookingUrl ?? stay.officialWebsiteUrl ?? maps?.href ?? mapsSearchUrl(`${stay.name} ${town.name}`);
             const ctaLabel = stay.affiliateUrl ? 'Check availability' : stay.bookingUrl ? 'View on Booking.com' : stay.officialWebsiteUrl ? 'Visit official website' : 'Search on Google Maps';
+            const showNotice = shouldShowListingVerificationNotice({
+              needsVerification: stay.needsVerification,
+              sourceUrls: stay.sourceUrls,
+            });
             return (
               <InfoCard
                 key={stay.id}
@@ -369,11 +400,12 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                   officialWebsiteUrl: stay.officialWebsiteUrl,
                   bookingUrl: stay.bookingUrl,
                   affiliateUrl: stay.affiliateUrl,
+                  sourceUrls: stay.sourceUrls,
                 }, 'stay')}
                 tags={uniquePublicTags([stay.type, 'No caravan parks'])}
                 ctaHref={ctaHref}
                 ctaLabel={ctaLabel}
-                verificationKind={stay.needsVerification ? 'stay' : undefined}
+                verificationKind={showNotice && !showStayVerificationSummary ? 'stay' : undefined}
               />
             );
           })}
@@ -384,8 +416,9 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
           These nearby options are separated from hotels and guest accommodation. Distances, facilities, dog policies, touring pitches, lodges, glamping and fishing should be verified with each park.
         </p>
+        {showParkVerificationSummary ? <SectionVerificationSummary kind="park" /> : null}
         <div className="grid gap-5 lg:grid-cols-2">
-          {(caravanGuide?.parks ?? []).slice(0, 5).map((park) => {
+          {visibleParks.map((park) => {
             const maps = getGoogleMapsLink({ name: park.name, areaNote: park.locationContext ?? town.name, location: park.location });
             return (
               <InfoCard
@@ -405,7 +438,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 tags={uniquePublicTags(park.tags.slice(0, 6))}
                 ctaHref={park.bookingUrl ?? park.affiliateUrl ?? park.sourceUrl ?? maps?.href ?? mapsSearchUrl(`${park.name} ${town.name}`)}
                 ctaLabel={park.bookingUrl || park.affiliateUrl ? 'Check availability' : park.sourceUrl ? 'Visit official website' : 'Search on Google Maps'}
-                verificationKind={park.needsVerification ? 'park' : undefined}
+                verificationKind={park.needsVerification && !showParkVerificationSummary ? 'park' : undefined}
               />
             );
           })}
@@ -413,8 +446,16 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
       </Section>
 
       <Section id="things-to-do" eyebrow="Attractions" title={`Things to Do in ${town.name}`} tint>
+        {showAttractionVerificationSummary ? <SectionVerificationSummary kind="attraction" /> : null}
         <div className="grid gap-5 lg:grid-cols-2">
-          {profile.attractions.map((item) => <ThingCard key={item.name} item={item} town={town.name} />)}
+          {profile.attractions.map((item) => (
+            <ThingCard
+              key={item.name}
+              item={item}
+              town={town.name}
+              showVerificationNotice={!showAttractionVerificationSummary}
+            />
+          ))}
         </div>
       </Section>
 
@@ -424,9 +465,14 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
           These food and drink options are included as practical local ideas, not rankings. Check current opening hours, menus and booking requirements directly before visiting.
         </p>
+        {showFoodVerificationSummary ? <SectionVerificationSummary kind="food" /> : null}
         <div className="grid gap-5 lg:grid-cols-2">
-          {(locationGuide.foodDrink as FoodAndDrinkOption[]).slice(0, 5).map((venue) => {
+          {visibleFood.map((venue) => {
             const maps = getGoogleMapsLink({ name: venue.name, town: town.name, location: venue.location });
+            const showNotice = shouldShowListingVerificationNotice({
+              needsVerification: venue.needsVerification,
+              sourceUrls: venue.sourceUrls,
+            });
             return (
               <InfoCard
                 key={venue.id}
@@ -436,12 +482,13 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                   name: venue.name,
                   town: town.name,
                   type: venue.type,
-                  description: `A ${venue.type.toLowerCase()} option for visitors planning food and drink in ${town.name}.`,
+                  description: venue.description,
+                  sourceUrls: venue.sourceUrls,
                 }, 'food')}
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
                 ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}
                 ctaLabel="Search on Google Maps"
-                verificationKind={venue.needsVerification ? 'food' : undefined}
+                verificationKind={showNotice && !showFoodVerificationSummary ? 'food' : undefined}
               />
             );
           })}

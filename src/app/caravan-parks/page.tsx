@@ -69,15 +69,15 @@ const REGION_TONE: Record<RegionType, 'sage' | 'coast' | 'warm' | 'fen'> = {
 const LANDING_FAQS = [
   {
     q: 'Are these parks bookable through Lincs Staycation Guide?',
-    a: 'No. We are a directory, not a booking engine. Book direct with the operator to check current availability, facilities and prices.',
+    a: 'No. We are a directory, not a booking engine. Use the listed official, platform or map route where available, then check current availability, facilities and prices directly.',
   },
   {
     q: 'How do you decide which parks are listed?',
-    a: "Listings are editorially curated. We verify every park independently before publishing. Operators cannot pay for an organic listing.",
+    a: "Listings are editorially curated from public and operator sources where available. Operators cannot pay for an organic listing, and details should still be checked directly before booking.",
   },
   {
     q: "What does 'featured' mean?",
-    a: 'Featured placement is editor-selected and rotates seasonally. We highlight a small number of parks that match the time of year and reader interest.',
+    a: 'Featured placement is a comparison shortlist that rotates over time. It highlights a small number of parks that may be useful for current trip planning.',
   },
   {
     q: 'Can I add my caravan park to the directory?',
@@ -227,7 +227,7 @@ export default function CaravanParksPage() {
           <SectionHead
             eyebrow="Comparison shortlist"
             title="Worth comparing this season"
-            sub="A small set of practical park guides for visitor planning. We never invent ratings or prices - visit each park's own site for live availability."
+            sub="A small set of practical park guides. We never invent ratings or prices - use each park's own site or listed source route for live availability."
             right={
               <Link href="/caravan-parks/booking" className="dsn-link">
                 Browse all

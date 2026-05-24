@@ -440,7 +440,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Stamford Meadows Glamping',
         bestFor: 'Couples and visitors who prefer glamping close to Stamford town.',
         description:
-          'Not a traditional caravan park, but an excellent Stamford accommodation option. Offers a town-and-country glamping feel, yurts/cabin/campervan options and private hot tub style stays close to Stamford Meadows.',
+          'Not a traditional caravan park, but a Stamford glamping stay to compare. It lists yurts, a cabin, campervan options and private hot tub style stays close to Stamford Meadows.',
         tags: ['Glamping', 'Hot tubs', 'Dog-friendly', 'Couples', 'Town access', 'Premium escape'],
         sourceUrl: 'https://stamfordmeadowsglamping.com/',
         sourceLabel: 'Official site',
@@ -709,7 +709,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Tallington Lakes Leisure Park',
         bestFor: 'Active families and lakeside holidaymakers within reach of Grantham.',
         description:
-          'Better known for Stamford and Bourne, but can also serve Grantham visitors who want more facilities and watersports. Best used as a "within driving distance" option rather than a Grantham town site.',
+          'More closely associated with Stamford and Bourne, but can also serve Grantham visitors who want facilities and watersports within a drive. Treat it as a "within driving distance" option rather than a Grantham town site.',
         tags: ['Touring', 'Camping', 'Watersports', 'Family-friendly', 'Restaurant', 'Lake activities'],
         sourceUrl: 'https://www.tallington.com/',
         sourceLabel: 'Official site',
@@ -895,7 +895,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Bainland Country Park',
         bestFor: 'Premium lodge and glamping stays near Woodhall Spa.',
         description:
-          'More lodge retreat than caravan park, but one of the best premium accommodation options near Sleaford/Woodhall Spa. Offers lodges, cabins, glamping, dog-friendly escapes and family/group options.',
+          'More lodge retreat than caravan park, but a useful premium stay to compare near Sleaford/Woodhall Spa. It lists lodges, cabins, glamping, dog-friendly escapes and family/group options.',
         tags: ['Lodges', 'Cabins', 'Glamping', 'Hot tubs', 'Dog-friendly', 'Premium'],
         sourceUrl: 'https://www.bainland.co.uk/',
         sourceLabel: 'Official site',
@@ -1049,7 +1049,7 @@ export const caravanParkGuides: CaravanParkGuide[] = [
         name: 'Bainland Country Park',
         bestFor: 'Luxury lodge retreats, hot tubs and premium countryside stays in Woodhall Spa.',
         description:
-          'One of the signature Woodhall Spa accommodation options, with luxury lodges, cabins, dog-friendly escapes, romantic retreats and family/group stays. Premium rather than budget touring.',
+          'A Woodhall Spa lodge and glamping stay to compare, with luxury lodges, cabins, dog-friendly escapes, romantic retreats and family/group stays. Premium rather than budget touring.',
         tags: ['Luxury lodges', 'Hot tubs', 'Dog-friendly', 'Families', 'Groups', 'Premium'],
         sourceUrl: 'https://www.bainland.co.uk/',
         sourceLabel: 'Official site',

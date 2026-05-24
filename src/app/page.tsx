@@ -29,7 +29,7 @@ const EXPLORE_AREAS = [
     href: '/places-to-stay',
     label: 'Places to Stay',
     title: 'Hotels, B&Bs, inns and cottages',
-    sub: 'Browse accommodation options by Lincolnshire location.',
+    sub: 'Compare local places to stay by town, then confirm live details direct.',
     icon: <Bed width={16} height={16} />,
   },
   {
@@ -55,12 +55,19 @@ const EXPLORE_AREAS = [
   },
 ];
 
+const FEATURED_EDITORIAL_GUIDE_IDS = [
+  'lincolnshire-beaches',
+  'dog-friendly-days-out',
+  'weekend-breaks',
+  'rainy-day-activities',
+];
+
 const FEATURED_EDITORIAL_GUIDES = publishedGuides
-  .filter((guide) => ['best-beaches', 'dog-friendly-days-out', 'weekend-breaks', 'rainy-day-activities'].includes(guide.slug))
+  .filter((guide) => FEATURED_EDITORIAL_GUIDE_IDS.includes(guide.id))
   .slice(0, 4);
 
 const EDITORIAL_GUIDE_IMAGES: Record<string, { src: string; alt: string }> = {
-  'best-beaches': {
+  'lincolnshire-beaches': {
     src: '/images/lincolnshire/skegness.jpg',
     alt: 'Skegness seafront and beach on the Lincolnshire Coast',
   },
@@ -206,8 +213,8 @@ export default function HomePage() {
                 title={guide.title}
                 sub={guide.description}
                 media={guide.category === 'Coast' ? 'coast' : guide.category === 'Stays' ? 'warm' : ''}
-                imageSrc={EDITORIAL_GUIDE_IMAGES[guide.slug]?.src}
-                imageAlt={EDITORIAL_GUIDE_IMAGES[guide.slug]?.alt}
+                imageSrc={EDITORIAL_GUIDE_IMAGES[guide.id]?.src}
+                imageAlt={EDITORIAL_GUIDE_IMAGES[guide.id]?.alt}
               />
             ))}
           </div>
@@ -225,15 +232,15 @@ export default function HomePage() {
 
       <section className="dsn-section">
         <SectionHead
-          eyebrow="Visitor planning"
-          title="How this guide helps visitors"
-          sub="Editorial blocks replace unverified testimonials, so the homepage stays useful without presenting unsupported claims."
+          eyebrow="Editorial approach"
+          title="Built for practical Lincolnshire trip planning"
+          sub="We focus on useful local planning pages rather than invented rankings. Listings use official websites, booking platforms or map-based routes where available, and we recommend checking opening times, facilities, prices and policies directly before travelling or booking."
         />
         <div className="dsn-card-grid">
           {[
             ['Pick the right base', 'Compare city, coast, Wolds, Fens and countryside destinations before choosing where to stay.'],
             ['Build a practical itinerary', 'Use town guides for one-day plans, weekend ideas, rainy-day options and family-friendly suggestions.'],
-            ['Check details safely', 'Accommodation, menus, facilities and opening hours change, so every guide points visitors back to direct checks.'],
+            ['Check details safely', 'Accommodation, menus, facilities and opening hours change, so every guide points visitors back to live checks with the venue, operator or platform.'],
           ].map(([title, body]) => (
             <article key={title} className="dsn-card" style={{ padding: 24 }}>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 500 }}>

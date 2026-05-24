@@ -71,7 +71,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
     practicalTips: [
       'Steep Hill is genuinely steep; choose waterfront or lower-city accommodation if mobility is a concern.',
       'Lincoln is workable by rail for a short break, but a car helps for Wolds, aviation and countryside add-ons.',
-      'The best area to stay depends on your plan: Bailgate for heritage, Brayford for nightlife and station access.',
+      'The right area to stay depends on your plan: Bailgate for heritage, Brayford for nightlife and station access.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
     ],
   },
@@ -101,7 +101,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
     attractions: [
       { name: 'Skegness Beach and seafront', category: 'Beach', description: 'The main draw for classic sand, promenade walks and resort atmosphere.', tags: ['Beach', 'Free activity', 'Family-friendly'], needsVerification: v },
       { name: 'Skegness Pier and arcades', category: 'Entertainment', description: 'Traditional family entertainment, games and seaside amusements close to the beach.', tags: ['Pier', 'Arcades', 'Rainy day'], officialWebsiteUrl: 'https://skegnesspier.co.uk/', needsVerification: v },
-      { name: 'Natureland Seal Sanctuary', category: 'Wildlife', description: 'A family-friendly wildlife stop best checked directly for current visitor information.', tags: ['Wildlife', 'Family-friendly'], officialWebsiteUrl: 'https://skegnessnatureland.co.uk/', needsVerification: v },
+      { name: 'Natureland Seal Sanctuary', category: 'Wildlife', description: 'A family-friendly wildlife stop worth checking directly for current visitor information.', tags: ['Wildlife', 'Family-friendly'], officialWebsiteUrl: 'https://skegnessnatureland.co.uk/', needsVerification: v },
       { name: 'Gibraltar Point National Nature Reserve', category: 'Nature', description: 'A quieter coastal landscape for birdwatching, walking and big skies south of the resort.', tags: ['Nature', 'Walk', 'Wildlife'], officialWebsiteUrl: 'https://www.lincstrust.org.uk/top-reserves/gibraltar-point', needsVerification: v },
       { name: 'Fantasy Island, Ingoldmells', category: 'Family-friendly', description: 'A major nearby family attraction for rides, markets and holiday park visitors.', tags: ['Nearby', 'Family-friendly', 'Entertainment'], officialWebsiteUrl: 'https://www.fantasyislandresort.co.uk/', needsVerification: v },
       { name: 'Chapel St Leonards', category: 'Beach', description: 'A nearby coastal village for a gentler beach and holiday-park day out.', tags: ['Nearby', 'Beach', 'Caravan holidays'], needsVerification: v },
@@ -137,7 +137,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
       { title: 'Outdoor option', items: ['Walk Burghley Park, the Meadows and riverside routes along the Welland'] },
     ],
     attractions: [
-      { name: 'Stamford town walk', category: 'Walk', description: 'The best way to appreciate Stamford is on foot through its limestone streets, lanes and market spaces.', tags: ['Walk', 'Architecture', 'Free activity'], needsVerification: v },
+      { name: 'Stamford town walk', category: 'Walk', description: 'A useful way to appreciate Stamford is on foot through its limestone streets, lanes and market spaces.', tags: ['Walk', 'Architecture', 'Free activity'], needsVerification: v },
       { name: 'Burghley House', category: 'Historic site', description: 'A major Elizabethan house and one of the strongest reasons to build a Stamford weekend.', tags: ['Historic house', 'Heritage', 'Garden'], officialWebsiteUrl: 'https://burghley.co.uk/', needsVerification: v },
       { name: 'Burghley Park', category: 'Nature', description: 'Open parkland and estate scenery close enough to pair with the town centre.', tags: ['Park', 'Walk', 'Outdoor'], needsVerification: v },
       { name: 'Stamford Arts Centre', category: 'Rainy day', description: 'A central culture stop for cinema, theatre, exhibitions and indoor plans.', tags: ['Arts', 'Rainy day', 'Culture'], officialWebsiteUrl: 'https://www.stamfordartscentre.com/', needsVerification: v },
@@ -145,7 +145,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
       { name: 'Rutland Water nearby', category: 'Nature', description: 'A strong nearby add-on for cycling, walking, birdwatching and waterside days.', tags: ['Nearby', 'Nature', 'Day trip'], needsVerification: v },
     ],
     practicalTips: [
-      'Stamford is best explored on foot; allow time for lanes, courtyards and independent shops.',
+      'Stamford works well on foot; allow time for lanes, courtyards and independent shops.',
       'A car helps for Burghley, Rutland Water and village pubs, though the town itself is compact.',
       'Book restaurants and accommodation early for race days, events and summer weekends.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
@@ -185,7 +185,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
     practicalTips: [
       'Market days are livelier, but parking and cafes can be busier.',
       'A car is useful for Wolds villages, Cadwell Park and coast day trips.',
-      'The best area to stay is central Louth for food and shopping, countryside edges for walking.',
+      'Central Louth works well for food and shopping; countryside edges suit walking.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
     ],
   },
@@ -221,7 +221,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
       { name: 'Freiston Shore', category: 'Nature', description: 'A quieter coastal reserve for wildlife and Wash-side walks.', tags: ['Nature', 'Wildlife', 'Walk'], officialWebsiteUrl: 'https://www.rspb.org.uk/days-out/reserves/freiston-shore', needsVerification: v },
     ],
     practicalTips: [
-      'Boston works best with a car if you want to combine town history and nature reserves.',
+      'Boston works well with a car if you want to combine town history and nature reserves.',
       'Check tides, reserve access and facilities when planning Wash-side walks.',
       'The town centre is compact, but nature reserves sit outside the main visitor core.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
@@ -261,7 +261,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
     practicalTips: [
       'Grantham is one of Lincolnshire\'s easiest rail bases, but a car helps for country estates.',
       'Check National Trust and castle opening dates before planning a weekend around them.',
-      'The best area to stay depends on whether you need the station, A1 access or countryside pubs.',
+      'The right area to stay depends on whether you need the station, A1 access or countryside pubs.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
     ],
   },
@@ -442,7 +442,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
       { title: 'Dog-friendly/outdoor option', items: ['Use Wolds footpaths and Spa Trail sections, checking route access'] },
     ],
     attractions: [
-      { name: 'Horncastle antiques trail', category: 'Shopping', description: 'The town\'s best-known visitor theme and a strong slow-browse activity.', tags: ['Antiques', 'Shopping', 'Independent'], needsVerification: v },
+      { name: 'Horncastle antiques trail', category: 'Shopping', description: 'The town\'s most recognisable visitor theme and a strong slow-browse activity.', tags: ['Antiques', 'Shopping', 'Independent'], needsVerification: v },
       { name: 'Joseph Banks Centre', category: 'Museum', description: 'A heritage and learning stop linked to the botanist Sir Joseph Banks.', tags: ['Museum', 'Heritage', 'Rainy day'], officialWebsiteUrl: 'https://www.joseph-banks.org.uk/', needsVerification: v },
       { name: 'Horncastle market town walk', category: 'Walk', description: 'A compact way to understand the town\'s lanes, river setting and independent shops.', tags: ['Walk', 'Town centre', 'Free activity'], needsVerification: v },
       { name: 'Spa Trail connection', category: 'Walk', description: 'A nearby walking and cycling link between Horncastle and Woodhall Spa.', tags: ['Walk', 'Cycle', 'Outdoor'], needsVerification: v },
@@ -452,7 +452,7 @@ export const townGuideProfiles: Record<string, TownGuideProfile> = {
     practicalTips: [
       'Antique shops can have individual opening patterns, so check before a specialist trip.',
       'Horncastle is a better car-based base than rail-based base for Wolds exploring.',
-      'The best area to stay is central for browsing or rural edges for countryside quiet.',
+      'Central stays work well for browsing; rural edges suit countryside quiet.',
       'Always check current opening hours, menus, facilities and booking availability directly.',
     ],
   },

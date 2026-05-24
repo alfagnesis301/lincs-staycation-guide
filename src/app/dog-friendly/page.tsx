@@ -12,11 +12,11 @@ import PopularCaravanGuidesStrip from '@/components/caravan-parks/PopularCaravan
 
 export const metadata: Metadata = {
   title: 'Dog-Friendly Lincolnshire | Stays, Pubs, Walks, Beaches & Days Out',
-  description: 'Find the best dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire. Dog-friendly beaches near Skegness, pet-friendly holiday cottages and pubs that welcome dogs.',
+  description: 'Plan dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire, with checks for current pet policies before travelling.',
   keywords: ['dog-friendly Lincolnshire', 'dog-friendly beaches near Skegness', 'dog-friendly pubs Lincolnshire', 'pet-friendly holiday cottages Lincolnshire', 'dog walks Lincolnshire Wolds', 'dog-friendly days out Lincolnshire'],
   openGraph: {
     title: 'Dog-Friendly Lincolnshire | Stays, Pubs, Walks & Beaches',
-    description: 'Find the best dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire.',
+    description: 'Plan dog-friendly stays, pubs, walks, beaches and days out across Lincolnshire with current policy checks.',
   },
   robots: {
     index: false,

@@ -5,7 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import CaravanParkEditorialNote from '@/components/caravan-parks/CaravanParkEditorialNote';
 import CaravanParkDisclosureBox from '@/components/caravan-parks/CaravanParkDisclosureBox';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
-import VerificationNotice from '@/components/VerificationNotice';
+import VerificationNotice, { SectionVerificationSummary } from '@/components/VerificationNotice';
 import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 import {
   categoryLandingFaqs,
@@ -18,7 +18,7 @@ import {
 } from '@/data/locationGuides';
 import { natureSpotsByTown } from '@/data/nature-spots';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
-import { getPublicListingDescription, type ListingKind } from '@/lib/public-copy';
+import { getPublicListingDescription, shouldShowListingVerificationNotice, type ListingKind } from '@/lib/public-copy';
 
 type Kind = 'places-to-stay' | 'things-to-do' | 'food-drink';
 
@@ -124,6 +124,7 @@ function itemSummary(o: CategoryItem, kind: Kind) {
         officialWebsiteUrl: o.officialWebsiteUrl,
         bookingUrl: o.bookingUrl,
         affiliateUrl: o.affiliateUrl,
+        sourceUrls: o.sourceUrls,
       },
       publicKind,
     );
@@ -136,15 +137,19 @@ function itemSummary(o: CategoryItem, kind: Kind) {
         type: o.category,
         description: o.shortDescription,
         officialWebsiteUrl: o.officialWebsiteUrl,
+        sourceUrls: o.sourceUrls,
       },
       publicKind,
     );
   }
+  const foodOption = o as FoodAndDrinkOption;
   return getPublicListingDescription(
     {
-      name: o.name,
-      town: o.town,
-      type: o.type,
+      name: foodOption.name,
+      town: foodOption.town,
+      type: foodOption.type,
+      description: foodOption.description,
+      sourceUrls: foodOption.sourceUrls,
     },
     publicKind,
   );
@@ -155,7 +160,10 @@ function officialWebsiteUrl(o: CategoryItem) {
 }
 
 function itemNeedsVerification(o: CategoryItem) {
-  return o.needsVerification === true;
+  return shouldShowListingVerificationNotice({
+    needsVerification: o.needsVerification,
+    sourceUrls: o.sourceUrls,
+  });
 }
 
 export function CategoryHub({ kind }: { kind: Kind }) {
@@ -248,6 +256,8 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
   const list = items(guide, kind);
   const related = getRelatedLocationGuides(guide.slug, 5);
   const natureSpots = kind === 'things-to-do' ? natureSpotsByTown[guide.slug] ?? [] : [];
+  const sectionVerificationCount = list.filter(itemNeedsVerification).length;
+  const showSectionVerificationSummary = sectionVerificationCount >= 3;
 
   return (
     <>
@@ -330,6 +340,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
             title="Curated listings"
             subtitle="Detailed information for each location. Check official sources for current opening, booking, access and visitor details."
           />
+          {showSectionVerificationSummary ? <SectionVerificationSummary kind={listingKind(kind)} /> : null}
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {list.map((o) => {
               const websiteUrl = officialWebsiteUrl(o);
@@ -339,7 +350,7 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
                   <span className="badge badge-coast mb-3 inline-block text-[10px]">{itemLabel(o)}</span>
                   <h3 className="font-heading text-xl font-semibold text-charcoal">{o.name}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal-muted">{summary}</p>
-                  {itemNeedsVerification(o) ? (
+                  {itemNeedsVerification(o) && !showSectionVerificationSummary ? (
                     <div className="mt-4">
                       <VerificationNotice kind={listingKind(kind)} compact />
                     </div>

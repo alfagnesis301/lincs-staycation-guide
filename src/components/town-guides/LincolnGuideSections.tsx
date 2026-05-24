@@ -17,7 +17,7 @@ export default function LincolnGuideSections() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Places to Stay in Lincoln"
-            subtitle="Compare hotel and accommodation options in Lincoln for cathedral city breaks, historic centre visits, weekend stays and practical access to the wider Lincolnshire area."
+            subtitle="Compare hotels, inns, B&Bs and guest stays in Lincoln for cathedral city breaks, historic centre visits, weekend stays and practical access to the wider Lincolnshire area."
           />
           <div className="grid gap-5 lg:grid-cols-2">
             {lincolnGuide.placesToStay.map((listing) => (
@@ -59,7 +59,7 @@ export default function LincolnGuideSections() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Food & Drink in Lincoln"
-            subtitle="Explore Lincoln's food and drink scene, including restaurants, cafés and casual dining options. Always check the venue for current opening hours."
+            subtitle="Compare Lincoln restaurants, cafes, bars and casual food stops, then check current menus, opening hours and booking requirements directly."
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {lincolnGuide.foodDrink.map((listing) => (
