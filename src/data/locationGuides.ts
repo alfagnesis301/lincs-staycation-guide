@@ -691,10 +691,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing Crown Hotel as a hotel base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Crown Hotel official website",
+            "url": "https://www.kneadpubs.co.uk/the-crown-hotel/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Crown Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-crown-stamford.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.kneadpubs.co.uk/the-crown-hotel/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-crown-stamford.html"
       },
       {
         "id": "the-george-hotel-of-stamford",
@@ -704,10 +719,18 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The George Hotel of Stamford as a hotel base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "official-site-only",
+        "sourceUrls": [
+          {
+            "label": "The George of Stamford official website",
+            "url": "https://www.georgehotelofstamford.com/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.georgehotelofstamford.com/"
       },
       {
         "id": "the-william-cecil",
@@ -717,10 +740,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The William Cecil as a hotel base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The William Cecil official website",
+            "url": "https://www.woodford.group/williamcecil",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The William Cecil Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-william-cecil.en-gb.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.woodford.group/williamcecil",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-william-cecil.en-gb.html"
       },
       {
         "id": "the-bull-and-swan",
@@ -730,10 +768,25 @@ export const locationGuides = [
         "type": "Inn",
         "bestFor": "Useful for visitors comparing The Bull and Swan as an inn base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Bull & Swan official website",
+            "url": "https://www.woodford.group/bullandswan",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Bull And Swan Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-bull-and-swan.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.woodford.group/bullandswan",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-bull-and-swan.html"
       },
       {
         "id": "old-bank-apartments",
@@ -743,10 +796,18 @@ export const locationGuides = [
         "type": "Apartment",
         "bestFor": "Useful for visitors comparing Old Bank Apartments as an apartment base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Confirm current access details, availability, parking, accessibility, house rules and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Old Bank Apartments Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/old-bank-apartments-stamford.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/old-bank-apartments-stamford.html"
       }
     ],
     "thingsToDo": [
@@ -763,11 +824,11 @@ export const locationGuides = [
             "label": "Burghley House official website",
             "url": "https://burghley.co.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "stamford-arts-centre",
@@ -782,11 +843,11 @@ export const locationGuides = [
             "label": "Stamford Arts Centre official website",
             "url": "https://www.stamfordartscentre.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "stamford-corn-exchange-theatre",
@@ -795,9 +856,17 @@ export const locationGuides = [
         "town": "Stamford",
         "category": "Family-friendly",
         "shortDescription": "Stamford Corn Exchange Theatre is a family-focused attraction to compare around Stamford when planning market-town breaks, independent shopping and historic centre walks. Check age suitability, opening times, ticketing, facilities, accessibility and seasonal rules directly before travelling.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.stamfordcornexchange.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "Stamford Corn Exchange Theatre official website",
+            "url": "https://www.stamfordcornexchange.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "stamford-meadows",
@@ -818,9 +887,17 @@ export const locationGuides = [
         "slug": "orbis-stamford",
         "town": "Stamford",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.orbisstamford.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "Orbis Stamford official website",
+            "url": "https://www.orbisstamford.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "Orbis Stamford is a restaurant listing to consider in Stamford when comparing sit-down meals around market-town breaks, independent shopping and historic centre walks. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
       },
       {
@@ -829,9 +906,17 @@ export const locationGuides = [
         "slug": "the-slanted-door",
         "town": "Stamford",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.theslanteddoor.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "The Slanted Door official website",
+            "url": "https://www.theslanteddoor.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A restaurant in Stamford to add to a food shortlist while planning time around market-town breaks, independent shopping and historic centre walks. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
       },
       {
@@ -840,9 +925,17 @@ export const locationGuides = [
         "slug": "the-mad-turk",
         "town": "Stamford",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://themadturk.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "The Mad Turk official website",
+            "url": "https://themadturk.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A Stamford restaurant listing for visitors comparing places to eat as part of market-town breaks, independent shopping and historic centre walks. Use it as a starting point for meal planning rather than a ranking. Check current hours, menus, booking needs, accessibility information and dietary options directly with the venue."
       },
       {
@@ -862,9 +955,17 @@ export const locationGuides = [
         "slug": "the-george-hotel-restaurant",
         "town": "Stamford",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.georgehotelofstamford.com/our-restaurants-bars",
+        "sourceUrls": [
+          {
+            "label": "The George of Stamford restaurants and bars official page",
+            "url": "https://www.georgehotelofstamford.com/our-restaurants-bars",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A restaurant in Stamford to add to a food shortlist while planning time around market-town breaks, independent shopping and historic centre walks. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
       }
     ]
@@ -886,10 +987,18 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Beaumont Accommodation as a hotel base in Louth for quieter market-town stays, Wolds exploring and short Lincolnshire breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Beaumont Accommodation Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-beaumont.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-beaumont.html"
       },
       {
         "id": "best-western-plus-kenwick-park-hotel",
@@ -899,10 +1008,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing Best Western Plus Kenwick Park Hotel as a hotel base in Louth for quieter market-town stays, Wolds exploring and short Lincolnshire breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Best Western Plus Kenwick Park Hotel official page",
+            "url": "https://www.bestwestern.com/en_US/book/louth/hotel-rooms/best-western-plus-kenwick-park-hotel/propertyCode.83858.html",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Best Western Plus Kenwick Park Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/kenwick-parkhotel.en-gb.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.bestwestern.com/en_US/book/louth/hotel-rooms/best-western-plus-kenwick-park-hotel/propertyCode.83858.html",
+        "bookingUrl": "https://www.booking.com/hotel/gb/kenwick-parkhotel.en-gb.html"
       },
       {
         "id": "brackenborough-hotel",
@@ -912,10 +1036,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing Brackenborough Hotel as a hotel base in Louth for quieter market-town stays, Wolds exploring and short Lincolnshire breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Brackenborough Lakes Resort official website",
+            "url": "https://brackenboroughlakesresort.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Brackenborough Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/brackenborough-arms.en-gb.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://brackenboroughlakesresort.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/brackenborough-arms.en-gb.html"
       },
       {
         "id": "the-masons-arms",
@@ -925,10 +1064,25 @@ export const locationGuides = [
         "type": "Inn",
         "bestFor": "Useful for visitors comparing The Masons Arms as an inn base in Louth for quieter market-town stays, Wolds exploring and short Lincolnshire breaks. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Masons Arms official website",
+            "url": "https://www.the-masons-arms.com/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Masons Arms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.en-gb.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.the-masons-arms.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.en-gb.html"
       },
       {
         "id": "the-kings-head",
@@ -938,10 +1092,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Kings Head as a hotel base in Louth for quieter market-town stays, Wolds exploring and short Lincolnshire breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The King's Head official website",
+            "url": "https://www.kingsheadlouth.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Kings Head Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-kings-head-louth.en-gb.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.kingsheadlouth.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-kings-head-louth.en-gb.html"
       }
     ],
     "thingsToDo": [
@@ -952,9 +1121,17 @@ export const locationGuides = [
         "town": "Louth",
         "category": "Historic site",
         "shortDescription": "St James' Church Louth is a heritage-focused stop to consider in Louth when adding local history to Wolds market-town visits and quieter short breaks. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.achurchnearyou.com/church/15101/",
+        "sourceUrls": [
+          {
+            "label": "Church of England official St James, Louth listing",
+            "url": "https://www.achurchnearyou.com/church/15101/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "louth-museum",
@@ -963,9 +1140,17 @@ export const locationGuides = [
         "town": "Louth",
         "category": "Museum",
         "shortDescription": "Louth Museum is a museum or indoor attraction to consider in Louth for local history, culture or a weather-flexible stop during Wolds market-town visits and quieter short breaks. Check current opening times, admission, facilities and accessibility directly before travelling.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.louthmuseum.org.uk/",
+        "sourceUrls": [
+          {
+            "label": "Louth Museum official website",
+            "url": "https://www.louthmuseum.org.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "hubbard-s-hills",
@@ -974,9 +1159,17 @@ export const locationGuides = [
         "town": "Louth",
         "category": "Nature",
         "shortDescription": "Hubbard's Hills is a nature or walking option to compare around Louth for a quieter outdoor stop during Wolds market-town visits and quieter short breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.louthtowncouncil.gov.uk/hubbards-hills/",
+        "sourceUrls": [
+          {
+            "label": "Louth Town Council Hubbard's Hills page",
+            "url": "https://www.louthtowncouncil.gov.uk/hubbards-hills/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "lincolnshire-wolds-railway",
@@ -985,9 +1178,17 @@ export const locationGuides = [
         "town": "Louth",
         "category": "Nature",
         "shortDescription": "Lincolnshire Wolds Railway is a nature or walking option to compare around Louth for a quieter outdoor stop during Wolds market-town visits and quieter short breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.lincolnshirewoldsrailway.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "Lincolnshire Wolds Railway official website",
+            "url": "https://www.lincolnshirewoldsrailway.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       }
     ],
     "foodDrink": [
@@ -997,9 +1198,17 @@ export const locationGuides = [
         "slug": "the-masons-arms",
         "town": "Louth",
         "type": "Pub",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.the-masons-arms.com/",
+        "sourceUrls": [
+          {
+            "label": "The Masons Arms official website",
+            "url": "https://www.the-masons-arms.com/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "The Masons Arms is a pub option to compare in or around Louth, useful for visitors planning a relaxed meal, drinks stop or break during Wolds market-town visits and quieter short breaks. Confirm current opening hours, menus, booking requirements, dog policy and accessibility details directly with the pub before travelling."
       },
       {
@@ -1008,9 +1217,17 @@ export const locationGuides = [
         "slug": "the-greyhound-inn",
         "town": "Louth",
         "type": "Pub",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.greyhoundlouth.co.uk/home",
+        "sourceUrls": [
+          {
+            "label": "The Greyhound Inn official website",
+            "url": "https://www.greyhoundlouth.co.uk/home",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A pub listing around Louth for visitors building a practical food stop into Wolds market-town visits and quieter short breaks. It may suit a casual meal or drinks break, depending on current service. Check opening times, menus, booking rules, pet policy and accessibility details directly with the pub."
       },
       {
@@ -1018,10 +1235,18 @@ export const locationGuides = [
         "name": "The Ranch Steakhouse & Grill",
         "slug": "the-ranch-steakhouse-and-grill",
         "town": "Louth",
-        "type": "Tea room",
-        "sourceUrls": [],
+        "type": "Restaurant",
+        "officialWebsiteUrl": "https://www.theranchlouth.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "The Ranch Steakhouse & Grill official website",
+            "url": "https://www.theranchlouth.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A Louth tea room option to consider for a quieter food break linked to Wolds market-town visits and quieter short breaks. Confirm current opening times, menus, booking requirements and accessibility details directly before visiting."
       },
       {
@@ -1030,9 +1255,17 @@ export const locationGuides = [
         "slug": "via-italia",
         "town": "Louth",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.viaitalialouth.com/",
+        "sourceUrls": [
+          {
+            "label": "Via Italia official website",
+            "url": "https://www.viaitalialouth.com/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "Via Italia is a restaurant listing to consider in Louth when comparing sit-down meals around Wolds market-town visits and quieter short breaks. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
       },
       {
@@ -1041,9 +1274,17 @@ export const locationGuides = [
         "slug": "the-kings-head",
         "town": "Louth",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "officialWebsiteUrl": "https://www.kingsheadlouth.co.uk/",
+        "sourceUrls": [
+          {
+            "label": "The King's Head official website",
+            "url": "https://www.kingsheadlouth.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "A restaurant in Louth to add to a food shortlist while planning time around Wolds market-town visits and quieter short breaks. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
       }
     ]
@@ -1137,11 +1378,11 @@ export const locationGuides = [
             "label": "St Botolph's Church official page",
             "url": "https://parish-of-boston.org.uk/church/st-botolphs/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "boston-guildhall-museum",
@@ -1156,11 +1397,11 @@ export const locationGuides = [
             "label": "Boston Guildhall official page",
             "url": "https://www.boston.gov.uk/bostonguildhall",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "maud-foster-windmill",
@@ -1175,11 +1416,11 @@ export const locationGuides = [
             "label": "Maud Foster Windmill official website",
             "url": "https://maudfoster.co.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "rspb-frampton-marsh",
@@ -2414,11 +2655,11 @@ export const locationGuides = [
             "label": "Gainsborough Old Hall official website",
             "url": "https://www.gainsborougholdhall.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "gainsborough-heritage-centre",
