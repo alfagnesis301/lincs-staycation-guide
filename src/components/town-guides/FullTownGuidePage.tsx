@@ -473,6 +473,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
               needsVerification: venue.needsVerification,
               sourceUrls: venue.sourceUrls,
             });
+            const ctaHref = venue.officialWebsiteUrl ?? maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`);
             return (
               <InfoCard
                 key={venue.id}
@@ -483,11 +484,12 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                   town: town.name,
                   type: venue.type,
                   description: venue.description,
+                  officialWebsiteUrl: venue.officialWebsiteUrl,
                   sourceUrls: venue.sourceUrls,
                 }, 'food')}
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
-                ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}
-                ctaLabel="View map/details"
+                ctaHref={ctaHref}
+                ctaLabel={venue.officialWebsiteUrl ? 'Visit official website' : 'View map/details'}
                 verificationKind={showNotice && !showFoodVerificationSummary ? 'food' : undefined}
               />
             );

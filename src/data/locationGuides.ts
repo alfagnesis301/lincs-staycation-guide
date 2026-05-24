@@ -7,9 +7,9 @@ export type ThingToDoCategory = 'Historic site' | 'Museum' | 'Family-friendly' |
 export type FoodAndDrinkType = 'Restaurant' | 'Pub' | 'Cafe' | 'Bar' | 'Seafood' | 'Tea room' | 'Bakery' | 'Sunday roast' | 'Farm shop' | 'Other';
 export interface CategorySourceUrl { label: string; url: string; type: 'Booking.com' | 'Official website' | 'Editorial source' | 'Map/search'; checkedDate?: string; }
 export interface ListingLocation { address?: string; town?: string; postcode?: string; googleMapsUrl?: string; googleMapsQuery?: string; latitude?: number; longitude?: number; }
-export interface PlaceToStay { id:string; name:string; slug:string; town:string; type:PlaceToStayType; bestFor:string; sourceNote:string; bookingStatus:BookingStatus; bookingUrl?:string; officialWebsiteUrl?:string; affiliateUrl?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:true; googleMapsUrl?:string; location?:ListingLocation; }
-export interface ThingToDo { id:string; name:string; slug:string; town:string; category:ThingToDoCategory; shortDescription:string; officialWebsiteUrl?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:true; googleMapsUrl?:string; location?:ListingLocation; }
-export interface FoodAndDrinkOption { id:string; name:string; slug:string; town:string; type:FoodAndDrinkType; description:string; cuisineOrStyle?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:true; googleMapsUrl?:string; location?:ListingLocation; }
+export interface PlaceToStay { id:string; name:string; slug:string; town:string; type:PlaceToStayType; bestFor:string; sourceNote:string; bookingStatus:BookingStatus; bookingUrl?:string; officialWebsiteUrl?:string; affiliateUrl?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:boolean; googleMapsUrl?:string; location?:ListingLocation; }
+export interface ThingToDo { id:string; name:string; slug:string; town:string; category:ThingToDoCategory; shortDescription:string; officialWebsiteUrl?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:boolean; googleMapsUrl?:string; location?:ListingLocation; }
+export interface FoodAndDrinkOption { id:string; name:string; slug:string; town:string; type:FoodAndDrinkType; description:string; cuisineOrStyle?:string; officialWebsiteUrl?:string; sourceUrls:CategorySourceUrl[]; imageGuidance:string; needsVerification:boolean; googleMapsUrl?:string; location?:ListingLocation; }
 export interface LocationGuideBase { id:string; name:string; slug:string; regionType:RegionType; contentAngle:string; lastUpdated:string; sourceStatus:SourceStatus; placesToStay:PlaceToStay[]; thingsToDo:ThingToDo[]; foodDrink:FoodAndDrinkOption[]; }
 export const locationGuides = [
   {
@@ -29,10 +29,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Rest Hotel as a hotel base in Lincoln for city-break, heritage and short Lincolnshire stay planning. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Rest Hotel official website",
+            "url": "https://www.theresthotellincoln.co.uk/the-rest-hotel-lincoln",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Rest Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-rest-lincoln.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.theresthotellincoln.co.uk/the-rest-hotel-lincoln",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-rest-lincoln.html"
       },
       {
         "id": "tower-hotel",
@@ -42,10 +57,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing Tower Hotel as a hotel base in Lincoln for city-break, heritage and short Lincolnshire stay planning. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Tower Hotel official website",
+            "url": "https://www.thetowerlincoln.com/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Tower Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/tower.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.thetowerlincoln.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/tower.html"
       },
       {
         "id": "the-white-hart-hotel-lincoln",
@@ -55,10 +85,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The White Hart Hotel Lincoln as a hotel base in Lincoln for city-break, heritage and short Lincolnshire stay planning. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The White Hart Hotel official website",
+            "url": "https://whitehart-lincoln.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The White Hart Hotel Lincoln Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/thewhitehart.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://whitehart-lincoln.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/thewhitehart.html"
       },
       {
         "id": "holiday-inn-lincoln-by-ihg",
@@ -68,10 +113,25 @@ export const locationGuides = [
         "type": "Inn",
         "bestFor": "Useful for visitors comparing Holiday Inn Lincoln by IHG as an inn base in Lincoln for city-break, heritage and short Lincolnshire stay planning. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Holiday Inn Lincoln IHG official page",
+            "url": "https://www.ihg.com/holidayinn/hotels/us/en/lincoln/eamln/hoteldetail",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Holiday Inn Lincoln by IHG Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/courtyardlincoln.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.ihg.com/holidayinn/hotels/us/en/lincoln/eamln/hoteldetail",
+        "bookingUrl": "https://www.booking.com/hotel/gb/courtyardlincoln.html"
       },
       {
         "id": "woodcocks-lincoln-by-marston-s-inns",
@@ -81,10 +141,25 @@ export const locationGuides = [
         "type": "Inn",
         "bestFor": "Useful for visitors comparing Woodcocks, Lincoln by Marston's Inns as an inn base in Lincoln for city-break, heritage and short Lincolnshire stay planning. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Woodcocks Hotel Lincoln Marston's Inns official page",
+            "url": "https://www.marstonsinns.co.uk/inns/woodcocks-hotel-lincoln/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Woodcocks, Lincoln by Marston's Inns Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-woodcocks-lodge.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.marstonsinns.co.uk/inns/woodcocks-hotel-lincoln/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-woodcocks-lodge.html"
       }
     ],
     "thingsToDo": [
@@ -101,11 +176,11 @@ export const locationGuides = [
             "label": "Lincoln Cathedral official website",
             "url": "https://lincolncathedral.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "lincoln-castle",
@@ -120,11 +195,11 @@ export const locationGuides = [
             "label": "Lincoln Castle official website",
             "url": "https://www.lincolncastle.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "museum-of-lincolnshire-life",
@@ -139,11 +214,11 @@ export const locationGuides = [
             "label": "Museum of Lincolnshire Life official page",
             "url": "https://www.lincolnshire.gov.uk/history-heritage/museum-lincolnshire-life",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "the-collection-usher-gallery",
@@ -158,11 +233,11 @@ export const locationGuides = [
             "label": "Lincoln Museum official website",
             "url": "https://www.lincolnmuseum.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "international-bomber-command-centre",
@@ -177,11 +252,11 @@ export const locationGuides = [
             "label": "International Bomber Command Centre official website",
             "url": "https://internationalbcc.co.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       }
     ],
     "foodDrink": [
@@ -191,10 +266,18 @@ export const locationGuides = [
         "slug": "the-jews-house-restaurant",
         "town": "Lincoln",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Jews House Restaurant official website",
+            "url": "https://www.jewshouserestaurant.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "The Jews House Restaurant is a restaurant listing to consider in Lincoln when comparing sit-down meals around city centre, Cathedral Quarter and heritage itineraries. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
+        "needsVerification": false,
+        "description": "The Jews House Restaurant is a restaurant listing to consider in Lincoln when comparing sit-down meals around city centre, Cathedral Quarter and heritage itineraries. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting.",
+        "officialWebsiteUrl": "https://www.jewshouserestaurant.co.uk/"
       },
       {
         "id": "olivares-tapas-bar",
@@ -202,10 +285,18 @@ export const locationGuides = [
         "slug": "olivares-tapas-bar",
         "town": "Lincoln",
         "type": "Bar",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Olivares Tapas Bar official website",
+            "url": "https://www.olivarestapas.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A bar or casual venue in Lincoln to consider for drinks, coffee or an informal break during city centre, Cathedral Quarter and heritage itineraries. Check current hours, menus, booking arrangements, accessibility and service details directly with the venue."
+        "needsVerification": false,
+        "description": "A bar or casual venue in Lincoln to consider for drinks, coffee or an informal break during city centre, Cathedral Quarter and heritage itineraries. Check current hours, menus, booking arrangements, accessibility and service details directly with the venue.",
+        "officialWebsiteUrl": "https://www.olivarestapas.co.uk/"
       },
       {
         "id": "dough-loco",
@@ -213,10 +304,18 @@ export const locationGuides = [
         "slug": "dough-loco",
         "town": "Lincoln",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Dough LoCo official website",
+            "url": "https://www.doughloco.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A Lincoln restaurant listing for visitors comparing places to eat as part of city centre, Cathedral Quarter and heritage itineraries. Use it as a starting point for meal planning rather than a ranking. Check current hours, menus, booking needs, accessibility information and dietary options directly with the venue."
+        "needsVerification": false,
+        "description": "A Lincoln restaurant listing for visitors comparing places to eat as part of city centre, Cathedral Quarter and heritage itineraries. Use it as a starting point for meal planning rather than a ranking. Check current hours, menus, booking needs, accessibility information and dietary options directly with the venue.",
+        "officialWebsiteUrl": "https://www.doughloco.co.uk/"
       },
       {
         "id": "rising-cafe",
@@ -224,10 +323,18 @@ export const locationGuides = [
         "slug": "rising-cafe",
         "town": "Lincoln",
         "type": "Cafe",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Rising Cafe Lincoln official page",
+            "url": "https://www.risingcafe.co.uk/lincoln",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "Rising Cafe is a cafe listing to consider for a daytime stop in Lincoln, especially while planning breaks around city centre, Cathedral Quarter and heritage itineraries. It may suit coffee, lunch or a pause between local stops. Check current opening hours, menus, accessibility details and any booking requirements directly with the cafe before visiting."
+        "needsVerification": false,
+        "description": "Rising Cafe is a cafe listing to consider for a daytime stop in Lincoln, especially while planning breaks around city centre, Cathedral Quarter and heritage itineraries. It may suit coffee, lunch or a pause between local stops. Check current opening hours, menus, accessibility details and any booking requirements directly with the cafe before visiting.",
+        "officialWebsiteUrl": "https://www.risingcafe.co.uk/lincoln"
       },
       {
         "id": "bar-unico",
@@ -235,10 +342,18 @@ export const locationGuides = [
         "slug": "bar-unico",
         "town": "Lincoln",
         "type": "Bar",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Bar Unico Lincoln official website",
+            "url": "https://barunicolincoln.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A bar or casual venue in Lincoln to consider for drinks, coffee or an informal break during city centre, Cathedral Quarter and heritage itineraries. Check current hours, menus, booking arrangements, accessibility and service details directly with the venue."
+        "needsVerification": false,
+        "description": "A bar or casual venue in Lincoln to consider for drinks, coffee or an informal break during city centre, Cathedral Quarter and heritage itineraries. Check current hours, menus, booking arrangements, accessibility and service details directly with the venue.",
+        "officialWebsiteUrl": "https://barunicolincoln.co.uk/"
       }
     ]
   },
@@ -259,10 +374,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Quorn as a hotel base in Skegness for coastal breaks, family trip planning and seaside weekends. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Quorn official website",
+            "url": "https://quornhotel.net/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Quorn Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-quorn.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://quornhotel.net/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-quorn.html"
       },
       {
         "id": "southview-park-hotel",
@@ -272,10 +402,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing Southview Park Hotel as a hotel base in Skegness for coastal breaks, family trip planning and seaside weekends. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Southview Park Hotel Parkdean Resorts official page",
+            "url": "https://www.parkdeanresorts.co.uk/location/east-anglia-lincolnshire/southview/hotel/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "Southview Park Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/southviewpark.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.parkdeanresorts.co.uk/location/east-anglia-lincolnshire/southview/hotel/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/southviewpark.html"
       },
       {
         "id": "north-shore-hotel",
@@ -285,10 +430,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing North Shore Hotel as a hotel base in Skegness for coastal breaks, family trip planning and seaside weekends. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "North Shore Hotel official website",
+            "url": "https://www.northshorehotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "North Shore Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/northshore.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.northshorehotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/northshore.html"
       },
       {
         "id": "the-saxby-hotel",
@@ -298,10 +458,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Saxby Hotel as a hotel base in Skegness for coastal breaks, family trip planning and seaside weekends. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Saxby Hotel official website",
+            "url": "https://thesaxby.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Saxby Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-saxby.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://thesaxby.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-saxby.html"
       },
       {
         "id": "the-fountaindale-skegness",
@@ -311,10 +486,25 @@ export const locationGuides = [
         "type": "Hotel",
         "bestFor": "Useful for visitors comparing The Fountaindale Skegness as a hotel base in Skegness for coastal breaks, family trip planning and seaside weekends. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Fountaindale Guesthouse official website",
+            "url": "https://fountaindaleguesthouse.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          },
+          {
+            "label": "The Fountaindale Skegness Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-fountaindale-skegness.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://fountaindaleguesthouse.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-fountaindale-skegness.html"
       }
     ],
     "thingsToDo": [
@@ -331,11 +521,11 @@ export const locationGuides = [
             "label": "Skegness Pier official website",
             "url": "https://skegnesspier.co.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "natureland-seal-sanctuary",
@@ -350,11 +540,11 @@ export const locationGuides = [
             "label": "Natureland Seal Sanctuary official website",
             "url": "https://skegnessnatureland.co.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "gibraltar-point-national-nature-reserve",
@@ -369,11 +559,11 @@ export const locationGuides = [
             "label": "Gibraltar Point official reserve page",
             "url": "https://www.lincstrust.org.uk/top-reserves/gibraltar-point",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       },
       {
         "id": "skegness-aquarium",
@@ -388,11 +578,11 @@ export const locationGuides = [
             "label": "Skegness Aquarium official website",
             "url": "https://www.skegness-aquarium.uk/",
             "type": "Official website",
-            "checkedDate": "2026-05-17"
+            "checkedDate": "2026-05-24"
           }
         ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false
       }
     ],
     "foodDrink": [
@@ -402,9 +592,16 @@ export const locationGuides = [
         "slug": "fleece-inn",
         "town": "Skegness",
         "type": "Pub",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Visit Lincs Coast listing for The Fleece Inn",
+            "url": "https://visitlincscoast.co.uk/business-directory/the-fleece-inn",
+            "type": "Editorial source",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
+        "needsVerification": false,
         "description": "Fleece Inn is a pub option to compare in or around Skegness, useful for visitors planning a relaxed meal, drinks stop or break during seaside day out, seafront and family coastal trips. Confirm current opening hours, menus, booking requirements, dog policy and accessibility details directly with the pub before travelling."
       },
       {
@@ -424,10 +621,18 @@ export const locationGuides = [
         "slug": "the-steamboat-cookhouse-pub",
         "town": "Skegness",
         "type": "Tea room",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Steamboat Cookhouse + Pub official page",
+            "url": "https://www.cookhouseandpub.co.uk/en-gb/locations/skegness",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A Skegness tea room option to consider for a quieter food break linked to seaside day out, seafront and family coastal trips. Confirm current opening times, menus, booking requirements and accessibility details directly before visiting."
+        "needsVerification": false,
+        "description": "A Skegness tea room option to consider for a quieter food break linked to seaside day out, seafront and family coastal trips. Confirm current opening times, menus, booking requirements and accessibility details directly before visiting.",
+        "officialWebsiteUrl": "https://www.cookhouseandpub.co.uk/en-gb/locations/skegness"
       },
       {
         "id": "the-hide-at-herons-mead",
@@ -435,10 +640,18 @@ export const locationGuides = [
         "slug": "the-hide-at-herons-mead",
         "town": "Skegness",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Hide at Herons Mead official page",
+            "url": "https://heronsmead.co.uk/the-hide/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "The Hide at Herons Mead is a restaurant listing to consider in Skegness when comparing sit-down meals around seaside day out, seafront and family coastal trips. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
+        "needsVerification": false,
+        "description": "The Hide at Herons Mead is a restaurant listing to consider in Skegness when comparing sit-down meals around seaside day out, seafront and family coastal trips. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting.",
+        "officialWebsiteUrl": "https://heronsmead.co.uk/the-hide/"
       },
       {
         "id": "tarantino",
@@ -446,10 +659,18 @@ export const locationGuides = [
         "slug": "tarantino",
         "town": "Skegness",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Tarantino Skegness official website",
+            "url": "https://www.tarantino-skegness.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-05-24"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A restaurant in Skegness to add to a food shortlist while planning time around seaside day out, seafront and family coastal trips. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
+        "needsVerification": false,
+        "description": "A restaurant in Skegness to add to a food shortlist while planning time around seaside day out, seafront and family coastal trips. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling.",
+        "officialWebsiteUrl": "https://www.tarantino-skegness.co.uk/"
       }
     ]
   },
