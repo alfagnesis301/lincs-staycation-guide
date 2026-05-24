@@ -36,7 +36,7 @@ export const guides: Guide[] = [
     lastUpdated: '17 May 2026',
     published: true,
     intro:
-      'Lincolnshire works well for families because it mixes city history, coast, countryside, museums and simple outdoor space. The best choice depends on age, weather, travel time and how much structure your children need. Use this guide for practical planning, then check opening times, age suitability, facilities, accessibility and ticketing directly before travelling.',
+      'Lincolnshire works well for families because it mixes city history, coast, countryside, museums and simple outdoor space. The right choice depends on age, weather, travel time and how much structure your children need. Use this guide for practical planning, then check opening times, age suitability, facilities, accessibility and ticketing directly before travelling.',
     sections: [
       {
         heading: 'Quick family picks',
@@ -84,7 +84,7 @@ export const guides: Guide[] = [
           'Treat tide, wind and parking as part of the plan. If the beach weather turns, move to arcades, cafes, indoor attractions or a shorter promenade walk rather than forcing a full outdoor day.',
         ],
         links: [
-          { label: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches' },
+          { label: 'Lincolnshire Beaches Guide', href: '/blog/best-beaches' },
           { label: 'Skegness town guide', href: '/town-guides/skegness' },
           { label: 'Mablethorpe town guide', href: '/town-guides/mablethorpe' },
         ],
@@ -102,12 +102,12 @@ export const guides: Guide[] = [
           'Families often benefit from staying close to the main reason for the trip: Lincoln for city history, Skegness or Mablethorpe for coast, and Woodhall Spa or the Wolds for slower countryside breaks.',
           'Check room setup, parking, pet policies, breakfast arrangements, accessibility details and cancellation terms directly before booking.',
         ],
-        links: [{ label: 'Best Places to Stay', href: '/blog/best-places-to-stay' }],
+        links: [{ label: 'Where to Stay Guide', href: '/blog/best-places-to-stay' }],
       },
     ],
     faqs: [
       {
-        question: 'Where is best in Lincolnshire for a family weekend?',
+        question: 'Where works well in Lincolnshire for a family weekend?',
         answer:
           'Lincoln works well for history and rainy-day cover, while Skegness and Mablethorpe are better for classic coastal family breaks. Choose based on weather, age and travel time.',
       },
@@ -122,7 +122,7 @@ export const guides: Guide[] = [
           'It can be, especially if you keep distances short and plan around parks, beaches, cafes and flexible stops rather than long itineraries.',
       },
       {
-        question: 'What is the best rainy-day base with children?',
+        question: 'Which rainy-day base works well with children?',
         answer:
           'Lincoln is usually the strongest rainy-day base because indoor heritage, museums, cafes and compact streets are close together. Coastal resorts can still work, but it helps to have indoor amusements or a second town plan ready.',
       },
@@ -130,7 +130,7 @@ export const guides: Guide[] = [
     relatedGuides: [
       { title: 'Things to Do in Lincolnshire', href: '/things-to-do', label: 'Activities' },
       { title: 'Rainy Day Activities', href: '/blog/rainy-day-activities', label: 'Family' },
-      { title: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches', label: 'Coast' },
+      { title: 'Lincolnshire Beaches Guide', href: '/blog/best-beaches', label: 'Coast' },
       { title: 'Lincoln Travel Guide', href: '/town-guides/lincoln', label: 'City' },
       { title: 'Places to Stay in Lincolnshire', href: '/blog/best-places-to-stay', label: 'Stays' },
     ],
@@ -138,13 +138,13 @@ export const guides: Guide[] = [
       'Family facilities, age suitability, tickets, menus, toilets and seasonal opening can change. Check directly before travelling.',
   },
   {
-    id: 'best-beaches',
-    title: 'Best Beaches in Lincolnshire',
+    id: 'lincolnshire-beaches',
+    title: 'Lincolnshire Beaches Guide',
     slug: 'best-beaches',
     category: 'Coast',
     description:
       'A practical guide to Lincolnshire beach days, quieter coastal walks and nature-led stops along the coast.',
-    seoTitle: 'Best Beaches in Lincolnshire | Coast, Family Days & Quiet Walks',
+    seoTitle: 'Lincolnshire Beaches Guide | Coast, Family Days & Quiet Walks',
     metaDescription:
       'Compare Lincolnshire beaches for family days, quiet walks, dog-friendly planning, parking checks and coastal breaks, including Skegness, Mablethorpe, Sutton-on-Sea and Gibraltar Point.',
     readingTime: '9 min read',
@@ -166,7 +166,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Best Lincolnshire beaches for families',
+        heading: 'Practical Lincolnshire beaches for families',
         body: [
           'Families usually need simple logistics: parking, toilets, food nearby, space to reset the day if the weather changes and enough options for mixed ages. Skegness is strongest for facilities; Mablethorpe is often easier when beach space matters.',
           'If you are travelling with toddlers or grandparents, keep the day compact. A shorter beach session with food nearby is usually more reliable than a long multi-stop route.',
@@ -196,7 +196,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       {
-        question: 'What is the best Lincolnshire beach for families?',
+        question: 'Which Lincolnshire beach works well for families?',
         answer:
           'Skegness is usually the most practical for facilities and amusements, while Mablethorpe is useful for wide sand and a gentler family beach day.',
       },
@@ -289,7 +289,7 @@ export const guides: Guide[] = [
     relatedGuides: [
       { title: 'Dog-Friendly Lincolnshire', href: '/dog-friendly', label: 'Planning' },
       { title: 'Dog-Friendly Stays near the Lincolnshire Coast', href: '/blog/dog-friendly-stays-coast', label: 'Stays' },
-      { title: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches', label: 'Coast' },
+      { title: 'Lincolnshire Beaches Guide', href: '/blog/best-beaches', label: 'Coast' },
     ],
     editorialNote:
       'Dog policies, seasonal restrictions, lead rules and food-service arrangements can change. Check directly before travelling.',
@@ -308,10 +308,10 @@ export const guides: Guide[] = [
     lastUpdated: '17 May 2026',
     published: true,
     intro:
-      'The best Lincolnshire weekend break depends on the base you choose: Lincoln for heritage and food, Skegness or Mablethorpe for seaside energy, Stamford for architecture and boutique stays, and the Wolds for slower countryside plans.',
+      'The right Lincolnshire weekend break depends on the base you choose: Lincoln for heritage and food, Skegness or Mablethorpe for seaside energy, Stamford for architecture and boutique stays, and the Wolds for slower countryside plans.',
     sections: [
       {
-        heading: 'Best weekend bases',
+        heading: 'Useful weekend bases',
         body: [
           'Choose Lincoln for a compact city break: cathedral quarter, castle, museums, Steep Hill, Brayford Waterfront and strong rail access.',
           'Choose Stamford for a gentler market-town weekend with limestone streets, independent shops and Burghley House nearby. Choose Woodhall Spa or Louth if you want Wolds walks, heritage and slower evenings.',
@@ -347,7 +347,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       {
-        question: 'Where is best for a first Lincolnshire weekend break?',
+        question: 'Where works well for a first Lincolnshire weekend break?',
         answer:
           'Lincoln is the most flexible first base because it combines heritage, food, shops, museums and rail access in a compact area.',
       },
@@ -363,7 +363,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedGuides: [
-      { title: 'Best Places to Stay', href: '/blog/best-places-to-stay', label: 'Stays' },
+      { title: 'Where to Stay Guide', href: '/blog/best-places-to-stay', label: 'Stays' },
       { title: 'Lincoln town guide', href: '/town-guides/lincoln', label: 'City' },
       { title: 'Stamford town guide', href: '/town-guides/stamford', label: 'Market town' },
     ],
@@ -371,23 +371,23 @@ export const guides: Guide[] = [
       'Accommodation facilities, availability, prices, parking and policies can change. Check directly before booking.',
   },
   {
-    id: 'best-places-to-stay',
-    title: 'Best Places to Stay in Lincolnshire',
+    id: 'where-to-stay',
+    title: 'Where to Stay in Lincolnshire',
     slug: 'best-places-to-stay',
     category: 'Stays',
     description:
       'A practical guide to choosing where to base yourself in Lincolnshire, from cathedral city breaks and coastal holidays to Wolds villages and family-friendly seaside towns.',
-    seoTitle: 'Best Places to Stay in Lincolnshire | Where to Base Your Break',
+    seoTitle: 'Where to Stay in Lincolnshire | Where to Base Your Break',
     metaDescription:
       'Compare where to stay in Lincolnshire, including Lincoln, Stamford, Skegness, Mablethorpe, Woodhall Spa, the Wolds and quieter market towns.',
     readingTime: '11 min read',
     lastUpdated: '17 May 2026',
     published: true,
     intro:
-      'The best place to stay in Lincolnshire depends on the trip you want: city heritage, coast, Wolds countryside, market-town food or a quieter base for visiting family and friends. This guide helps you choose a base before comparing individual accommodation.',
+      'The right place to stay in Lincolnshire depends on the trip you want: city heritage, coast, Wolds countryside, market-town food or a quieter base for visiting family and friends. This guide helps you choose a base before comparing individual accommodation.',
     sections: [
       {
-        heading: 'Best for city breaks: Lincoln',
+        heading: 'Useful for city breaks: Lincoln',
         body: [
           'Lincoln is the most practical base for a cathedral city break, with the historic uphill quarter, Lincoln Castle, Lincoln Cathedral, museums, shops, food stops and Brayford Waterfront all close enough for a compact itinerary.',
           'It is also one of the strongest choices if you want rail access or a stay that does not depend on driving every day. Check accommodation location, parking, accessibility and breakfast arrangements directly before booking.',
@@ -398,7 +398,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Best for coast: Skegness, Mablethorpe and Sutton-on-Sea',
+        heading: 'Useful for coast: Skegness, Mablethorpe and Sutton-on-Sea',
         body: [
           'Skegness is the easiest base for classic seaside facilities, family attractions, holiday parks and a lively resort feel. Mablethorpe and Sutton-on-Sea are better suited to slower coastal stays, beach walks and quieter seaside routines.',
           'For coastal stays, check seasonal opening, beach rules, dog policies, entertainment schedules, parking and whether you are booking a room, static caravan, lodge, touring pitch or self-catering unit.',
@@ -410,7 +410,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Best for boutique weekends: Stamford',
+        heading: 'Useful for boutique weekends: Stamford',
         body: [
           'Stamford works well for a slower market-town weekend, with historic streets, independent shops, pubs, riverside walks and Burghley House nearby.',
           'It suits visitors who want a town-and-country break rather than a resort stay. Confirm current accommodation facilities, parking and cancellation policies directly with the operator before booking.',
@@ -421,14 +421,14 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Best for countryside and Wolds: Louth, Horncastle and Market Rasen',
+        heading: 'Useful for countryside and Wolds: Louth, Horncastle and Market Rasen',
         body: [
           'Louth, Horncastle and Market Rasen are useful bases for the Lincolnshire Wolds, countryside walks, market-town wandering and quieter food-led breaks.',
-          'These areas work best if you are happy to drive between villages, walks and attractions. Check access, seasonal opening and dog rules before building a countryside itinerary around one venue.',
+          'These areas work well if you are happy to drive between villages, walks and attractions. Check access, seasonal opening and dog rules before building a countryside itinerary around one venue.',
         ],
       },
       {
-        heading: 'Best for spa-style breaks: Woodhall Spa',
+        heading: 'Useful for spa-style breaks: Woodhall Spa',
         body: [
           'Woodhall Spa is a good choice for a gentler village-style break with woodland, heritage, golf, tea rooms and a distinctive Edwardian feel.',
           'It is especially useful for visitors who want slower days rather than a packed resort itinerary. Check current accommodation policies, spa or leisure access and dining arrangements directly.',
@@ -449,7 +449,7 @@ export const guides: Guide[] = [
           'Lincoln is the most flexible first base. Choose the coast for seaside days, Stamford for a market-town weekend and Woodhall Spa or the Wolds for slower countryside breaks.',
       },
       {
-        question: 'Where is best for families?',
+        question: 'Where works well for families?',
         answer:
           'Skegness and Mablethorpe are useful for coast-focused family breaks, while Lincoln gives better rainy-day cover and heritage options.',
       },
@@ -462,7 +462,7 @@ export const guides: Guide[] = [
     relatedGuides: [
       { title: 'Weekend Breaks in Lincolnshire', href: '/blog/weekend-breaks', label: 'Stays' },
       { title: 'Places to Stay', href: '/places-to-stay', label: 'Directory' },
-      { title: 'Best Beaches in Lincolnshire', href: '/blog/best-beaches', label: 'Coast' },
+      { title: 'Lincolnshire Beaches Guide', href: '/blog/best-beaches', label: 'Coast' },
     ],
     editorialNote:
       'This guide compares areas and trip styles. It does not invent ratings, prices, reviews or availability.',
@@ -484,7 +484,7 @@ export const guides: Guide[] = [
       'Rain in Lincolnshire does not have to cancel a short break, but it does change the way you should plan. The safest approach is to base the day around towns with indoor anchors, short walking distances and reliable food stops nearby.',
     sections: [
       {
-        heading: 'Best towns to use as rainy-day bases',
+        heading: 'Useful towns to use as rainy-day bases',
         body: [
           'Lincoln is usually the most flexible rainy-day base because it has cathedral interiors, castle time, museums, galleries, cafes and shops within a compact city centre.',
           'Stamford, Boston and Woodhall Spa can also work for slower indoor plans, especially when you pair heritage context with cafes and short town walks between showers.',
@@ -498,7 +498,7 @@ export const guides: Guide[] = [
       {
         heading: 'How to build a family rainy-day itinerary',
         body: [
-          'For families, the best rainy-day plan has two or three short stops rather than one fragile activity. Pair an indoor attraction with a cafe and a short walk if the weather breaks.',
+          'For families, a reliable rainy-day plan has two or three short stops rather than one fragile activity. Pair an indoor attraction with a cafe and a short walk if the weather breaks.',
           'Avoid overloading the day with long drives. Bad weather makes parking, coats, pushchairs and tired children harder to manage, so choose a compact town or cluster of nearby stops.',
         ],
       },
@@ -519,7 +519,7 @@ export const guides: Guide[] = [
     ],
     faqs: [
       {
-        question: 'What is the best Lincolnshire town for a rainy day?',
+        question: 'Which Lincolnshire town works well for a rainy day?',
         answer:
           'Lincoln is usually the most flexible rainy-day base because it has several indoor attractions close to food, shops and transport.',
       },
@@ -556,7 +556,7 @@ export const guides: Guide[] = [
       'Dog-friendly coastal stays in Lincolnshire need a little planning because beach rules, park policies and accommodation charges can change by season. Use this guide to choose the right coastal base, then confirm pet rules, fees, facilities and nearby walking options directly with the operator before booking.',
     sections: [
       {
-        heading: 'Best coastal bases with dogs',
+        heading: 'Useful coastal bases with dogs',
         body: [
           'Skegness, Ingoldmells and Chapel St Leonards work well if you want classic seaside facilities, holiday parks and easy access to family attractions, but you should check seasonal beach dog restrictions before travelling.',
           'Mablethorpe and Sutton-on-Sea are better for slower coastal breaks, promenade walks and quieter stays. For nature-led days, Gibraltar Point can be useful, but always check reserve guidance and dog-control rules before visiting.',
@@ -586,7 +586,7 @@ export const guides: Guide[] = [
       'Pet rules, fees, beach restrictions and accommodation policies can change. Confirm directly before booking or travelling.',
   },
   {
-    id: 'best-caravan-parks-skegness',
+    id: 'caravan-parks-skegness',
     title: 'Caravan Parks near Skegness',
     slug: 'best-caravan-parks-skegness',
     category: 'Coast',

@@ -439,13 +439,13 @@ export function HowItWorks() {
       n: '02',
       icon: <Bed width={18} height={18} />,
       h: 'Compare options',
-      p: 'Filter by stay type, dog-friendly, sea view or parking. Each listing links directly to the operator.',
+      p: 'Compare stay types, locations and practical details, then use official websites or map-based routes where available.',
     },
     {
       n: '03',
       icon: <Calendar width={18} height={18} />,
-      h: 'Book direct',
-      p: 'Book direct with the operator to check current availability, facilities and prices.',
+      h: 'Check live details',
+      p: 'Confirm current availability, facilities, policies and prices directly with the operator or booking platform before committing.',
     },
   ];
   return (

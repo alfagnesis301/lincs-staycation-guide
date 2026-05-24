@@ -280,7 +280,7 @@ export const lincolnGuide = {
       location: 'Brandy Wharf, north of Lincoln',
       bestFor: 'Simple riverside camping and caravanning north of Lincoln.',
       description:
-        'A family-run riverside camping and caravan site beside the River Ancholme. Best positioned for visitors looking for a quiet rural base, fishing, boating atmosphere and countryside access rather than a large entertainment-led holiday park.',
+        'A family-run riverside camping and caravan site beside the River Ancholme. Useful for visitors looking for a quiet rural base, fishing, boating atmosphere and countryside access rather than a large entertainment-led holiday park.',
       tags: ['Riverside', 'Touring', 'Tents', 'Motorhomes', 'Fishing', 'Boating', 'Peaceful'],
       bookingDeepLinkPending: true,
       officialUrl: 'https://www.brandywharfleisurepark.co.uk/',
@@ -347,7 +347,7 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Historic Lincoln',
       description:
-        'A refined dining option in historic Lincoln. Check the venue for current opening hours and booking availability.',
+        'A restaurant listing to consider in historic Lincoln for visitors comparing a sit-down meal around the Cathedral Quarter or city-centre heritage route. Check current opening hours, menus, booking requirements, accessibility and dietary details directly with the venue before visiting.',
       tags: ['Restaurant', 'Fine dining option', 'Historic Lincoln', 'Couples', 'Dinner'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -373,7 +373,7 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Lincoln',
       description:
-        'A casual dining option for visitors searching for relaxed food options in Lincoln. Check current opening times directly before visiting.',
+        'A Lincoln restaurant listing to compare for visitors planning a relaxed meal during a city break, shopping trip or evening in the local area. Confirm current opening times, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting.',
       tags: ['Pizza', 'Casual dining', 'Family-friendly option', 'Independent', 'City food'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',

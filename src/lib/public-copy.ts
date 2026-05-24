@@ -163,13 +163,15 @@ export function buildVerificationNote({
   hasOfficialSource: hasOfficial,
   hasBookingSource,
   needsVerification,
+  kind = 'generic',
 }: {
   hasOfficialSource?: boolean;
   hasBookingSource?: boolean;
   needsVerification?: boolean;
+  kind?: ListingKind;
 }): string {
   if (needsVerification) {
-    return 'Details are being checked. Confirm current facilities, opening times, policies and prices directly before travelling or booking.';
+    return publicVerificationNote(kind);
   }
 
   if (hasOfficial || hasBookingSource) {
@@ -231,6 +233,13 @@ export function hasMapOnlySources(sourceUrls?: PublicSourceUrl[] | null): boolea
   });
 }
 
+export function shouldShowListingVerificationNotice(input: {
+  needsVerification?: boolean;
+  sourceUrls?: PublicSourceUrl[] | null;
+}): boolean {
+  return input.needsVerification === true || hasMapOnlySources(input.sourceUrls);
+}
+
 export function getPublicListingDescription(
   listing: PublicListingInput,
   kind: ListingKind = 'generic',
@@ -256,7 +265,7 @@ export function getPublicListingDescription(
     return `A ${typePart}${townPart} for visitors comparing practical places to stay.${bestForPart} ${note}`;
   }
   if (kind === 'food') {
-    return `A ${typePart}${townPart} for visitors planning food and drink stops.${bestForPart} ${note}`;
+    return `A ${typePart}${townPart} for visitors comparing meal, cafe or drinks stops.${bestForPart} ${note}`;
   }
   if (kind === 'attraction') {
     return `A useful ${typePart}${townPart} for visitors building an itinerary.${bestForPart} ${note}`;

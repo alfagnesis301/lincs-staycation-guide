@@ -7,10 +7,11 @@ type VerificationNoticeProps = {
 };
 
 export default function VerificationNotice({
+  kind = 'generic',
   compact = false,
   children,
 }: VerificationNoticeProps) {
-  const text = children ?? buildVerificationNote({ needsVerification: true });
+  const text = children ?? buildVerificationNote({ needsVerification: true, kind });
 
   return (
     <p
@@ -20,5 +21,25 @@ export default function VerificationNotice({
     >
       {text}
     </p>
+  );
+}
+
+export function SectionVerificationSummary({ kind = 'generic' }: { kind?: ListingKind }) {
+  const subject =
+    kind === 'food'
+      ? 'food and drink listings'
+      : kind === 'attraction'
+        ? 'visitor listings'
+        : kind === 'stay'
+          ? 'accommodation listings'
+          : kind === 'park'
+            ? 'park listings'
+            : 'listings';
+
+  return (
+    <aside className="mb-5 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950">
+      Some {subject} are still being checked against official sources or map-based routes. Always confirm
+      current opening times, facilities, prices and policies directly before travelling or booking.
+    </aside>
   );
 }
