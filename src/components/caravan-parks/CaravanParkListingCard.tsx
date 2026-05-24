@@ -95,7 +95,7 @@ export default function CaravanParkListingCard({ listing }: Props) {
               rel="sponsored nofollow noopener"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-sage-dark transition-colors"
             >
-              Check availability on Booking
+              View on Booking.com
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

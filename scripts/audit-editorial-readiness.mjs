@@ -34,7 +34,49 @@ const UNSUPPORTED_CLAIM_PATTERNS = [
   { pattern: /\bcheapest\b/i, reason: 'Potential unsupported price claim' },
   { pattern: /\bnumber one\b/i, reason: 'Potential unsupported ranking claim' },
   { pattern: /\baward[-\s]?winning\b/i, reason: 'Potential unsupported award claim' },
+  { pattern: /\brecommended\s+(accommodation|business|caravan park|hotel|listing|park|restaurant|stay)\b/i, reason: 'Potential unsupported recommendation claim' },
 ];
+
+const BRAND_ALLOWLIST_PATTERNS = [
+  /\bbest[-\s]+western[-\s]+plus\b/gi,
+  /\bbest[-\s]+western\b/gi,
+];
+
+function stripAllowedBrandTerms(text) {
+  return BRAND_ALLOWLIST_PATTERNS.reduce((output, pattern) => output.replace(pattern, ''), text);
+}
+
+function hasUnsupportedClaimRisk(text) {
+  const claimCheckContent = stripAllowedBrandTerms(text);
+  return UNSUPPORTED_CLAIM_PATTERNS.some(({ pattern }) => pattern.test(claimCheckContent));
+}
+
+function runSelfCheck() {
+  const cases = [
+    { input: 'Best Western Plus Kenwick Park Hotel', shouldFlag: false },
+    { input: 'best-western-plus-kenwick-park-hotel', shouldFlag: false },
+    { input: 'Best Western Kenwick Park Hotel', shouldFlag: false },
+    { input: 'Best hotel in Lincolnshire', shouldFlag: true },
+    { input: 'Top-rated restaurant in Lincoln', shouldFlag: true },
+    { input: 'Award-winning caravan park', shouldFlag: true },
+    { input: 'Recommended accommodation near Lincoln', shouldFlag: true },
+  ];
+
+  for (const testCase of cases) {
+    const flagged = hasUnsupportedClaimRisk(testCase.input);
+    if (flagged !== testCase.shouldFlag) {
+      console.error('Audit self-check failed:', testCase, { flagged });
+      process.exit(1);
+    }
+  }
+
+  console.log('Audit self-check passed.');
+  process.exit(0);
+}
+
+if (process.argv.includes('--self-check')) {
+  runSelfCheck();
+}
 
 async function pathExists(filePath) {
   try {
@@ -103,7 +145,8 @@ for (const dir of TARGET_DIRS) {
       }
 
       for (const { pattern, reason } of UNSUPPORTED_CLAIM_PATTERNS) {
-        if (pattern.test(line) && !shouldSkipClaimRisk(line)) {
+        const claimCheckContent = stripAllowedBrandTerms(line);
+        if (pattern.test(claimCheckContent) && !shouldSkipClaimRisk(line)) {
           pushFinding(findings, {
             type: 'claim-risk',
             filePath: rel,

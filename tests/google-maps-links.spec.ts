@@ -24,9 +24,9 @@ test.describe('Google Maps listing links', () => {
       expect(href).toBeTruthy();
       expect(href!).toMatch(/^https:\/\/(www\.)?google\.[a-z.]+\//);
 
-      // Either an "Open in" (verified URL) or "Search on" (generated query) label.
+      // Verified URLs can say Google Maps directly; generated queries use a softer public CTA.
       const label = (await first.innerText()).trim();
-      expect(label).toMatch(/Google Maps$/);
+      expect(['Open in Google Maps', 'View map/details']).toContain(label);
 
       // aria-label must be present and reference the listing for accessibility.
       const aria = await first.getAttribute('aria-label');

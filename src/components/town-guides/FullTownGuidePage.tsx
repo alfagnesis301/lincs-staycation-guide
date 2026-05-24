@@ -94,7 +94,7 @@ function CtaLink({ href, children }: { href: string; children: React.ReactNode }
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer nofollow' : undefined}
       data-google-maps-link={maps ? true : undefined}
-      aria-label={maps ? 'Search on Google Maps (opens in a new tab)' : undefined}
+      aria-label={maps ? 'View map/details on Google Maps (opens in a new tab)' : undefined}
       className="inline-flex rounded-xl bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
     >
       {children}
@@ -161,7 +161,7 @@ function ThingCard({
       body={item.description}
       tags={item.tags}
       ctaHref={item.officialWebsiteUrl ?? mapsSearchUrl(`${item.name} ${town}`)}
-      ctaLabel={item.officialWebsiteUrl ? 'Visit official website' : 'Search on Google Maps'}
+      ctaLabel={item.officialWebsiteUrl ? 'Visit official website' : 'View map/details'}
       verificationKind={item.needsVerification && showVerificationNotice ? 'attraction' : undefined}
     />
   );
@@ -329,7 +329,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
           { label: 'Nearby caravan parks', href: '#caravan-parks', description: 'Touring, lodges and holiday parks.' },
         ]} />
         <div className="-mt-2 mb-6">
-          <CtaLink href={mapsSearchUrl(town.name)}>Search on Google Maps</CtaLink>
+          <CtaLink href={mapsSearchUrl(town.name)}>View map/details</CtaLink>
         </div>
       </div>
 
@@ -381,7 +381,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
           {visibleStays.map((stay) => {
             const maps = getGoogleMapsLink({ name: stay.name, town: town.name, location: stay.location });
             const ctaHref = stay.affiliateUrl ?? stay.bookingUrl ?? stay.officialWebsiteUrl ?? maps?.href ?? mapsSearchUrl(`${stay.name} ${town.name}`);
-            const ctaLabel = stay.affiliateUrl ? 'Check availability' : stay.bookingUrl ? 'View on Booking.com' : stay.officialWebsiteUrl ? 'Visit official website' : 'Search on Google Maps';
+            const ctaLabel = stay.affiliateUrl ? 'Check availability' : stay.bookingUrl ? 'View on Booking.com' : stay.officialWebsiteUrl ? 'Visit official website' : 'View map/details';
             const showNotice = shouldShowListingVerificationNotice({
               needsVerification: stay.needsVerification,
               sourceUrls: stay.sourceUrls,
@@ -437,7 +437,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 }, 'park')}
                 tags={uniquePublicTags(park.tags.slice(0, 6))}
                 ctaHref={park.bookingUrl ?? park.affiliateUrl ?? park.sourceUrl ?? maps?.href ?? mapsSearchUrl(`${park.name} ${town.name}`)}
-                ctaLabel={park.bookingUrl || park.affiliateUrl ? 'Check availability' : park.sourceUrl ? 'Visit official website' : 'Search on Google Maps'}
+                ctaLabel={park.affiliateUrl ? 'Check availability' : park.bookingUrl ? 'View on Booking.com' : park.sourceUrl ? 'Visit official website' : 'View map/details'}
                 verificationKind={park.needsVerification && !showParkVerificationSummary ? 'park' : undefined}
               />
             );
@@ -487,7 +487,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 }, 'food')}
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
                 ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}
-                ctaLabel="Search on Google Maps"
+                ctaLabel="View map/details"
                 verificationKind={showNotice && !showFoodVerificationSummary ? 'food' : undefined}
               />
             );

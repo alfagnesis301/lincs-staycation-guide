@@ -9,7 +9,7 @@ type BookingCtaButtonProps = {
 };
 
 // Booking/visit CTA priority:
-//   1. Verified affiliate / booking URL -> "Check availability on Booking" (sponsored link)
+//   1. Verified affiliate / booking URL -> "View on Booking.com" (sponsored link)
 //   2. Verified official website        -> "Visit official website"
 //   3. Otherwise                        -> public verification notice (no button)
 // Never advertise a future booking link as a primary CTA.
@@ -28,7 +28,7 @@ export default function BookingCtaButton({
           rel="sponsored nofollow noopener"
           className="inline-flex items-center justify-center rounded-xl bg-sage px-4 py-2.5 text-sm font-semibold text-white hover:bg-sage-dark"
         >
-          Check availability on Booking
+          View on Booking.com
         </a>
         <span className="text-[11px] text-charcoal-muted">Affiliate link</span>
       </div>

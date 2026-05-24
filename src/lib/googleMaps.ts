@@ -21,7 +21,7 @@ export interface ListingLocationInput {
 
 export interface GoogleMapsLink {
   href: string;
-  label: 'Open in Google Maps' | 'Search on Google Maps';
+  label: 'Open in Google Maps' | 'View map/details';
   isVerified: boolean;
   ariaLabel: string;
 }
@@ -92,7 +92,7 @@ export function getGoogleMapsLink(listing: ListingLocationInput): GoogleMapsLink
   const href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   return {
     href,
-    label: 'Search on Google Maps',
+    label: 'View map/details',
     isVerified: false,
     ariaLabel: `Search ${name} on Google Maps (opens in a new tab)`,
   };
