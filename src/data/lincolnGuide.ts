@@ -154,7 +154,7 @@ export const lincolnGuide = {
       location: 'Cathedral quarter, Lincoln',
       bestFor: 'Visitors wanting a stay near the cathedral quarter and Lincoln\'s historic attractions.',
       description:
-        'A useful Lincoln accommodation option for travellers interested in the cathedral, castle, independent restaurants and walkable historic streets.',
+        'A Lincoln stay to compare for travellers interested in the cathedral, castle, independent restaurants and walkable historic streets.',
       tags: ['Cathedral quarter', 'City break', 'Historic attractions', 'Couples'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
@@ -199,7 +199,7 @@ export const lincolnGuide = {
       location: 'Lincoln area',
       bestFor: 'Visitors wanting a practical stay with pub/restaurant-style convenience outside the busiest historic centre.',
       description:
-        'A useful accommodation option for travellers who want easy access to Lincoln while staying slightly outside the most central visitor areas.',
+        'A Lincoln-area stay to compare for travellers who want access to the city while staying slightly outside the most central visitor areas.',
       tags: ['Inn', 'Practical base', 'Food on site', 'Budget-friendly'],
       bookingDeepLinkPending: true,
       image: lincolnAreaImage,
@@ -360,7 +360,7 @@ export const lincolnGuide = {
       category: 'Restaurant',
       location: 'Lincoln',
       description:
-        'A useful food and drink option for visitors looking for independent dining in Lincoln. Check current menu and opening times directly before visiting.',
+        'A Lincoln food-and-drink listing to consider when comparing sit-down places to eat during a city visit. It may suit visitors planning an evening meal, relaxed lunch or stop before exploring nearby central Lincoln. Check the latest opening times, menu, booking requirements, accessibility details and dietary information directly with the venue before visiting.',
       tags: ['Tapas', 'Independent restaurant', 'Dinner', 'City centre', 'Couples'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -386,7 +386,7 @@ export const lincolnGuide = {
       category: 'Cafe',
       location: 'Lincoln',
       description:
-        'A cafe option for visitors looking for lunch, coffee or a daytime food stop in Lincoln. Check current opening times and visitor suitability directly before visiting.',
+        'A Lincoln cafe listing to consider for a daytime stop while planning time around the city centre. It may suit visitors looking for a break between sightseeing, shopping or local heritage stops. Confirm current opening hours, menu, accessibility information, booking requirements and any dietary options directly with the cafe before travelling.',
       tags: ['Cafe', 'Lunch', 'Coffee', 'Daytime', 'City centre'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
@@ -399,7 +399,7 @@ export const lincolnGuide = {
       category: 'Bar',
       location: 'Lincoln',
       description:
-        'A food and drink option for visitors looking for coffee, casual bites or drinks in Lincoln. Check current opening times and menu directly before visiting.',
+        'A Lincoln food-and-drink listing to compare for visitors planning coffee, drinks or a casual stop during time in the city. It may be useful as part of a wider shortlist around central Lincoln. Check current opening times, menu, booking requirements, accessibility details and service arrangements directly with the venue before visiting.',
       tags: ['Cafe', 'Bar', 'Coffee', 'Casual food', 'City centre'],
       reviewVerificationNeeded: true,
       imageStatus: 'permission-needed',
