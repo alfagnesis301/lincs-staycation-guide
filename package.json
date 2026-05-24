@@ -11,11 +11,14 @@
     "content:audit": "node scripts/audit-content-quality.mjs",
     "content:editorial-audit": "node scripts/audit-editorial-readiness.mjs",
     "content:editorial-strict": "node scripts/check-editorial-quality.mjs",
+    "check:editorial-audit:self": "node scripts/audit-editorial-readiness.mjs --self-check",
     "check:editorial-quality": "npm run content:editorial-strict",
+    "audit:sources": "node scripts/audit-listing-sources.mjs",
     "qa:static": "node scripts/audit-static-routes.mjs",
     "check:site-quality": "npm run content:audit && npm run content:editorial-audit && npm run qa:static",
     "qa": "npm run lint && npm run typecheck && npm run check:site-quality && npm run build",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:e2e:ci": "npm run build && node scripts/run-playwright-e2e.mjs --reporter=line --workers=1"
   },
   "dependencies": {
     "next": "16.2.4",
