@@ -149,6 +149,7 @@ function itemSummary(o: CategoryItem, kind: Kind) {
       town: foodOption.town,
       type: foodOption.type,
       description: foodOption.description,
+      officialWebsiteUrl: foodOption.officialWebsiteUrl,
       sourceUrls: foodOption.sourceUrls,
     },
     publicKind,
@@ -157,6 +158,14 @@ function itemSummary(o: CategoryItem, kind: Kind) {
 
 function officialWebsiteUrl(o: CategoryItem) {
   return 'officialWebsiteUrl' in o ? o.officialWebsiteUrl : undefined;
+}
+
+function bookingUrl(o: CategoryItem) {
+  return 'bookingUrl' in o ? o.bookingUrl : undefined;
+}
+
+function affiliateUrl(o: CategoryItem) {
+  return 'affiliateUrl' in o ? o.affiliateUrl : undefined;
 }
 
 function itemNeedsVerification(o: CategoryItem) {
@@ -344,6 +353,17 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {list.map((o) => {
               const websiteUrl = officialWebsiteUrl(o);
+              const listingBookingUrl = bookingUrl(o);
+              const listingAffiliateUrl = affiliateUrl(o);
+              const ctaUrl = listingAffiliateUrl ?? listingBookingUrl ?? websiteUrl;
+              const ctaLabel = listingAffiliateUrl
+                ? 'Check availability'
+                : listingBookingUrl
+                  ? 'View on Booking.com'
+                  : 'Visit official website';
+              const ctaRel = listingAffiliateUrl || listingBookingUrl
+                ? 'sponsored nofollow noopener'
+                : 'noopener noreferrer';
               const summary = itemSummary(o, kind);
               return (
                 <article key={o.id} className="rounded-2xl border border-cream-dark/60 bg-white p-5">
@@ -358,14 +378,14 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
                   <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/40 pt-4">
                     <p className="text-xs text-charcoal-muted">Use official sources for live details.</p>
                     <div className="flex flex-wrap items-center gap-3">
-                      {websiteUrl ? (
+                      {ctaUrl ? (
                         <a
-                          href={websiteUrl}
+                          href={ctaUrl}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel={ctaRel}
                           className="text-sm font-semibold text-sage hover:text-sage-dark"
                         >
-                          Official website
+                          {ctaLabel}
                         </a>
                       ) : null}
                       <GoogleMapsLinkButton
