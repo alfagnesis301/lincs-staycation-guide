@@ -9,6 +9,7 @@ import type {
 import BookingCtaButton from './BookingCtaButton';
 import ImageCreditLink from './ImageCreditLink';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
+import VerificationNotice from '@/components/VerificationNotice';
 import type { ListingLocationInput } from '@/lib/googleMaps';
 import { cleanPublicCopy, uniquePublicTags } from '@/lib/public-copy';
 
@@ -76,6 +77,7 @@ export function StayListingCard({ listing }: { listing: StayListing }) {
         <BookingCtaButton
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
+          verificationKind="stay"
         />
         <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
@@ -103,6 +105,7 @@ export function CaravanParkCard({ listing }: { listing: CaravanParkListing }) {
         <BookingCtaButton
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
+          verificationKind="park"
         />
         <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
@@ -131,7 +134,7 @@ export function ThingToDoCard({ listing }: { listing: ThingToDoListing }) {
               Visit official website
             </a>
           ) : (
-            <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
+            <VerificationNotice kind="attraction" compact />
           )}
           <GoogleMapsLinkButton listing={toMapsInput(listing)} variant="inline" />
         </div>
@@ -150,7 +153,7 @@ export function FoodDrinkCard({ listing }: { listing: FoodDrinkListing }) {
       <TagList tags={listing.tags} />
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-cream-dark/50 pt-4">
         {listing.reviewVerificationNeeded ? (
-          <span className="text-xs text-charcoal-muted">Check current menus, opening times and visitor details directly before visiting.</span>
+          <VerificationNotice kind="food" compact />
         ) : (
           <span />
         )}
@@ -167,7 +170,7 @@ export function FoodDrinkCard({ listing }: { listing: FoodDrinkListing }) {
           ) : null}
           <GoogleMapsLinkButton listing={toMapsInput(listing)} variant="inline" />
           {!listing.officialUrl && !getMapsHrefHint(listing) ? (
-            <span className="text-sm font-medium text-charcoal-muted">Details being verified</span>
+            <VerificationNotice kind="food" compact />
           ) : null}
         </div>
       </div>

@@ -1,15 +1,24 @@
+import VerificationNotice from '@/components/VerificationNotice';
+import type { ListingKind } from '@/lib/public-copy';
+
 type BookingCtaButtonProps = {
   bookingUrl?: string;
   bookingDeepLinkPending?: boolean;
   officialUrl?: string;
+  verificationKind?: ListingKind;
 };
 
 // Booking/visit CTA priority:
-//   1. Verified affiliate / booking URL → "Check availability on Booking" (sponsored link)
-//   2. Verified official website        → "Visit official website"
-//   3. Otherwise                        → small "Details being verified" note (no button)
+//   1. Verified affiliate / booking URL -> "Check availability on Booking" (sponsored link)
+//   2. Verified official website        -> "Visit official website"
+//   3. Otherwise                        -> public verification notice (no button)
 // Never advertise a future booking link as a primary CTA.
-export default function BookingCtaButton({ bookingUrl, bookingDeepLinkPending, officialUrl }: BookingCtaButtonProps) {
+export default function BookingCtaButton({
+  bookingUrl,
+  bookingDeepLinkPending,
+  officialUrl,
+  verificationKind = 'stay',
+}: BookingCtaButtonProps) {
   if (bookingUrl) {
     return (
       <div className="flex flex-col items-start gap-1.5">
@@ -40,11 +49,7 @@ export default function BookingCtaButton({ bookingUrl, bookingDeepLinkPending, o
   }
 
   if (bookingDeepLinkPending) {
-    return (
-      <span className="text-xs text-charcoal-muted italic">
-        Details being verified
-      </span>
-    );
+    return <VerificationNotice kind={verificationKind} compact />;
   }
 
   return null;

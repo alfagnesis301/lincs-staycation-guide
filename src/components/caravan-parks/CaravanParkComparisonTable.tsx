@@ -17,7 +17,7 @@ export default function CaravanParkComparisonTable({ parks }: Props) {
             <thead className="bg-cream/50 text-charcoal">
               <tr>
                 <th scope="col" className="text-left font-semibold px-4 py-3">Park / site</th>
-                <th scope="col" className="text-left font-semibold px-4 py-3">Best for</th>
+                <th scope="col" className="text-left font-semibold px-4 py-3">Good for</th>
                 <th scope="col" className="text-left font-semibold px-4 py-3">Good for</th>
                 <th scope="col" className="text-left font-semibold px-4 py-3">Location notes</th>
                 <th scope="col" className="text-left font-semibold px-4 py-3">More</th>

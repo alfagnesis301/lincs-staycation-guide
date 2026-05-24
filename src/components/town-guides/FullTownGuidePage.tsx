@@ -13,8 +13,9 @@ import {
 } from '@/data/locationGuides';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
-import { getPublicListingDescription, uniquePublicTags } from '@/lib/public-copy';
+import { getPublicListingDescription, uniquePublicTags, type ListingKind } from '@/lib/public-copy';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import VerificationNotice from '@/components/VerificationNotice';
 import { NatureSpotsSection } from '@/components/town-guides/NatureSpotsSection';
 import { QuickLinks, lincolnQuickLinks } from '@/components/navigation/QuickLinks';
 
@@ -103,6 +104,7 @@ function InfoCard({
   tags = [],
   ctaHref,
   ctaLabel,
+  verificationKind,
 }: {
   title: string;
   meta: string;
@@ -110,6 +112,7 @@ function InfoCard({
   tags?: string[];
   ctaHref: string;
   ctaLabel: string;
+  verificationKind?: ListingKind;
 }) {
   return (
     <article className="rounded-2xl border border-cream-dark/60 bg-white p-5 shadow-sm">
@@ -123,6 +126,11 @@ function InfoCard({
               {tag}
             </span>
           ))}
+        </div>
+      ) : null}
+      {verificationKind ? (
+        <div className="mt-4">
+          <VerificationNotice kind={verificationKind} compact />
         </div>
       ) : null}
       <div className="mt-5 border-t border-cream-dark/50 pt-4">
@@ -141,6 +149,7 @@ function ThingCard({ item, town }: { item: TownAttraction; town: string }) {
       tags={item.tags}
       ctaHref={item.officialWebsiteUrl ?? mapsSearchUrl(`${item.name} ${town}`)}
       ctaLabel={item.officialWebsiteUrl ? 'Visit official website' : 'Search on Google Maps'}
+      verificationKind={item.needsVerification ? 'attraction' : undefined}
     />
   );
 }
@@ -364,6 +373,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 tags={uniquePublicTags([stay.type, 'No caravan parks'])}
                 ctaHref={ctaHref}
                 ctaLabel={ctaLabel}
+                verificationKind={stay.needsVerification ? 'stay' : undefined}
               />
             );
           })}
@@ -395,6 +405,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 tags={uniquePublicTags(park.tags.slice(0, 6))}
                 ctaHref={park.bookingUrl ?? park.affiliateUrl ?? park.sourceUrl ?? maps?.href ?? mapsSearchUrl(`${park.name} ${town.name}`)}
                 ctaLabel={park.bookingUrl || park.affiliateUrl ? 'Check availability' : park.sourceUrl ? 'Visit official website' : 'Search on Google Maps'}
+                verificationKind={park.needsVerification ? 'park' : undefined}
               />
             );
           })}
@@ -411,7 +422,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
 
       <Section id="food-drink" eyebrow="Food and drink" title={`Food & Drink in ${town.name}`}>
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
-          These food and drink options are included for visitor planning, not rankings. Check current opening hours, menus and booking requirements directly before visiting.
+          These food and drink options are included as practical local ideas, not rankings. Check current opening hours, menus and booking requirements directly before visiting.
         </p>
         <div className="grid gap-5 lg:grid-cols-2">
           {(locationGuide.foodDrink as FoodAndDrinkOption[]).slice(0, 5).map((venue) => {
@@ -430,6 +441,7 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
                 tags={[venue.type, 'Check menus direct', 'No ratings published']}
                 ctaHref={maps?.href ?? mapsSearchUrl(`${venue.name} ${town.name}`)}
                 ctaLabel="Search on Google Maps"
+                verificationKind={venue.needsVerification ? 'food' : undefined}
               />
             );
           })}

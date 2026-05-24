@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import type { CaravanParkGuide, RegionType } from '@/data/caravanParkGuides';
+import { softenSuitabilityCopy } from '@/lib/public-copy';
 
 interface Props {
   guides: CaravanParkGuide[];
@@ -116,7 +117,7 @@ export default function CaravanParkLocationGrid({ guides }: Props) {
                   Caravan Parks near {g.location} to Compare
                 </h3>
                 <p className="text-sm text-charcoal-muted leading-relaxed mb-4 line-clamp-3">
-                  {g.contentAngle}
+                  {softenSuitabilityCopy(g.contentAngle)}
                 </p>
                 <div className="flex items-center justify-between text-xs text-charcoal-muted">
                   <span>{g.parks.length} curated options</span>

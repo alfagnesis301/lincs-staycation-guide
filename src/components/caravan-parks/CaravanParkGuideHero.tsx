@@ -1,5 +1,6 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
 import type { CaravanParkGuide } from '@/data/caravanParkGuides';
+import { softenSuitabilityCopy } from '@/lib/public-copy';
 
 interface Props {
   guide: CaravanParkGuide;
@@ -22,7 +23,7 @@ export default function CaravanParkGuideHero({ guide }: Props) {
             {guide.h1}
           </h1>
           <p className="text-lg text-charcoal-muted leading-relaxed mb-3">
-            {guide.contentAngle}
+            {softenSuitabilityCopy(guide.contentAngle)}
           </p>
           <p className="text-base text-charcoal-muted leading-relaxed">
             {guide.intro}
