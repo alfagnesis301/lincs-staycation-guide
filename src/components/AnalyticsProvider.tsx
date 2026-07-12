@@ -7,7 +7,7 @@ import {
   hasAnalyticsConsent,
   trackEvent,
 } from '@/lib/analytics';
-import { isBookingComUrl } from '@/lib/affiliate';
+import { isAffiliateRedirectUrl, isBookingComUrl } from '@/lib/affiliate';
 
 let gtagLoaded = false;
 
@@ -58,16 +58,26 @@ function handleDocumentClick(event: MouseEvent) {
   const propertyTown = anchor.dataset.propertyTown;
   const linkPosition = anchor.dataset.linkPosition;
 
-  if (isBookingComUrl(href)) {
+  // Decorated links point at the CJ click host; the real destination is in
+  // the ?url= parameter. Undecorated booking.com links are counted too.
+  let bookingDestination = isBookingComUrl(href) ? destinationHost : undefined;
+  if (!bookingDestination && isAffiliateRedirectUrl(href)) {
+    const wrapped = new URL(href).searchParams.get('url') ?? undefined;
+    bookingDestination = isBookingComUrl(wrapped)
+      ? new URL(wrapped).hostname
+      : destinationHost;
+  }
+
+  if (bookingDestination) {
     trackEvent('affiliate_click', {
       affiliate_partner: 'booking.com',
-      destination: destinationHost,
+      destination: bookingDestination,
       property_name: propertyName,
       property_town: propertyTown,
       link_position: linkPosition,
     });
     trackEvent('booking_click', {
-      destination: destinationHost,
+      destination: bookingDestination,
       property_name: propertyName,
       property_town: propertyTown,
     });
