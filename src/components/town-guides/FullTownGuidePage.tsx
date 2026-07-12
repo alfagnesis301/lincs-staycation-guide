@@ -13,6 +13,8 @@ import {
 } from '@/data/locationGuides';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
+import { AFFILIATE_REL, isBookingComUrl, withBookingAffiliate } from '@/lib/affiliate';
+import AffiliateDisclosureSmall from '@/components/caravan-parks/AffiliateDisclosureSmall';
 import {
   getPublicListingDescription,
   shouldShowListingVerificationNotice,
@@ -85,20 +87,36 @@ function Section({
   );
 }
 
-function CtaLink({ href, children }: { href: string; children: React.ReactNode }) {
+function CtaLink({
+  href,
+  children,
+  propertyName,
+  propertyTown,
+}: {
+  href: string;
+  children: React.ReactNode;
+  propertyName?: string;
+  propertyTown?: string;
+}) {
   const external = href.startsWith('http');
   const maps = /^https:\/\/(www\.)?google\./i.test(href);
+  const booking = isBookingComUrl(href);
   return (
-    <a
-      href={href}
-      target={external ? '_blank' : undefined}
-      rel={external ? 'noopener noreferrer nofollow' : undefined}
-      data-google-maps-link={maps ? true : undefined}
-      aria-label={maps ? 'View map/details on Google Maps (opens in a new tab)' : undefined}
-      className="inline-flex rounded-xl bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
-    >
-      {children}
-    </a>
+    <span className="inline-flex flex-col items-start gap-1">
+      <a
+        href={booking ? withBookingAffiliate(href) : href}
+        target={external ? '_blank' : undefined}
+        rel={external ? (booking ? AFFILIATE_REL : 'noopener noreferrer nofollow') : undefined}
+        data-google-maps-link={maps ? true : undefined}
+        data-property-name={propertyName}
+        data-property-town={propertyTown}
+        aria-label={maps ? 'View map/details on Google Maps (opens in a new tab)' : undefined}
+        className="inline-flex rounded-xl bg-sage px-4 py-2 text-sm font-semibold text-white hover:bg-sage-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage"
+      >
+        {children}
+      </a>
+      {booking ? <span className="text-[11px] text-charcoal-muted">Affiliate link</span> : null}
+    </span>
   );
 }
 
@@ -139,7 +157,7 @@ function InfoCard({
         </div>
       ) : null}
       <div className="mt-5 border-t border-cream-dark/50 pt-4">
-        <CtaLink href={ctaHref}>{ctaLabel}</CtaLink>
+        <CtaLink href={ctaHref} propertyName={title} propertyTown={meta}>{ctaLabel}</CtaLink>
       </div>
     </article>
   );
@@ -376,6 +394,9 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         <p className="mb-6 max-w-3xl text-sm leading-relaxed text-charcoal-muted">
           This section focuses on hotels, B&Bs, guest houses, inns, apartments and cottages. Caravan and holiday parks are listed separately so visitors can compare the right type of stay.
         </p>
+        <div className="mb-6">
+          <AffiliateDisclosureSmall />
+        </div>
         {showStayVerificationSummary ? <SectionVerificationSummary kind="stay" /> : null}
         <div className="grid gap-5 lg:grid-cols-2">
           {visibleStays.map((stay) => {

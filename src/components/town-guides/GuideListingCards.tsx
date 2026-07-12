@@ -78,6 +78,8 @@ export function StayListingCard({ listing }: { listing: StayListing }) {
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
           verificationKind="stay"
+          propertyName={listing.name}
+          propertyTown={listing.location}
         />
         <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
@@ -106,6 +108,8 @@ export function CaravanParkCard({ listing }: { listing: CaravanParkListing }) {
           bookingUrl={listing.bookingUrl}
           bookingDeepLinkPending={listing.bookingDeepLinkPending}
           verificationKind="park"
+          propertyName={listing.name}
+          propertyTown={listing.location}
         />
         <GoogleMapsLinkButton listing={toMapsInput(listing)} />
       </div>
