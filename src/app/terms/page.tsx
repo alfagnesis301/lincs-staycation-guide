@@ -57,7 +57,7 @@ export default function TermsPage() {
 
       <h2>Contact</h2>
       <p>
-        If you have questions about these terms, please contact us at: <a href="mailto:hello@lincsstaycationguide.co.uk">hello@lincsstaycationguide.co.uk</a>
+        If you have questions about these terms, please contact us at: <a href="mailto:hello@lincs-staycation-guide.co.uk">hello@lincs-staycation-guide.co.uk</a>
       </p>
     </LegalPageLayout>
   );

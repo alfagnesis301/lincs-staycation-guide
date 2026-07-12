@@ -7,6 +7,7 @@ export const siteConfig = {
     'An independent guide to staying, eating and exploring across Lincolnshire - coast, city, Wolds, Fens and market towns.',
   establishedYear: '2026',
   location: 'Lincoln, UK',
+  contactEmail: 'hello@lincs-staycation-guide.co.uk',
   lastEditorialReview: 'May 2026',
   footerDisclaimer:
     'We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.',

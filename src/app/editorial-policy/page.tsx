@@ -50,7 +50,7 @@ export default function EditorialPolicyPage() {
         Lincs Staycation Guide is a <strong>fully independent directory</strong>. We are not affiliated with any local council, official tourism board, destination marketing organisation or government body. Our editorial decisions are made independently and are not influenced by paid listings, advertising relationships or commercial partnerships.
       </p>
       <p>
-        We believe that editorial independence is essential for building trust with our readers. Visitors to Lincolnshire deserve honest, practical information — not promotional copy written to satisfy advertisers. This commitment to independence is central to everything we publish.
+        We believe that editorial independence is essential for building trust with our readers. Visitors to Lincolnshire deserve honest, practical information â€” not promotional copy written to satisfy advertisers. This commitment to independence is central to everything we publish.
       </p>
 
       <h2>Transparency</h2>
@@ -60,7 +60,7 @@ export default function EditorialPolicyPage() {
 
       <h2>Contact to report errors</h2>
       <p>
-        If you believe any information on our website is inaccurate, outdated or misleading, please contact us at: <a href="mailto:hello@lincsstaycationguide.co.uk">hello@lincsstaycationguide.co.uk</a>
+        If you believe any information on our website is inaccurate, outdated or misleading, please contact us at: <a href="mailto:hello@lincs-staycation-guide.co.uk">hello@lincs-staycation-guide.co.uk</a>
       </p>
     </LegalPageLayout>
   );

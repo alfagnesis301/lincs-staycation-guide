@@ -42,7 +42,7 @@ export default function BusinessListingTermsPage() {
 
       <h2>Updates and removal requests</h2>
       <p>
-        To request an update to or removal of your listing, please contact us at: <a href="mailto:hello@lincsstaycationguide.co.uk">hello@lincsstaycationguide.co.uk</a>
+        To request an update to or removal of your listing, please contact us at: <a href="mailto:hello@lincs-staycation-guide.co.uk">hello@lincs-staycation-guide.co.uk</a>
       </p>
     </LegalPageLayout>
   );

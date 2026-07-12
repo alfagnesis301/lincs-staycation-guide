@@ -41,7 +41,7 @@ export default function ContactPage() {
                   For general enquiries:
                 </p>
                 <p className="text-sm text-coast font-medium">
-                  hello@lincsstaycationguide.co.uk
+                  hello@lincs-staycation-guide.co.uk
                 </p>
               </div>
 
