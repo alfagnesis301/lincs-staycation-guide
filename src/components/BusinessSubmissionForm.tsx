@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
+import { siteConfig } from '@/lib/site-config';
 
 interface BusinessFormData {
   businessName: string;
@@ -47,6 +49,7 @@ export default function BusinessSubmissionForm() {
   const [errors, setErrors] = useState<Partial<Record<string, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<string, string>> = {};
@@ -74,6 +77,8 @@ export default function BusinessSubmissionForm() {
 
     if (!validate()) return;
     setIsSubmitting(true);
+    setSubmitError(null);
+    trackEvent('business_submission_start', { category: formData.category });
 
     try {
       const response = await fetch('/api/business-submission', {
@@ -92,15 +97,20 @@ export default function BusinessSubmissionForm() {
           features: formData.features,
           listingInterest: formData.listingInterest,
           message: formData.message,
+          honeypot: formData.honeypot,
         }),
       });
 
       if (response.ok) {
+        trackEvent('business_submission_complete', { category: formData.category });
         setIsSuccess(true);
         setFormData(initialFormData);
+      } else {
+        const data = await response.json().catch(() => null);
+        setSubmitError(data?.error ?? 'Something went wrong sending your submission.');
       }
     } catch {
-      // Silently handle
+      setSubmitError('We could not reach the server. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -262,6 +272,15 @@ export default function BusinessSubmissionForm() {
         </label>
         {errors.consent && <p className="mt-1 text-xs text-red-500">{errors.consent}</p>}
       </div>
+
+      {submitError && (
+        <div role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          {submitError} You can also email us at{' '}
+          <a href={`mailto:${siteConfig.contactEmail}`} className="font-semibold underline">
+            {siteConfig.contactEmail}
+          </a>.
+        </div>
+      )}
 
       <button
         type="submit"

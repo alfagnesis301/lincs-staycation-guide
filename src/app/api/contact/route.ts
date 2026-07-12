@@ -1,11 +1,19 @@
 import { NextResponse } from 'next/server';
+import { sendNotificationEmail, emailDeliveryConfigured } from '@/lib/email';
+
+const MAX_FIELD = 300;
+const MAX_MESSAGE = 5000;
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, subject, reason, message } = body;
+    const { name, email, subject, reason, message, honeypot } = body;
 
-    // Validate required fields
+    // Bots that fill the hidden field get a generic OK and are dropped.
+    if (typeof honeypot === 'string' && honeypot.trim() !== '') {
+      return NextResponse.json({ success: true, message: 'Message received' });
+    }
+
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -13,7 +21,15 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate email format
+    if (
+      [name, email, subject, reason].some(
+        (v) => typeof v === 'string' && v.length > MAX_FIELD
+      ) ||
+      (typeof message === 'string' && message.length > MAX_MESSAGE)
+    ) {
+      return NextResponse.json({ error: 'Input too long' }, { status: 400 });
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
@@ -22,21 +38,32 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Connect to email service (e.g. SendGrid, Resend, Nodemailer)
-    // Example:
-    // await sendEmail({
-    //   to: process.env.CONTACT_EMAIL,
-    //   from: 'noreply@lincsstaycationguide.co.uk',
-    //   subject: `[Contact Form] ${subject}`,
-    //   body: `Name: ${name}\nEmail: ${email}\nReason: ${reason}\n\n${message}`,
-    // });
+    if (!emailDeliveryConfigured()) {
+      // Never pretend the message was delivered when no provider is set up.
+      return NextResponse.json(
+        { error: 'The contact form is temporarily unavailable. Please email us directly.' },
+        { status: 503 }
+      );
+    }
 
-    // TODO: Optionally save to database
-    // await db.contactSubmissions.create({
-    //   data: { name, email, subject, reason, message },
-    // });
+    const sent = await sendNotificationEmail({
+      subject: `[Contact form] ${subject}`,
+      replyTo: email,
+      text: [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Reason: ${reason ?? 'not given'}`,
+        '',
+        message,
+      ].join('\n'),
+    });
 
-    console.log('Contact form submission:', { name, email, subject, reason, message });
+    if (!sent) {
+      return NextResponse.json(
+        { error: 'We could not send your message right now. Please email us directly.' },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({ success: true, message: 'Message received' });
   } catch {
