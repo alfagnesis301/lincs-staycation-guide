@@ -1,11 +1,14 @@
 import VerificationNotice from '@/components/VerificationNotice';
 import type { ListingKind } from '@/lib/public-copy';
+import { AFFILIATE_REL, withBookingAffiliate } from '@/lib/affiliate';
 
 type BookingCtaButtonProps = {
   bookingUrl?: string;
   bookingDeepLinkPending?: boolean;
   officialUrl?: string;
   verificationKind?: ListingKind;
+  propertyName?: string;
+  propertyTown?: string;
 };
 
 // Booking/visit CTA priority:
@@ -18,14 +21,18 @@ export default function BookingCtaButton({
   bookingDeepLinkPending,
   officialUrl,
   verificationKind = 'stay',
+  propertyName,
+  propertyTown,
 }: BookingCtaButtonProps) {
   if (bookingUrl) {
     return (
       <div className="flex flex-col items-start gap-1.5">
         <a
-          href={bookingUrl}
+          href={withBookingAffiliate(bookingUrl)}
           target="_blank"
-          rel="sponsored nofollow noopener"
+          rel={AFFILIATE_REL}
+          data-property-name={propertyName}
+          data-property-town={propertyTown}
           className="inline-flex items-center justify-center rounded-xl bg-sage px-4 py-2.5 text-sm font-semibold text-white hover:bg-sage-dark"
         >
           View on Booking.com
@@ -41,6 +48,9 @@ export default function BookingCtaButton({
         href={officialUrl}
         target="_blank"
         rel="noopener noreferrer nofollow"
+        data-cta-type="official-website"
+        data-property-name={propertyName}
+        data-property-town={propertyTown}
         className="inline-flex items-center justify-center rounded-xl border border-sage px-4 py-2.5 text-sm font-semibold text-sage hover:bg-sage hover:text-white"
       >
         Visit official website

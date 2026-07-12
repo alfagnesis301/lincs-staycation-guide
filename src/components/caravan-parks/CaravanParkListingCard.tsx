@@ -1,6 +1,7 @@
 import type { CaravanParkListing } from '@/data/caravanParkGuides';
 import GoogleMapsLinkButton from '@/components/GoogleMapsLinkButton';
 import VerificationNotice from '@/components/VerificationNotice';
+import { AFFILIATE_REL, withBookingAffiliate } from '@/lib/affiliate';
 
 interface Props {
   listing: CaravanParkListing;
@@ -90,9 +91,11 @@ export default function CaravanParkListingCard({ listing }: Props) {
         {listing.bookingUrl ? (
           <div className="flex flex-col items-end gap-1">
             <a
-              href={listing.bookingUrl}
+              href={withBookingAffiliate(listing.bookingUrl)}
               target="_blank"
-              rel="sponsored nofollow noopener"
+              rel={AFFILIATE_REL}
+              data-property-name={listing.name}
+              data-property-town={listing.location}
               className="inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-sage-dark transition-colors"
             >
               View on Booking.com
@@ -111,6 +114,9 @@ export default function CaravanParkListingCard({ listing }: Props) {
             href={listing.sourceUrl}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            data-cta-type="official-website"
+            data-property-name={listing.name}
+            data-property-town={listing.location}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-sage hover:text-sage-dark transition-colors"
           >
             Visit official website

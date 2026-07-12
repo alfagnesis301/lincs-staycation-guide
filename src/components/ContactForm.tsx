@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
+import { siteConfig } from '@/lib/site-config';
 
 interface FormData {
   name: string;
@@ -25,6 +27,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
@@ -46,6 +49,7 @@ export default function ContactForm() {
 
     if (!validate()) return;
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
       const response = await fetch('/api/contact', {
@@ -57,15 +61,20 @@ export default function ContactForm() {
           subject: formData.subject,
           reason: formData.reason,
           message: formData.message,
+          honeypot: formData.honeypot,
         }),
       });
 
       if (response.ok) {
+        trackEvent('contact_form_submit', { reason: formData.reason });
         setIsSuccess(true);
         setFormData(initialFormData);
+      } else {
+        const data = await response.json().catch(() => null);
+        setSubmitError(data?.error ?? 'Something went wrong sending your message.');
       }
     } catch {
-      // Silently handle - form will show as not submitted
+      setSubmitError('We could not reach the server. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -189,6 +198,15 @@ export default function ContactForm() {
         />
         {errors.message && <p className="mt-1 text-xs text-red-500">{errors.message}</p>}
       </div>
+
+      {submitError && (
+        <div role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+          {submitError} You can also email us at{' '}
+          <a href={`mailto:${siteConfig.contactEmail}`} className="font-semibold underline">
+            {siteConfig.contactEmail}
+          </a>.
+        </div>
+      )}
 
       <button
         type="submit"

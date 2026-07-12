@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import VerificationNotice from '@/components/VerificationNotice';
+import { AFFILIATE_REL, withBookingAffiliate } from '@/lib/affiliate';
 import {
   bookableCaravanParks,
   getParkImage,
@@ -333,9 +334,11 @@ function ParkCard({ park }: { park: BookableCaravanPark }) {
         {hasAffiliate ? (
           <>
             <a
-              href={park.affiliateUrl}
+              href={withBookingAffiliate(park.affiliateUrl)}
               target="_blank"
-              rel="sponsored nofollow noopener"
+              rel={AFFILIATE_REL}
+              data-property-name={park.name}
+              data-property-town={park.location}
               className="inline-flex items-center justify-center text-sm font-semibold bg-sage text-white px-4 py-2 rounded-lg hover:bg-sage-dark transition-colors"
             >
               Check availability
@@ -348,7 +351,10 @@ function ParkCard({ park }: { park: BookableCaravanPark }) {
           <a
             href={park.officialUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
+            data-cta-type="official-website"
+            data-property-name={park.name}
+            data-property-town={park.location}
             className="inline-flex items-center justify-center text-sm font-semibold bg-sage text-white px-4 py-2 rounded-lg hover:bg-sage-dark transition-colors"
           >
             Visit official website

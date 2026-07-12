@@ -22,7 +22,7 @@ export default function CookiePolicyPage() {
 
       <h2>Analytics cookies</h2>
       <p>
-        We may use analytics cookies (such as Google Analytics) to understand how visitors use our website. These cookies collect anonymised data about page views, time on site, browser type and approximate location. This helps us improve the site and create better content.
+        We use Google Analytics 4 to understand how visitors use our website. These cookies collect anonymised data about page views, time on site, browser type and approximate location. Analytics cookies are only set if you choose &quot;Accept&quot; on our cookie banner — if you reject non-essential cookies, no analytics run at all.
       </p>
 
       <h2>Advertising cookies (future use)</h2>
@@ -47,7 +47,7 @@ export default function CookiePolicyPage() {
 
       <h2>Contact</h2>
       <p>
-        If you have questions about our cookie policy, please contact us at: <a href="mailto:hello@lincsstaycationguide.co.uk">hello@lincsstaycationguide.co.uk</a>
+        If you have questions about our cookie policy, please contact us at: <a href="mailto:hello@lincs-staycation-guide.co.uk">hello@lincs-staycation-guide.co.uk</a>
       </p>
     </LegalPageLayout>
   );

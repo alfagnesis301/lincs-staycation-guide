@@ -5,6 +5,7 @@ import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import MobileTabBar from '@/components/MobileTabBar';
 import CookieBanner from '@/components/CookieBanner';
+import AnalyticsProvider from '@/components/AnalyticsProvider';
 import { getSiteUrl, siteConfig } from '@/lib/site-config';
 
 const newsreader = Newsreader({
@@ -42,11 +43,18 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Places to Stay, Eat & Explore in Lincolnshire`,
     description: siteConfig.description,
+    images: [
+      {
+        url: '/images/lincolnshire/lincoln.jpg',
+        alt: 'Lincoln Cathedral and the historic city of Lincoln, Lincolnshire',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ['/images/lincolnshire/lincoln.jpg'],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },
@@ -73,7 +81,7 @@ const siteJsonLd = [
     '@type': 'Organization',
     name: siteConfig.name,
     url: SITE_URL,
-    logo: `${SITE_URL}/file.svg`,
+    email: siteConfig.contactEmail,
     sameAs: [],
     contactPoint: [
       {
@@ -107,6 +115,7 @@ export default function RootLayout({
         <SiteFooter />
         <MobileTabBar />
         <CookieBanner />
+        <AnalyticsProvider />
       </body>
     </html>
   );

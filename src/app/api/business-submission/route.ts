@@ -1,4 +1,8 @@
 import { NextResponse } from 'next/server';
+import { sendNotificationEmail, emailDeliveryConfigured } from '@/lib/email';
+
+const MAX_FIELD = 300;
+const MAX_TEXT = 5000;
 
 export async function POST(request: Request) {
   try {
@@ -16,9 +20,14 @@ export async function POST(request: Request) {
       features,
       listingInterest,
       message,
+      honeypot,
     } = body;
 
-    // Validate required fields
+    // Bots that fill the hidden field get a generic OK and are dropped.
+    if (typeof honeypot === 'string' && honeypot.trim() !== '') {
+      return NextResponse.json({ success: true, message: 'Business submission received' });
+    }
+
     if (!businessName || !contactName || !contactEmail || !category || !town || !description) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -26,7 +35,14 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate email format
+    const shortFields = [businessName, contactName, contactEmail, phone, website, category, town, address, listingInterest];
+    if (
+      shortFields.some((v) => typeof v === 'string' && v.length > MAX_FIELD) ||
+      [description, message].some((v) => typeof v === 'string' && v.length > MAX_TEXT)
+    ) {
+      return NextResponse.json({ error: 'Input too long' }, { status: 400 });
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(contactEmail)) {
       return NextResponse.json(
@@ -35,7 +51,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate URL if provided
     if (website && !/^https?:\/\/.+/.test(website)) {
       return NextResponse.json(
         { error: 'Invalid website URL' },
@@ -43,26 +58,41 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Save to database
-    // await db.businessSubmissions.create({
-    //   data: {
-    //     businessName, contactName, contactEmail, phone, website,
-    //     category, town, address, description, features, listingInterest, message,
-    //     status: 'pending',
-    //   },
-    // });
+    if (!emailDeliveryConfigured()) {
+      // Never pretend the submission was delivered when no provider is set up.
+      return NextResponse.json(
+        { error: 'Submissions are temporarily unavailable. Please email us directly.' },
+        { status: 503 }
+      );
+    }
 
-    // TODO: Send notification email to admin
-    // await sendEmail({
-    //   to: process.env.CONTACT_EMAIL,
-    //   subject: `[New Business Submission] ${businessName}`,
-    //   body: `Business: ${businessName}\nCategory: ${category}\nTown: ${town}\nContact: ${contactName} (${contactEmail})\n\n${description}`,
-    // });
-
-    console.log('Business submission:', {
-      businessName, contactName, contactEmail, phone, website,
-      category, town, address, description, features, listingInterest, message,
+    const sent = await sendNotificationEmail({
+      subject: `[Business submission] ${businessName}`,
+      replyTo: contactEmail,
+      text: [
+        `Business: ${businessName}`,
+        `Category: ${category}`,
+        `Town: ${town}`,
+        `Address: ${address ?? 'not given'}`,
+        `Website: ${website ?? 'not given'}`,
+        `Contact: ${contactName} (${contactEmail}${phone ? `, ${phone}` : ''})`,
+        `Listing interest: ${listingInterest ?? 'not given'}`,
+        `Features: ${Array.isArray(features) ? features.join(', ') : features ?? 'not given'}`,
+        '',
+        `Description:`,
+        description,
+        '',
+        `Message:`,
+        message ?? '(none)',
+      ].join('\n'),
     });
+
+    if (!sent) {
+      return NextResponse.json(
+        { error: 'We could not send your submission right now. Please email us directly.' },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({ success: true, message: 'Business submission received' });
   } catch {

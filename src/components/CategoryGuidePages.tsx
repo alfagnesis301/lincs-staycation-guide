@@ -19,6 +19,7 @@ import {
 import { natureSpotsByTown } from '@/data/nature-spots';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
 import { getPublicListingDescription, shouldShowListingVerificationNotice, type ListingKind } from '@/lib/public-copy';
+import { AFFILIATE_REL, withBookingAffiliate } from '@/lib/affiliate';
 
 type Kind = 'places-to-stay' | 'things-to-do' | 'food-drink';
 
@@ -355,15 +356,14 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
               const websiteUrl = officialWebsiteUrl(o);
               const listingBookingUrl = bookingUrl(o);
               const listingAffiliateUrl = affiliateUrl(o);
-              const ctaUrl = listingAffiliateUrl ?? listingBookingUrl ?? websiteUrl;
+              const isCommercialCta = Boolean(listingAffiliateUrl || listingBookingUrl);
+              const ctaUrl = withBookingAffiliate(listingAffiliateUrl ?? listingBookingUrl ?? websiteUrl);
               const ctaLabel = listingAffiliateUrl
                 ? 'Check availability'
                 : listingBookingUrl
                   ? 'View on Booking.com'
                   : 'Visit official website';
-              const ctaRel = listingAffiliateUrl || listingBookingUrl
-                ? 'sponsored nofollow noopener'
-                : 'noopener noreferrer';
+              const ctaRel = isCommercialCta ? AFFILIATE_REL : 'noopener noreferrer nofollow';
               const summary = itemSummary(o, kind);
               return (
                 <article key={o.id} className="rounded-2xl border border-cream-dark/60 bg-white p-5">
@@ -379,14 +379,22 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
                     <p className="text-xs text-charcoal-muted">Use official sources for live details.</p>
                     <div className="flex flex-wrap items-center gap-3">
                       {ctaUrl ? (
-                        <a
-                          href={ctaUrl}
-                          target="_blank"
-                          rel={ctaRel}
-                          className="text-sm font-semibold text-sage hover:text-sage-dark"
-                        >
-                          {ctaLabel}
-                        </a>
+                        <span className="inline-flex flex-col items-end gap-0.5">
+                          <a
+                            href={ctaUrl}
+                            target="_blank"
+                            rel={ctaRel}
+                            data-cta-type={isCommercialCta ? undefined : 'official-website'}
+                            data-property-name={o.name}
+                            data-property-town={o.town}
+                            className="text-sm font-semibold text-sage hover:text-sage-dark"
+                          >
+                            {ctaLabel}
+                          </a>
+                          {isCommercialCta ? (
+                            <span className="text-[11px] text-charcoal-muted">Affiliate link</span>
+                          ) : null}
+                        </span>
                       ) : null}
                       <GoogleMapsLinkButton
                         listing={{ name: o.name, town: o.town, googleMapsUrl: o.googleMapsUrl, location: o.location }}

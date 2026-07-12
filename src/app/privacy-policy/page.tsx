@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
 
       <h2>Contact</h2>
       <p>
-        If you have questions about this privacy policy or how we handle your data, please contact us at: <a href="mailto:hello@lincsstaycationguide.co.uk">hello@lincsstaycationguide.co.uk</a>
+        If you have questions about this privacy policy or how we handle your data, please contact us at: <a href="mailto:hello@lincs-staycation-guide.co.uk">hello@lincs-staycation-guide.co.uk</a>
       </p>
     </LegalPageLayout>
   );
