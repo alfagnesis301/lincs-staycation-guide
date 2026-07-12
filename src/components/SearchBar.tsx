@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/lib/analytics';
 import { categoryChips } from '@/data/navigation';
 import { findSearchTarget } from '@/data/searchIndex';
 
@@ -24,6 +25,7 @@ export default function SearchBar({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedQuery = query.trim();
+    if (trimmedQuery) trackEvent('search_used');
     if (onSearch) {
       onSearch(trimmedQuery);
       return;

@@ -1,32 +1,29 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { CONSENT_CHANGE_EVENT, CONSENT_STORAGE_KEY } from '@/lib/analytics';
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
+    const consent = localStorage.getItem(CONSENT_STORAGE_KEY);
+    if (!consent || consent === 'managed') {
+      // 'managed' was written by an old banner version that stored no real
+      // preference — re-ask instead of guessing.
       const timer = setTimeout(() => setIsVisible(true), 1500);
       return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
+  const storeConsent = (value: 'accepted' | 'rejected') => {
+    localStorage.setItem(CONSENT_STORAGE_KEY, value);
+    window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     setIsVisible(false);
   };
 
-  const handleReject = () => {
-    localStorage.setItem('cookie-consent', 'rejected');
-    setIsVisible(false);
-  };
-
-  const handleManage = () => {
-    localStorage.setItem('cookie-consent', 'managed');
-    setIsVisible(false);
-  };
+  const handleAccept = () => storeConsent('accepted');
+  const handleReject = () => storeConsent('rejected');
 
   if (!isVisible) return null;
 
@@ -40,7 +37,7 @@ export default function CookieBanner() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <p className="text-sm text-gray-300 flex-1 leading-relaxed">
-              We use cookies to improve your experience, understand site usage and support future advertising and affiliate features. You can accept or manage your preferences.{' '}
+              We use optional analytics cookies to understand how the site is used. No analytics run unless you accept.{' '}
               <a href="/cookie-policy" className="text-coast-light underline hover:text-white">
                 Learn more
               </a>
@@ -48,15 +45,9 @@ export default function CookieBanner() {
             <div className="flex items-center gap-2 flex-shrink-0">
               <button
                 onClick={handleReject}
-                className="px-4 py-2 text-xs font-medium text-gray-400 hover:text-white border border-gray-600 hover:border-gray-400 rounded-lg transition-colors"
+                className="px-4 py-2 text-xs font-semibold text-gray-200 hover:text-white border border-gray-500 hover:border-gray-300 rounded-lg transition-colors"
               >
                 Reject non-essential
-              </button>
-              <button
-                onClick={handleManage}
-                className="px-4 py-2 text-xs font-medium text-gray-300 hover:text-white border border-gray-600 hover:border-gray-400 rounded-lg transition-colors"
-              >
-                Manage preferences
               </button>
               <button
                 onClick={handleAccept}
