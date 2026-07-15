@@ -227,10 +227,6 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
         '@type': 'Organization',
         name: 'Lincs Staycation Guide',
         url: SITE_URL,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${SITE_URL}/logo.png`,
-        },
       },
       hasPart: [
         {
@@ -274,8 +270,13 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
       '@type': 'ImageObject',
       contentUrl: `${SITE_URL}${credit.localPath}`,
       name: credit.title,
-      creator: credit.author,
+      creator: {
+        '@type': 'Person',
+        name: credit.author,
+      },
+      copyrightNotice: `© ${credit.author}, ${credit.licence}`,
       license: credit.licenceUrl,
+      acquireLicensePage: credit.sourceUrl,
       creditText: `${credit.author} via ${credit.source}`,
     },
     {
