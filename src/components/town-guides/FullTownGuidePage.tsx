@@ -12,6 +12,7 @@ import {
   type PlaceToStay,
 } from '@/data/locationGuides';
 import { getTownGuideProfile, type TownAttraction } from '@/data/townGuideProfiles';
+import { getTownPhotos } from '@/data/townPhotos';
 import { getGoogleMapsLink } from '@/lib/googleMaps';
 import { AFFILIATE_REL, isBookingComUrl, withBookingAffiliate } from '@/lib/affiliate';
 import AffiliateDisclosureSmall from '@/components/caravan-parks/AffiliateDisclosureSmall';
@@ -198,7 +199,10 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
   const related = getRelatedLocationGuides(slug, 4);
   const heroSrc = town.image ?? credit.localPath;
   const natureSpots = natureSpotsByTown[town.slug] ?? [];
-  const visibleStays = (locationGuide.placesToStay as PlaceToStay[]).slice(0, 5);
+  const galleryPhotos = getTownPhotos(slug)
+    .map((photo) => ({ photo, credit: getImageCredit(photo.creditId) }))
+    .filter((item) => item.credit != null);
+  const visibleStays = (locationGuide.placesToStay as PlaceToStay[]).slice(0, 6);
   const visibleParks = (caravanGuide?.parks ?? []).slice(0, 5);
   const visibleFood = (locationGuide.foodDrink as FoodAndDrinkOption[]).slice(0, 5);
   const showStayVerificationSummary =
@@ -279,6 +283,20 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
       acquireLicensePage: credit.sourceUrl,
       creditText: `${credit.author} via ${credit.source}`,
     },
+    ...galleryPhotos.map(({ photo, credit: photoCredit }) => ({
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      contentUrl: `${SITE_URL}${photo.src}`,
+      name: photoCredit!.title,
+      creator: {
+        '@type': 'Person',
+        name: photoCredit!.author,
+      },
+      copyrightNotice: `© ${photoCredit!.author}, ${photoCredit!.licence}`,
+      license: photoCredit!.licenceUrl,
+      acquireLicensePage: photoCredit!.sourceUrl,
+      creditText: `${photoCredit!.author} via ${photoCredit!.source}`,
+    })),
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -377,6 +395,32 @@ export default function FullTownGuidePage({ slug }: { slug: string }) {
           {town.extendedDescription.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
       </Section>
+
+      {galleryPhotos.length > 0 ? (
+        <Section id="photo-highlights" eyebrow="Gallery" title={`${town.name} in pictures`}>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {galleryPhotos.map(({ photo, credit }) => (
+              <figure key={photo.creditId} className="overflow-hidden rounded-2xl border border-cream-dark/60 bg-white shadow-sm">
+                <div className="relative aspect-[4/3] bg-cream">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="px-4 py-3 text-xs leading-relaxed text-charcoal-muted">
+                  {photo.caption}. Photo:{' '}
+                  <a href={credit!.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">{credit!.author}</a>{' '}
+                  via {credit!.source} - {credit!.licence} - <Link href={`/image-credits#${credit!.id}`} className="underline">Full credits</Link>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      ) : null}
 
       <Section id="itineraries" eyebrow="Plans" title={`Suggested itineraries for ${town.name}`}>
         <div className="grid gap-5 lg:grid-cols-2">

@@ -174,3 +174,95 @@ Modifications: Resized to 1200px wide, converted to progressive JPEG
 ---
 
 *Last updated: 5 May 2026*
+
+## /towns/ (town guide photo highlights, added 15 July 2026)
+
+---
+
+Image: Brayford Pool waterfront, Lincoln
+Author: Oliver Mills / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Brayford_Pool,_Lincoln_-_geograph.org.uk_-_5894120.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Lincoln Castle, west gate
+Author: Stephen Craven / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Lincoln_Castle,_west_gate_-_geograph.org.uk_-_8008961.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Skegness beach and pier
+Author: Mat Fascione / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Skegness_beach_and_pier_-_geograph.org.uk_-_3800138.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Gibraltar Point National Nature Reserve
+Author: Christopher Hilton / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Gibraltar_Point_National_Nature_Reserve_-_geograph.org.uk_-_3616528.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: The West front of Burghley House, near Stamford
+Author: Derek Voller / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:The_West_front_of_Burghley_House,_near_Stamford_-_geograph.org.uk_-_3467632.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Stamford, the Welland and the meadows
+Author: Christopher Hilton / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Stamford,_the_Welland_and_the_meadows,_upstream_of_the_town_-_geograph.org.uk_-_3376037.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Market Place, Boston, Lincolnshire
+Author: David Hallam-Jones / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Market_Place,_Boston,_Lincs_(geograph_4218494).jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Maud Foster Windmill, Boston
+Author: David P Howard / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Maud_Foster_Windmill,_Boston_-_geograph.org.uk_-_4375702.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Market Place, Louth
+Author: Colin Smith / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Louth_-_Market_Place_-_geograph.org.uk_-_8032270.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
+
+---
+
+Image: Westgate, Louth
+Author: Colin Smith / Geograph Britain and Ireland
+Source: Wikimedia Commons
+Licence: CC BY-SA 2.0
+Source URL: https://commons.wikimedia.org/wiki/File:Louth_-_Westgate_-_geograph.org.uk_-_8031041.jpg
+Modifications: Resized to 1100px wide, optimised as progressive JPEG
