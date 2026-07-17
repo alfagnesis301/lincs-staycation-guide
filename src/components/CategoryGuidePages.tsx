@@ -290,16 +290,6 @@ export function LocationCategoryPage({ guide, kind }: { guide: LocationGuideBase
         </div>
       </section>
 
-      {guide.sourceStatus !== 'verified' ? (
-        <section className="bg-white py-6">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <VerificationNotice>
-              This location guide is still in editorial review. Check official sources before booking, travelling or relying on facilities.
-            </VerificationNotice>
-          </div>
-        </section>
-      ) : null}
-
       <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-4 sm:grid-cols-4">
