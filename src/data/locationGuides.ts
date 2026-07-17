@@ -18,7 +18,7 @@ export const locationGuides = [
     "slug": "lincoln",
     "regionType": "City",
     "contentAngle": "History, cathedral city breaks and practical bases near the historic centre.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -160,6 +160,34 @@ export const locationGuides = [
         "needsVerification": false,
         "officialWebsiteUrl": "https://www.marstonsinns.co.uk/inns/woodcocks-hotel-lincoln/",
         "bookingUrl": "https://www.booking.com/hotel/gb/the-woodcocks-lodge.html"
+      },
+      {
+        "id": "doubletree-by-hilton-lincoln",
+        "name": "DoubleTree by Hilton Lincoln",
+        "slug": "doubletree-by-hilton-lincoln",
+        "town": "Lincoln",
+        "type": "Hotel",
+        "bestFor": "A modern waterfront hotel on Brayford Wharf North with a rooftop restaurant and views towards Lincoln Cathedral. Its position suits city breaks combining the waterside, university quarter and rail station, with the historic uphill core a steady walk away. Check parking options, room categories and current availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "DoubleTree by Hilton Lincoln official page",
+            "url": "https://www.hilton.com/en/hotels/huylndi-doubletree-lincoln/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "DoubleTree by Hilton Lincoln Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/doubletree-by-hilton-lincoln.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.hilton.com/en/hotels/huylndi-doubletree-lincoln/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/doubletree-by-hilton-lincoln.html"
       }
     ],
     "thingsToDo": [
@@ -363,7 +391,7 @@ export const locationGuides = [
     "slug": "skegness",
     "regionType": "Coast",
     "contentAngle": "Classic seaside holidays, family coastal breaks and coastal entertainment.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -505,6 +533,34 @@ export const locationGuides = [
         "needsVerification": false,
         "officialWebsiteUrl": "https://fountaindaleguesthouse.co.uk/",
         "bookingUrl": "https://www.booking.com/hotel/gb/the-fountaindale-skegness.html"
+      },
+      {
+        "id": "the-vine-hotel-skegness",
+        "name": "The Vine Hotel",
+        "slug": "the-vine-hotel-skegness",
+        "town": "Skegness",
+        "type": "Hotel",
+        "bestFor": "An 18th-century hotel set among gardens in the quieter Seacroft area of Skegness, around fifteen minutes' walk from the beach and close to Seacroft Golf Club. Its restaurant, bars and leafy setting suit visitors who want a calmer base than the central seafront. Confirm dining times, parking and current availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Vine Hotel official website",
+            "url": "https://thevinehotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Vine Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/vinehotel.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://thevinehotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/vinehotel.html"
       }
     ],
     "thingsToDo": [
@@ -680,7 +736,7 @@ export const locationGuides = [
     "slug": "stamford",
     "regionType": "Market town",
     "contentAngle": "Georgian town breaks, Burghley House, Rutland Water and countryside weekends.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -717,20 +773,27 @@ export const locationGuides = [
         "slug": "the-george-hotel-of-stamford",
         "town": "Stamford",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The George Hotel of Stamford as a hotel base in Stamford for historic market-town breaks, local dining and nearby countryside exploring. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A celebrated former coaching inn on the southern approach to Stamford, trading for centuries, with 45 individually designed rooms, an oak-panelled restaurant and gardens. It suits slower Georgian-townscape weekends a short drive from Burghley House. Confirm dining reservations, parking and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "official-site-only",
+        "bookingStatus": "booking-confirmed",
         "sourceUrls": [
           {
-            "label": "The George of Stamford official website",
+            "label": "The George Hotel of Stamford official website",
             "url": "https://www.georgehotelofstamford.com/",
             "type": "Official website",
-            "checkedDate": "2026-05-24"
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The George Hotel of Stamford Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-george-of-stamford.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
           }
         ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
-        "officialWebsiteUrl": "https://www.georgehotelofstamford.com/"
+        "officialWebsiteUrl": "https://www.georgehotelofstamford.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-george-of-stamford.html"
       },
       {
         "id": "the-william-cecil",
@@ -750,7 +813,7 @@ export const locationGuides = [
           },
           {
             "label": "The William Cecil Booking.com property page",
-            "url": "https://www.booking.com/hotel/gb/the-william-cecil.en-gb.html",
+            "url": "https://www.booking.com/hotel/gb/the-william-cecil.html",
             "type": "Booking.com",
             "checkedDate": "2026-05-24"
           }
@@ -758,7 +821,7 @@ export const locationGuides = [
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
         "officialWebsiteUrl": "https://www.woodford.group/williamcecil",
-        "bookingUrl": "https://www.booking.com/hotel/gb/the-william-cecil.en-gb.html"
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-william-cecil.html"
       },
       {
         "id": "the-bull-and-swan",
@@ -976,7 +1039,7 @@ export const locationGuides = [
     "slug": "louth",
     "regionType": "Wolds",
     "contentAngle": "Lincolnshire Wolds walking, Georgian market town stays and coastal access.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -1018,7 +1081,7 @@ export const locationGuides = [
           },
           {
             "label": "Best Western Plus Kenwick Park Hotel Booking.com property page",
-            "url": "https://www.booking.com/hotel/gb/kenwick-parkhotel.en-gb.html",
+            "url": "https://www.booking.com/hotel/gb/kenwick-parkhotel.html",
             "type": "Booking.com",
             "checkedDate": "2026-05-24"
           }
@@ -1026,7 +1089,7 @@ export const locationGuides = [
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
         "officialWebsiteUrl": "https://www.bestwestern.com/en_US/book/louth/hotel-rooms/best-western-plus-kenwick-park-hotel/propertyCode.83858.html",
-        "bookingUrl": "https://www.booking.com/hotel/gb/kenwick-parkhotel.en-gb.html"
+        "bookingUrl": "https://www.booking.com/hotel/gb/kenwick-parkhotel.html"
       },
       {
         "id": "brackenborough-hotel",
@@ -1046,7 +1109,7 @@ export const locationGuides = [
           },
           {
             "label": "Brackenborough Hotel Booking.com property page",
-            "url": "https://www.booking.com/hotel/gb/brackenborough-arms.en-gb.html",
+            "url": "https://www.booking.com/hotel/gb/brackenborough-arms.html",
             "type": "Booking.com",
             "checkedDate": "2026-05-24"
           }
@@ -1054,7 +1117,7 @@ export const locationGuides = [
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
         "officialWebsiteUrl": "https://brackenboroughlakesresort.co.uk/",
-        "bookingUrl": "https://www.booking.com/hotel/gb/brackenborough-arms.en-gb.html"
+        "bookingUrl": "https://www.booking.com/hotel/gb/brackenborough-arms.html"
       },
       {
         "id": "the-masons-arms",
@@ -1074,7 +1137,7 @@ export const locationGuides = [
           },
           {
             "label": "The Masons Arms Booking.com property page",
-            "url": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.en-gb.html",
+            "url": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.html",
             "type": "Booking.com",
             "checkedDate": "2026-05-24"
           }
@@ -1082,7 +1145,7 @@ export const locationGuides = [
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
         "officialWebsiteUrl": "https://www.the-masons-arms.com/",
-        "bookingUrl": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.en-gb.html"
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-masons-arms-louth1.html"
       },
       {
         "id": "the-kings-head",
@@ -1102,7 +1165,7 @@ export const locationGuides = [
           },
           {
             "label": "The Kings Head Booking.com property page",
-            "url": "https://www.booking.com/hotel/gb/the-kings-head-louth.en-gb.html",
+            "url": "https://www.booking.com/hotel/gb/the-kings-head-louth.html",
             "type": "Booking.com",
             "checkedDate": "2026-05-24"
           }
@@ -1110,7 +1173,28 @@ export const locationGuides = [
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
         "needsVerification": false,
         "officialWebsiteUrl": "https://www.kingsheadlouth.co.uk/",
-        "bookingUrl": "https://www.booking.com/hotel/gb/the-kings-head-louth.en-gb.html"
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-kings-head-louth.html"
+      },
+      {
+        "id": "the-priory-hotel-louth",
+        "name": "The Priory Hotel",
+        "slug": "the-priory-hotel-louth",
+        "town": "Louth",
+        "type": "Hotel",
+        "bestFor": "A characterful hotel in a Gothic-style listed building on Eastgate, within walking distance of Louth town centre, with gardens, a bar and free parking. It suits food-and-market weekends in the Wolds capital. Check breakfast service, room styles and current availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Priory Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-priory-louth.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-priory-louth.html"
       }
     ],
     "thingsToDo": [
@@ -1176,7 +1260,7 @@ export const locationGuides = [
         "name": "Lincolnshire Wolds Railway",
         "slug": "lincolnshire-wolds-railway",
         "town": "Louth",
-        "category": "Nature",
+        "category": "Heritage",
         "shortDescription": "Lincolnshire Wolds Railway is a nature or walking option to compare around Louth for a quieter outdoor stop during Wolds market-town visits and quieter short breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
         "officialWebsiteUrl": "https://www.lincolnshirewoldsrailway.co.uk/",
         "sourceUrls": [
@@ -1295,7 +1379,7 @@ export const locationGuides = [
     "slug": "boston",
     "regionType": "Fens",
     "contentAngle": "Market town breaks, countryside retreats and access to The Wash.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -1304,12 +1388,27 @@ export const locationGuides = [
         "slug": "the-white-hart-hotel-boston",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The White Hart Hotel, Boston as a hotel base in Boston for heritage stops, work trips and wider south Lincolnshire itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A 19th-century coaching inn on the River Witham in the centre of Boston, a short walk from St Botolph's Church and the market place. Its riverside position works well for exploring the town on foot, with an eatery and coffee house on site. Confirm current room details, parking and availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The White Hart Hotel, Boston official website",
+            "url": "https://whitehartboston.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The White Hart Hotel, Boston Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/white-hart-hotel.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://whitehartboston.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/white-hart-hotel.html"
       },
       {
         "id": "boston-west-hotel",
@@ -1317,12 +1416,27 @@ export const locationGuides = [
         "slug": "boston-west-hotel",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Boston West Hotel as a hotel base in Boston for heritage stops, work trips and wider south Lincolnshire itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A countryside hotel at the Boston West golf and leisure site on the western edge of town, with a driving range and nine-hole course. It suits visitors who want parking, space and a quieter setting a short drive from central Boston. Check golf packages, dining and room availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Boston West Hotel official website",
+            "url": "https://www.awayresorts.co.uk/parks/lincolnshire/appletree/hotel/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Boston West Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/boston-west.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.awayresorts.co.uk/parks/lincolnshire/appletree/hotel/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/boston-west.html"
       },
       {
         "id": "the-old-kings-head",
@@ -1330,12 +1444,27 @@ export const locationGuides = [
         "slug": "the-old-kings-head",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Old Kings Head as a hotel base in Boston for heritage stops, work trips and wider south Lincolnshire itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A restored 16th-century Grade II listed building in the village of Kirton, around ten minutes' drive south of Boston. Its nine individually styled rooms suit visitors who prefer a small heritage property to a town-centre hotel. Confirm opening arrangements, parking and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Old Kings Head official website",
+            "url": "https://www.theoldkingshead.com/en",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Old Kings Head Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-old-kings-head.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.theoldkingshead.com/en",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-old-kings-head.html"
       },
       {
         "id": "quayside-hotel-and-bar",
@@ -1343,12 +1472,27 @@ export const locationGuides = [
         "slug": "quayside-hotel-and-bar",
         "town": "Boston",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Quayside Hotel & Bar as a hotel base in Boston for heritage stops, work trips and wider south Lincolnshire itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A Grade II listed hotel and bar on London Road beside Boston's old port area, long associated with the town's fishing heritage. Thirteen rooms in a walkable riverside spot make it a practical base for town-centre visits. Check room types, food service and availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Quayside Hotel & Bar official website",
+            "url": "https://www.thequaysidehotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Quayside Hotel & Bar Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/quayside-amp-bar.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.thequaysidehotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/quayside-amp-bar.html"
       },
       {
         "id": "the-kings-arms",
@@ -1356,12 +1500,48 @@ export const locationGuides = [
         "slug": "the-kings-arms",
         "town": "Boston",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Kings Arms as an inn base in Boston for heritage stops, work trips and wider south Lincolnshire itineraries. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A Grade II listed pub with five en-suite rooms on Horncastle Road, about a quarter of a mile from Boston town centre near the Maud Foster Windmill. It suits visitors who want a friendly pub stay within walking distance of the Stump. Confirm breakfast arrangements, parking and current prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Kings Arms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-king-39-s-arms-boston.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-king-39-s-arms-boston.html"
+      },
+      {
+        "id": "supreme-inn-boston",
+        "name": "Supreme Inn Boston",
+        "slug": "supreme-inn-boston",
+        "town": "Boston",
+        "type": "Inn",
+        "bestFor": "A modern roadside inn at Bicker Bar on the A17, around eight miles south-west of Boston. Its location suits drivers touring south Lincolnshire who want practical en-suite rooms, on-site dining and free parking rather than a town-centre base. Check current room details, food service times and availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Supreme Inns official website",
+            "url": "https://supremeinns.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Supreme Inn Boston Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/supreme-inns.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://supremeinns.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/supreme-inns.html"
       }
     ],
     "thingsToDo": [
@@ -1427,11 +1607,19 @@ export const locationGuides = [
         "name": "RSPB Frampton Marsh",
         "slug": "rspb-frampton-marsh",
         "town": "Boston",
-        "category": "Other",
+        "category": "Wildlife",
         "shortDescription": "RSPB Frampton Marsh is a visitor stop to compare in Boston while building heritage stops, market-place visits and south Lincolnshire routes. Check current opening times, facilities, access and any booking requirements directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "RSPB Frampton Marsh official page",
+            "url": "https://www.rspb.org.uk/days-out/reserves/frampton-marsh",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.rspb.org.uk/days-out/reserves/frampton-marsh"
       }
     ],
     "foodDrink": [
@@ -1452,10 +1640,18 @@ export const locationGuides = [
         "slug": "the-white-hart-restaurant",
         "town": "Boston",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The White Hart Boston official website",
+            "url": "https://whitehartboston.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A restaurant in Boston to add to a food shortlist while planning time around heritage stops, market-place visits and south Lincolnshire routes. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
+        "needsVerification": false,
+        "description": "A restaurant in Boston to add to a food shortlist while planning time around heritage stops, market-place visits and south Lincolnshire routes. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling.",
+        "officialWebsiteUrl": "https://whitehartboston.com/"
       },
       {
         "id": "the-ropers-arms",
@@ -1498,7 +1694,7 @@ export const locationGuides = [
     "slug": "grantham",
     "regionType": "Countryside",
     "contentAngle": "A1 stopovers, Belton House, Belvoir Castle and South Lincolnshire breaks.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -1507,12 +1703,27 @@ export const locationGuides = [
         "slug": "angel-and-royal-hotel",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Angel and Royal Hotel as a hotel base in Grantham for short stays, work trips and stops along a wider Lincolnshire route. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "One of England's oldest coaching inns, trading on Grantham High Street since the medieval period, with 31 individually styled bedrooms. It suits heritage-minded visitors who want to stay in the town centre near St Wulfram's Church. Confirm parking arrangements, current room details and availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Angel and Royal Hotel official website",
+            "url": "https://www.angelandroyal.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Angel and Royal Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-angel-and-royal-hotel.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.angelandroyal.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-angel-and-royal-hotel.html"
       },
       {
         "id": "belton-woods-hotel-spa-and-golf-resort",
@@ -1520,12 +1731,27 @@ export const locationGuides = [
         "slug": "belton-woods-hotel-spa-and-golf-resort",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Belton Woods Hotel, Spa & Golf Resort as a hotel base in Grantham for short stays, work trips and stops along a wider Lincolnshire route. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A countryside resort hotel in 475 acres of grounds north of Grantham, with golf courses, a spa and leisure facilities. It suits golf breaks and family stays where on-site activities matter more than a town-centre location. Check spa access, golf bookings and room availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Belton Woods Hotel, Spa & Golf Resort official website",
+            "url": "https://www.beltonwoods.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Belton Woods Hotel, Spa & Golf Resort Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/belton-woods.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.beltonwoods.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/belton-woods.html"
       },
       {
         "id": "the-avenue-hotel",
@@ -1533,12 +1759,27 @@ export const locationGuides = [
         "slug": "the-avenue-hotel",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Avenue Hotel as a hotel base in Grantham for short stays, work trips and stops along a wider Lincolnshire route. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A family-run guest house on Avenue Road, a short walk from Grantham town centre and the railway station. It suits visitors who want a practical, affordable base with parking for country-house day trips to Belton and Belvoir. Confirm breakfast options, check-in times and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Avenue Hotel official website",
+            "url": "https://www.avenuehotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Avenue Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-avenue-grantham.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.avenuehotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-avenue-grantham.html"
       },
       {
         "id": "the-barn-hotel-and-spa",
@@ -1546,12 +1787,27 @@ export const locationGuides = [
         "slug": "the-barn-hotel-and-spa",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Barn Hotel & Spa as a hotel base in Grantham for short stays, work trips and stops along a wider Lincolnshire route. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A converted barn hotel in Marston, about a mile from the A1 and ten minutes north of Grantham, now part of the Sure Hotel Collection by Best Western. An indoor pool, sauna and treatment rooms suit spa-led stays outside town. Check spa opening, dining and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Barn Hotel & Spa official website",
+            "url": "https://theoldebarnhotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Barn Hotel & Spa Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-olde-barn-hotel-sure-hotel-collection-by-best-western.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://theoldebarnhotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-olde-barn-hotel-sure-hotel-collection-by-best-western.html"
       },
       {
         "id": "urban-hotel-grantham",
@@ -1559,12 +1815,27 @@ export const locationGuides = [
         "slug": "urban-hotel-grantham",
         "town": "Grantham",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Urban Hotel Grantham as a hotel base in Grantham for short stays, work trips and stops along a wider Lincolnshire route. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A hotel on Swingbridge Road on the southern side of Grantham with a pool, gym and on-site restaurant. It suits visitors who want leisure facilities and free parking within a short drive of the town centre and the A1. Confirm leisure access, room types and current prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Urban Hotel Grantham official website",
+            "url": "https://www.urbanhotelgrantham.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Urban Hotel Grantham Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/urban-lincolnshire.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.urbanhotelgrantham.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/urban-lincolnshire.html"
       }
     ],
     "thingsToDo": [
@@ -1575,9 +1846,17 @@ export const locationGuides = [
         "town": "Grantham",
         "category": "Historic site",
         "shortDescription": "Belton House is a heritage-focused stop to consider in Grantham when adding local history to short stays, route stops and A1 corridor trips. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Belton House National Trust page",
+            "url": "https://www.nationaltrust.org.uk/visit/nottinghamshire-lincolnshire/belton-estate",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.nationaltrust.org.uk/visit/nottinghamshire-lincolnshire/belton-estate"
       },
       {
         "id": "belvoir-castle",
@@ -1586,9 +1865,17 @@ export const locationGuides = [
         "town": "Grantham",
         "category": "Historic site",
         "shortDescription": "Belvoir Castle is a heritage-focused stop to consider in Grantham when adding local history to short stays, route stops and A1 corridor trips. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Belvoir Castle official website",
+            "url": "https://www.belvoircastle.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.belvoircastle.com/"
       },
       {
         "id": "wyndham-park",
@@ -1608,9 +1895,17 @@ export const locationGuides = [
         "town": "Grantham",
         "category": "Museum",
         "shortDescription": "Grantham Museum is a museum or indoor attraction to consider in Grantham for local history, culture or a weather-flexible stop during short stays, route stops and A1 corridor trips. Check current opening times, admission, facilities and accessibility directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Grantham Museum official website",
+            "url": "https://www.granthammuseum.org.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.granthammuseum.org.uk/"
       }
     ],
     "foodDrink": [
@@ -1677,7 +1972,7 @@ export const locationGuides = [
     "slug": "spalding",
     "regionType": "Fens",
     "contentAngle": "South Holland, the Fens, gardens and riverside market town breaks.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -1686,12 +1981,27 @@ export const locationGuides = [
         "slug": "tulip-queen-spalding-by-marston-s-inns",
         "town": "Spalding",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing Tulip Queen, Spalding by Marston's Inns as an inn base in Spalding for relaxed Fenland stays, local gardens and south Lincolnshire short breaks. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A purpose-built Marston's inn beside its own family pub-restaurant on the edge of Spalding. It suits visitors who want predictable chain-style rooms, easy parking and food on site while exploring the south Lincolnshire fens. Check family room options and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Tulip Queen, Spalding by Marston's Inns official website",
+            "url": "https://marstonsinns.co.uk/inns/tulip-queen-hotel-spalding/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Tulip Queen, Spalding by Marston's Inns Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/tulip-queen-by-marston-39-s-inns.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://marstonsinns.co.uk/inns/tulip-queen-hotel-spalding/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/tulip-queen-by-marston-39-s-inns.html"
       },
       {
         "id": "woodhouse-farm-lodge",
@@ -1699,12 +2009,20 @@ export const locationGuides = [
         "slug": "woodhouse-farm-lodge",
         "town": "Spalding",
         "type": "B&B",
-        "bestFor": "Useful for visitors comparing Woodhouse Farm Lodge as a B&B base in Spalding for relaxed Fenland stays, local gardens and south Lincolnshire short breaks. Confirm current room details, breakfast arrangements, availability, parking, accessibility and cancellation terms directly before booking.",
+        "bestFor": "A rural lodge stay outside Spalding with gardens, a shared lounge and an indoor pool. It suits couples and families who prefer a countryside setting within a short drive of Springfields and the town centre. Confirm pool access, breakfast arrangements and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Woodhouse Farm Lodge Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/woodhouse-farm-lodge.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/woodhouse-farm-lodge.html"
       },
       {
         "id": "the-red-lion-hotel",
@@ -1712,12 +2030,20 @@ export const locationGuides = [
         "slug": "the-red-lion-hotel",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Red Lion Hotel as a hotel base in Spalding for relaxed Fenland stays, local gardens and south Lincolnshire short breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An 18th-century coaching inn on the Market Place in central Spalding, refurbished and family run, with seventeen en-suite rooms. Its position suits visitors exploring the town, riverside and weekly markets on foot. Check pet policies, parking and current room details directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Red Lion Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-red-lion-spalding.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-red-lion-spalding.html"
       },
       {
         "id": "woodlands-hotel",
@@ -1725,12 +2051,27 @@ export const locationGuides = [
         "slug": "woodlands-hotel",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Woodlands Hotel as a hotel base in Spalding for relaxed Fenland stays, local gardens and south Lincolnshire short breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An Edwardian house hotel on Pinchbeck Road, around ten minutes' walk from Spalding town centre, with a patio garden and free parking. It suits quieter breaks and garden-trail visits in bulb country. Confirm breakfast times, room choices and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Woodlands Hotel official website",
+            "url": "https://woodlandshotelspalding.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Woodlands Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/woodlands-spalding.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://woodlandshotelspalding.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/woodlands-spalding.html"
       },
       {
         "id": "cley-hall",
@@ -1738,12 +2079,27 @@ export const locationGuides = [
         "slug": "cley-hall",
         "town": "Spalding",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Cley Hall as a hotel base in Spalding for relaxed Fenland stays, local gardens and south Lincolnshire short breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A Georgian Grade II listed house overlooking the River Welland, a few minutes on foot from central Spalding, with gardens, a terrace and a bar-lounge. It suits visitors who want period character on the riverside. Check dining arrangements, parking and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Cley Hall official website",
+            "url": "https://www.cleyhall.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Cley Hall Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/cley-hall.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.cleyhall.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/cley-hall.html"
       }
     ],
     "thingsToDo": [
@@ -1754,9 +2110,17 @@ export const locationGuides = [
         "town": "Spalding",
         "category": "Museum",
         "shortDescription": "Ayscoughfee Hall Museum and Gardens is a museum or indoor attraction to consider in Spalding for local history, culture or a weather-flexible stop during Fenland visits, gardens and countryside days. Check current opening times, admission, facilities and accessibility directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Ayscoughfee Hall official page",
+            "url": "https://www.sholland.gov.uk/ayscoughfee",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.sholland.gov.uk/ayscoughfee"
       },
       {
         "id": "springfields-outlet-shopping-and-leisure",
@@ -1765,9 +2129,17 @@ export const locationGuides = [
         "town": "Spalding",
         "category": "Shopping",
         "shortDescription": "Springfields Outlet Shopping & Leisure is a shopping or browsing stop to consider in Spalding as part of Fenland visits, gardens and countryside days. Opening times, market days and individual business hours can vary, so check current details before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Springfields Outlet official website",
+            "url": "https://springfieldsshopping.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://springfieldsshopping.co.uk/"
       },
       {
         "id": "chain-bridge-forge",
@@ -1785,7 +2157,7 @@ export const locationGuides = [
         "name": "Baytree Owl and Wildlife Centre",
         "slug": "baytree-owl-and-wildlife-centre",
         "town": "Spalding",
-        "category": "Nature",
+        "category": "Wildlife",
         "shortDescription": "Baytree Owl and Wildlife Centre is a nature or walking option to compare around Spalding for a quieter outdoor stop during Fenland visits, gardens and countryside days. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
@@ -1856,7 +2228,7 @@ export const locationGuides = [
     "slug": "sleaford",
     "regionType": "Countryside",
     "contentAngle": "Central Lincolnshire bases, Tattershall, aviation heritage and countryside visits.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -1865,12 +2237,27 @@ export const locationGuides = [
         "slug": "the-solo",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The SOLO as a hotel base in Sleaford for market-town stays, local heritage stops and rail-linked Lincolnshire plans. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A boutique hotel in the former bank chambers in the heart of Sleaford, opened in 2021 with eight rooms above its own bistro bar. It suits town-centre stays near the station, The Hub and the River Slea. Confirm bar opening, breakfast options and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The SOLO official website",
+            "url": "https://www.thesolo.bar/chambers",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The SOLO Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/no-1-bank-chambers.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.thesolo.bar/chambers",
+        "bookingUrl": "https://www.booking.com/hotel/gb/no-1-bank-chambers.html"
       },
       {
         "id": "marquis-of-granby",
@@ -1878,12 +2265,20 @@ export const locationGuides = [
         "slug": "marquis-of-granby",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Marquis of Granby as a hotel base in Sleaford for market-town stays, local heritage stops and rail-linked Lincolnshire plans. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A traditional inn on Northgate in central Sleaford with a garden, bar and restaurant below its guest rooms. It suits visitors who want a walkable pub base for the town's heritage stops and the Sleaford Navigation. Check food service days, parking and current room details directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Marquis of Granby Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/marquis-of-granby-lincoln.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/marquis-of-granby-lincoln.html"
       },
       {
         "id": "the-finch-hatton-arms",
@@ -1891,12 +2286,27 @@ export const locationGuides = [
         "slug": "the-finch-hatton-arms",
         "town": "Sleaford",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Finch Hatton Arms as an inn base in Sleaford for market-town stays, local heritage stops and rail-linked Lincolnshire plans. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A former hunting lodge turned country inn in the village of Ewerby, around four miles east of Sleaford. Its restaurant, garden and quiet village setting suit countryside breaks over town-centre convenience. Confirm dining times, room types and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Finch Hatton Arms official website",
+            "url": "https://thefinchhatton.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Finch Hatton Arms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-finch-hatton-arms.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://thefinchhatton.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-finch-hatton-arms.html"
       },
       {
         "id": "the-mallards",
@@ -1904,12 +2314,20 @@ export const locationGuides = [
         "slug": "the-mallards",
         "town": "Sleaford",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Mallards as a hotel base in Sleaford for market-town stays, local heritage stops and rail-linked Lincolnshire plans. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A family-run hotel at Eastgate in Sleaford town centre with eight en-suite rooms, including ground-floor and family options. Its position suits rail arrivals and flat walks along the River Slea. Check breakfast arrangements, accessibility details and current prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Mallards Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-mallards-lincolnshire.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-mallards-lincolnshire.html"
       },
       {
         "id": "riverside-guest-house",
@@ -1917,12 +2335,20 @@ export const locationGuides = [
         "slug": "riverside-guest-house",
         "town": "Sleaford",
         "type": "Guest house",
-        "bestFor": "A guest house option for visitors to Sleaford.",
+        "bestFor": "A small guest house on West Banks beside the River Slea, a short stroll from Sleaford's centre. En-suite rooms, a private car park and continental breakfast suit walkers and low-key overnight stops. Confirm room availability, parking and check-in times directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Riverside Guest House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/riverside-guest-house-sleaford.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/riverside-guest-house-sleaford.html"
       }
     ],
     "thingsToDo": [
@@ -1931,18 +2357,26 @@ export const locationGuides = [
         "name": "Hub - National Centre for Craft and Design",
         "slug": "hub-national-centre-for-craft-and-design",
         "town": "Sleaford",
-        "category": "Other",
+        "category": "Museum",
         "shortDescription": "Hub - National Centre for Craft and Design is a visitor stop to compare in Sleaford while building market-town stops, rail-linked visits and local heritage routes. Check current opening times, facilities, access and any booking requirements directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Hub Sleaford official website",
+            "url": "https://hub-sleaford.org.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://hub-sleaford.org.uk/"
       },
       {
         "id": "cogglesford-watermill",
         "name": "Cogglesford Watermill",
         "slug": "cogglesford-watermill",
         "town": "Sleaford",
-        "category": "Other",
+        "category": "Heritage",
         "shortDescription": "Cogglesford Watermill is a visitor stop to compare in Sleaford while building market-town stops, rail-linked visits and local heritage routes. Check current opening times, facilities, access and any booking requirements directly before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
@@ -1955,9 +2389,17 @@ export const locationGuides = [
         "town": "Sleaford",
         "category": "Historic site",
         "shortDescription": "Heckington Windmill is a heritage-focused stop to consider in Sleaford when adding local history to market-town stops, rail-linked visits and local heritage routes. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Heckington Windmill official website",
+            "url": "https://www.heckingtonwindmill.org.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.heckingtonwindmill.org.uk/"
       },
       {
         "id": "cranwell-aviation-heritage-museum",
@@ -1989,10 +2431,18 @@ export const locationGuides = [
         "slug": "the-finch-hatton-arms",
         "town": "Sleaford",
         "type": "Pub",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Finch Hatton official website",
+            "url": "https://thefinchhatton.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A pub listing around Sleaford for visitors building a practical food stop into market-town stops, rail-linked visits and local heritage routes. It may suit a casual meal or drinks break, depending on current service. Check opening times, menus, booking rules, pet policy and accessibility details directly with the pub."
+        "needsVerification": false,
+        "description": "A pub listing around Sleaford for visitors building a practical food stop into market-town stops, rail-linked visits and local heritage routes. It may suit a casual meal or drinks break, depending on current service. Check opening times, menus, booking rules, pet policy and accessibility details directly with the pub.",
+        "officialWebsiteUrl": "https://thefinchhatton.co.uk/"
       },
       {
         "id": "millers-restaurant",
@@ -2035,7 +2485,7 @@ export const locationGuides = [
     "slug": "mablethorpe",
     "regionType": "Coast",
     "contentAngle": "Traditional seaside holidays, beach access and family coastal accommodation.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2044,64 +2494,118 @@ export const locationGuides = [
         "slug": "white-heather-guest-house",
         "town": "Mablethorpe",
         "type": "Guest house",
-        "bestFor": "A guest house option for visitors to Mablethorpe.",
+        "bestFor": "A six-room Victorian guest house off Mablethorpe High Street, about a four-minute walk from the beach, run as a guest house since the 1930s. Cooked breakfasts and private parking suit classic seaside stays. Confirm seasonal opening, house rules and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "White Heather Guest House official website",
+            "url": "https://whiteheatherguesthouse.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "White Heather Guest House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/white-heather-guest-house.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://whiteheatherguesthouse.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/white-heather-guest-house.html"
       },
       {
-        "id": "k44-mablethorpe-chalet-park",
-        "name": "K44 Mablethorpe Chalet Park",
-        "slug": "k44-mablethorpe-chalet-park",
+        "id": "the-victoria-guest-house",
+        "name": "The Victoria Guest House",
+        "slug": "the-victoria-guest-house",
+        "town": "Mablethorpe",
+        "type": "Guest house",
+        "bestFor": "A guest house on Victoria Road around three minutes' walk from Mablethorpe Beach, with a bar, garden, sauna and family rooms. It suits families and couples who want to be close to the seafront without staying on the busiest stretch. Check room options, facilities and current availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Victoria Guest House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-victoria-guest-house.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-victoria-guest-house.html"
+      },
+      {
+        "id": "the-cross-guest-house",
+        "name": "The Cross Guest House",
+        "slug": "the-cross-guest-house",
+        "town": "Mablethorpe",
+        "type": "Guest house",
+        "bestFor": "A guest house with an adjoining touring park on Alford Road on the landward edge of Mablethorpe, with facilities for guests with reduced mobility. It suits visitors who want parking, space and a quieter base a short drive from the beach. Confirm breakfast choices, accessibility details and current availability directly before booking.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Cross Guest House official website",
+            "url": "https://www.the-cross-guesthouse.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Cross Guest House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-cross-guest-house.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.the-cross-guesthouse.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-cross-guest-house.html"
+      },
+      {
+        "id": "park-view-guest-house",
+        "name": "Park View Guest House",
+        "slug": "park-view-guest-house",
+        "town": "Mablethorpe",
+        "type": "Guest house",
+        "bestFor": "A licensed guest house across from the seafront gardens in Mablethorpe, with a private car park and a small bar with an open fire in winter. It suits traditional bed-and-breakfast seaside breaks. The owners take bookings directly, so check room availability and current prices with the guest house before travelling.",
+        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
+        "bookingStatus": "official-site-only",
+        "sourceUrls": [
+          {
+            "label": "Park View Guest House official website",
+            "url": "https://parkviewguest.house/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
+        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://parkviewguest.house/"
+      },
+      {
+        "id": "the-beach-house-mablethorpe",
+        "name": "The Beach House",
+        "slug": "the-beach-house-mablethorpe",
         "town": "Mablethorpe",
         "type": "Holiday cottage",
-        "bestFor": "A chalet-style stay to compare for visitors planning beach time, promenade walks and casual coastal breaks in Mablethorpe.",
+        "bestFor": "A self-catering beach house sleeping six to eight, a couple of hundred metres from Mablethorpe's sands, with a hot tub, garden and off-road parking. It suits family or group stays wanting kitchen facilities rather than serviced rooms. Confirm occupancy, pet rules and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Beach House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-beach-house-mablethorpe.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
-      },
-      {
-        "id": "l30-what-a-cracker",
-        "name": "L30 what a cracker",
-        "slug": "l30-what-a-cracker",
-        "town": "Mablethorpe",
-        "type": "Hotel",
-        "bestFor": "Useful for visitors comparing L30 what a cracker as a hotel base in Mablethorpe for seaside breaks, beach-focused trips and quieter coastal stays. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
-        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
-        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
-      },
-      {
-        "id": "l90-holiday-home",
-        "name": "L90 Holiday Home",
-        "slug": "l90-holiday-home",
-        "town": "Mablethorpe",
-        "type": "Holiday cottage",
-        "bestFor": "A self-catering stay to consider for visitors planning a Mablethorpe seaside break with direct checks on facilities and booking terms.",
-        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
-        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
-      },
-      {
-        "id": "h21-holiday-let",
-        "name": "H21 holiday let",
-        "slug": "h21-holiday-let",
-        "town": "Mablethorpe",
-        "type": "Holiday cottage",
-        "bestFor": "A holiday let to compare for visitors looking at Mablethorpe beach days, coastal walks and flexible self-catering stays.",
-        "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
-        "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-beach-house-mablethorpe.html"
       }
     ],
     "thingsToDo": [
@@ -2121,11 +2625,19 @@ export const locationGuides = [
         "name": "Mablethorpe Seal Sanctuary and Wildlife Centre",
         "slug": "mablethorpe-seal-sanctuary-and-wildlife-centre",
         "town": "Mablethorpe",
-        "category": "Nature",
+        "category": "Wildlife",
         "shortDescription": "Mablethorpe Seal Sanctuary and Wildlife Centre is a nature or walking option to compare around Mablethorpe for a quieter outdoor stop during beach days, promenade time and casual coastal breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Mablethorpe Seal Sanctuary official website",
+            "url": "https://mablethorpesealsanctuary.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://mablethorpesealsanctuary.co.uk/"
       },
       {
         "id": "queens-park",
@@ -2214,7 +2726,7 @@ export const locationGuides = [
     "slug": "woodhall-spa",
     "regionType": "Countryside",
     "contentAngle": "Woodland retreats, golf, aviation heritage and spa-town breaks.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2223,12 +2735,27 @@ export const locationGuides = [
         "slug": "village-limits-bed-and-breakfast-rooms",
         "town": "Woodhall Spa",
         "type": "B&B",
-        "bestFor": "Useful for visitors comparing Village Limits Bed and Breakfast Rooms as a B&B base in Woodhall Spa for relaxed Lincolnshire breaks, Wolds-edge exploring and heritage-focused stays. Confirm current room details, breakfast arrangements, availability, parking, accessibility and cancellation terms directly before booking.",
+        "bestFor": "A small bed and breakfast on the wooded edge of Woodhall Spa with air-conditioned rooms, cooked-to-order breakfasts and free parking. Its quiet setting suits couples touring the village, golf courses and aviation heritage. Confirm room availability, breakfast times and current prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Village Limits Bed and Breakfast Rooms official website",
+            "url": "https://www.villagelimits.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Village Limits Bed and Breakfast Rooms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/village-limits.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.villagelimits.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/village-limits.html"
       },
       {
         "id": "the-dower-house-hotel",
@@ -2236,12 +2763,27 @@ export const locationGuides = [
         "slug": "the-dower-house-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Dower House Hotel as a hotel base in Woodhall Spa for relaxed Lincolnshire breaks, Wolds-edge exploring and heritage-focused stays. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A country house hotel in two acres of gardens and woodland beside the National Golf Centre fairways, a short walk from the Kinema in the Woods. Its restaurant and garden outlook suit slower village breaks. Check dinner service, room styles and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Dower House Hotel official website",
+            "url": "https://www.dowerhousehotel.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Dower House Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-dower-house-woodhall-spa.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.dowerhousehotel.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-dower-house-woodhall-spa.html"
       },
       {
         "id": "petwood-hotel",
@@ -2249,12 +2791,27 @@ export const locationGuides = [
         "slug": "petwood-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Petwood Hotel as a hotel base in Woodhall Spa for relaxed Lincolnshire breaks, Wolds-edge exploring and heritage-focused stays. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A 1905 country house hotel in thirty acres of gardens, known as the wartime officers' mess of 617 Squadron, with a memorabilia-filled Squadron Bar. It suits heritage-led stays and garden afternoons in Woodhall Spa. Confirm event closures, dining and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Petwood Hotel official website",
+            "url": "https://www.petwood.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Petwood Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/petwood.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.petwood.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/petwood.html"
       },
       {
         "id": "the-golf-hotel",
@@ -2262,12 +2819,27 @@ export const locationGuides = [
         "slug": "the-golf-hotel",
         "town": "Woodhall Spa",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Golf Hotel as a hotel base in Woodhall Spa for relaxed Lincolnshire breaks, Wolds-edge exploring and heritage-focused stays. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An 1880s hotel in seven acres of lawns and woodland on The Broadway, a couple of minutes from the village centre and next to the championship golf courses. It suits golf groups and traditional countryside stays. Check group bookings, dining and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Golf Hotel official website",
+            "url": "https://www.thegolf-hotel.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Golf Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/golfhotellincs.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.thegolf-hotel.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/golfhotellincs.html"
       },
       {
         "id": "the-inn-at-woodhall-spa",
@@ -2275,12 +2847,27 @@ export const locationGuides = [
         "slug": "the-inn-at-woodhall-spa",
         "town": "Woodhall Spa",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Inn at Woodhall Spa as an inn base in Woodhall Spa for relaxed Lincolnshire breaks, Wolds-edge exploring and heritage-focused stays. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A village inn with en-suite rooms above a pub and brasserie, around five minutes' walk from the Kinema in the Woods. It suits visitors who want food, real ales and a central Woodhall Spa base under one roof. Confirm dining times, room types and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Inn at Woodhall Spa official website",
+            "url": "https://www.theinnatwoodhallspa.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Inn at Woodhall Spa Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-inn-at-woodhall-spa.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.theinnatwoodhallspa.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-inn-at-woodhall-spa.html"
       }
     ],
     "thingsToDo": [
@@ -2289,11 +2876,19 @@ export const locationGuides = [
         "name": "The Kinema in the Woods",
         "slug": "the-kinema-in-the-woods",
         "town": "Woodhall Spa",
-        "category": "Nature",
+        "category": "Entertainment",
         "shortDescription": "The Kinema in the Woods is a nature or walking option to compare around Woodhall Spa for a quieter outdoor stop during relaxed Wolds-edge stays, heritage stops and leisure breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Kinema in the Woods official website",
+            "url": "https://thekinemainthewoods.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://thekinemainthewoods.co.uk/"
       },
       {
         "id": "woodhall-spa-cottage-museum",
@@ -2302,9 +2897,17 @@ export const locationGuides = [
         "town": "Woodhall Spa",
         "category": "Museum",
         "shortDescription": "Woodhall Spa Cottage Museum is a museum or indoor attraction to consider in Woodhall Spa for local history, culture or a weather-flexible stop during relaxed Wolds-edge stays, heritage stops and leisure breaks. Check current opening times, admission, facilities and accessibility directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Woodhall Spa Cottage Museum official website",
+            "url": "https://www.cottagemuseum.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.cottagemuseum.co.uk/"
       },
       {
         "id": "jubilee-park",
@@ -2313,9 +2916,17 @@ export const locationGuides = [
         "town": "Woodhall Spa",
         "category": "Nature",
         "shortDescription": "Jubilee Park is a nature or walking option to compare around Woodhall Spa for a quieter outdoor stop during relaxed Wolds-edge stays, heritage stops and leisure breaks. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Jubilee Park official website",
+            "url": "https://www.jubileeparkwoodhallspa.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.jubileeparkwoodhallspa.co.uk/"
       },
       {
         "id": "tattershall-castle",
@@ -2369,10 +2980,18 @@ export const locationGuides = [
         "slug": "petwood-hotel-restaurant",
         "town": "Woodhall Spa",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Petwood Hotel official website",
+            "url": "https://www.petwood.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "Petwood Hotel Restaurant is a restaurant listing to consider in Woodhall Spa when comparing sit-down meals around relaxed Wolds-edge stays, heritage stops and leisure breaks. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
+        "needsVerification": false,
+        "description": "Petwood Hotel Restaurant is a restaurant listing to consider in Woodhall Spa when comparing sit-down meals around relaxed Wolds-edge stays, heritage stops and leisure breaks. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting.",
+        "officialWebsiteUrl": "https://www.petwood.co.uk/"
       },
       {
         "id": "the-inn-at-woodhall-spa",
@@ -2380,10 +2999,18 @@ export const locationGuides = [
         "slug": "the-inn-at-woodhall-spa",
         "town": "Woodhall Spa",
         "type": "Pub",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Inn at Woodhall Spa official website",
+            "url": "https://www.theinnatwoodhallspa.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A pub listing around Woodhall Spa for visitors building a practical food stop into relaxed Wolds-edge stays, heritage stops and leisure breaks. It may suit a casual meal or drinks break, depending on current service. Check opening times, menus, booking rules, pet policy and accessibility details directly with the pub."
+        "needsVerification": false,
+        "description": "A pub listing around Woodhall Spa for visitors building a practical food stop into relaxed Wolds-edge stays, heritage stops and leisure breaks. It may suit a casual meal or drinks break, depending on current service. Check opening times, menus, booking rules, pet policy and accessibility details directly with the pub.",
+        "officialWebsiteUrl": "https://www.theinnatwoodhallspa.co.uk/"
       }
     ]
   },
@@ -2393,7 +3020,7 @@ export const locationGuides = [
     "slug": "horncastle",
     "regionType": "Wolds",
     "contentAngle": "Antiques, Lincolnshire Wolds villages and countryside breaks.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2402,12 +3029,27 @@ export const locationGuides = [
         "slug": "the-admiral-rodney-hotel",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Admiral Rodney Hotel as a hotel base in Horncastle for market-town stops, antiques browsing and wider Lincolnshire Wolds itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An 18th-century coaching inn on North Street in the centre of Horncastle, now a Grade II listed hotel with an eatery and coffee house. It suits antiques-trail browsing and Wolds touring on foot from the door. Check parking, dining times and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Admiral Rodney Hotel official website",
+            "url": "https://admiralrodney.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Admiral Rodney Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/admiralrodney.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://admiralrodney.com/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/admiralrodney.html"
       },
       {
         "id": "magpies-restaurant-with-rooms",
@@ -2415,12 +3057,27 @@ export const locationGuides = [
         "slug": "magpies-restaurant-with-rooms",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Magpies Restaurant with Rooms as a hotel base in Horncastle for market-town stops, antiques browsing and wider Lincolnshire Wolds itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A family-run restaurant with rooms in a row of 200-year-old cottages on East Street, with three en-suite bedrooms above a long-established dining room. It suits food-led weekends in the southern Wolds. Confirm dinner reservations, breakfast times and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Magpies Restaurant with Rooms official website",
+            "url": "https://www.magpiesrestaurant.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Magpies Restaurant with Rooms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/magpies-restaurant-with-rooms.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.magpiesrestaurant.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/magpies-restaurant-with-rooms.html"
       },
       {
         "id": "laurel-lodge",
@@ -2428,12 +3085,20 @@ export const locationGuides = [
         "slug": "laurel-lodge",
         "town": "Horncastle",
         "type": "B&B",
-        "bestFor": "Useful for visitors comparing Laurel Lodge as a B&B base in Horncastle for market-town stops, antiques browsing and wider Lincolnshire Wolds itineraries. Confirm current room details, breakfast arrangements, availability, parking, accessibility and cancellation terms directly before booking.",
+        "bestFor": "A bed and breakfast on a quiet street near the centre of Horncastle, with a garden and free parking. It suits couples and walkers who want a calm base for the Wolds and the Spa Trail to Woodhall Spa. Check room choices, breakfast arrangements and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Laurel Lodge Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/laurel-lodge.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/laurel-lodge.html"
       },
       {
         "id": "mountain-ash",
@@ -2441,12 +3106,20 @@ export const locationGuides = [
         "slug": "mountain-ash",
         "town": "Horncastle",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Mountain Ash as a hotel base in Horncastle for market-town stops, antiques browsing and wider Lincolnshire Wolds itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A rural bed and breakfast on the edge of Horncastle with garden views, packed-lunch options and pet-friendly rooms on request. It suits walkers and cyclists heading into the Lincolnshire Wolds. Confirm directions, dog policies and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Mountain Ash Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/mountain-ash.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/mountain-ash.html"
       },
       {
         "id": "the-bull-hotel",
@@ -2454,12 +3127,27 @@ export const locationGuides = [
         "slug": "the-bull-hotel",
         "town": "Horncastle",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Bull Hotel as an inn base in Horncastle for market-town stops, antiques browsing and wider Lincolnshire Wolds itineraries. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A traditional family-run pub with rooms in Horncastle's market place, offering bed and breakfast above a working local bar. It suits visitors who want a simple, central stay among the town's antiques shops. Check food service, parking and current room details directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Bull Hotel official website",
+            "url": "https://thebullhotel.org.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Bull Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-bull-lincoln.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://thebullhotel.org.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-bull-lincoln.html"
       }
     ],
     "thingsToDo": [
@@ -2468,7 +3156,7 @@ export const locationGuides = [
         "name": "Horncastle Antiques Centre",
         "slug": "horncastle-antiques-centre",
         "town": "Horncastle",
-        "category": "Historic site",
+        "category": "Shopping",
         "shortDescription": "Horncastle Antiques Centre is a heritage-focused stop to consider in Horncastle when adding local history to antiques browsing, market-town stops and Wolds itineraries. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
@@ -2501,7 +3189,7 @@ export const locationGuides = [
         "name": "Horncastle Market Place",
         "slug": "horncastle-market-place",
         "town": "Horncastle",
-        "category": "Historic site",
+        "category": "Market",
         "shortDescription": "Horncastle Market Place is a heritage-focused stop to consider in Horncastle when adding local history to antiques browsing, market-town stops and Wolds itineraries. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
@@ -2515,10 +3203,18 @@ export const locationGuides = [
         "slug": "magpies-restaurant-with-rooms",
         "town": "Horncastle",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Magpies Restaurant official website",
+            "url": "https://www.magpiesrestaurant.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "Magpies Restaurant with Rooms is a restaurant listing to consider in Horncastle when comparing sit-down meals around antiques browsing, market-town stops and Wolds itineraries. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting."
+        "needsVerification": false,
+        "description": "Magpies Restaurant with Rooms is a restaurant listing to consider in Horncastle when comparing sit-down meals around antiques browsing, market-town stops and Wolds itineraries. It may suit visitors planning lunch, dinner or a slower break during a local itinerary. Check current opening hours, menus, booking requirements, accessibility details and dietary information directly with the venue before visiting.",
+        "officialWebsiteUrl": "https://www.magpiesrestaurant.co.uk/"
       },
       {
         "id": "shakesby-s",
@@ -2537,10 +3233,18 @@ export const locationGuides = [
         "slug": "the-admiral-rodney",
         "town": "Horncastle",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Admiral Rodney official website",
+            "url": "https://admiralrodney.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A Horncastle restaurant listing for visitors comparing places to eat as part of antiques browsing, market-town stops and Wolds itineraries. Use it as a starting point for meal planning rather than a ranking. Check current hours, menus, booking needs, accessibility information and dietary options directly with the venue."
+        "needsVerification": false,
+        "description": "A Horncastle restaurant listing for visitors comparing places to eat as part of antiques browsing, market-town stops and Wolds itineraries. Use it as a starting point for meal planning rather than a ranking. Check current hours, menus, booking needs, accessibility information and dietary options directly with the venue.",
+        "officialWebsiteUrl": "https://admiralrodney.com/"
       },
       {
         "id": "montebello-ristorante",
@@ -2572,7 +3276,7 @@ export const locationGuides = [
     "slug": "gainsborough",
     "regionType": "Countryside",
     "contentAngle": "Trent-side breaks, North Lincolnshire countryside and Lincoln day trips.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2581,12 +3285,27 @@ export const locationGuides = [
         "slug": "brampton-dales-farm",
         "town": "Gainsborough",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Brampton Dales Farm as a hotel base in Gainsborough for north-west Lincolnshire stays, local heritage stops and wider Trent-side itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A farm-based bed and breakfast on a 26-acre estate outside Gainsborough, with detached en-suite rooms away from the main farmhouse. It suits visitors who want rural quiet within reach of the Old Hall and the Trent villages. Confirm directions, breakfast times and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Brampton Dales Farm official website",
+            "url": "https://www.bramptondalesfarm.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Brampton Dales Farm Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/brampton-dales-farm.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.bramptondalesfarm.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/brampton-dales-farm.html"
       },
       {
         "id": "hickman-hill-hotel",
@@ -2594,12 +3313,27 @@ export const locationGuides = [
         "slug": "hickman-hill-hotel",
         "town": "Gainsborough",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing Hickman Hill Hotel as a hotel base in Gainsborough for north-west Lincolnshire stays, local heritage stops and wider Trent-side itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A hotel in a historic building on the hill above Gainsborough town centre, with a garden, bar and restaurant. It suits visitors combining Gainsborough Old Hall with West Lindsey countryside drives. Check evening dining, parking and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Hickman Hill Hotel official website",
+            "url": "https://www.hickmanhill.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Hickman Hill Hotel Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/hickman-hill.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.hickmanhill.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/hickman-hill.html"
       },
       {
         "id": "black-swan-guest-house",
@@ -2607,12 +3341,27 @@ export const locationGuides = [
         "slug": "black-swan-guest-house",
         "town": "Gainsborough",
         "type": "Guest house",
-        "bestFor": "A guest house option for visitors to Gainsborough.",
+        "bestFor": "An 18th-century former coaching inn in the village of Marton, five miles south of Gainsborough on the road to Lincoln, with rooms in the main house and a converted stable block. A pet-friendly policy and cooked breakfasts suit touring stays. Confirm dog arrangements, room location and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "Black Swan Guest House official website",
+            "url": "https://blackswanguesthouse.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "Black Swan Guest House Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/black-swan-guest-house.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://blackswanguesthouse.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/black-swan-guest-house.html"
       },
       {
         "id": "the-black-horse-inn",
@@ -2620,12 +3369,20 @@ export const locationGuides = [
         "slug": "the-black-horse-inn",
         "town": "Gainsborough",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Black Horse Inn as an inn base in Gainsborough for north-west Lincolnshire stays, local heritage stops and wider Trent-side itineraries. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A village pub with six en-suite rooms in a separate building at Blyton, around four miles north of Gainsborough. It suits visitors who want a country local with food, beer and a straightforward overnight base. The pub handles stays directly, so check room availability and current prices with the inn before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "official-site-only",
+        "sourceUrls": [
+          {
+            "label": "The Black Horse Inn official website",
+            "url": "https://www.blackhorseblyton.com/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.blackhorseblyton.com/"
       },
       {
         "id": "thonock-park-b-and-b",
@@ -2633,7 +3390,7 @@ export const locationGuides = [
         "slug": "thonock-park-b-and-b",
         "town": "Gainsborough",
         "type": "B&B",
-        "bestFor": "Useful for visitors comparing Thonock Park B&B as a B&B base in Gainsborough for north-west Lincolnshire stays, local heritage stops and wider Trent-side itineraries. Confirm current room details, breakfast arrangements, availability, parking, accessibility and cancellation terms directly before booking.",
+        "bestFor": "A bed and breakfast in the Thonock parkland area on the northern edge of Gainsborough, with air-conditioned rooms close to the town's golf course. It suits golf visits and low-key overnight stops. Booking is handled by the operator, so confirm room details and current availability directly before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
@@ -2759,7 +3516,7 @@ export const locationGuides = [
     "slug": "market-rasen",
     "regionType": "Wolds",
     "contentAngle": "Lincolnshire Wolds, racing weekends, walking and quiet countryside breaks.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2768,12 +3525,27 @@ export const locationGuides = [
         "slug": "the-advocate-arms",
         "town": "Market Rasen",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Advocate Arms as an inn base in Market Rasen for Wolds breaks, countryside stays and short Lincolnshire itineraries. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An 18th-century restaurant with rooms on Queen Street in the centre of Market Rasen, with boutique-style bedrooms above a busy kitchen. It suits race-day visits and Wolds food weekends. Confirm race-fixture demand, dinner bookings and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Advocate Arms official website",
+            "url": "https://advocatearms.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Advocate Arms Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/advocate-arms.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://advocatearms.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/advocate-arms.html"
       },
       {
         "id": "the-olive",
@@ -2781,12 +3553,20 @@ export const locationGuides = [
         "slug": "the-olive",
         "town": "Market Rasen",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Olive as a hotel base in Market Rasen for Wolds breaks, countryside stays and short Lincolnshire itineraries. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A Catalan tapas restaurant on King Street with guest rooms to the rear, within walking distance of Market Rasen Racecourse. It suits visitors pairing an evening meal with a simple overnight stay. The venue takes bookings directly, so check room availability and current prices before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "official-site-only",
+        "sourceUrls": [
+          {
+            "label": "The Olive official website",
+            "url": "https://www.theolivemarketrasen.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.theolivemarketrasen.co.uk/"
       },
       {
         "id": "woldview-house-b-and-b",
@@ -2794,7 +3574,7 @@ export const locationGuides = [
         "slug": "woldview-house-b-and-b",
         "town": "Market Rasen",
         "type": "B&B",
-        "bestFor": "Useful for visitors comparing Woldview House B&B as a B&B base in Market Rasen for Wolds breaks, countryside stays and short Lincolnshire itineraries. Confirm current room details, breakfast arrangements, availability, parking, accessibility and cancellation terms directly before booking.",
+        "bestFor": "A small bed and breakfast base for the northern Wolds near Market Rasen, with free parking and cooked breakfasts. It suits walkers and race-goers who prefer a personal, owner-run property. Booking is handled directly with the owners, so confirm room availability and current prices before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
@@ -2807,7 +3587,7 @@ export const locationGuides = [
         "slug": "glebe-farm-apartments",
         "town": "Market Rasen",
         "type": "Apartment",
-        "bestFor": "Useful for visitors comparing Glebe Farm Apartments as an apartment base in Market Rasen for Wolds breaks, countryside stays and short Lincolnshire itineraries. Confirm current access details, availability, parking, accessibility, house rules and cancellation terms directly before booking.",
+        "bestFor": "Self-catering farm accommodation on the edge of Market Rasen countryside, suited to visitors who want independent space and parking for Wolds walking or race weekends. Availability is managed by the operator, so confirm apartment details, occupancy and current prices directly before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
@@ -2820,12 +3600,20 @@ export const locationGuides = [
         "slug": "the-white-swan",
         "town": "Market Rasen",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The White Swan as an inn base in Market Rasen for Wolds breaks, countryside stays and short Lincolnshire itineraries. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A pub with rooms dating from the 1800s on the A46 at Market Rasen, with a garden, bar and free private parking. It suits stopovers between Lincoln and Grimsby as well as race-day stays. Check food service, room types and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The White Swan Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-white-swan-market-rasen1.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-white-swan-market-rasen1.html"
       }
     ],
     "thingsToDo": [
@@ -2834,11 +3622,19 @@ export const locationGuides = [
         "name": "Market Rasen Racecourse",
         "slug": "market-rasen-racecourse",
         "town": "Market Rasen",
-        "category": "Shopping",
+        "category": "Entertainment",
         "shortDescription": "Market Rasen Racecourse is a shopping or browsing stop to consider in Market Rasen as part of Wolds countryside stays, market-town stops and race-day plans. Opening times, market days and individual business hours can vary, so check current details before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Market Rasen Racecourse official page",
+            "url": "https://www.thejockeyclub.co.uk/market-rasen/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.thejockeyclub.co.uk/market-rasen/"
       },
       {
         "id": "willingham-woods",
@@ -2856,7 +3652,7 @@ export const locationGuides = [
         "name": "Lincolnshire Wolds Railway",
         "slug": "lincolnshire-wolds-railway",
         "town": "Market Rasen",
-        "category": "Nature",
+        "category": "Heritage",
         "shortDescription": "Lincolnshire Wolds Railway is a nature or walking option to compare around Market Rasen for a quieter outdoor stop during Wolds countryside stays, market-town stops and race-day plans. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
@@ -2881,10 +3677,18 @@ export const locationGuides = [
         "slug": "the-advocate-arms",
         "town": "Market Rasen",
         "type": "Pub",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Advocate Arms official website",
+            "url": "https://advocatearms.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "The Advocate Arms is a pub option to compare in or around Market Rasen, useful for visitors planning a relaxed meal, drinks stop or break during Wolds countryside stays, market-town stops and race-day plans. Confirm current opening hours, menus, booking requirements, dog policy and accessibility details directly with the pub before travelling."
+        "needsVerification": false,
+        "description": "The Advocate Arms is a pub option to compare in or around Market Rasen, useful for visitors planning a relaxed meal, drinks stop or break during Wolds countryside stays, market-town stops and race-day plans. Confirm current opening hours, menus, booking requirements, dog policy and accessibility details directly with the pub before travelling.",
+        "officialWebsiteUrl": "https://advocatearms.co.uk/"
       },
       {
         "id": "the-olive",
@@ -2892,10 +3696,18 @@ export const locationGuides = [
         "slug": "the-olive",
         "town": "Market Rasen",
         "type": "Restaurant",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "The Olive official website",
+            "url": "https://www.theolivemarketrasen.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Do not reuse venue photos unless permission is granted; use an area image or request a press image.",
-        "needsVerification": true,
-        "description": "A restaurant in Market Rasen to add to a food shortlist while planning time around Wolds countryside stays, market-town stops and race-day plans. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling."
+        "needsVerification": false,
+        "description": "A restaurant in Market Rasen to add to a food shortlist while planning time around Wolds countryside stays, market-town stops and race-day plans. It may be useful for visitors who want a seated meal before or after exploring the local area. Confirm opening times, menus, booking arrangements, accessibility and dietary details directly with the restaurant before travelling.",
+        "officialWebsiteUrl": "https://www.theolivemarketrasen.co.uk/"
       },
       {
         "id": "march-hare-kitchen-and-deli",
@@ -2938,7 +3750,7 @@ export const locationGuides = [
     "slug": "bourne",
     "regionType": "Countryside",
     "contentAngle": "South Lincolnshire countryside, Stamford, Rutland Water and A15/A1 access.",
-    "lastUpdated": "13 May 2026",
+    "lastUpdated": "15 July 2026",
     "sourceStatus": "research-draft",
     "placesToStay": [
       {
@@ -2947,12 +3759,20 @@ export const locationGuides = [
         "slug": "the-wishing-well-inn",
         "town": "Bourne",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Wishing Well Inn as an inn base in Bourne for south Lincolnshire stays, market-town stops and countryside-linked short breaks. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A stone-built village inn at Dyke, on the northern edge of Bourne, with pub rooms and a restaurant. It suits visitors who want a classic pub stay near Bourne Woods and the town centre. Confirm food times, room options and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Wishing Well Inn Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-wishing-well-inn.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-wishing-well-inn.html"
       },
       {
         "id": "the-angel-at-bourne",
@@ -2960,12 +3780,20 @@ export const locationGuides = [
         "slug": "the-angel-at-bourne",
         "town": "Bourne",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Angel at Bourne as a hotel base in Bourne for south Lincolnshire stays, market-town stops and countryside-linked short breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "An 18th-century coaching inn on the Market Place in the centre of Bourne, modernised with bed-and-breakfast rooms above its bar and grill. It suits town-centre stays within an easy drive of Grimsthorpe Castle and Bourne Wood. Check breakfast choices, parking and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Angel at Bourne Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-angel-at-bourne.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-angel-at-bourne.html"
       },
       {
         "id": "the-six-bells-witham-on-the-hill",
@@ -2973,12 +3801,20 @@ export const locationGuides = [
         "slug": "the-six-bells-witham-on-the-hill",
         "town": "Bourne",
         "type": "Hotel",
-        "bestFor": "Useful for visitors comparing The Six Bells Witham on the Hill as a hotel base in Bourne for south Lincolnshire stays, market-town stops and countryside-linked short breaks. Confirm current room details, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A restored pub with rooms at Witham on the Hill, a village between Bourne and Stamford, with a wood-fired kitchen and three dining areas. It suits countryside food stays within reach of both towns. Confirm dinner service days, room details and current availability directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Six Bells Witham on the Hill Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-six-bells.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-six-bells.html"
       },
       {
         "id": "the-bull-inn-rippingale",
@@ -2986,12 +3822,27 @@ export const locationGuides = [
         "slug": "the-bull-inn-rippingale",
         "town": "Bourne",
         "type": "Inn",
-        "bestFor": "Useful for visitors comparing The Bull Inn Rippingale as an inn base in Bourne for south Lincolnshire stays, market-town stops and countryside-linked short breaks. Check current room details, food service, availability, parking, accessibility, pet policies and cancellation terms directly before booking.",
+        "bestFor": "A high-street village pub in Rippingale, a few miles north of Bourne, with en-suite rooms in an annexe behind the inn. It suits quiet rural overnights with pub food downstairs. Check current menus, room availability and prices directly before booking.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
-        "bookingStatus": "booking-search-fallback",
-        "sourceUrls": [],
+        "bookingStatus": "booking-confirmed",
+        "sourceUrls": [
+          {
+            "label": "The Bull Inn Rippingale official website",
+            "url": "https://www.rippingalebull.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          },
+          {
+            "label": "The Bull Inn Rippingale Booking.com property page",
+            "url": "https://www.booking.com/hotel/gb/the-bull-inn-bourne.html",
+            "type": "Booking.com",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Use approved booking-platform images if available; otherwise use a public area image or request permission.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.rippingalebull.co.uk/",
+        "bookingUrl": "https://www.booking.com/hotel/gb/the-bull-inn-bourne.html"
       },
       {
         "id": "glen-house-annexe",
@@ -2999,7 +3850,7 @@ export const locationGuides = [
         "slug": "glen-house-annexe",
         "town": "Bourne",
         "type": "Holiday cottage",
-        "bestFor": "A holiday cottage option for visitors to Bourne.",
+        "bestFor": "A self-contained annexe stay on the edge of Bourne suited to visitors who want independent space rather than a serviced room. Availability and house arrangements are managed by the owners, so confirm current details, occupancy and prices directly before travelling.",
         "sourceNote": "We are a directory, not a booking engine - check current availability, facilities, policies and prices directly with the operator.",
         "bookingStatus": "booking-search-fallback",
         "sourceUrls": [],
@@ -3015,9 +3866,17 @@ export const locationGuides = [
         "town": "Bourne",
         "category": "Nature",
         "shortDescription": "Bourne Woods is a nature or walking option to compare around Bourne for a quieter outdoor stop during south Lincolnshire market-town stops and Fens-edge routes. Confirm access, parking, seasonal conditions and visitor facilities before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Bourne Woods Forestry England page",
+            "url": "https://www.forestryengland.uk/bourne-woods",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://www.forestryengland.uk/bourne-woods"
       },
       {
         "id": "grimsthorpe-castle-park-and-gardens",
@@ -3026,9 +3885,17 @@ export const locationGuides = [
         "town": "Bourne",
         "category": "Historic site",
         "shortDescription": "Grimsthorpe Castle Park and Gardens is a heritage-focused stop to consider in Bourne when adding local history to south Lincolnshire market-town stops and Fens-edge routes. Check current opening arrangements, admission details, facilities and accessibility information directly before travelling.",
-        "sourceUrls": [],
+        "sourceUrls": [
+          {
+            "label": "Grimsthorpe Castle official website",
+            "url": "https://grimsthorpe.co.uk/",
+            "type": "Official website",
+            "checkedDate": "2026-07-15"
+          }
+        ],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",
-        "needsVerification": true
+        "needsVerification": false,
+        "officialWebsiteUrl": "https://grimsthorpe.co.uk/"
       },
       {
         "id": "bourne-outdoor-pool",
@@ -3046,7 +3913,7 @@ export const locationGuides = [
         "name": "Bowthorpe Oak",
         "slug": "bowthorpe-oak",
         "town": "Bourne",
-        "category": "Other",
+        "category": "Nature",
         "shortDescription": "Bowthorpe Oak is a visitor stop to compare in Bourne while building south Lincolnshire market-town stops and Fens-edge routes. Check current opening times, facilities, access and any booking requirements directly before travelling.",
         "sourceUrls": [],
         "imageGuidance": "Exact public image may exist on Wikimedia Commons or Geograph; verify licence.",

@@ -37,13 +37,14 @@ export default function ImageCreditsPage() {
       {(() => {
         const townCount = imageCredits.filter((c) => c.id.startsWith('town-')).length;
         const coastalCount = imageCredits.filter((c) => c.id.startsWith('coastal-')).length;
+        const galleryCount = imageCredits.filter((c) => c.id.startsWith('gallery-')).length;
         const caravanCount = bookableCaravanParks.length;
-        const total = townCount + coastalCount + caravanCount;
+        const total = townCount + coastalCount + galleryCount + caravanCount;
         return (
           <>
             <h2>Image library overview ({total} total)</h2>
             <p className="text-sm text-charcoal-muted">
-              Town and area images: <strong>{townCount}</strong> · Coastal area images: <strong>{coastalCount}</strong> · Caravan and holiday park images: <strong>{caravanCount}</strong>.
+              Town and area images: <strong>{townCount}</strong> · Coastal area images: <strong>{coastalCount}</strong> · Town guide gallery images: <strong>{galleryCount}</strong> · Caravan and holiday park images: <strong>{caravanCount}</strong>.
             </p>
           </>
         );
@@ -63,6 +64,14 @@ export default function ImageCreditsPage() {
           Coastal area images ({imageCredits.filter((c) => c.id.startsWith('coastal-')).length})
         </h3>
         {imageCredits.filter(c => c.id.startsWith('coastal-')).map((credit) => (
+          <ImageCreditComponent key={credit.id} credit={credit} variant="card" />
+        ))}
+
+        {/* Town guide gallery photographs */}
+        <h3 className="font-heading text-lg font-semibold text-charcoal mt-6 mb-3">
+          Town guide gallery images ({imageCredits.filter((c) => c.id.startsWith('gallery-')).length})
+        </h3>
+        {imageCredits.filter(c => c.id.startsWith('gallery-')).map((credit) => (
           <ImageCreditComponent key={credit.id} credit={credit} variant="card" />
         ))}
 
